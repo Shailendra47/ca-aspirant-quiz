@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICAI Code of Ethics & Professional Conduct - Digital Study & Quiz</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Merriweather for editorial body & Playfair Display for textbook headers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            icai: {
+              navy: '#122543',
+              dark: '#0B1728',
+              gold: '#C59B27',
+              goldLight: '#E8CA65',
+              burgundy: '#6E1624',
+              crimson: '#881A2D',
+              parchment: '#FAF7EE',
+              card: '#FFFFFF',
+              border: '#E8E1CE',
+              muted: '#685F51',
+              ink: '#231F1A'
+            }
+          },
+          fontFamily: {
+            serif: ['Merriweather', 'serif'],
+            display: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'book': '0 4px 20px -2px rgba(18, 37, 67, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
+            'ribbon': '0 4px 6px -1px rgba(110, 22, 36, 0.3)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Textbook Page styling */
+    body {
+      background-color: #F6F2E8;
+      background-image: 
+        radial-gradient(#E5DEC9 0.75px, transparent 0.75px),
+        linear-gradient(to right, rgba(18, 37, 67, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px, 120px 100%;
+      color: #231F1A;
+      font-family: 'Merriweather', serif;
+    }
+    
+    .paper-texture {
+      background-color: #FCFBF7;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 10px 25px -5px rgba(28, 25, 23, 0.07);
+      border: 1px solid #ECE4D0;
+    }
+
+    .chapter-heading {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.05em;
+    }
+
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F3ECE0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D2C4AE;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B6A489;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-icai-gold/30 selection:text-icai-navy">
+
+  <!-- Top Academic Navigation Bar -->
+  <header class="no-print sticky top-0 z-40 bg-icai-dark text-stone-100 border-b-2 border-icai-gold shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Emblem and Title -->
+        <div class="flex items-center space-x-3.5">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-icai-gold/60 bg-icai-navy flex items-center justify-center p-1.5 shadow-inner flex-shrink-0">
+            <!-- Simplified Emblem Graphic -->
+            <svg viewBox="0 0 100 100" class="w-full h-full fill-current text-icai-gold">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="4"/>
+              <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <!-- Garuda Wings Motif -->
+              <path d="M22 48 C 35 30, 48 34, 50 48 C 52 34, 65 30, 78 48 C 65 64, 55 60, 50 78 C 45 60, 35 64, 22 48 Z" fill="currentColor" opacity="0.9"/>
+              <circle cx="50" cy="40" r="4" fill="#FAF7EE"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-xs uppercase tracking-widest text-icai-gold font-sans font-semibold">ICAI Board of Studies Compendium</span>
+              <span class="hidden sm:inline-block px-1.5 py-0.2 text-[10px] bg-icai-burgundy text-amber-100 rounded font-sans tracking-wide">CA FINAL & INTER</span>
+            </div>
+            <h1 class="text-lg sm:text-xl font-bold font-display tracking-wide text-amber-50">
+              Code of Ethics & Disciplinary Code
+            </h1>
+          </div>
+        </div>
+
+        <!-- Mode Toggles & Controls -->
+        <div class="flex items-center space-x-3 font-sans">
+          <!-- View Switcher -->
+          <div class="bg-black/30 p-1 rounded-lg border border-stone-700/60 flex items-center text-xs font-medium">
+            <button id="btnQuizMode" onclick="switchMainView('quiz')" class="px-3 py-1.5 rounded-md transition-all duration-150 flex items-center space-x-1.5 bg-icai-gold text-stone-900 font-semibold shadow-sm">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <span>Practice Exam</span>
+            </button>
+            <button id="btnNotesMode" onclick="switchMainView('notes')" class="px-3 py-1.5 rounded-md text-stone-300 hover:text-white transition-all duration-150 flex items-center space-x-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              <span>Textbook Notes</span>
+            </button>
+          </div>
+
+          <!-- Timer & Study Reset -->
+          <div id="quizTimerWrapper" class="hidden sm:flex items-center space-x-2 text-stone-300 bg-stone-900/50 px-3 py-1.5 rounded-md border border-stone-700/40 text-xs">
+            <svg class="w-3.5 h-3.5 text-icai-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span id="timerDisplay" class="font-mono text-amber-200">15:00</span>
+          </div>
+
+          <button onclick="window.print()" title="Print Study Handout" class="p-2 text-stone-300 hover:text-amber-300 hover:bg-stone-800 rounded-lg transition" aria-label="Print Document">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          </button>
+          <button id="authButton" onclick="openAuthModal()" class="px-3 py-2 rounded-lg bg-icai-gold text-stone-900 text-xs font-bold hover:bg-amber-300">Sign in</button>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Progress Indicator Bar -->
+    <div id="quizProgressContainer" class="w-full bg-icai-navy/80 h-1.5 overflow-hidden">
+      <div id="quizProgressBar" class="h-full bg-gradient-to-r from-icai-gold via-amber-300 to-amber-500 transition-all duration-300" style="width: 10%;"></div>
+    </div>
+  </header>
+
+  <!-- Sub-header Ribbon Banner -->
+  <div class="no-print bg-amber-50/70 border-b border-icai-border py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between text-xs text-stone-600 font-sans gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="font-serif italic font-bold text-icai-navy">Motto:</span>
+        <span class="font-serif text-icai-burgundy font-medium">"य एष सुप्तेषु जागर्ति"</span>
+        <span class="hidden md:inline text-stone-400">|</span>
+        <span class="hidden md:inline italic text-stone-700">"Ya Esha Supteshu Jagarti" — Eternal vigilance in professional duty (Kathopanishad)</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span id="dbStatusBadge" class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-[11px] font-semibold shadow-xs">
+          <span id="dbStatusDot" class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span id="dbStatusText">Atlas DB: quiz_db</span>
+        </span>
+        <span class="hidden sm:inline text-stone-400">|</span>
+        <span class="text-stone-600 font-medium">Authoritative ICAI Syllabus Aligned</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-9 w-full flex-1">
+    
+    <!-- ==================== QUIZ VIEW ==================== -->
+    <div id="quizView" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left Chapter Index & Palette (Desktop col-4) -->
+      <aside class="no-print lg:col-span-4 space-y-5">
+        
+        <!-- Filter/Chapter Navigation Card -->
+        <div class="paper-texture rounded-xl p-5 shadow-book relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-icai-navy via-icai-burgundy to-icai-gold"></div>
+          
+          <div class="flex items-center justify-between pb-3 border-b border-stone-200">
+            <div>
+              <span class="text-[11px] font-sans uppercase font-bold tracking-wider text-icai-burgundy">Curriculum Outline</span>
+              <h2 class="text-base font-bold font-display text-icai-navy">Syllabus Sections</h2>
+            </div>
+            <span id="filterLabel" class="text-xs px-2 py-0.5 rounded bg-stone-100 font-sans font-medium text-stone-700">All (25 MCQs)</span>
+          </div>
+
+          <div class="mt-3 space-y-1.5 font-sans text-xs">
+            <button onclick="setChapterFilter('ALL')" id="tabFilterAll" class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between font-medium transition bg-icai-navy text-white shadow-sm">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-icai-gold"></span>
+                <span>Full Test (All 4 Chapters & Cases)</span>
+              </span>
+              <span class="bg-black/20 text-stone-200 text-[10px] px-1.5 py-0.5 rounded">25 Qs</span>
+            </button>
+
+            <button onclick="setChapterFilter(1)" id="tabFilter1" class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between font-medium transition hover:bg-stone-100 text-stone-700">
+              <span class="truncate pr-1">Ch 1: Fundamental Principles & Threats</span>
+              <span class="text-stone-400 text-[10px]">8 Qs</span>
+            </button>
+
+            <button onclick="setChapterFilter(2)" id="tabFilter2" class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between font-medium transition hover:bg-stone-100 text-stone-700">
+              <span class="truncate pr-1">Ch 2: CA in Practice & KYC Norms</span>
+              <span class="text-stone-400 text-[10px]">4 Qs</span>
+            </button>
+
+            <button onclick="setChapterFilter(3)" id="tabFilter3" class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between font-medium transition hover:bg-stone-100 text-stone-700">
+              <span class="truncate pr-1">Ch 3: Schedules to the Act (Misconduct)</span>
+              <span class="text-stone-400 text-[10px]">8 Qs</span>
+            </button>
+
+            <button onclick="setChapterFilter(4)" id="tabFilter4" class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between font-medium transition hover:bg-stone-100 text-stone-700">
+              <span class="truncate pr-1">Ch 4: Disciplinary Procedures & ESB</span>
+              <span class="text-stone-400 text-[10px]">5 Qs</span>
+            </button>
+          </div>
+
+          <!-- Question Question Palette Grid -->
+          <div class="mt-5 pt-4 border-t border-stone-200">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-sans font-bold text-stone-700 uppercase tracking-wider">Question Matrix</span>
+              <div class="flex items-center space-x-2 text-[10px] font-sans text-stone-500">
+                <span class="inline-flex items-center"><span class="w-2 h-2 rounded-full bg-emerald-600 mr-1"></span>Correct</span>
+                <span class="inline-flex items-center"><span class="w-2 h-2 rounded-full bg-rose-600 mr-1"></span>Missed</span>
+              </div>
+            </div>
+
+            <div id="questionGrid" class="grid grid-cols-5 gap-2 font-sans text-xs">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="mt-5 pt-4 border-t border-stone-200 grid grid-cols-3 gap-2 text-center font-sans">
+            <div class="bg-stone-100/70 p-2 rounded-lg">
+              <span class="block text-[10px] text-stone-500 uppercase tracking-tight font-medium">Answered</span>
+              <span id="metricAnswered" class="text-base font-bold text-icai-navy">0/20</span>
+            </div>
+            <div class="bg-stone-100/70 p-2 rounded-lg">
+              <span class="block text-[10px] text-stone-500 uppercase tracking-tight font-medium">Score</span>
+              <span id="metricScore" class="text-base font-bold text-emerald-700">0 pts</span>
+            </div>
+            <div class="bg-stone-100/70 p-2 rounded-lg">
+              <span class="block text-[10px] text-stone-500 uppercase tracking-tight font-medium">Bookmarked</span>
+              <span id="metricBookmarks" class="text-base font-bold text-amber-600">0</span>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-stone-200 flex justify-between items-center text-xs font-sans text-stone-500">
+            <button onclick="resetQuizState()" class="text-rose-700 hover:text-rose-900 underline underline-offset-2 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              <span>Restart Exam</span>
+            </button>
+            <span class="text-[11px] text-stone-400">Keys: [1-4], [Enter]</span>
+          </div>
+        </div>
+
+        <!-- Academic Margin Note Box (Textbook feel) -->
+        <div class="bg-amber-100/40 border border-amber-300/60 rounded-xl p-4 text-xs font-sans text-stone-700 relative">
+          <div class="flex items-center gap-2 mb-1.5 font-serif font-bold text-icai-burgundy">
+            <svg class="w-4 h-4 text-icai-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <span>Examiner's Advisory</span>
+          </div>
+          <p class="leading-relaxed text-stone-600">
+            "In professional ethics, question stems often test whether a safeguard is <span class="font-semibold text-stone-800">sufficient to reduce threats to an acceptable level</span>. Memorize the Five Fundamental Principles vs. the Five Threats."
+          </p>
+          <div class="mt-2 text-[10px] text-stone-500 text-right italic font-serif">— ICAI Disciplinary Committee Notes</div>
+        </div>
+
+      </aside>
+
+      <!-- Right Main Interactive Textbook Sheet (Desktop col-8) -->
+      <section class="lg:col-span-8 space-y-6">
+        
+        <!-- Textbook Chapter Header & Question Folio -->
+        <div class="paper-texture rounded-2xl p-6 sm:p-9 shadow-book border border-icai-border relative">
+          
+          <!-- Ribbon Bookmark (Top Right) -->
+          <div class="absolute -top-1.5 right-8">
+            <button id="btnBookmark" onclick="toggleCurrentBookmark()" class="group flex flex-col items-center focus:outline-none" title="Bookmark this question for revision">
+              <div id="bookmarkRibbon" class="w-8 h-10 bg-stone-300 text-stone-600 group-hover:bg-amber-500 transition-colors shadow-sm flex items-center justify-center rounded-b-sm">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- Academic Chapter Breadcrumb -->
+          <div class="flex items-center space-x-2 text-xs font-sans text-stone-500 uppercase tracking-widest mb-3">
+            <span id="qChapterNum" class="font-bold text-icai-burgundy">Chapter 1</span>
+            <span>•</span>
+            <span id="qChapterTitle" class="truncate max-w-[280px] sm:max-w-md">Fundamental Principles and Threats</span>
+          </div>
+
+          <!-- Question Header Row -->
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-stone-200 pb-4 mb-5">
+            <div class="flex items-center space-x-3">
+              <span id="qIndexBadge" class="font-display text-2xl sm:text-3xl font-bold text-icai-navy">Question 01</span>
+              <span id="qTagBadge" class="text-[11px] font-sans px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 font-semibold tracking-wide">
+                Core ICAI Motto
+              </span>
+            </div>
+            
+            <span class="text-xs font-sans text-stone-400">1.0 Mark | Single Correct</span>
+          </div>
+
+          <!-- Question Prompt -->
+          <div class="my-5">
+            <p id="qText" class="text-lg sm:text-xl leading-relaxed text-stone-900 font-normal">
+              <!-- Rendered via JS -->
+            </p>
+          </div>
+
+          <!-- Multiple Choice Options -->
+          <div id="optionsContainer" class="space-y-3 my-6 font-sans">
+            <!-- Options dynamically generated -->
+          </div>
+
+          <!-- Action Buttons / Next / Prev -->
+          <div class="mt-8 pt-5 border-t border-stone-200 flex flex-wrap items-center justify-between gap-3 font-sans">
+            <div class="flex items-center space-x-2">
+              <button id="btnPrev" onclick="navigateQuestion(-1)" class="px-4 py-2 rounded-lg border border-stone-300 text-stone-700 hover:bg-stone-100 transition text-sm font-medium flex items-center space-x-1 disabled:opacity-40 disabled:cursor-not-allowed">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span>Previous</span>
+              </button>
+
+              <button id="btnNext" onclick="navigateQuestion(1)" class="px-4 py-2 rounded-lg border border-stone-300 text-stone-700 hover:bg-stone-100 transition text-sm font-medium flex items-center space-x-1 disabled:opacity-40 disabled:cursor-not-allowed">
+                <span>Next</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <button id="btnSubmit" onclick="submitCurrentAnswer()" class="px-6 py-2.5 rounded-lg bg-icai-navy text-amber-100 hover:bg-icai-dark hover:text-white transition font-semibold text-sm shadow-md flex items-center space-x-2">
+                <span>Submit & Verify</span>
+                <svg class="w-4 h-4 text-icai-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </button>
+
+              <button id="btnFinishExam" onclick="showScorecardModal(true)" class="px-5 py-2.5 rounded-lg bg-icai-burgundy text-white hover:bg-red-950 transition font-semibold text-sm shadow-md flex items-center space-x-2">
+                <span>Submit Test &amp; View Scorecard</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Textbook Commentary & Statutory Footnote Box (Reveals upon submission) -->
+          <div id="explanationContainer" class="hidden mt-6 pt-5 border-t-2 border-stone-200 transition-all duration-300">
+            <div id="statusAlertBox" class="p-4 rounded-xl mb-4 font-sans flex items-start space-x-3">
+              <!-- Will be styled as success or error dynamically -->
+            </div>
+
+            <!-- Authentic Textbook Scholarly Note -->
+            <div class="bg-[#F8F5EC] border-l-4 border-icai-gold p-5 rounded-r-xl shadow-sm text-stone-800">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-sans font-bold uppercase tracking-wider text-icai-navy flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-icai-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
+                  ICAI Commentary & Statutory Rationale
+                </span>
+                <span id="statutoryRefTag" class="text-[10px] font-sans px-2 py-0.5 rounded bg-amber-200/60 text-stone-800 font-semibold">
+                  Kathopanishad / Code of Ethics
+                </span>
+              </div>
+              <p id="explanationText" class="text-sm leading-relaxed font-serif text-stone-800">
+                <!-- Rationale rendered via JS -->
+              </p>
+              <div class="mt-3 pt-3 border-t border-stone-300/60 flex items-center justify-between text-xs font-sans text-stone-500">
+                <span>Subject: Chartered Accountants Act 1949 & Guidelines</span>
+                <span class="italic text-stone-600">Relevance: CA Final / Inter Mandatory Module</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footnote citation -->
+        <div class="text-center font-sans text-xs text-stone-400 no-print">
+          Tip: You can use keys <kbd class="px-1.5 py-0.5 rounded bg-stone-200 text-stone-700">1</kbd> to <kbd class="px-1.5 py-0.5 rounded bg-stone-200 text-stone-700">4</kbd> to select options, and <kbd class="px-1.5 py-0.5 rounded bg-stone-200 text-stone-700">Enter</kbd> to submit.
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- ==================== STUDY NOTES VIEW ==================== -->
+    <div id="notesView" class="hidden space-y-8 max-w-4xl mx-auto">
+      
+      <!-- Academic Cover Note -->
+      <div class="paper-texture rounded-2xl p-7 sm:p-10 shadow-book border border-icai-border">
+        <div class="border-b-2 border-stone-200 pb-5 mb-6 text-center">
+          <span class="text-xs font-sans uppercase tracking-widest text-icai-burgundy font-bold">Authoritative Syllabus Reference Material</span>
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-icai-navy mt-1">ICAI Code of Ethics & Misconduct Compendium</h2>
+          <p class="font-serif italic text-stone-600 text-sm mt-2">Comprehensive notes covering the fundamental principles, threats, deemed practice rules, schedules, and disciplinary machinery.</p>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="mb-8">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-icai-navy text-amber-200 font-sans font-bold text-xs flex items-center justify-center">01</span>
+            <h3 class="text-lg font-bold font-display text-icai-navy">Fundamental Principles & Threats to Independence</h3>
+          </div>
+          <div class="font-serif text-sm leading-relaxed text-stone-800 space-y-3 pl-11">
+            <p>
+              The Code of Ethics for Chartered Accountants rests upon <span class="font-bold text-icai-burgundy">Five Fundamental Principles</span> that are non-negotiable in all professional engagements:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-3 font-sans text-xs">
+              <div class="p-3 rounded-lg bg-amber-50 border border-amber-200">
+                <span class="font-bold text-icai-navy">1. Integrity</span>
+                <p class="text-stone-600 mt-1">Straightforward, honest, and truthful in all professional and business relationships.</p>
+              </div>
+              <div class="p-3 rounded-lg bg-amber-50 border border-amber-200">
+                <span class="font-bold text-icai-navy">2. Objectivity</span>
+                <p class="text-stone-600 mt-1">Not compromising professional judgment due to bias, conflict of interest, or undue influence.</p>
+              </div>
+              <div class="p-3 rounded-lg bg-amber-50 border border-amber-200">
+                <span class="font-bold text-icai-navy">3. Due Care & Competence</span>
+                <p class="text-stone-600 mt-1">Attain and maintain professional knowledge; act diligently according to technical standards.</p>
+              </div>
+              <div class="p-3 rounded-lg bg-amber-50 border border-amber-200">
+                <span class="font-bold text-icai-navy">4. Confidentiality</span>
+                <p class="text-stone-600 mt-1">Respect confidential client data; no disclosure without specific authorization or legal duty.</p>
+              </div>
+              <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 sm:col-span-2">
+                <span class="font-bold text-icai-navy">5. Professional Behaviour</span>
+                <p class="text-stone-600 mt-1">Comply with laws and avoid any action that discredits or brings disrepute to the profession.</p>
+              </div>
+            </div>
+
+            <p class="mt-4 font-bold text-stone-900">Five Threats to Independence (Mnemonic: SAFIS):</p>
+            <ul class="list-disc list-inside space-y-1.5 text-stone-700">
+              <li><strong class="text-icai-navy">Self-Interest Threat:</strong> Financial or other interest inappropriately influencing judgment (e.g. holding shares in audit client).</li>
+              <li><strong class="text-icai-navy">Self-Review Threat:</strong> Evaluating results of a previous judgment made or other services provided by oneself.</li>
+              <li><strong class="text-icai-navy">Advocacy Threat:</strong> Promoting a client's position to the point where objectivity is compromised.</li>
+              <li><strong class="text-icai-navy">Familiarity Threat:</strong> Long or close relationship creating undue sympathy toward client's interests.</li>
+              <li><strong class="text-icai-navy">Intimidation Threat:</strong> Being deterred from acting objectively by actual or perceived threats.</li>
+            </ul>
+
+            <div class="bg-amber-100/50 p-3.5 rounded-lg border border-amber-300/70 text-xs font-sans text-stone-800 mt-3">
+              <strong>Concept of Safeguards:</strong> Controls created by legislation, professional regulation, or internal firm procedures that eliminate threats or reduce them to an acceptable level.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="mb-8 pt-6 border-t border-stone-200">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-icai-navy text-amber-200 font-sans font-bold text-xs flex items-center justify-center">02</span>
+            <h3 class="text-lg font-bold font-display text-icai-navy">CA in Practice & KYC (Know Your Client) Norms</h3>
+          </div>
+          <div class="font-serif text-sm leading-relaxed text-stone-800 space-y-3 pl-11">
+            <p>
+              Under <strong class="text-icai-navy">Section 2(2) of the Chartered Accountants Act, 1949</strong>, a member is <em>deemed to be in practice</em> when, individually or in partnership, they offer to perform or perform audit, verification, financial representations, or services rendered to the public, regardless of whether a formal sole proprietorship has been registered.
+            </p>
+            <p>
+              <strong>Mandatory KYC Norms:</strong> Council guidelines mandate that members in practice verify client identity, address, and source of business to protect the member and the public against money laundering, terror financing, and illicit activities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="mb-8 pt-6 border-t border-stone-200">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-icai-navy text-amber-200 font-sans font-bold text-xs flex items-center justify-center">03</span>
+            <h3 class="text-lg font-bold font-display text-icai-navy">Schedules to the Act (Misconduct Framework)</h3>
+          </div>
+          <div class="font-serif text-sm leading-relaxed text-stone-800 space-y-3 pl-11">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2">
+              <div class="p-4 bg-stone-50 border border-stone-300 rounded-xl">
+                <span class="font-sans font-bold text-xs uppercase text-icai-navy block mb-1">First Schedule</span>
+                <p class="text-xs text-stone-700">Deals primarily with <strong>Members in Practice</strong> (Parts I, II, III, IV). Covers soliciting, sharing fees, accepting unpermitted work, negligence, and non-compliance with Council regulations. Inquiries handled by the <strong>Board of Discipline</strong>.</p>
+              </div>
+              <div class="p-4 bg-stone-50 border border-stone-300 rounded-xl">
+                <span class="font-sans font-bold text-xs uppercase text-icai-burgundy block mb-1">Second Schedule</span>
+                <p class="text-xs text-stone-700">Deals with <strong>Members in Employment</strong> and more severe breaches across all members (gross negligence, certifying without examination, disclosing confidential data without duty). Inquiries handled by the <strong>Disciplinary Committee</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="pt-6 border-t border-stone-200">
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="w-8 h-8 rounded-full bg-icai-navy text-amber-200 font-sans font-bold text-xs flex items-center justify-center">04</span>
+            <h3 class="text-lg font-bold font-display text-icai-navy">Disciplinary Mechanism & Ethical Standards Board (ESB)</h3>
+          </div>
+          <div class="font-serif text-sm leading-relaxed text-stone-800 space-y-3 pl-11">
+            <p>
+              The <strong>Ethical Standards Board (ESB)</strong> is a statutory standing committee of the ICAI that issues official interpretations, advisories, and decisions regarding the Code of Ethics. Its rulings serve as direct precedents for exam problems involving conflict of interest, advertising, auditor rotation, and concurrent appointments.
+            </p>
+            <div class="mt-4 p-3 bg-amber-50 rounded-lg text-xs font-sans text-stone-700">
+              <strong>ICAI Motto:</strong> <em>"Ya Esha Supteshu Jagarti"</em> (Kathopanishad) — "He who is awake in those that sleep." Inspires the auditor's duty of eternal vigilance for public trust.
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <button onclick="switchMainView('quiz')" class="px-6 py-2.5 bg-icai-navy text-amber-200 rounded-lg font-sans font-bold text-xs hover:bg-icai-dark shadow-md">
+            Return to Interactive Practice Exam →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ==================== FINAL SCORECARD MODAL ==================== -->
+  <div id="scorecardModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="paper-texture max-w-2xl w-full rounded-2xl shadow-2xl border-2 border-icai-gold overflow-hidden animate-in fade-in zoom-in duration-200">
+      
+      <!-- Academic Certificate Header -->
+      <div class="bg-icai-dark text-stone-100 p-6 text-center border-b border-icai-gold/40 relative">
+        <span class="text-[10px] font-sans uppercase tracking-widest text-icai-gold font-bold">Assessment Transcript</span>
+        <h3 class="text-2xl font-display font-bold text-amber-100 mt-1">Performance Evaluation Sheet</h3>
+        <p class="text-xs font-serif text-stone-300 mt-1">ICAI Code of Ethics & Misconduct Diagnostic Test</p>
+      </div>
+
+      <div class="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
+        
+        <!-- Score Highlights -->
+        <div class="grid grid-cols-3 gap-3 text-center font-sans">
+          <div class="bg-stone-100 p-4 rounded-xl border border-stone-200">
+            <span class="text-xs text-stone-500 uppercase font-medium">Final Score</span>
+            <div id="modalScoreDisplay" class="text-3xl font-bold text-icai-navy mt-1">0/10</div>
+            <span id="modalPercentage" class="text-xs font-semibold text-emerald-700">0%</span>
+          </div>
+
+          <div class="bg-stone-100 p-4 rounded-xl border border-stone-200">
+            <span class="text-xs text-stone-500 uppercase font-medium">Accuracy</span>
+            <div id="modalAccuracy" class="text-3xl font-bold text-icai-burgundy mt-1">0%</div>
+            <span class="text-xs text-stone-500">ICAI Benchmark: 50%</span>
+          </div>
+
+          <div class="bg-stone-100 p-4 rounded-xl border border-stone-200">
+            <span class="text-xs text-stone-500 uppercase font-medium">Time Taken</span>
+            <div id="modalTimeSpent" class="text-3xl font-bold text-stone-800 mt-1">00:00</div>
+            <span class="text-xs text-stone-500">Self-Paced</span>
+          </div>
+        </div>
+
+        <!-- Grade Banner -->
+        <div id="gradeBanner" class="p-3.5 rounded-xl border text-center font-sans text-sm font-semibold">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Chapter-wise Performance Breakdown -->
+        <div>
+          <h4 class="text-xs font-sans uppercase font-bold text-stone-600 tracking-wider mb-2.5">Chapter-wise Performance Analysis</h4>
+          <div id="chapterScoreBreakdown" class="space-y-2 font-sans text-xs">
+            <!-- Dynamic breakdown items -->
+          </div>
+        </div>
+
+        <!-- Review Question List with Bookmarks and Incorrect Tags -->
+        <div>
+          <h4 class="text-xs font-sans uppercase font-bold text-stone-600 tracking-wider mb-2.5">Detailed Question Review</h4>
+          <div id="modalQuestionList" class="space-y-2 font-sans text-xs max-h-52 overflow-y-auto pr-1">
+            <!-- Dynamic review items -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Buttons -->
+      <div class="bg-stone-100 p-4 border-t border-stone-200 flex flex-wrap items-center justify-between gap-3 font-sans">
+        <button onclick="closeScorecardModal()" class="px-4 py-2 border border-stone-300 text-stone-700 rounded-lg hover:bg-stone-200 text-xs font-medium">
+          Close & Inspect Questions
+        </button>
+
+        <div class="flex items-center space-x-2">
+          <button onclick="retryIncorrectQuestions()" id="btnRetryWrong" class="px-4 py-2 bg-amber-600 text-white rounded-lg text-xs font-bold hover:bg-amber-700 shadow-sm disabled:opacity-40 disabled:cursor-not-allowed">
+            Retry Incorrect Only
+          </button>
+          <button onclick="resetQuizState(); closeScorecardModal();" class="px-4 py-2 bg-icai-navy text-amber-200 rounded-lg text-xs font-bold hover:bg-icai-dark shadow-sm">
+            Retake Full Test
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom Alert Toast (Replacing standard alert) -->
+  <div id="toastMessage" class="fixed bottom-6 right-6 z-50 bg-stone-900 text-white px-4 py-3 rounded-lg shadow-xl text-xs font-sans flex items-center space-x-2 border border-stone-700 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span id="toastIcon">ℹ️</span>
+    <span id="toastText">Message goes here</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="no-print bg-[#122543] text-stone-300 border-t border-icai-gold/40 py-6 text-center font-sans text-xs mt-10">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p class="font-serif italic text-amber-100/80">"Ya Esha Supteshu Jagarti — Eternal vigilance is the price of public confidence."</p>
+      <p class="text-stone-400">Chartered Accountancy Ethics Academic Simulator • Designed for ICAI Examination Preparation</p>
+    </div>
+  </footer>
+
+  <div id="quizLoginGate" class="fixed inset-0 z-[60] bg-icai-dark/85 backdrop-blur-sm flex items-center justify-center p-4" role="alertdialog" aria-modal="true" aria-labelledby="quizGateTitle" aria-describedby="quizGateMessage">
+    <div class="relative w-full max-w-lg overflow-hidden rounded-2xl border border-icai-gold/60 bg-icai-parchment shadow-2xl">
+      <div class="h-2 bg-gradient-to-r from-icai-gold via-amber-300 to-icai-gold"></div>
+      <div class="p-7 text-center sm:p-9">
+        <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border-2 border-icai-gold bg-icai-navy text-3xl text-amber-200 shadow-md" aria-hidden="true">🔐</div>
+        <p class="mb-2 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-icai-burgundy">Access required</p>
+        <h2 id="quizGateTitle" class="chapter-heading text-2xl font-bold text-icai-navy sm:text-3xl">Sign in to begin</h2>
+        <p id="quizGateMessage" class="mx-auto mt-3 max-w-sm text-sm leading-6 text-stone-600">Please sign in or create an account before entering the practice quiz. Your scores will be saved to your account.</p>
+        <div class="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+          <button onclick="openAuthModal('login')" class="rounded-lg bg-icai-navy px-6 py-3 font-sans text-sm font-bold text-amber-100 shadow-md transition hover:bg-icai-dark">Sign in</button>
+          <button onclick="openAuthModal('register')" class="rounded-lg border border-icai-gold bg-white px-6 py-3 font-sans text-sm font-bold text-icai-burgundy transition hover:bg-amber-50">Create an account</button>
+        </div>
+        <p class="mt-5 font-sans text-[11px] text-stone-500">ICAI Code of Ethics · Practice Exam</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="authModal" class="hidden fixed inset-0 z-[70] bg-slate-950/70 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="w-full max-w-md rounded-xl border border-icai-gold/50 bg-icai-parchment p-6 shadow-2xl font-sans">
+      <div class="mb-4 flex items-center justify-between"><h2 id="authTitle" class="text-xl font-bold text-icai-navy">Sign in</h2><button onclick="closeAuthModal()" class="text-2xl text-stone-500" aria-label="Close">&times;</button></div>
+      <form id="authForm" class="space-y-3">
+        <label id="authNameWrap" class="hidden block text-sm text-stone-700">Name<input id="authName" autocomplete="name" maxlength="80" class="mt-1 w-full rounded border border-stone-300 px-3 py-2" /></label>
+        <label class="block text-sm text-stone-700">Email<input id="authEmail" type="email" autocomplete="email" required class="mt-1 w-full rounded border border-stone-300 px-3 py-2" /></label>
+        <label class="block text-sm text-stone-700">Password<input id="authPassword" type="password" autocomplete="current-password" minlength="8" required class="mt-1 w-full rounded border border-stone-300 px-3 py-2" /></label>
+        <p id="authError" class="hidden text-sm text-rose-700" role="alert"></p>
+        <button id="authSubmit" class="w-full rounded-lg bg-icai-navy px-4 py-2.5 font-bold text-amber-100">Sign in</button>
+      </form>
+      <p class="mt-4 text-center text-sm text-stone-600"><span id="authModePrompt">New here?</span> <button id="authModeToggle" type="button" onclick="toggleAuthMode()" class="font-bold text-icai-burgundy underline">Create an account</button></p>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT QUIZ ENGINE ==================== -->
+  <script>
+    /* Question Bank derived directly from the user's syllabus notes and 10 questions */
+    const QUESTIONS = [
+        {
+            "id": 1,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "Fee Dependence & PIE Thresholds",
+            "question": "M/s Sterling & Associates, a chartered accountancy firm, has been the statutory auditor of Zenith Infotech Ltd. (a listed Public Interest Entity) for three consecutive financial years. The firm's total gross professional fees from Zenith Infotech Ltd. and its subsidiaries represent 34% of the firm's total annual fees across all clients for each of these three years. Evaluating this engagement under Section 410 of the Revised ICAI Code of Ethics (2020) and Council Guidelines, which of the following statements correctly states the ethical obligations and safeguards required?",
+            "options": [
+                "The firm is immediately disqualified by operation of law because fee dependence from any single corporate client exceeding 15% is an absolute bar that cannot be mitigated by safeguards.",
+                "Fee dependence rules apply exclusively to unlisted private enterprises; for listed entities, the Audit Committee's unanimous approval provides an automatic statutory exemption from all independence threats.",
+                "Because the fee dependence from a Public Interest Entity exceeds 15% for more than two consecutive years, the firm must disclose this matter to TCWG and apply safeguards—such as having a pre-issuance or post-issuance review performed by an external professional accountant not associated with the firm.",
+                "The firm may continue without any external safeguards provided it submits a written self-declaration to the Quality Review Board (QRB) certifying that professional fees were determined on an arm's-length basis."
+            ],
+            "correct": 2,
+            "ref": "ICAI Code of Ethics (2020), Volume I, Section 410 & Council Guidelines",
+            "explanation": "Under Section 410 of the Revised ICAI Code of Ethics (Volume I), where an audit client is a Public Interest Entity (PIE) and, for two consecutive years, the total gross fees from the client and its related entities exceed 15% of the total fees received by the firm, the firm must disclose this fact to Those Charged With Governance (TCWG). As a mandatory safeguard, the firm must have either: (a) a pre-issuance review of the second year's audit conducted by an external professional accountant, or (b) a post-issuance review. If fee dependence continues beyond 5 consecutive years, a pre-issuance review is mandatory."
+        },
+        {
+            "id": 2,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "Long Association & Cooling-Off Period",
+            "question": "CA. Raghav has completed five consecutive years as the Engagement Partner for the statutory audit of Apex Capital Ltd., a listed non-banking financial company (PIE). For the upcoming sixth financial year, the audit firm proposes that CA. Raghav step down from the role of Engagement Partner and instead act as the Engagement Quality Control Reviewer (EQCR) for the same client, while a junior partner signs the audit opinion. How does the Revised ICAI Code of Ethics (Section 540) evaluate this proposed rotation plan?",
+            "options": [
+                "The proposal is valid because rotating out of the primary engagement signatory role fully satisfies the statutory partner rotation mandate under Section 139(2) of the Companies Act, 2013.",
+                "The proposal violates the Code because during the mandatory cooling-off period, the former Engagement Partner is strictly prohibited from serving as the EQCR, consulting with the engagement team, or leading client relationship activities for that entity.",
+                "The proposal is permissible provided the client's Audit Committee approves the assignment of CA. Raghav as EQCR in its annual corporate governance report.",
+                "The cooling-off restriction applies only if CA. Raghav holds equity shares or debentures in Apex Capital Ltd. or its associate holding entities."
+            ],
+            "correct": 1,
+            "ref": "ICAI Code of Ethics (2020), Section 540 (Long Association of Personnel with an Audit Client)",
+            "explanation": "Under Section 540 of the Revised ICAI Code of Ethics, when an individual has served as the Key Audit Partner / Engagement Partner for a Public Interest Entity (PIE) for the maximum permissible tenure, they must undergo a mandatory cooling-off period. During this cooling-off period, the individual shall NOT: (1) be an engagement team member, (2) act as an Engagement Quality Control Reviewer (EQCR), (3) provide quality control, (4) consult with the engagement team regarding technical or industry-specific matters, or (5) lead or coordinate professional services provided to the client. Appointing the former engagement partner as EQCR compromises independence."
+        },
+        {
+            "id": 3,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "Second Opinions & Communication Protocol",
+            "question": "Omega Dynamics Ltd. has an ongoing technical dispute with its existing statutory auditor regarding the capitalization of ₹45 Crores of software research and development expenditures under Ind AS 38. The company's management approaches CA. Sneha, an independent practicing CA, requesting a formal second opinion supporting their capitalization treatment. Management explicitly demands that CA. Sneha must not contact the existing statutory auditor because of ongoing non-disclosure covenants. Under Section 321 of the Revised Code of Ethics, what is CA. Sneha's required course of action?",
+            "options": [
+                "CA. Sneha can provide the second opinion without contacting the existing auditor, provided she includes an express disclaimer that the opinion is based solely on management representations.",
+                "CA. Sneha must automatically provide the opinion supporting management's stance because second opinions on accounting standards are non-attest advisory services outside the purview of professional ethics.",
+                "CA. Sneha must accept the engagement and report the existing statutory auditor to the Disciplinary Committee for creating unjustified hurdles in technical accounting interpretation.",
+                "CA. Sneha must request client permission to communicate with the existing auditor; if the client refuses to permit such communication, she must decline to provide the proposed second opinion."
+            ],
+            "correct": 3,
+            "ref": "ICAI Code of Ethics (2020), Section 321 (Second Opinions)",
+            "explanation": "Under Section 321 of the Revised Code of Ethics, a professional accountant in public practice asked to provide a second opinion on the application of accounting, auditing, or reporting standards to a specific scenario faces threats to professional competence and due care if all relevant facts are not known. The practitioner must seek client permission to contact the existing accountant. If the client refuses to give permission, the accountant does not have all necessary facts and perspectives, and therefore must decline to issue the requested second opinion."
+        },
+        {
+            "id": 4,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "Non-Assurance Services & Valuation Prohibitions",
+            "question": "M/s K. R. & Co. is the statutory auditor of Surya Power Ltd., a public company. During the audit year, the Board requests the consulting division of M/s K. R. & Co. to undertake an independent valuation of patented solar cell technology and associated goodwill aggregating to ₹80 Crores for balance sheet incorporation, which will be subject to statutory audit by the same firm. The firm argues that the valuation will be performed by a separate valuation partner operating from a different branch with a distinct team. Analyzing this assignment under Section 603 of the Code of Ethics and Section 144 of the Companies Act, 2013:",
+            "options": [
+                "The assignment cannot be accepted because performing a valuation that involves significant subjectivity and has a material effect on the financial statements generates an insurmountable Self-Review Threat that no safeguard can reduce to an acceptable level.",
+                "The firm can validly undertake the valuation assignment provided the fee for the valuation does not exceed 100% of the statutory audit fee.",
+                "The assignment is permissible because maintaining separate partner engagement teams and establishing internal Chinese walls completely eliminates the Self-Review Threat.",
+                "Valuation services are only prohibited if the company is listed on an overseas international stock exchange; domestic public entities are exempt from non-assurance service curbs."
+            ],
+            "correct": 0,
+            "ref": "Section 144, Companies Act 2013 & ICAI Code of Ethics (2020), Section 603",
+            "explanation": "Under Section 603 of the Revised Code of Ethics and Section 144 of the Companies Act, 2013, an auditor is prohibited from providing valuation services to an audit client if the valuation involves a significant degree of subjectivity and has a material effect on the financial statements being audited. Such an engagement creates an insurmountable Self-Review Threat because the audit firm would be auditing its own valuation figures and assumptions. Establishing internal barriers ('Chinese walls') or using separate branch partners cannot reduce this threat to an acceptable level."
+        },
+        {
+            "id": 5,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "Inducements, Gifts & Hospitality Thresholds",
+            "question": "During the year-end statutory audit of Grand Monarch Hotels Ltd. (a premier five-star hospitality conglomerate), the Chief Executive Officer invites the entire 6-member audit engagement team and their families to a 4-night luxury weekend retreat at the company's presidential villa in Goa, with all charter flights, spa treatments, and banquets valued at ₹12 Lakhs fully hosted by the client. The CEO clarifies in writing that this is purely an expression of customary hospitality with zero intention to influence the audit opinion. Under Section 340 of the Revised Code of Ethics, which evaluation is correct?",
+            "options": [
+                "The audit team may accept the luxury hospitality if they disclose the commercial market value in the notes to accounts under related-party disclosures.",
+                "The team can accept provided the hospitality takes place after the statutory audit report has been formally signed and submitted to the stock exchanges.",
+                "The audit team must decline the offer because inducements and hospitality that are not trivial and inconsequential create severe Self-Interest and Familiarity Threats that cannot be eliminated by any safeguard.",
+                "The offer can be accepted if the audit firm matches the hospitality with an equivalent festive corporate gift hamper sent to the client's board of directors."
+            ],
+            "correct": 2,
+            "ref": "ICAI Code of Ethics (2020), Section 340 (Inducements, Including Gifts and Hospitality)",
+            "explanation": "Under Section 340 of the Revised Code of Ethics, a professional accountant shall not accept gifts or hospitality unless the value is trivial and inconsequential. Where hospitality is lavish, luxurious, or beyond customary modest business courtesies, it creates severe Self-Interest, Familiarity, and Intimidation threats. Even if the host asserts no improper intent, a reasonable and informed third party would conclude that independence and objectivity are compromised. Such offers must be declined immediately."
+        },
+        {
+            "id": 6,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "NOCLAR Framework & Overriding Confidentiality",
+            "question": "During the statutory audit of a listed pharmaceutical enterprise, the audit partner discovers conclusive documentary proof that the company has systematically bribed municipal drug procurement officers and doctored stability test data for life-saving antibiotics, risking severe public health disasters. The partner raises the issue with the Audit Committee, but they order him to destroy the memos and invoke Section 114 (Confidentiality). Under the Non-Compliance with Laws and Regulations (NOCLAR) provisions (Sections 260 and 360) of the Revised Code of Ethics, what are the auditor's legal and ethical duties?",
+            "options": [
+                "The duty of confidentiality under Section 114 is absolute; the auditor can only report to the police if served with a non-bailable search warrant issued by a criminal magistrate.",
+                "Because the entity is listed and the non-compliance causes substantial public harm, the duty of confidentiality is overridden by the public interest; if management fails to act, the auditor is permitted and required to disclose the matter to appropriate regulatory and enforcement authorities.",
+                "The auditor must immediately resign and withdraw from all public statements without stating any reasons to any authority, in order to avoid civil defamation litigation.",
+                "The auditor's sole duty under NOCLAR is to report the matter to the Institute's President within 24 hours, who alone possesses statutory authority to notify public health regulators."
+            ],
+            "correct": 1,
+            "ref": "ICAI Code of Ethics (2020), Sections 260 & 360 (NOCLAR Framework)",
+            "explanation": "Under the NOCLAR framework (Sections 260 & 360 of the Revised Code of Ethics) applicable to audits of listed entities, professional accountants are required to respond to identified or suspected non-compliance with laws and regulations. If management and Those Charged With Governance (TCWG) fail to take appropriate rectifying or remedial action regarding acts that cause substantial harm to investors, consumers, or the public, the auditor's duty of confidentiality is overridden by public interest. The auditor may disclose the violation to external regulatory and enforcement bodies without being guilty of professional misconduct."
+        },
+        {
+            "id": 7,
+            "chapter": 2,
+            "chapterTitle": "CA in Practice & KYC",
+            "tag": "Section 2(2) Deemed Practice & Multi-Disciplinary Partnerships",
+            "question": "CA. Vikram, holding a full-time Certificate of Practice (COP), enters into a Multi-Disciplinary Partnership (MDP) with a practicing Advocate of the Bar Council and a practicing Company Secretary (ICSI) under Regulation 53B of the Chartered Accountants Regulations, 1988. The multi-disciplinary firm proposes to bid for the statutory financial audit of a public limited company under Section 139 of the Companies Act, 2013, with the audit report to be signed by CA. Vikram on behalf of the multi-disciplinary firm. What is the legal and regulatory standing of this bid?",
+            "options": [
+                "The bid is entirely lawful because Regulation 53B permits multi-disciplinary partnerships to offer all professional services including statutory corporate audits.",
+                "The bid is valid only if the non-CA partners hold less than 26% of the profit-sharing ratio in the multi-disciplinary partnership firm.",
+                "The bid is invalid and prohibited because under Section 141(1) of the Companies Act, 2013, a firm can only be appointed as statutory auditor if all or majority of partners practicing in India are qualified CAs, and an MDP cannot undertake statutory assurance audits where non-CAs share audit profits.",
+                "The bid is valid provided the Advocate partner submits an affidavit waiving their right to cross-examine company directors during court proceedings."
+            ],
+            "correct": 2,
+            "ref": "Section 141(1), Companies Act 2013 & ICAI MDP Guidelines under Regulation 53B",
+            "explanation": "While Regulation 53B allows Chartered Accountants to form Multi-Disciplinary Partnerships (MDPs) with specified professionals (Advocates, CS, CMA) for consulting and non-assurance services, Section 141(1) of the Companies Act, 2013 explicitly restricts statutory audit appointments. A firm can be appointed statutory auditor only if only partners who are Chartered Accountants are authorized to act and sign on behalf of the firm. MDPs with non-CA partners cannot undertake statutory assurance engagements under the Companies Act, 2013."
+        },
+        {
+            "id": 8,
+            "chapter": 2,
+            "chapterTitle": "CA in Practice & KYC",
+            "tag": "Mandatory KYC Guidelines & UBO Verification",
+            "question": "A practicing CA firm accepts an engagement to conduct tax audit and certify cross-border inward remittances for a private limited company where 92% of share capital is held by an offshore shell corporation registered in the Cayman Islands. The firm obtains the Indian company's PAN and certificate of incorporation, but deliberately avoids identifying or verifying the Ultimate Beneficial Owners (UBOs) holding effective control in the Cayman entity, relying exclusively on a generalized management letter. Under ICAI Council's Mandatory KYC Guidelines, what are the regulatory consequences?",
+            "options": [
+                "The CA firm is not liable because KYC guidelines are merely advisory recommendations lacking disciplinary enforceability.",
+                "KYC guidelines apply only to public sector bank statutory branch audits and have no applicability to private limited companies or tax audit assignments.",
+                "The CA firm is protected from liability because an auditor is entitled to rely on management representations as per SA 580 without independent verification.",
+                "The firm is guilty of professional misconduct under Clause (1) of Part II of the Second Schedule for contravening mandatory Council Guidelines, as KYC norms strictly mandate verifying the identity of the Ultimate Beneficial Owners (UBOs)."
+            ],
+            "correct": 3,
+            "ref": "ICAI Council Mandatory KYC Guidelines & Clause (1), Part II, Second Schedule",
+            "explanation": "Under the mandatory KYC Norms issued by the ICAI Council, a member in practice is required to identify and verify the identity of clients, including their Ultimate Beneficial Owners (UBOs), for corporate clients with complex or offshore holding structures. Failure to comply with mandatory Council KYC Guidelines constitutes professional misconduct under Clause (1) of Part II of the Second Schedule to the Chartered Accountants Act, 1949."
+        },
+        {
+            "id": 9,
+            "chapter": 2,
+            "chapterTitle": "CA in Practice & KYC",
+            "tag": "Clause (1), (2) & (3), Part I, First Schedule",
+            "question": "CA. Manan enters into a written agreement with M/s QuickLoan Fintech Pvt. Ltd., an online loan aggregator. Under the contract, QuickLoan refers micro-enterprise clients requiring project finance certifications to CA. Manan, and CA. Manan pays QuickLoan a 15% 'administrative processing fee' on all professional fees collected from referred clients. Simultaneously, CA. Manan pays 20% of his firm's annual net audit profits as a pension to the widow of his deceased founding partner in accordance with the original partnership deed. Evaluating these arrangements under the First Schedule to the CA Act, 1949:",
+            "options": [
+                "Paying the 15% referral fee to QuickLoan constitutes professional misconduct under Clause (1) of Part I of the First Schedule, whereas paying a share of profits/pension to the widow of a deceased partner is legally permissible under the proviso to Clause (1) and Council guidelines.",
+                "Both payments constitute professional misconduct because any fee-sharing with non-members is completely illegal under all circumstances.",
+                "Both payments are legally valid because commercial referral commissions are recognized under the Indian Contract Act, 1872.",
+                "The payment to the deceased partner's widow is illegal fee-sharing, whereas the payment to QuickLoan is an exempt digital platform marketing expense."
+            ],
+            "correct": 0,
+            "ref": "Clause (1), Part I, First Schedule, CA Act 1949 & Council Statement on Goodwill",
+            "explanation": "Under Clause (1) of Part I of the First Schedule, a member in practice is guilty of misconduct if they share fees or profits with any person other than a member or partner. However, under the long-standing Council Statement and judicial precedents, paying a share of fees/profits or annuity to the widow or legal representative of a deceased partner is permitted if provided for in the partnership deed. Conversely, paying a referral commission or processing fee to an aggregator like QuickLoan directly violates Clause (1)."
+        },
+        {
+            "id": 10,
+            "chapter": 2,
+            "chapterTitle": "CA in Practice & KYC",
+            "tag": "Clause (6), Part I, First Schedule & Website Guidelines",
+            "question": "CA. Tanvi establishes an official website for her proprietary audit firm. To increase visibility, she pays a digital advertising agency to run Google Search Ads targeting keywords such as 'Best Tax Auditor in Mumbai' and 'Cheapest Statutory Audit Services'. Furthermore, her website displays the logos and names of 15 prominent multinational clients without their written consent, accompanied by a banner claiming '100% Tax Demand Relief Guaranteed'. How are these digital marketing practices classified under the CA Act, 1949?",
+            "options": [
+                "The website is entirely compliant because digital advertising on search engines is permitted under the revised E-Commerce Directive of 2022.",
+                "Tanvi is guilty of professional misconduct under Clauses (6) and (7) of Part I of the First Schedule for soliciting clients via 'push' advertising, making comparative/guaranteed claims, and publishing client names without regulatory sanction.",
+                "The website is compliant provided the firm registers its domain name with the ICAI Digital Portal within 30 days of launch.",
+                "Only the phrase 'Cheapest Statutory Audit Services' is misconduct; running paid Google Search Ads and claiming guaranteed tax relief are permitted forms of public education."
+            ],
+            "correct": 1,
+            "ref": "Clause (6) & (7), Part I, First Schedule & Council Guidelines on Website Maintenance",
+            "explanation": "Under Clause (6) (soliciting clients) and Clause (7) (advertising attainments) of Part I of the First Schedule, read with Council Guidelines on Website Maintenance: (1) Websites must operate strictly on a 'pull' model; paid 'push' advertising, sponsored search engine ads, and keyword bidding are prohibited. (2) Claiming superiority or guaranteed outcomes ('Best Tax Auditor', '100% Relief Guaranteed') is banned. (3) Listing client names and fees without specific Council guidelines or client permission is strictly forbidden."
+        },
+        {
+            "id": 11,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Clause (11), Part I, First Schedule & Regulation 190A",
+            "question": "CA. Harish, a practicing Chartered Accountant, undertakes three independent roles during the year without obtaining specific prior approval from the ICAI Council: (i) Acting as an Independent Director in an unlisted FMCG company; (ii) Acting as a sleeping partner in an ancestral family textile manufacturing firm; and (iii) Becoming a Whole-Time Managing Director in a retail fintech startup. Evaluating CA. Harish's conduct under Clause (11) of Part I of the First Schedule and Regulation 190A:",
+            "options": [
+                "CA. Harish is guilty of misconduct for all three positions because a CA holding a full-time COP cannot engage in any other business or directorship whatsoever.",
+                "None of the three positions constitute misconduct because Council grants blanket general permission for all commercial activities not exceeding ₹50 Lakhs annual turnover.",
+                "Only the sleeping partnership requires prior Council permission; directorships and Managing Director roles are covered under blanket general permission.",
+                "Acting as an Independent Director and a sleeping partner are covered under Council's General Permission; however, assuming the post of Whole-Time Managing Director without specific prior Council permission constitutes professional misconduct under Clause (11)."
+            ],
+            "correct": 3,
+            "ref": "Clause (11), Part I, First Schedule & Regulation 190A (General & Specific Permission)",
+            "explanation": "Under Regulation 190A and Council Guidelines pursuant to Clause (11) of Part I of the First Schedule: (a) General Permission is granted to members in practice to act as a Director Simpliciter / Independent Director (attending board meetings without executive duties) and to be a sleeping partner in a family firm. (b) Specific Prior Permission of the Council is mandatory before accepting any executive or full-time position such as Managing Director or Whole-time Director. Acting as a Managing Director without prior permission is professional misconduct."
+        },
+        {
+            "id": 12,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Clause (7), Part I, First Schedule & Specialized Designations",
+            "question": "CA. Siddharth qualifies as an Insolvency Professional (IP) registered with IBBI and also earns a Certified Information Systems Auditor (CISA) credential from ISACA. On his professional CA visiting cards, official letterhead, and email signatures, he prints: 'CA. Siddharth, FCA, CISA, Insolvency Professional, Registered Valuer, Forensic Audit & Tax Specialist'. How does this representation stand under Clause (7) of Part I of the First Schedule?",
+            "options": [
+                "Siddharth is guilty of professional misconduct under Clause (7) of Part I of the First Schedule for advertising professional attainments, using designations other than Chartered Accountant on CA stationery, and displaying specialization claims.",
+                "The visiting card is fully permissible because all designations represent statutory recognitions conferred by regulatory authorities.",
+                "Misconduct applies only to the term 'CISA'; all other designations are authorized for combined display on a single visiting card.",
+                "Displaying multiple designations is allowed provided the font size of 'Chartered Accountant' is twice the size of any other title."
+            ],
+            "correct": 0,
+            "ref": "Clause (7), Part I, First Schedule & Council Guidelines on Visiting Cards and Designations",
+            "explanation": "Under Clause (7) of Part I of the First Schedule, a member in practice is prohibited from using any designation or description other than Chartered Accountant on professional stationery and visiting cards, except degrees of statutory universities or recognized titles. While a member can act as an Insolvency Professional or Registered Valuer, Council guidelines mandate that separate stationery/visiting cards must be used when acting in those specific capacities. Printing 'Forensic Audit & Tax Specialist' and multiple combined designations on a CA card violates Clause (7)."
+        },
+        {
+            "id": 13,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Clause (4), Part I, Second Schedule & Substantial Interest",
+            "question": "CA. Aniruddh is appointed statutory auditor of Radiant Chemicals Ltd. for FY 2024-25. Aniruddh's spouse owns 24% of the paid-up equity share capital of Radiant Chemicals Ltd. with full voting rights. Aniruddh asserts that because he personally does not own a single share and his spouse acquired the shares through her independent inheritance, his objectivity is unaffected, and he issues an unqualified audit report. Under Clause (4) of Part I of the Second Schedule to the CA Act, 1949, what is the ethical determination?",
+            "options": [
+                "CA. Aniruddh is not guilty because Section 2(77) of the Companies Act, 2013 does not classify a spouse's ancestral inheritance as an auditor disqualification.",
+                "Aniruddh can audit the company provided he discloses his spouse's shareholding in the 'Emphasis of Matter' paragraph of the independent audit report.",
+                "CA. Aniruddh is guilty of professional misconduct under Clause (4) of Part I of the Second Schedule for expressing an opinion on financial statements of an enterprise in which he or his relative has a substantial interest.",
+                "Aniruddh is guilty only if the company suffers a cash loss or defaults on bank borrowings during the financial year under audit."
+            ],
+            "correct": 2,
+            "ref": "Clause (4), Part I, Second Schedule & Appendix 9 to CA Regulations (Substantial Interest)",
+            "explanation": "Under Clause (4) of Part I of the Second Schedule, a member in practice is guilty of professional misconduct if they express an opinion on financial statements of any business or enterprise in which they, their partner, or their relative has a substantial interest. For this clause, 'relative' includes spouse, and 'substantial interest' arises when the member or relatives beneficially hold 20% or more of the voting power. A spouse holding 24% voting power creates a statutory substantial interest, making the expression of an audit opinion serious professional misconduct."
+        },
+        {
+            "id": 14,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Clause (7) & (8), Part I, Second Schedule (Gross Negligence)",
+            "question": "During the statutory branch audit of an urban public sector bank, the branch auditor, CA. Gaurav, fails to inspect original title deeds or obtain external third-party balance confirmations for 8 large commercial loan accounts totaling ₹32 Crores. CA. Gaurav relies solely on a handwritten certificate from the Branch Manager asserting that the original security documents are lodged in the zonal safe deposit vault. Six months later, the loans turn out to be fictitious borrower accounts created by branch staff. Under the Second Schedule to the CA Act, 1949, how is CA. Gaurav's conduct judged?",
+            "options": [
+                "CA. Gaurav is fully exonerated because an auditor is a watchdog and not a bloodhound, as established in the Kingston Cotton Mill case.",
+                "CA. Gaurav is guilty of professional misconduct under Clauses (7) and (8) of Part I of the Second Schedule for failing to exercise due diligence, being grossly negligent in the conduct of professional duties, and failing to obtain sufficient information to warrant expression of opinion.",
+                "CA. Gaurav is guilty only under the Indian Penal Code for criminal conspiracy, but is immune from ICAI disciplinary action as branch audits are secondary assignments.",
+                "CA. Gaurav can only be held guilty if the Central Bureau of Investigation proves that he received financial kickbacks from the bank branch manager."
+            ],
+            "correct": 1,
+            "ref": "Clause (7) & (8), Part I, Second Schedule, CA Act 1949 & SA 500/SA 505",
+            "explanation": "Under Clause (7) (gross negligence and failure to exercise due diligence) and Clause (8) (failure to obtain sufficient information to warrant expression of an opinion) of Part I of the Second Schedule, an auditor is bound to comply with Standards on Auditing (SAs). Failing to inspect primary collateral documents or obtain independent third-party confirmations for material advance balances, and blindly relying on management certificates, constitutes gross negligence."
+        },
+        {
+            "id": 15,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Part II, Second Schedule (Members in Employment)",
+            "question": "CA. Rajesh is employed as the Financial Controller of a listed telecom company. Under executive pressure from the Managing Director to meet quarterly market guidance, Rajesh prepares and signs quarterly financial statements knowingly concealing ₹60 Crores in statutory spectrum license liabilities, which transforms an operational loss into an artificial profit. Rajesh argues in his defense that he had expressed verbal objections to the MD and acted purely as a salaried employee following superior corporate orders. Under Part II of the Second Schedule to the CA Act, 1949, which outcome applies?",
+            "options": [
+                "Rajesh is immune from ICAI disciplinary proceedings because disciplinary jurisdiction under the CA Act applies solely to members holding a Certificate of Practice (COP).",
+                "Rajesh is protected from misconduct charges because corporate employees owe absolute master-servant contractual loyalty under labor law.",
+                "Rajesh is guilty of professional misconduct under Clauses (1), (3), and (4) of Part II of the Second Schedule for being grossly negligent, failing to disclose known material facts, and not reporting material misstatements in financial statements signed by him.",
+                "Rajesh is guilty only of First Schedule misconduct, which can only be penalized with a minor verbal reprimand by the Board of Discipline."
+            ],
+            "correct": 2,
+            "ref": "Part II, Second Schedule, Clauses (1), (3) & (4), Chartered Accountants Act, 1949",
+            "explanation": "Part II of the Second Schedule applies specifically to members of the Institute in employment. Under Clauses (1), (2), (3), and (4), a member in employment is guilty of professional misconduct if they contravene the Act or regulations, are grossly negligent, fail to disclose a material fact known to them in financial statements, or fail to report a material misstatement. Obeying a superior's command does not exonerate a professional accountant from liability for signing knowingly misleading statements."
+        },
+        {
+            "id": 16,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Clause (10), Part I, First Schedule & Regulation 192 (Contingent Fees)",
+            "question": "CA. Divya accepts four distinct client engagements with differentiated fee structures: (i) Acting as an Insolvency Resolution Professional (IRP) where fees are based on a percentage of asset realizations approved by the CoC; (ii) Acting as an Arbitrator in a contract dispute where fees are determined as a percentage of the claim awarded; (iii) Representing a corporate assessee before the Income Tax Appellate Tribunal (ITAT) for a fee of 8% of the total tax relief secured; and (iv) Acting as liquidator under the Companies Act for a percentage of realization. Which of these fee arrangements constitutes professional misconduct under Clause (10) of Part I of the First Schedule?",
+            "options": [
+                "Engagement (iii) constitutes professional misconduct, whereas engagements (i), (ii), and (iv) are legally exempted under Regulation 192 and Council guidelines.",
+                "All four fee arrangements constitute professional misconduct because percentage-based fees are illegal across all attest and non-attest services.",
+                "Engagements (i) and (iv) are misconduct, while contingency fees for ITAT representations and arbitration claims are fully permissible.",
+                "Only engagement (ii) is misconduct; charging success-based percentage fees before tax appellate bodies is an approved practice under Regulation 192."
+            ],
+            "correct": 0,
+            "ref": "Clause (10), Part I, First Schedule & Regulation 192 of CA Regulations, 1988",
+            "explanation": "Under Clause (10) of Part I of the First Schedule, charging fees based on a percentage of profits or contingent upon findings or results is professional misconduct. Regulation 192 provides narrow exceptions, including acting as a receiver, liquidator, valuer, insolvency professional under IBC, or arbitrator. Charging a success fee or percentage of tax saved before the ITAT or tax authorities is strictly prohibited and constitutes professional misconduct."
+        },
+        {
+            "id": 17,
+            "chapter": 4,
+            "chapterTitle": "Disciplinary Procedures & ESB",
+            "tag": "Disciplinary Machinery & Bifurcated Jurisdiction",
+            "question": "A formal complaint is lodged against CA. Vandana containing dual allegations: (1) Soliciting clients through mass WhatsApp broadcasting (falling under Part I of the First Schedule); and (2) Certifying financial statements without examining accounting books (falling under Part I of the Second Schedule). The Director (Discipline) forms a prima facie opinion that CA. Vandana is guilty of both allegations. Under Sections 21, 21A, and 21B of the Chartered Accountants Act, 1949, how will this disciplinary inquiry proceed?",
+            "options": [
+                "The Board of Discipline will hear both charges simultaneously because First Schedule offenses take precedence over Second Schedule offenses.",
+                "Because the complaint involves offenses falling under both the First and Second Schedules, the entire matter must be placed before the Disciplinary Committee under Section 21B.",
+                "The complaint must be split into two separate proceedings: the Board of Discipline hears the First Schedule charge, while the High Court hears the Second Schedule charge.",
+                "The Director (Discipline) has final summary powers to dismiss the First Schedule charge and impose an administrative fine without referring to any committee."
+            ],
+            "correct": 1,
+            "ref": "Sections 21, 21A & 21B, Chartered Accountants Act, 1949",
+            "explanation": "Under Section 21(2), 21A, and 21B of the CA Act, 1949, when the Director (Discipline) forms a prima facie opinion of guilt: (a) if the misconduct falls purely under the First Schedule, it is referred to the Board of Discipline; (b) if the misconduct falls under the Second Schedule OR under BOTH the First and Second Schedules, the matter must be referred to the Disciplinary Committee under Section 21B. The Disciplinary Committee possesses plenary jurisdiction over composite complaints."
+        },
+        {
+            "id": 18,
+            "chapter": 4,
+            "chapterTitle": "Disciplinary Procedures & ESB",
+            "tag": "Statutory Appellate Authority & Limitation Period",
+            "question": "The Disciplinary Committee of the ICAI passes an adverse order under Section 21B against CA. Mohan, ordering the removal of his name from the Register of Members for a period of three years and imposing a penalty of ₹4,00,000 for gross negligence. CA. Mohan intends to challenge this penalty. What is the statutory appellate forum and limitation period provided under the Chartered Accountants Act, 1949?",
+            "options": [
+                "An appeal must be filed before the National Company Law Appellate Tribunal (NCLAT) within 30 days of the order.",
+                "An appeal must be filed directly before the Supreme Court of India via a Special Leave Petition (SLP) within 45 days.",
+                "The member has no statutory right of appeal under the Act; he can only submit a mercy petition to the Council President.",
+                "An appeal lies to the Appellate Authority constituted under Section 22A of the Act, and must be filed within 90 days from the date on which the order is communicated."
+            ],
+            "correct": 3,
+            "ref": "Section 22G, Chartered Accountants Act, 1949 (Appeals to Appellate Authority)",
+            "explanation": "Under Section 22G of the Chartered Accountants Act, 1949, any member of the Institute aggrieved by any order of the Board of Discipline or the Disciplinary Committee imposing any penalty may prefer an appeal to the Appellate Authority constituted under Section 22A within ninety (90) days from the date on which the order is communicated to them."
+        },
+        {
+            "id": 19,
+            "chapter": 4,
+            "chapterTitle": "Disciplinary Procedures & ESB",
+            "tag": "ESB Rulings on Indebtedness vs Statutory Limits",
+            "question": "CA. Pranav is the statutory auditor of Zenith Trading Pvt. Ltd. During the audit year, CA. Pranav purchases consumer electronics worth ₹2,50,000 on credit from the client for personal use, which remains unpaid for 65 days. The management also leases a commercial office space to CA. Pranav's audit firm at a concessional rent of ₹10,000 per month against the prevailing market commercial rental value of ₹75,000 per month. How is this situation analyzed under the ICAI Council Guidelines on Indebtedness and ESB Rulings?",
+            "options": [
+                "CA. Pranav is guilty of misconduct because ICAI Council Guidelines prohibit client indebtedness exceeding ₹1,00,000, and leasing office premises at 87% below market value creates an impermissible commercial Self-Interest Threat compromising independence.",
+                "CA. Pranav is completely compliant because Section 141(3)(d)(ii) of the Companies Act, 2013 permits indebtedness up to ₹5,00,000, which overrides ICAI Council guidelines.",
+                "The concessional rent is considered a standard commercial volume discount; only loans in hard cash are evaluated under independence norms.",
+                "Indebtedness guidelines apply exclusively to audit partners holding more than 5% equity shares in the audited company."
+            ],
+            "correct": 0,
+            "ref": "ICAI Council Guidelines on Indebtedness (Chapter IX) & Code of Ethics Section 520",
+            "explanation": "While Section 141(3)(d)(ii) of the Companies Act sets a statutory disqualification ceiling of ₹5,00,000, the ICAI Council Guidelines on Indebtedness establish a stricter standard: a member in practice compromises their independence if indebted to the client for an amount exceeding ₹1,00,000. Furthermore, renting commercial property at substantial discounts from an audit client creates a significant commercial relationship and an insurmountable Self-Interest Threat."
+        },
+        {
+            "id": 20,
+            "chapter": 4,
+            "chapterTitle": "Disciplinary Procedures & ESB",
+            "tag": "ESB Rulings on Conflicting Concurrent Engagements",
+            "question": "An audit firm, M/s Keystone & Partners, is evaluating three prospective assignments for the same financial year: (1) Acting as Statutory Central Auditor and Concurrent Auditor of the same public sector bank; (2) Acting as Internal Auditor and Statutory Auditor of the same listed corporate entity; and (3) Acting as Internal Auditor and Tax Auditor under Section 44AB of the Income-tax Act, 1961 for the same manufacturing company. According to Ethical Standards Board (ESB) decisions and Council Guidelines, which assignment is PERMISSIBLE?",
+            "options": [
+                "Assignment (1) is permissible, whereas assignments (2) and (3) are strictly prohibited.",
+                "Assignment (2) is permissible with Audit Committee approval; assignments (1) and (3) are banned.",
+                "Assignment (3) is permissible; assignments (1) and (2) are strictly prohibited by ESB and statutory guidelines.",
+                "None of the assignments are permissible because any dual engagement for the same entity violates the fundamental principle of objectivity."
+            ],
+            "correct": 2,
+            "ref": "Ethical Standards Board (ESB) Clarifications & Section 144 of Companies Act 2013",
+            "explanation": "According to clear rulings by the Ethical Standards Board (ESB) and Council Guidelines: (1) A statutory auditor of a bank cannot simultaneously be its concurrent auditor. (2) Under Section 144 of Companies Act 2013 and Council guidelines, an internal auditor cannot be the statutory auditor of the same entity. (3) However, the ICAI Council has explicitly clarified that an Internal Auditor CAN conduct the Tax Audit under Section 44AB of the Income-tax Act, 1961. Therefore, only Assignment (3) is permissible."
+        },
+        {
+            "id": 21,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "Case Study: Resignation, ADT-3 & Predecessor Fees",
+            "question": "CA. Nitin is the statutory auditor of Horizon Infra Ltd., a listed public company. During the audit for FY 2024-25, CA. Nitin uncovers fraudulent round-tripping of funds aggregating to ₹85 Crores via unlisted promoter-owned entities. When CA. Nitin insists on reporting this under Section 143(12) and issuing an adverse audit report, the Board unlawfully withholds his undisputed audit fees of ₹18 Lakhs for the prior financial year and threatens personal physical harm. In distress, CA. Nitin tenders an immediate resignation letter on 15th February 2025 without filing Form ADT-3 or issuing the limited review report for the quarter ended 31st December 2024. The Board immediately appoints CA. Prakash to fill the casual vacancy. Prakash accepts the appointment within 24 hours without communicating with Nitin. Analyzing the conduct of BOTH practitioners under the CA Act, 1949 and relevant regulations:",
+            "options": [
+                "Neither practitioner has committed misconduct: Nitin faced an intimidation threat justifying immediate resignation, and Prakash was under a commercial duty to prevent an audit vacuum.",
+                "Both practitioners have committed grave violations: Nitin violated Section 140(2) of Companies Act and SEBI/ICAI Resignation Guidelines by failing to file ADT-3 and omitting the Q3 review report; Prakash violated Clause (8) of Part I of First Schedule and Council Guidelines for accepting appointment without prior written communication and while undisputed audit fees of the predecessor remained unpaid.",
+                "Only Nitin is guilty of misconduct for abandoning a listed entity audit mid-way; Prakash has no legal duty toward a resigned predecessor whose fees are in dispute.",
+                "Only Prakash is guilty because Nitin's failure to file ADT-3 is a minor technical corporate filing lapse handled solely by the ROC under MCA compounding."
+            ],
+            "correct": 1,
+            "ref": "Section 140(2), Companies Act 2013, Clause (8), First Schedule & Council Guidelines (Chapter VII)",
+            "explanation": "This integrated case tests dual professional misconduct: (1) CA. Nitin violated statutory requirements: under Section 140(2), an auditor who resigns must file Form ADT-3 within 30 days stating reasons. Under SEBI/ICAI circulars on resignation, an auditor resigning after 45 days of a quarter must issue the limited review report before resigning. (2) CA. Prakash committed professional misconduct under Clause (8) of Part I of the First Schedule by failing to communicate in writing with the retiring auditor, and under Chapter VII of Council Guidelines by accepting an audit where undisputed fees of the predecessor remain unpaid."
+        },
+        {
+            "id": 22,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Case Study: Audit Tenders, Predatory Bidding & Debt Syndication",
+            "question": "A State Government Infrastructure Corporation floats an e-tender for the statutory audit of a highway project SPV. The tender does not specify any minimum audit fee floor. CA. Mayank submits a commercial bid quoting a token fee of ₹1 (Rupee One), with the undisclosed intent to win the account and subsequently cross-sell profitable debt syndication and project advisory services. After winning the tender, CA. Mayank enters into a side-agreement with an unregistered financial broker to share 30% of all debt syndication commissions generated from the SPV's financial lenders. How does CA. Mayank's conduct fare under the CA Act, 1949?",
+            "options": [
+                "Quoting ₹1 is permissible under open market commercial freedom, and debt syndication fees are non-assurance consulting profits exempt from fee-sharing restrictions.",
+                "The bid of ₹1 is valid if approved by the State Comptroller and Auditor General (CAG); fee sharing is allowed with financial brokers under SEBI merchant banking norms.",
+                "CA. Mayank is guilty under Clause (7) of the Second Schedule for gross negligence, but quoting ₹1 in tenders is an established professional marketing technique.",
+                "CA. Mayank is guilty of professional misconduct under ICAI Council Guideline No. 1-CA(7)/03/2016 for submitting a predatory tender quote below reasonable cost where no minimum fee is prescribed, and under Clause (1) of Part I of the First Schedule for sharing professional fees with an unqualified non-member."
+            ],
+            "correct": 3,
+            "ref": "ICAI Council Guidelines on Tendering (2016) & Clause (1), Part I, First Schedule",
+            "explanation": "Under ICAI Council Guideline No. 1-CA(7)/03/2016 on Tendering, members are prohibited from responding to tenders where minimum audit fees are not specified or quoting unrealistic, predatory fees (such as ₹1) that undermine professional standards and independence. Furthermore, entering into a side-agreement to share fees or commissions with an unregistered financial broker (a non-member) violates Clause (1) of Part I of the First Schedule to the Chartered Accountants Act, 1949."
+        },
+        {
+            "id": 23,
+            "chapter": 1,
+            "chapterTitle": "Fundamental Principles and Threats",
+            "tag": "Case Study: International Networks & Royalty Remittances",
+            "question": "M/s Prime & Co., an Indian chartered accountancy partnership firm, joins a global network named 'Omni International Alliance' (OIA). Under the network affiliation agreement, Prime & Co. prints 'Prime & Co., Member Firm of Omni International Alliance, the World's Preeminent Audit Network' on all audit certificates and letterheads. Furthermore, Prime & Co. remits a mandatory annual 'Global Brand & Referral Royalty' equal to 7% of its total gross statutory audit billings to the network's holding company in Zurich, Switzerland. Analyzing this network arrangement under the Revised ICAI Network Guidelines (2021) and the CA Act, 1949:",
+            "options": [
+                "The firm is guilty of professional misconduct under Clause (1) of Part I of the First Schedule for sharing statutory audit fees/profits with an overseas entity as a brand royalty, and under Clause (7) for making superlative publicity claims ('World's Preeminent Audit Network').",
+                "The arrangement is entirely legal because international network agreements registered with the World Bank supersede domestic ICAI Council guidelines.",
+                "Paying an annual brand royalty is permitted under foreign exchange laws, provided the remittance receives prior approval from the Reserve Bank of India.",
+                "Prime & Co. is compliant provided all partners of the Indian firm hold valid European Union statutory audit licenses."
+            ],
+            "correct": 0,
+            "ref": "ICAI Network Guidelines (2021) & Clauses (1) & (7), Part I, First Schedule",
+            "explanation": "Under the ICAI Guidelines on Networking and Clause (1) of Part I of the First Schedule, an Indian audit firm cannot pay any percentage of its audit fees, profits, or turnover as 'royalty', 'brand fee', or 'referral kickback' to any entity, domestic or international. Cost reimbursement for actual shared technology/training infrastructure is permitted, but profit/revenue-sharing royalties violate Clause (1). Additionally, asserting superlative claims such as 'World's Preeminent Audit Network' on stationery directly violates Clause (7)."
+        },
+        {
+            "id": 24,
+            "chapter": 3,
+            "chapterTitle": "Schedules to the Act",
+            "tag": "Case Study: Clause (8) & Proof of Written Delivery",
+            "question": "CA. Jayesh is appointed as statutory auditor of Vertex Engineering Ltd. for FY 2024-25 in place of the retiring auditor, CA. Dilip. On 18th July at 11:30 PM, Jayesh sends an email from his personal Gmail account to Dilip's generic firm contact email address inquiring whether Dilip has any professional objections. On 19th July at 10:00 AM (just 10.5 hours later), without verifying whether the email was delivered, opened, or read, Jayesh formally accepts the appointment and enters the client's premises to commence the audit. Dilip later demonstrates that the email landed in his spam folder and that he had strong objections involving management's refusal to record unbilled vendor liabilities. How is CA. Jayesh's conduct evaluated under Clause (8) of Part I of the First Schedule?",
+            "options": [
+                "Jayesh is fully protected because an email constitutes a valid electronic record under the Information Technology Act, 2000, and no waiting period is mandated by law.",
+                "Jayesh is guilty of professional misconduct under Clause (8) of Part I of the First Schedule because communication must be sent via Registered Post AD, Speed Post with proof of delivery, or through verified member portal channels allowing a reasonable time to respond before accepting appointment.",
+                "Jayesh is guilty only if CA. Dilip files an injunction suit before the City Civil Court within 15 days of the appointment.",
+                "The appointment is valid because the retiring auditor's failure to check spam filters constitutes contributory negligence exonerating the incoming auditor."
+            ],
+            "correct": 1,
+            "ref": "Clause (8), Part I, First Schedule, CA Act 1949 & Council Guidelines on Communication",
+            "explanation": "Under Clause (8) of Part I of the First Schedule and established Council Guidelines, an incoming auditor must communicate with the retiring auditor in a manner that provides positive proof of delivery (such as Registered Post Acknowledgement Due, Speed Post with tracking proof, by hand against written acknowledgment, or verified official member portal email). Furthermore, the incoming auditor must allow a reasonable time (typically at least 7 days) for the predecessor to respond before accepting the assignment. Sending a midnight email and accepting within 10 hours without proof of delivery is professional misconduct."
+        },
+        {
+            "id": 25,
+            "chapter": 4,
+            "chapterTitle": "Disciplinary Procedures & ESB",
+            "tag": "Case Study: Tax Audit Ceilings & Unauthorized DSC Usage",
+            "question": "M/s Precision & Co. is a partnership firm with three partners: CA. Roy, CA. Sen, and CA. Das. During FY 2024-25, the firm uploads 210 tax audit reports under Section 44AB of the Income-tax Act, 1961. The individual partner signing distribution reveals: CA. Roy signed 95 reports; CA. Sen signed 85 reports; and CA. Das (who was hospitalised for 9 months) had his Digital Signature Certificate (DSC) and portal credentials used by CA. Roy under an informal internal Power of Attorney to sign the remaining 30 reports. The firm argues that the overall firm limit is 180 (60 × 3) and that the 30 audits were signed on behalf of Partner Das. Evaluating this conduct under the CA Act, 1949 and Council Guidelines:",
+            "options": [
+                "The firm's defense is valid because partnership firms are entitled to pool partner limits, and a Power of Attorney legally delegates audit signing authority.",
+                "Only the excess 30 audits above 180 are invalid, which can be regularized by paying a nominal administrative fee to the Income Tax Department.",
+                "All three partners are liable: CA. Roy and CA. Sen violated the individual partner ceiling of 60 tax audits under Council Guidelines (misconduct under Clause (1), Part II, Second Schedule), and CA. Roy's use of CA. Das's DSC constitutes grave misconduct under Clause (1) & (2) of Part I of Second Schedule and the IT Act.",
+                "The ceiling of 60 tax audits applies exclusively to corporate tax audits; manufacturing partnership firms under Section 44AB are completely exempt from audit limits."
+            ],
+            "correct": 2,
+            "ref": "Council Guidelines No. 1-CA(7)/02/2008 & Clauses (1) & (2), Part I, Second Schedule",
+            "explanation": "Under ICAI Council Guidelines No. 1-CA(7)/02/2008 (Tax Audit Ceiling): (1) A member in practice cannot sign more than 60 tax audit reports under Section 44AB in a financial year. In a firm, audits can be distributed, but no individual partner can exceed 60 audits. Roy (95) and Sen (85) directly violated this mandatory ceiling, making them guilty of misconduct under Clause (1) of Part II of the Second Schedule. (2) Digital Signature Certificates (DSC) are personal statutory credentials that cannot be delegated via Power of Attorney. Using another partner's DSC constitutes severe misconduct under Clause (1) (permitting another to practice in his name) and Clause (2) of Part I of Second Schedule."
+        }
+    ];
+
+    /* App State */
+    let activeFilter = 'ALL'; // 'ALL', 1, 2, 3, 4
+    let currentFilteredQuestions = [...QUESTIONS];
+    let currentFilteredIndex = 0; // index in currentFilteredQuestions
+    let userAnswers = {}; // map { qId: selectedOptionIndex }
+    let submittedAnswers = {}; // map { qId: true }
+    let bookmarks = new Set();
+    let examStartTime = new Date();
+    let timerInterval = null;
+    const QUIZ_DURATION_SECONDS = 15 * 60;
+    let examDeadline = null;
+    let paperSubmitted = false;
+    // VS Code Live Server runs the page on :3000; the Express API runs on :5000.
+    // When served by Express/ngrok, keep API calls same-origin.
+    const API_BASE_URL = location.port === '3000' ? 'http://localhost:5000/api' : '/api';
+    let authMode = 'login';
+    let currentUser = null;
+    function authHeaders() {
+      const token = localStorage.getItem('caQuizToken');
+      return token ? { Authorization: `Bearer ${token}` } : {};
+    }
+    function setQuizGate(open) {
+      document.getElementById('quizLoginGate').classList.toggle('hidden', !open);
+    }
+    function openAuthModal(mode) {
+      if (currentUser) {
+        if (confirm('Sign out of your CA Quiz account?')) {
+          localStorage.removeItem('caQuizToken'); currentUser = null;
+          if (timerInterval) clearInterval(timerInterval);
+          timerInterval = null; updateAuthButton(); setQuizGate(true);
+        }
+        return;
+      }
+      if (mode) setAuthMode(mode);
+      document.getElementById('authModal').classList.remove('hidden');
+    }
+    function closeAuthModal() { document.getElementById('authModal').classList.add('hidden'); }
+    function setAuthMode(mode) {
+      authMode = mode;
+      document.getElementById('authTitle').innerText = mode === 'login' ? 'Sign in' : 'Create account';
+      document.getElementById('authSubmit').innerText = mode === 'login' ? 'Sign in' : 'Create account';
+      document.getElementById('authNameWrap').classList.toggle('hidden', mode === 'login');
+      document.getElementById('authName').required = mode === 'register';
+      document.getElementById('authPassword').autocomplete = mode === 'login' ? 'current-password' : 'new-password';
+      document.getElementById('authModePrompt').innerText = mode === 'login' ? 'New here?' : 'Already registered?';
+      document.getElementById('authModeToggle').innerText = mode === 'login' ? 'Create an account' : 'Sign in';
+      document.getElementById('authError').classList.add('hidden');
+    }
+    function toggleAuthMode() { setAuthMode(authMode === 'login' ? 'register' : 'login'); }
+    function updateAuthButton() {
+      const button = document.getElementById('authButton');
+      button.innerText = currentUser ? `${currentUser.name} · Sign out` : 'Sign in';
+      button.title = currentUser ? currentUser.email : 'Sign in to enter the quiz';
+    }
+    document.getElementById('authForm').addEventListener('submit', async event => {
+      event.preventDefault();
+      const error = document.getElementById('authError');
+      try {
+        const response = await fetch(`${API_BASE_URL}/auth/${authMode}`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: document.getElementById('authName').value, email: document.getElementById('authEmail').value, password: document.getElementById('authPassword').value })
+        });
+        const contentType = response.headers.get('content-type') || '';
+        if (!contentType.includes('application/json')) {
+          throw new Error('The quiz API did not return JSON. Start the backend with "cd server; npm start" and reload this page.');
+        }
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Unable to sign in.');
+        localStorage.setItem('caQuizToken', data.token); currentUser = data.user;
+        updateAuthButton(); closeAuthModal(); setQuizGate(false); event.target.reset(); startTimer();
+        showToast(`Welcome, ${currentUser.name}. You may now begin the quiz.`, '✓');
+      } catch (err) { error.innerText = err.message; error.classList.remove('hidden'); }
+    });
+
+    /* Timer controller for live test duration tracking */
+    function startTimer(resetClock = true) {
+      if (!currentUser || (paperSubmitted && !resetClock)) return;
+      if (resetClock) paperSubmitted = false;
+      if (timerInterval) clearInterval(timerInterval);
+      const deadlineKey = `caQuizDeadline_${currentUser.id}`;
+      const savedDeadline = resetClock ? null : Number(sessionStorage.getItem(deadlineKey));
+      examDeadline = savedDeadline && savedDeadline > 0 ? savedDeadline : Date.now() + QUIZ_DURATION_SECONDS * 1000;
+      sessionStorage.setItem(deadlineKey, String(examDeadline));
+      examStartTime = new Date(examDeadline - QUIZ_DURATION_SECONDS * 1000);
+      const timerDisplay = document.getElementById('timerDisplay');
+      const tick = () => {
+        const remaining = Math.max(0, Math.ceil((examDeadline - Date.now()) / 1000));
+        const mins = String(Math.floor(remaining / 60)).padStart(2, '0');
+        const secs = String(remaining % 60).padStart(2, '0');
+        if (timerDisplay) timerDisplay.innerText = `${mins}:${secs}`;
+        if (remaining === 0) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+          showScorecardModal(true, true);
+        }
+      };
+      tick();
+      if (!paperSubmitted) timerInterval = setInterval(tick, 1000);
+    }
+
+    /* View Switcher between interactive test and textbook syllabus notes */
+    function switchMainView(view) {
+      if (view === 'quiz' && !currentUser) { setQuizGate(true); return; }
+      const quizView = document.getElementById('quizView');
+      const notesView = document.getElementById('notesView');
+      const btnQuiz = document.getElementById('btnQuizMode');
+      const btnNotes = document.getElementById('btnNotesMode');
+
+      if (!quizView || !notesView) return;
+
+      if (view === 'quiz') {
+        quizView.classList.remove('hidden');
+        notesView.classList.add('hidden');
+        if (btnQuiz && btnNotes) {
+          btnQuiz.className = "px-3 py-1.5 rounded-md transition-all duration-150 flex items-center space-x-1.5 bg-icai-gold text-stone-900 font-semibold shadow-sm";
+          btnNotes.className = "px-3 py-1.5 rounded-md text-stone-300 hover:text-white transition-all duration-150 flex items-center space-x-1.5";
+        }
+      } else {
+        quizView.classList.add('hidden');
+        notesView.classList.remove('hidden');
+        if (btnQuiz && btnNotes) {
+          btnNotes.className = "px-3 py-1.5 rounded-md transition-all duration-150 flex items-center space-x-1.5 bg-icai-gold text-stone-900 font-semibold shadow-sm";
+          btnQuiz.className = "px-3 py-1.5 rounded-md text-stone-300 hover:text-white transition-all duration-150 flex items-center space-x-1.5";
+        }
+      }
+    }
+
+    /* Initialize on window load */
+    window.onload = async function() {
+      await restoreSession();
+      await syncQuestionsFromMongoDB();
+      renderFilterMenu();
+      renderCurrentQuestion();
+      updateMetricBadges();
+      setupKeyboardShortcuts();
+      if (currentUser) startTimer(false);
+    };
+
+    async function restoreSession() {
+      if (!localStorage.getItem('caQuizToken')) { setQuizGate(true); return; }
+      try {
+        const response = await fetch(`${API_BASE_URL}/auth/me`, { headers: authHeaders() });
+        if (!response.ok) throw new Error('Session expired');
+        currentUser = await response.json(); updateAuthButton(); setQuizGate(false);
+      } catch { localStorage.removeItem('caQuizToken'); setQuizGate(true); }
+    }
+
+    async function syncQuestionsFromMongoDB() {
+      const badge = document.getElementById('dbStatusBadge');
+      const text = document.getElementById('dbStatusText');
+      const dot = document.getElementById('dbStatusDot');
+      
+      try {
+        const response = await fetch(`${API_BASE_URL}/questions`, { cache: 'no-store' });
+        if (response.ok) {
+          const dbData = await response.json();
+          if (Array.isArray(dbData) && dbData.length > 0) {
+            QUESTIONS.length = 0;
+            QUESTIONS.push(...dbData);
+            currentFilteredQuestions = [...QUESTIONS];
+            if (badge && text && dot) {
+              badge.className = "flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-[11px] font-semibold";
+              dot.className = "w-2 h-2 rounded-full bg-emerald-600";
+              text.innerHTML = `MongoDB Atlas: <span class="font-mono font-bold">quiz_db</span> (Live)`;
+            }
+            showToast(`Loaded ${QUESTIONS.length} questions from MongoDB Atlas (quiz_db)!`, "🍃");
+            return;
+          }
+        }
+      } catch (err) {
+        // Fallback to local textbook data if backend is offline
+        if (badge && text && dot) {
+          badge.className = "flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-300 text-amber-800 text-[11px] font-semibold";
+          dot.className = "w-2 h-2 rounded-full bg-amber-500";
+          text.innerHTML = `MongoDB Atlas: <span class="font-mono font-bold">quiz_db</span> (Local Fallback)`;
+        }
+      }
+    }
+
+    /* Filter by Chapter */
+    function setChapterFilter(chapterCode) {
+      if (!currentUser) { setQuizGate(true); return; }
+      activeFilter = chapterCode;
+      if (chapterCode === 'ALL') {
+        currentFilteredQuestions = [...QUESTIONS];
+        document.getElementById('filterLabel').innerText = `All (${QUESTIONS.length} MCQs)`;
+      } else {
+        currentFilteredQuestions = QUESTIONS.filter(q => q.chapter === chapterCode);
+        document.getElementById('filterLabel').innerText = `Ch ${chapterCode} (${currentFilteredQuestions.length} Qs)`;
+      }
+      currentFilteredIndex = 0;
+      updateFilterButtonsUI();
+      renderCurrentQuestion();
+      renderQuestionGrid();
+    }
+
+    function updateFilterButtonsUI() {
+      const tabs = ['ALL', 1, 2, 3, 4];
+      tabs.forEach(tab => {
+        const elem = document.getElementById(tab === 'ALL' ? 'tabFilterAll' : `tabFilter${tab}`);
+        if (!elem) return;
+        if (activeFilter === tab) {
+          elem.className = "w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between font-medium transition bg-icai-navy text-white shadow-sm";
+        } else {
+          elem.className = "w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between font-medium transition hover:bg-stone-100 text-stone-700";
+        }
+      });
+    }
+
+    function renderFilterMenu() {
+      updateFilterButtonsUI();
+      renderQuestionGrid();
+    }
+
+    /* Render Matrix grid buttons */
+    function renderQuestionGrid() {
+      const grid = document.getElementById('questionGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      currentFilteredQuestions.forEach((q, idx) => {
+        const btn = document.createElement('button');
+        const isCurrent = idx === currentFilteredIndex;
+        const isSubmitted = submittedAnswers[q.id];
+        const isSelected = userAnswers[q.id] !== undefined;
+        const isCorrect = isSubmitted && (userAnswers[q.id] === q.correct);
+        const isWrong = isSubmitted && (userAnswers[q.id] !== q.correct);
+
+        let bgClass = "bg-stone-100 text-stone-700 hover:bg-stone-200 border-stone-200";
+        if (isCorrect) {
+          bgClass = "bg-emerald-600 text-white border-emerald-700";
+        } else if (isWrong) {
+          bgClass = "bg-rose-600 text-white border-rose-700";
+        } else if (isSelected) {
+          bgClass = "bg-amber-100 text-amber-900 border-amber-300 font-bold";
+        }
+
+        const currentRing = isCurrent ? "ring-2 ring-icai-navy ring-offset-1 font-bold" : "";
+        const bookmarkedIcon = bookmarks.has(q.id) ? "★ " : "";
+
+        btn.className = `py-2 rounded-lg border text-xs font-sans transition-all text-center ${bgClass} ${currentRing}`;
+        btn.innerHTML = `${bookmarkedIcon}Q${q.id}`;
+        btn.onclick = () => {
+          currentFilteredIndex = idx;
+          renderCurrentQuestion();
+        };
+        grid.appendChild(btn);
+      });
+    }
+
+    /* Render Active Question Card */
+    function renderCurrentQuestion() {
+      if (currentFilteredQuestions.length === 0) return;
+      const q = currentFilteredQuestions[currentFilteredIndex];
+
+      // Breadcrumb & Info
+      document.getElementById('qChapterNum').innerText = `Chapter ${q.chapter}`;
+      document.getElementById('qChapterTitle').innerText = q.chapterTitle;
+      document.getElementById('qIndexBadge').innerText = `Question ${String(q.id).padStart(2, '0')}`;
+      document.getElementById('qTagBadge').innerText = q.tag;
+      document.getElementById('qText').innerText = q.question;
+
+      // Bookmark button state
+      const isBookmarked = bookmarks.has(q.id);
+      const ribbon = document.getElementById('bookmarkRibbon');
+      if (isBookmarked) {
+        ribbon.className = "w-8 h-10 bg-amber-500 text-white shadow-md flex items-center justify-center rounded-b-sm transition-all";
+      } else {
+        ribbon.className = "w-8 h-10 bg-stone-300 text-stone-600 group-hover:bg-amber-400 transition-colors shadow-sm flex items-center justify-center rounded-b-sm";
+      }
+
+      // Progress bar
+      const totalOverall = QUESTIONS.length;
+      const answeredOverall = Object.keys(submittedAnswers).length;
+      const pct = Math.round((answeredOverall / totalOverall) * 100);
+      document.getElementById('quizProgressBar').style.width = `${Math.max(pct, 5)}%`;
+
+      // Render Options
+      const optionsContainer = document.getElementById('optionsContainer');
+      optionsContainer.innerHTML = '';
+
+      const isSubmitted = submittedAnswers[q.id];
+      const selectedOption = userAnswers[q.id];
+
+      const optionLabels = ['A', 'B', 'C', 'D'];
+
+      q.options.forEach((optText, optIdx) => {
+        const optionDiv = document.createElement('div');
+        const isThisSelected = selectedOption === optIdx;
+        const isThisCorrect = q.correct === optIdx;
+
+        let styleClasses = "border-stone-300 hover:border-amber-400 hover:bg-amber-50/40 bg-white";
+        let badgeClasses = "bg-stone-100 text-stone-700 border-stone-300";
+        let iconMarkup = `<span class="font-bold text-xs">${optionLabels[optIdx]}</span>`;
+
+        if (isSubmitted) {
+          if (isThisCorrect) {
+            styleClasses = "border-emerald-500 bg-emerald-50/80 text-emerald-950 font-medium";
+            badgeClasses = "bg-emerald-600 text-white border-emerald-600";
+            iconMarkup = `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>`;
+          } else if (isThisSelected && !isThisCorrect) {
+            styleClasses = "border-rose-500 bg-rose-50/80 text-rose-950 font-medium";
+            badgeClasses = "bg-rose-600 text-white border-rose-600";
+            iconMarkup = `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>`;
+          } else {
+            styleClasses = "border-stone-200 bg-stone-50/50 opacity-60 text-stone-600";
+          }
+        } else if (isThisSelected) {
+          styleClasses = "border-icai-navy bg-amber-50/70 text-icai-navy shadow-sm ring-1 ring-icai-navy";
+          badgeClasses = "bg-icai-navy text-amber-200 border-icai-navy font-bold";
+        }
+
+        optionDiv.className = `p-3.5 sm:p-4 rounded-xl border-2 cursor-pointer transition flex items-center space-x-3.5 ${styleClasses}`;
+        optionDiv.innerHTML = `
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center border flex-shrink-0 transition ${badgeClasses}">
+            ${iconMarkup}
+          </div>
+          <div class="text-sm sm:text-base leading-snug flex-1">
+            ${optText}
+          </div>
+        `;
+
+        if (!isSubmitted) {
+          optionDiv.onclick = () => selectOption(optIdx);
+        }
+
+        optionsContainer.appendChild(optionDiv);
+      });
+
+      // Commentary and Verification Box
+      const explanationContainer = document.getElementById('explanationContainer');
+      const statusAlertBox = document.getElementById('statusAlertBox');
+      const btnSubmit = document.getElementById('btnSubmit');
+
+      if (isSubmitted) {
+        explanationContainer.classList.remove('hidden');
+        document.getElementById('explanationText').innerText = q.explanation;
+        document.getElementById('statutoryRefTag').innerText = q.ref;
+
+        const isUserCorrect = selectedOption === q.correct;
+        if (isUserCorrect) {
+          statusAlertBox.className = "p-4 rounded-xl mb-4 font-sans flex items-start space-x-3 bg-emerald-50 border border-emerald-300 text-emerald-900";
+          statusAlertBox.innerHTML = `
+            <svg class="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <div>
+              <span class="font-bold block text-sm">Correct Answer (+1.0 Mark)</span>
+              <span class="text-xs">Your understanding aligns with the ICAI code provisions and relevant schedules.</span>
+            </div>
+          `;
+        } else {
+          statusAlertBox.className = "p-4 rounded-xl mb-4 font-sans flex items-start space-x-3 bg-rose-50 border border-rose-300 text-rose-900";
+          statusAlertBox.innerHTML = `
+            <svg class="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+            <div>
+              <span class="font-bold block text-sm">Incorrect Selection</span>
+              <span class="text-xs">Correct choice is Option ${optionLabels[q.correct]}. Review the authoritative commentary below.</span>
+            </div>
+          `;
+        }
+
+        btnSubmit.classList.add('hidden');
+      } else {
+        explanationContainer.classList.add('hidden');
+        btnSubmit.classList.remove('hidden');
+      }
+
+      // Prev / Next button states
+      document.getElementById('btnPrev').disabled = currentFilteredIndex === 0;
+      document.getElementById('btnNext').disabled = currentFilteredIndex === currentFilteredQuestions.length - 1;
+
+      renderQuestionGrid();
+      updateMetricBadges();
+    }
+
+    /* Option Selection */
+    function selectOption(index) {
+      if (!currentUser || paperSubmitted) { if (!currentUser) setQuizGate(true); return; }
+      const q = currentFilteredQuestions[currentFilteredIndex];
+      userAnswers[q.id] = index;
+      renderCurrentQuestion();
+    }
+
+    /* Submit current question answer */
+    function submitCurrentAnswer() {
+      if (!currentUser || paperSubmitted) { if (!currentUser) setQuizGate(true); return; }
+      const q = currentFilteredQuestions[currentFilteredIndex];
+      if (userAnswers[q.id] === undefined) {
+        showToast("Please choose an answer option first.", "⚠️");
+        return;
+      }
+      submittedAnswers[q.id] = true;
+      renderCurrentQuestion();
+
+      // If all answered in the current subset, check if all 10 are done
+      if (Object.keys(submittedAnswers).length === QUESTIONS.length) {
+        showToast("All questions submitted! You can now view the Final Scorecard.", "🏆");
+      }
+    }
+
+    /* Next / Prev Navigation */
+    function navigateQuestion(delta) {
+      if (!currentUser || paperSubmitted) { if (!currentUser) setQuizGate(true); return; }
+      const newIdx = currentFilteredIndex + delta;
+      if (newIdx >= 0 && newIdx < currentFilteredQuestions.length) {
+        currentFilteredIndex = newIdx;
+        renderCurrentQuestion();
+      }
+    }
+
+    /* Bookmark toggle */
+    function toggleCurrentBookmark() {
+      if (!currentUser || paperSubmitted) { if (!currentUser) setQuizGate(true); return; }
+      const q = currentFilteredQuestions[currentFilteredIndex];
+      if (bookmarks.has(q.id)) {
+        bookmarks.delete(q.id);
+        showToast(`Question ${q.id} removed from bookmarks.`);
+      } else {
+        bookmarks.add(q.id);
+        showToast(`Question ${q.id} bookmarked for revision!`, "🔖");
+      }
+      renderCurrentQuestion();
+    }
+
+    /* Metric Badges updates */
+    function updateMetricBadges() {
+      const answeredCount = Object.keys(submittedAnswers).length;
+      let score = 0;
+      QUESTIONS.forEach(q => {
+        if (submittedAnswers[q.id] && userAnswers[q.id] === q.correct) {
+          score += 1;
+        }
+      });
+
+      document.getElementById('metricAnswered').innerText = `${answeredCount}/${QUESTIONS.length}`;
+      document.getElementById('metricScore').innerText = `${score} pts`;
+      document.getElementById('metricBookmarks').innerText = bookmarks.size;
+    }
+
+    /* Scorecard Modal */
+    function showScorecardModal(autoSubmit = false, timedOut = false) {
+      if (!currentUser) { setQuizGate(true); return; }
+      if (paperSubmitted) return;
+      paperSubmitted = true;
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = null;
+      if (autoSubmit) {
+        QUESTIONS.forEach(q => { submittedAnswers[q.id] = true; });
+        updateMetricBadges();
+        renderCurrentQuestion();
+      }
+      if (autoSubmit) {
+        showToast(
+          timedOut ? '15 minutes are up. Your paper has been submitted.' : 'Test submitted. Your scorecard is ready.',
+          timedOut ? '⏱️' : '🏆'
+        );
+      }
+      let score = 0;
+      let correctCount = 0;
+      let wrongCount = 0;
+
+      QUESTIONS.forEach(q => {
+        if (submittedAnswers[q.id]) {
+          if (userAnswers[q.id] === q.correct) {
+            score++;
+            correctCount++;
+          } else {
+            wrongCount++;
+          }
+        }
+      });
+
+      const total = QUESTIONS.length;
+      const pct = Math.round((score / total) * 100);
+
+      document.getElementById('modalScoreDisplay').innerText = `${score}/${total}`;
+      document.getElementById('modalPercentage').innerText = `${pct}% Score`;
+      document.getElementById('modalAccuracy').innerText = `${pct}%`;
+
+      // Time
+      const now = new Date();
+      const diffSecs = Math.min(QUIZ_DURATION_SECONDS, Math.max(0, Math.floor((now - examStartTime) / 1000)));
+      const mins = String(Math.floor(diffSecs / 60)).padStart(2, '0');
+      const secs = String(diffSecs % 60).padStart(2, '0');
+      document.getElementById('modalTimeSpent').innerText = `${mins}:${secs}`;
+
+      // Grade Banner text
+      const gradeBanner = document.getElementById('gradeBanner');
+      if (pct >= 80) {
+        gradeBanner.className = "p-3.5 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-900 font-sans font-semibold";
+        gradeBanner.innerHTML = "🌟 Exemplary Performance! Ready for the CA Professional Examination.";
+      } else if (pct >= 50) {
+        gradeBanner.className = "p-3.5 rounded-xl border border-amber-300 bg-amber-50 text-amber-900 font-sans font-semibold";
+        gradeBanner.innerHTML = "✓ Passed (Above ICAI 50% Threshold). Focus on reviewing missed questions.";
+      } else {
+        gradeBanner.className = "p-3.5 rounded-xl border border-rose-300 bg-rose-50 text-rose-900 font-sans font-semibold";
+        gradeBanner.innerHTML = "⚠️ Revision Required. Study the Code of Ethics chapters in the notes tab.";
+      }
+
+      // Retry incorrect button state
+      const btnRetry = document.getElementById('btnRetryWrong');
+      btnRetry.disabled = wrongCount === 0;
+
+      // Chapter breakdown calculation for all 25 questions (including Case Studies)
+      const chapters = [
+        { id: 1, title: "Ch 1: Fundamental Principles & Threats (incl. NOCLAR)", total: 8 },
+        { id: 2, title: "Ch 2: CA in Practice & KYC Norms", total: 4 },
+        { id: 3, title: "Ch 3: Schedules to the Act (incl. Clause 8 & Fees)", total: 8 },
+        { id: 4, title: "Ch 4: Disciplinary Procedures & Council Guidelines", total: 5 }
+      ];
+
+      const breakdownDiv = document.getElementById('chapterScoreBreakdown');
+      breakdownDiv.innerHTML = '';
+
+      chapters.forEach(ch => {
+        let chScore = 0;
+        QUESTIONS.filter(q => q.chapter === ch.id).forEach(q => {
+          if (submittedAnswers[q.id] && userAnswers[q.id] === q.correct) chScore++;
+        });
+        const chPct = Math.round((chScore / ch.total) * 100);
+
+        const row = document.createElement('div');
+        row.className = "flex items-center justify-between p-2 rounded-lg bg-stone-50 border border-stone-200";
+        row.innerHTML = `
+          <span class="text-stone-700 font-medium">${ch.title}</span>
+          <div class="flex items-center space-x-2">
+            <span class="font-bold text-icai-navy">${chScore}/${ch.total}</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] ${chPct >= 60 ? 'bg-emerald-100 text-emerald-800' : 'bg-stone-200 text-stone-700'}">${chPct}%</span>
+          </div>
+        `;
+        breakdownDiv.appendChild(row);
+      });
+
+      // Question review list
+      const reviewList = document.getElementById('modalQuestionList');
+      reviewList.innerHTML = '';
+      QUESTIONS.forEach(q => {
+        const isAnswered = submittedAnswers[q.id] && userAnswers[q.id] !== undefined;
+        const isCorrect = isAnswered && userAnswers[q.id] === q.correct;
+        const item = document.createElement('div');
+        item.className = `p-2 rounded border flex items-center justify-between ${
+          isCorrect ? 'border-emerald-200 bg-emerald-50/50' : isAnswered ? 'border-rose-200 bg-rose-50/50' : 'border-stone-200 bg-stone-50'
+        }`;
+        item.innerHTML = `
+          <div class="flex items-center space-x-2 truncate pr-2">
+            <span class="font-bold ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">Q${q.id}</span>
+            <span class="truncate text-stone-700">${q.tag}</span>
+            ${bookmarks.has(q.id) ? '<span class="text-amber-500 font-bold" title="Bookmarked">★</span>' : ''}
+          </div>
+          <span class="font-semibold text-[11px] ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">
+            ${isCorrect ? 'Correct (+1)' : isAnswered ? 'Incorrect' : 'Unanswered'}
+          </span>
+        `;
+        reviewList.appendChild(item);
+    });
+
+    document.getElementById('scorecardModal').classList.remove('hidden');
+
+    recordAttemptInMongoDB({
+      score,
+      total,
+      percentage: pct,
+      timeSpentFormatted: `${mins}:${secs}`,
+      userAnswers,
+      submittedAt: new Date().toISOString()
+    });
+  }
+
+  async function recordAttemptInMongoDB(payload) {
+    try {
+      if (!currentUser) { setQuizGate(true); return; }
+      const res = await fetch(`${API_BASE_URL}/attempts`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...authHeaders() },
+        body: JSON.stringify(payload)
+      });
+      if (res.status === 401) {
+        currentUser = null; localStorage.removeItem('caQuizToken'); updateAuthButton(); setQuizGate(true); openAuthModal('login');
+        return;
+      }
+      if (res.ok) {
+        showToast("Score successfully logged to MongoDB Atlas 'quiz_db.attempts'", "🍃");
+      }
+    } catch (e) {
+      // Graceful offline fallback
+    }
+  }
+
+  function closeScorecardModal() {
+      document.getElementById('scorecardModal').classList.add('hidden');
+    }
+
+    /* Retry only incorrect questions */
+    function retryIncorrectQuestions() {
+      if (!currentUser) { setQuizGate(true); return; }
+      const wrongQIds = QUESTIONS.filter(q => submittedAnswers[q.id] && userAnswers[q.id] !== q.correct).map(q => q.id);
+      if (wrongQIds.length === 0) return;
+
+      wrongQIds.forEach(id => {
+        delete userAnswers[id];
+        delete submittedAnswers[id];
+      });
+
+      closeScorecardModal();
+      currentFilteredQuestions = QUESTIONS.filter(q => wrongQIds.includes(q.id));
+      currentFilteredIndex = 0;
+      document.getElementById('filterLabel').innerText = `Retry (${currentFilteredQuestions.length} Qs)`;
+      startTimer();
+      renderCurrentQuestion();
+      showToast(`Loaded ${wrongQIds.length} missed questions for re-attempt.`, "🔄");
+    }
+
+    /* Reset Exam */
+    function resetQuizState() {
+      if (!currentUser) { setQuizGate(true); return; }
+      userAnswers = {};
+      submittedAnswers = {};
+      currentFilteredQuestions = [...QUESTIONS];
+      activeFilter = 'ALL';
+      currentFilteredIndex = 0;
+      startTimer();
+      renderFilterMenu();
+      renderCurrentQuestion();
+      showToast("Exam restarted. Good luck!", "📖");
+    }
+
+    /* Keyboard Shortcuts */
+    function setupKeyboardShortcuts() {
+      window.addEventListener('keydown', (e) => {
+        if (!currentUser) { setQuizGate(true); return; }
+        if (paperSubmitted) return;
+        // Ignore if user is inside an input or modal is open
+        const modal = document.getElementById('scorecardModal');
+        if (!modal.classList.contains('hidden')) {
+          if (e.key === 'Escape') closeScorecardModal();
+          return;
+        }
+
+        const q = currentFilteredQuestions[currentFilteredIndex];
+        if (!q) return;
+
+        // Keys 1, 2, 3, 4 or A, B, C, D to pick options
+        if (['1', '2', '3', '4'].includes(e.key)) {
+          const optIdx = parseInt(e.key) - 1;
+          if (!submittedAnswers[q.id]) {
+            selectOption(optIdx);
+          }
+        } else if (['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D'].includes(e.key)) {
+          const map = { a: 0, b: 1, c: 2, d: 3, A: 0, B: 1, C: 2, D: 3 };
+          if (!submittedAnswers[q.id]) {
+            selectOption(map[e.key]);
+          }
+        } else if (e.key === 'Enter') {
+          if (!submittedAnswers[q.id]) {
+            submitCurrentAnswer();
+          } else if (currentFilteredIndex < currentFilteredQuestions.length - 1) {
+            navigateQuestion(1);
+          }
+        } else if (e.key === 'ArrowRight') {
+          if (currentFilteredIndex < currentFilteredQuestions.length - 1) {
+            navigateQuestion(1);
+          }
+        } else if (e.key === 'ArrowLeft') {
+          if (currentFilteredIndex > 0) {
+            navigateQuestion(-1);
+          }
+        }
+      });
+    }
+
+    /* Custom Toast */
+    function showToast(text, icon = "ℹ️") {
+      const toast = document.getElementById('toastMessage');
+      const toastText = document.getElementById('toastText');
+      const toastIcon = document.getElementById('toastIcon');
+
+      toastText.innerText = text;
+      toastIcon.innerText = icon;
+
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>
