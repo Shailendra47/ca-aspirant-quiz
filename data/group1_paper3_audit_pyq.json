@@ -1,0 +1,362 @@
+[
+  {
+    "id": 3001,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2024 PYQ] Code of Ethics - Fee Dependence on PIEs (Section 410)",
+    "question": "M/s Sterling & Associates, a chartered accountancy firm, has been the statutory auditor of Zenith Infrastructure Ltd. (a listed public interest entity) for 3 consecutive years. Total gross professional fees received from Zenith Infrastructure Ltd. and its subsidiaries represent 24% of the firm's total gross fee revenue in FY 2022-23 and 22% in FY 2023-24. Under Section 410 of the Revised ICAI Code of Ethics (2020), which mandatory safeguards must the firm apply?",
+    "options": [
+      "The firm can continue without safeguards because the threshold for PIEs is 40%.",
+      "Because fees exceed 15% for two consecutive years, the firm must disclose this fact to TCWG and arrange for an engagement quality review by an external professional accountant (Pre-issuance or Post-issuance review). If fee dependence continues beyond 5 years, the firm cannot continue as auditor.",
+      "The firm must resign immediately with retrospective effect.",
+      "The firm must refund the excess fee above 15% to the Central Government."
+    ],
+    "correct": 1,
+    "ref": "Revised ICAI Code of Ethics (2020) - Section 410: Fees & Dependence on Public Interest Entities",
+    "explanation": "Under Section 410.3 to 410.5 of the revised Code of Ethics, where fees from a Public Interest Entity (PIE) audit client exceed 15% of the firm's total fees for two consecutive years, the firm must disclose the situation to Those Charged With Governance (TCWG) and apply safeguards: either an Engagement Quality Review by an external professional accountant before the second year's audit opinion is issued, or a post-issuance review. If the proportion continues to exceed 15% for 5 consecutive years, the firm must cease to act as auditor.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3002,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Standards on Auditing - SA 701 Key Audit Matters vs Modified Opinion",
+    "question": "During the statutory audit of Bharat Metals Ltd., the auditor identifies that management has failed to recognize an impairment loss of ₹85 Crores on an obsolete blast furnace, which is material and pervasive to the financial statements. The auditor issues an Adverse Audit Opinion under SA 705. Can the auditor also include the blast furnace impairment in the Key Audit Matters (KAM) section under SA 701?",
+    "options": [
+      "Yes, because matters leading to adverse opinion are of most significance and must be duplicated in the KAM section.",
+      "No. Under SA 701 Paragraph 15, matters giving rise to a modified opinion (Qualified, Adverse, or Disclaimer) under SA 705 are reported in the 'Basis for Adverse Opinion' section and must NOT be described in the Key Audit Matters section.",
+      "Yes, provided a cross-reference is omitted.",
+      "Only if authorized by the Audit Committee."
+    ],
+    "correct": 1,
+    "ref": "SA 701 (Communicating Key Audit Matters in the Independent Auditor's Report) - Paragraph 15",
+    "explanation": "Paragraph 15 of SA 701 explicitly prohibits describing a matter that gives rise to a modified opinion (Qualified, Adverse, or Disclaimer) under SA 705 in the Key Audit Matters section. Instead, such matters must be reported exclusively in the 'Basis for Modification' section. In the KAM section, the auditor simply includes a reference stating: 'Except for the matter described in the Basis for Adverse Opinion section, we have determined that there are no other key audit matters to communicate.'",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3003,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2023 PYQ] Companies Act - Section 143(12) Fraud Reporting to Central Govt",
+    "question": "During the audit of a listed company, the statutory auditor discovers an inflated invoicing fraud perpetrated by the Chief Operating Officer involving fictitious vendor payments of ₹1.40 Crores during the current year. Management agrees to rectify the books and terminate the employee. What is the statutory duty of the auditor under Section 143(12) of the Companies Act, 2013 read with Rule 13 of the Companies (Audit and Auditors) Rules, 2014?",
+    "options": [
+      "No reporting to Central Government is required because management has agreed to rectify the accounts.",
+      "The auditor must report the matter to the Board/Audit Committee within 2 days seeking reply in 45 days. Upon receipt of reply (or on failure to receive reply within 45 days), the auditor must forward the report in Form ADT-4 to the Ministry of Corporate Affairs (Central Government) within 15 days.",
+      "Report directly to the police within 24 hours.",
+      "Report only in CARO 2020 Clause (xi) without informing the Central Government."
+    ],
+    "correct": 1,
+    "ref": "Section 143(12) Companies Act 2013 & Rule 13 of Companies (Audit and Auditors) Rules, 2014 - Form ADT-4",
+    "explanation": "Under Section 143(12) of the Companies Act, 2013 and Rule 13, if an auditor has reason to believe that an offence of fraud involving ₹1 Crore or more is being or has been committed against the company by its officers or employees, the auditor is statutorily bound to report the matter to the Central Government. The prescribed procedure requires: (1) report to Board/Audit Committee within 2 days; (2) await reply for up to 45 days; (3) forward report with comments in Form ADT-4 to the Secretary, MCA within 15 days of reply.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3004,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Standards on Auditing - SA 570 Going Concern Material Uncertainty",
+    "question": "A manufacturing company has incurred continuous operating losses, its net worth is completely eroded, and working capital is negative ₹40 Crores. Management has prepared realistic debt restructuring plans with banks, and the auditor concludes that the Going Concern assumption is appropriate, but a Material Uncertainty exists regarding its viability, which management has adequately disclosed in Note 28. How should the auditor report this under SA 570 (Revised)?",
+    "options": [
+      "Issue an Adverse Opinion because net worth is completely eroded.",
+      "Issue an Unmodified Opinion with a separate dedicated section titled 'Material Uncertainty Related to Going Concern' drawing attention to Note 28.",
+      "Issue a Qualified Opinion for material uncertainty.",
+      "Report exclusively under Emphasis of Matter paragraph."
+    ],
+    "correct": 1,
+    "ref": "SA 570 (Revised) - Going Concern: Paragraphs 21-23 on Reporting Material Uncertainty",
+    "explanation": "Under SA 570 (Revised), if adequate disclosure about the material uncertainty is made in the financial statements and the use of the going concern basis of accounting is appropriate, the auditor shall express an UNMODIFIED OPINION and include a separate section with the heading 'Material Uncertainty Related to Going Concern' to: (a) draw attention to the note in the financial statements; and (b) state that these events indicate a material uncertainty exists that may cast significant doubt on the entity's ability to continue as a going concern.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3005,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2024 PYQ] Code of Ethics - Section 144 Prohibitions & Network Firms",
+    "question": "M/s Agarwal & Co. is statutory auditor of Delta Pharmaceuticals Ltd. A consulting firm, M/s Agarwal Financial Advisors LLP, where partners of M/s Agarwal & Co. hold 60% profit-sharing interest, accepts an engagement to provide 'Tax Advocacy and Designing Internal Financial Controls' for Delta Pharmaceuticals Ltd. for a fee of ₹30 Lakhs. Evaluating this under Section 144 of the Companies Act, 2013 and Section 400 of the ICAI Code of Ethics, which statement is true?",
+    "options": [
+      "Permissible because the consulting firm is a separate legal entity (LLP).",
+      "Prohibited. Under Section 144 of Companies Act 2013 and ICAI Network Rules, an auditor cannot provide internal audit, accounting, or design of financial information systems directly or through an associated entity where common control or brand sharing exists.",
+      "Permissible if approved by unanimous resolution of the Board.",
+      "Permissible up to 50% of the audit fee."
+    ],
+    "correct": 1,
+    "ref": "Section 144 Companies Act 2013 & Section 400 ICAI Code of Ethics: Prohibition of Non-Audit Services through Network Entities",
+    "explanation": "Section 144 of the Companies Act, 2013 strictly prohibits statutory auditors from providing specified non-audit services (including design/implementation of financial information systems, internal audit, and management services) to the company or its holding/subsidiary companies, either directly or indirectly through its partners or associated entities under common control/significant influence. Violating this attracts disqualification under Section 141(3)(i) and disciplinary action under the Second Schedule.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3006,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Standards on Auditing - SA 600 Group Audits vs Component Auditor",
+    "question": "The principal auditor of a conglomerate audits 65% of the consolidated assets and relies on financial statements audited by component auditors for 8 subsidiaries (representing 35% of consolidated assets). The principal auditor visits none of the component audit sites and relies solely on written representations and component audit reports without issuing any supplementary audit questionnaires or reviewing documentation. Under SA 600, has the principal auditor complied with professional standards?",
+    "options": [
+      "Yes, because under SA 600 the principal auditor is fully entitled to rely on the work of component auditors without performing any review procedures.",
+      "No. Under SA 600, while the principal auditor can rely on component auditors, they must perform procedures such as advising component auditors of the use to be made of their work, issuing questionnaires, reviewing written summaries of component procedures, and evaluating significant audit findings.",
+      "The principal auditor must personally re-audit 100% of all subsidiaries under Indian law.",
+      "The principal auditor must disclaim opinion on all 8 subsidiaries."
+    ],
+    "correct": 1,
+    "ref": "SA 600 (Using the Work of Another Auditor) - Paragraphs 9-14: Principal Auditor Procedures",
+    "explanation": "Under SA 600, although the principal auditor does not duplicate the audit of components, they have a professional obligation to perform coordinating procedures: (a) advise the other auditor of the independence requirements and the use to be made of their work; (b) issue questionnaires requesting details of the component's audit procedures; and (c) discuss audit findings with component auditors where necessary. Blind reliance without any documented evaluation of the component auditor's work violates SA 600.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3007,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2023 PYQ] Code of Ethics - Clause 6 Part I First Schedule (Tendering & Tenders)",
+    "question": "A nationalized bank issues a public advertisement inviting open tenders from chartered accountancy firms for statutory concurrent audit of 50 branches. The tender explicitly requires firms to quote competitive professional fees per branch. M/s Gupta & Co. submits a commercial bid quoting ₹12,000 per branch per month. Under the Council Guidelines on Tendering (Guideline No. 1-CA(7)/03/2016), has the firm committed professional misconduct?",
+    "options": [
+      "No, because any firm can bid for any tender issued by public sector banks.",
+      "Yes. Under Council Guidelines, a CA in practice shall not respond to any tender for audit/assurance services where minimum fee is not prescribed, unless the tender is exclusively open to CAs or the assignment is a non-audit service.",
+      "No, provided the firm submits UDIN along with the tender.",
+      "Yes, because concurrent audits cannot be outsourced by banks."
+    ],
+    "correct": 1,
+    "ref": "Clause 6, Part I, First Schedule & Council Guidelines on Tenders (2016)",
+    "explanation": "Under Clause 6 of Part I of the First Schedule read with the Council Guidelines on Tenders (dated 7th April 2016), a member in practice shall not respond to any tender for any audit or assurance work where minimum professional fees are not specified in the tender document. Responding to price-competitive open bids without minimum fee benchmarking constitutes professional misconduct under Clause 6.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3008,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] CARO 2020 - Clause (i) Property, Plant & Equipment & Benami Property",
+    "question": "During the audit of Zenith Developers Ltd., the auditor notes that title deeds of 3 commercial parcels of land valued at ₹42 Crores are held in the name of a former director who resigned 4 years ago. Furthermore, proceedings have been initiated against the company under the Prohibition of Benami Property Transactions Act, 1988 for another property. How must the auditor report these matters under CARO 2020?",
+    "options": [
+      "Report under Clause 3(i)(c) providing tabular details of title deeds not held in company's name, and under Clause 3(i)(e) disclosing whether proceedings have been initiated under the Benami Transactions Act.",
+      "No reporting is necessary as long as the properties are capitalized on the balance sheet.",
+      "Report only under Clause 3(xi) for fraud.",
+      "Issue a disclaimer of opinion on the entire financial statements."
+    ],
+    "correct": 0,
+    "ref": "CARO 2020 - Clause 3(i)(c) (Title Deeds not in Company's Name) & Clause 3(i)(e) (Benami Property Proceedings)",
+    "explanation": "Under CARO 2020 Clause 3(i)(c), the auditor must report whether the title deeds of all immovable properties (other than properties where company is lessee) are held in the name of the company, and if not, provide a tabular disclosure specifying description of property, gross carrying value, held in whose name, relationship, and reasons. Under Clause 3(i)(e), the auditor must explicitly state whether any proceedings have been initiated or are pending against the company for holding any benami property under the Benami Transactions Act.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3009,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2024 PYQ] Forensic Audit - Benford's Law & Chain of Custody",
+    "question": "In a court-mandated forensic audit of a cooperative bank involving suspected diversion of ₹200 Crores through 15,000 disbursement vouchers, the forensic investigator applies Benford's Law on the leading digits of voucher amounts. The frequency of digit '1' is found to be 8.5% (normal expectation 30.1%), while digit '9' appears in 44.2% of vouchers (normal expectation 4.6%). What does this statistical anomaly indicate, and how must electronic evidence be preserved to ensure legal admissibility under Section 65B of the Indian Evidence Act?",
+    "options": [
+      "The anomaly indicates human fabrication of transaction values just below ₹10 Lakhs reporting thresholds. To ensure admissibility, a forensic bit-stream image (clone) must be generated with cryptographic hash values (SHA-256) and a documented Chain of Custody.",
+      "The anomaly indicates random sample variation; no fraud is indicated.",
+      "Benford's law is inadmissible in Indian courts.",
+      "The investigator must delete all digital files and rely on oral testimony."
+    ],
+    "correct": 0,
+    "ref": "Forensic Audit & Section 65B Indian Evidence Act / Digital Forensics Standards",
+    "explanation": "Benford's Law states that in natural numerical datasets, the number 1 occurs as the leading digit approximately 30.1% of the time, whereas 9 occurs only 4.6%. An abnormal spike of 44.2% for digit 9 strongly indicates deliberate artificial manipulation of values (e.g. creating disbursements of ₹9,99,000 to evade CTR/regulatory limits). For digital evidence to be admissible in a court of law under Section 65B, investigators must create forensic bit-stream disk images, verify cryptographic hash checksums (MD5/SHA-256), and maintain strict unbroken Chain of Custody logs.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3010,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Bank Audit - NPA Classification & IRAC Provisioning Norms",
+    "question": "A commercial borrower holds a Working Capital Cash Credit limit of ₹10 Crores with an outstanding debit balance of ₹9.80 Crores as of 31st March 2024. During the quarter ended 31st March 2024, total credits to the account were ₹15 Lakhs, whereas the interest debited during the same quarter was ₹24 Lakhs. The sanctioned limit was last renewed on 15th January 2023 (over 14 months ago). How should the statutory bank branch auditor classify this account under RBI IRAC norms?",
+    "options": [
+      "Standard Asset because outstanding balance is within the sanctioned limit of ₹10 Crores.",
+      "Non-Performing Asset (NPA) under 'Out of Order' status because credits are insufficient to cover interest debited during the quarter, AND the CC limit has not been renewed within 180 days from original due date.",
+      "Special Mention Account (SMA-0) with 0.40% provisioning.",
+      "Standard Asset provided the borrower gives a letter of comfort."
+    ],
+    "correct": 1,
+    "ref": "RBI Prudential Norms on Income Recognition, Asset Classification and Provisioning (IRAC) - Out of Order Accounts",
+    "explanation": "Under RBI Master Circular on IRAC Norms, an account is classified as 'Out of Order' (and hence NPA) if: (a) the outstanding balance remains continuously in excess of the sanctioned limit/DP; or (b) the outstanding balance is within the sanctioned limit, but there are no credits continuously for 90 days or credits are not enough to cover the interest debited during the same period. Furthermore, regular credit facilities not renewed within 180 days from the due date are treated as NPA. Here, credits (₹15L) < interest (₹24L) and renewal is overdue by >180 days, requiring mandatory NPA classification.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3011,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2023 PYQ] Standards on Auditing - SQC 1 Quality Control & Audit Documentation",
+    "question": "An audit firm concludes the statutory audit of a listed entity on 25th May 2024. The engagement team assembles the final audit file on 15th August 2024 (82 days after the audit report date). Furthermore, the firm's document retention policy specifies destroying audit working papers after 5 years. Does this practice adhere to SQC 1 and SA 230?",
+    "options": [
+      "Yes, because assembling audit files within 90 days is standard industry practice.",
+      "No. Under SQC 1 and SA 230, final audit file assembly must be completed ordinarily within 60 days from the date of the auditor's report, and the mandatory minimum retention period for audit documentation is 7 years from the date of the auditor's report.",
+      "Yes, provided the Audit Committee approves the extension.",
+      "No, files must be assembled within 24 hours."
+    ],
+    "correct": 1,
+    "ref": "SQC 1 (Quality Control for Firms) Paragraphs 73-83 & SA 230 (Audit Documentation)",
+    "explanation": "Under SQC 1 and paragraph 14 of SA 230, the auditor shall assemble the audit documentation in an audit file and complete the administrative process of assembling the final audit file on a timely basis, ordinarily not more than 60 days after the date of the auditor's report (82 days is a violation). Furthermore, SQC 1 explicitly mandates that the retention period for audit documentation of assurance engagements is no shorter than 7 years from the date of the auditor's report (5-year retention violates SQC 1).",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3012,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Code of Ethics - Clause 7 Part I First Schedule (Professional Designations)",
+    "question": "CA. Vikash has qualified as a Chartered Accountant, Company Secretary (ACS), and Cost and Management Accountant (ACMA). On his letterheads and visiting cards, he writes: 'CA. Vikash, Chartered Accountant, Company Secretary, Cost Accountant, Insolvency Professional, and Registered Valuer'. Evaluating this under Clause 7 of Part I of the First Schedule to the CA Act, 1949, which statement is correct?",
+    "options": [
+      "Fully permissible because he has legally earned all the qualifications.",
+      "Guilty of professional misconduct. Under Clause 7 and Council Guidelines, a member in practice can use only the designation 'Chartered Accountant' on visiting cards/letterheads. While degrees of universities or membership of CS/CMA can be used as letters after the name, other professional designations (such as Insolvency Professional/Valuer) cannot be used as designatory titles.",
+      "Permissible provided he prints separate cards for each profession.",
+      "Permissible if he pays annual fees to ICAI."
+    ],
+    "correct": 1,
+    "ref": "Clause 7, Part I, First Schedule to the Chartered Accountants Act, 1949 & Council Guidelines",
+    "explanation": "Under Clause 7 of Part I of the First Schedule, a member in practice is prohibited from using any designation or description other than that of 'Chartered Accountant' on professional documents, letterheads, or visiting cards. While titles of membership of ICSI or ICMAI can be added as letters indicating qualifications after the name, using descriptions like 'Insolvency Professional' or 'Registered Valuer' alongside 'Chartered Accountant' on visiting cards constitutes professional misconduct.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3013,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2024 PYQ] Standards on Auditing - SA 560 Subsequent Events",
+    "question": "The audit report of Omega Ltd. for FY 2023-24 was signed on 28th April 2024. On 10th May 2024 (before the AGM and before financial statements are issued to shareholders), a major customer who accounted for 30% of total trade receivables went into liquidation due to sudden bankruptcy. The auditor becomes aware of this fact. Under SA 560 Paragraphs 10-13, what are the auditor's responsibilities?",
+    "options": [
+      "No responsibility because the audit report has already been signed.",
+      "The auditor must discuss the matter with management, determine whether the financial statements need amendment, and if management amends the statements, carry out necessary procedures and issue a new or amended auditor's report with an Emphasis of Matter paragraph.",
+      "Issue an adverse opinion directly to the stock exchanges.",
+      "Resign as auditor with immediate effect."
+    ],
+    "correct": 1,
+    "ref": "SA 560 (Subsequent Events) - Paragraphs 10-13: Facts Which Become Known to the Auditor Before Financial Statements are Issued",
+    "explanation": "Under SA 560.10-13, for facts that become known to the auditor after the date of the auditor's report but before the financial statements are issued: (a) discuss the matter with management and TCWG; (b) determine if financial statements need amendment; (c) if management amends, extend audit procedures to the date of the new auditor's report, or issue a dual-dated report. If management refuses to amend the financial statements, the auditor shall notify TCWG that the auditor's report must not be issued to third parties.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3014,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Digital Auditing - Automated Tools & Exception Testing",
+    "question": "In an audit of an automated enterprise with 5,000,000 journal entries, the auditor uses CAATs (Computer Assisted Audit Techniques) and generalized audit software to test 100% of the population for high-risk manual entries. The tool flags 420 entries posted on public holidays, at unusual hours, or directly by users with administrative override privileges. How should the auditor proceed under SA 240 and SA 315 (Revised)?",
+    "options": [
+      "Select a random sample of 5 items from the 420 exceptions and ignore the rest.",
+      "Investigate all 420 exceptions, obtain underlying documentation, evaluate management justification for system overrides, and assess whether the exceptions represent systemic internal control failures or management override of controls (fraud risk indicator).",
+      "Reject the entire journal voucher population without testing.",
+      "Rely on management's verbal confirmation that holiday postings are routine."
+    ],
+    "correct": 1,
+    "ref": "SA 240 (The Auditor's Responsibilities Relating to Fraud) & SA 315 (Revised): Journal Entry Testing in Automated Environments",
+    "explanation": "Under SA 240.32, management override of controls is an inherent fraud risk present in all entities. In an automated environment, testing 100% of journal entries using CAATs is standard practice. When high-risk exceptions are flagged (postings on weekends, odd hours, round sums, or administrator overrides), the auditor must investigate the specific business rationale for these entries rather than sample-testing, because management override of controls is non-random and carries high potential for material misstatement.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3015,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2023 PYQ] Standards on Auditing - SA 505 External Confirmations Non-Responses",
+    "question": "In performing external confirmation procedures for trade receivables of ₹150 Crores, the auditor receives no response for 12 positive confirmation requests totaling ₹32 Crores. Management requests the auditor not to send follow-up reminders claiming customer relationships may be damaged. How should the auditor evaluate management's request and verify the ₹32 Crores balance under SA 505?",
+    "options": [
+      "Accept management's request without further verification.",
+      "Evaluate the validity and reasonableness of management's grounds; if refusal is unjustified, treat as limitation on scope. For non-responses, perform alternative audit procedures (inspect subsequent cash receipts, shipping documents, and sales invoices) to obtain sufficient appropriate audit evidence.",
+      "Immediately issue a Disclaimer of Opinion.",
+      "Send letters through registered post without informing management."
+    ],
+    "correct": 1,
+    "ref": "SA 505 (External Confirmations) - Paragraphs 8, 10, 12: Management Refusal & Alternative Procedures",
+    "explanation": "Under SA 505.8-12, if management refuses to allow the auditor to send confirmation requests, the auditor must inquire into the reasons and evaluate the implications on audit risk and fraud assessment. If management's request is not reasonable, it represents a scope limitation. For non-responses where confirmation could not be obtained, the auditor is statutorily required to perform alternative audit procedures: examining subsequent cash collections, shipping notes, and delivery challans.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3016,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Code of Ethics - Council General Guidelines 2008 (Specified Number of Audits)",
+    "question": "A partnership firm has 4 partners: CA. A, CA. B, CA. C, and CA. D. CA. A is in full-time employment as Chief Financial Officer of a private company. Under Chapter VI of the Council General Guidelines, 2008, what is the maximum number of company audits that the firm can accept under Section 141(3)(g) of the Companies Act, 2013?",
+    "options": [
+      "80 company audits (4 partners × 20 each).",
+      "60 company audits (3 partners in full-time practice × 20 audits each; CA. A cannot be counted as he is in full-time commercial employment).",
+      "120 company audits.",
+      "Unlimited audits for private companies."
+    ],
+    "correct": 1,
+    "ref": "Chapter VI, Council General Guidelines 2008 & Section 141(3)(g) Companies Act 2013: Specified Number of Audits",
+    "explanation": "Under Section 141(3)(g) of the Companies Act, 2013 read with Chapter VI of Council General Guidelines, 2008, an audit firm can accept up to 20 company audits per partner in full-time practice. A partner who is in full-time employment elsewhere (such as CA. A who is a full-time CFO) cannot hold a Certificate of Practice for full-time public practice and cannot be counted for computing the firm's audit ceiling. Maximum permissible audits = 3 practicing partners × 20 = 60 company audits.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3017,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2024 PYQ] Special Audit - Bank Audit Long Form Audit Report (LFAR)",
+    "question": "In the statutory audit of a public sector bank branch, the branch statutory auditor discovers that 15 gold loan accounts were sanctioned without conducting purity testing by an approved assayer, and physical verification of pledged gold packets was not performed during the financial year. Where and how must the branch auditor report these serious operational lapses?",
+    "options": [
+      "In the Long Form Audit Report (LFAR) under the specific questionnaire on Advances and Pledged Assets, and in the main statutory audit report if internal controls are fundamentally compromised.",
+      "Only in a private letter to the branch manager without informing central statutory auditors.",
+      "In the Tax Audit Report under Form 3CD.",
+      "No reporting is required if the loans are currently regular."
+    ],
+    "correct": 0,
+    "ref": "RBI Revised LFAR Format (2020) & Guidance Note on Audit of Banks - Gold Loans",
+    "explanation": "Under the revised LFAR format prescribed by RBI, the branch auditor is required to answer detailed questionnaires concerning physical verification of pledged securities, custody of security items, and compliance with lending guidelines for gold loans (including purity verification by approved assayers). Such critical procedural deficiencies must be highlighted in the LFAR Advances section and communicated to the Central Statutory Auditors and controlling authorities.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3018,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Standards on Auditing - SA 299 Joint Audit Responsibility",
+    "question": "Firm A and Firm B are appointed joint statutory auditors of a large corporation. The work is formally divided between them by mutual agreement, and documented in a joint work allocation schedule. During the year, Firm A audits the inventory division (₹400 Crores) and fails to detect a material inventory valuation fraud. Is Firm B also jointly and severally liable for Firm A's negligence under SA 299 (Revised)?",
+    "options": [
+      "Yes. Joint auditors are jointly and severally liable for 100% of the audit work without exception.",
+      "No. Under SA 299 (Revised), in respect of audit work divided between the joint auditors, each joint auditor is responsible only for the work allocated to them, unless the other joint auditor had specific knowledge of matters brought to their notice or the matter involves undivided work.",
+      "Firm B is liable only if Firm A is declared insolvent.",
+      "Joint audits have been abolished by ICAI."
+    ],
+    "correct": 1,
+    "ref": "SA 299 (Revised) - Joint Audit of Financial Statements: Allocation of Work & Liability Division",
+    "explanation": "Under SA 299 (Revised) Paragraphs 9-11, where work is formally allocated among joint auditors and documented in the joint audit plan, each joint auditor is individually responsible only for the work allocated to them. They are jointly and severally liable only for undivided work, decisions taken jointly regarding disclosure, or compliance with statutory reporting requirements where a matter was brought to their notice by another joint auditor.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3019,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final May 2023 PYQ] Code of Ethics - Unique Document Identification Number (UDIN)",
+    "question": "A practicing Chartered Accountant signs an independent statutory audit report of an unlisted company on 15th September 2023. The CA fails to generate a Unique Document Identification Number (UDIN) within the mandated time frame and generates it 45 days later on 31st October 2023. What are the regulatory and ethical consequences under ICAI Council Directives?",
+    "options": [
+      "No consequences as long as UDIN is generated before the AGM.",
+      "Non-generation of UDIN within 60 days of signing certificates/audit reports is a violation of Council Directives and constitutes professional misconduct under Clause 1 of Part II of the Second Schedule to the Chartered Accountants Act, 1949.",
+      "The audit report becomes void ab initio, and the company must hold fresh elections.",
+      "The CA is fined ₹100 per day by the Registrar of Companies."
+    ],
+    "correct": 1,
+    "ref": "ICAI UDIN Guidelines & Clause 1, Part II, Second Schedule to CA Act, 1949",
+    "explanation": "Under the mandatory UDIN guidelines issued by ICAI Council, every practicing Chartered Accountant is required to generate a UDIN for all certificates, tax audit reports, and statutory audit reports within 60 days of signing. Failure to generate UDIN within the prescribed time limit is deemed a non-compliance with the Council's directions, attracting disciplinary proceedings for professional misconduct under Clause 1 of Part II of the Second Schedule.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  },
+  {
+    "id": 3020,
+    "chapter": 3,
+    "chapterTitle": "Paper 3: Advanced Auditing & Professional Ethics",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Standards on Auditing - SA 260 Communication with TCWG",
+    "question": "During the statutory audit of a listed company, the audit team observes significant deficiencies in internal financial controls over financial reporting (IFCoFR), specifically lack of segregation of duties in treasury fund transfers. Management requests the auditor to communicate this deficiency verbally to the CFO and avoid putting it in writing to the Audit Committee to prevent adverse stock price impact. What is the auditor's professional obligation under SA 265 and SA 260?",
+    "options": [
+      "The auditor must accede to management's request if the CFO promises prompt rectification.",
+      "The auditor must communicate significant deficiencies in internal control in writing to Those Charged With Governance (Audit Committee) on a timely basis under SA 265, and cannot compromise reporting obligations due to management preference.",
+      "The auditor must immediately inform the media.",
+      "The auditor must resign immediately without completing the audit."
+    ],
+    "correct": 1,
+    "ref": "SA 265 (Communicating Deficiencies in Internal Control) Paragraphs 9-11 & SA 260 (Revised)",
+    "explanation": "Under SA 265 Paragraph 9, the auditor shall communicate in writing significant deficiencies in internal control identified during the audit to Those Charged With Governance (TCWG) on a timely basis. Verbal communication to executive management (CFO) does not discharge this statutory and professional obligation. Management's commercial concerns regarding share price can never override the auditor's duty to report significant control deficiencies in writing to the Audit Committee.",
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ"
+  }
+]

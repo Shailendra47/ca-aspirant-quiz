@@ -1,0 +1,164 @@
+{
+  "subject": "Financial Reporting (FR)",
+  "group": "Group I",
+  "paperCode": "PAPER_1",
+  "totalTopics": 13,
+  "questionsPerTopic": 20,
+  "timePerTopicMinutes": 15,
+  "totalTopicQuestions": 260,
+  "fullExam": {
+    "title": "Paper 1: Financial Reporting (FR) - Comprehensive Grand Examination",
+    "totalQuestions": 100,
+    "timeLimitMinutes": 180,
+    "totalMarks": 200,
+    "marksPerQuestion": 2,
+    "negativeMarking": 0,
+    "fileName": "fr_full_paper_100q.json",
+    "coverage": "All 13 Financial Reporting Topics Included"
+  },
+  "topics": [
+    {
+      "topicId": 1,
+      "topicTitle": "Conceptual Framework for Financial Reporting",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_1_conceptual_framework.json",
+      "path": "data/fr/topic_1_conceptual_framework.json"
+    },
+    {
+      "topicId": 2,
+      "topicTitle": "Ind AS for General & Specialised Entities (Presentation, Inventories, Cash Flows, Policies)",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_2_general_presentation_inventories.json",
+      "path": "data/fr/topic_2_general_presentation_inventories.json"
+    },
+    {
+      "topicId": 3,
+      "topicTitle": "Property, Plant and Equipment (PPE), Intangible Assets, and Impairment",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_3_ppe_intangibles_impairment.json",
+      "path": "data/fr/topic_3_ppe_intangibles_impairment.json"
+    },
+    {
+      "topicId": 4,
+      "topicTitle": "Revenue Recognition and Construction Contracts (Ind AS 115)",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_4_revenue_recognition.json",
+      "path": "data/fr/topic_4_revenue_recognition.json"
+    },
+    {
+      "topicId": 5,
+      "topicTitle": "Leases, Employee Benefits, Share-Based Payments, and Income Taxes",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_5_leases_employee_sharebased_tax.json",
+      "path": "data/fr/topic_5_leases_employee_sharebased_tax.json"
+    },
+    {
+      "topicId": 6,
+      "topicTitle": "Provisions, Contingent Liabilities, and Events After the Reporting Period",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_6_provisions_contingencies_events.json",
+      "path": "data/fr/topic_6_provisions_contingencies_events.json"
+    },
+    {
+      "topicId": 7,
+      "topicTitle": "Financial Instruments: Recognition, Measurement, and Classification",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_7_financial_instruments.json",
+      "path": "data/fr/topic_7_financial_instruments.json"
+    },
+    {
+      "topicId": 8,
+      "topicTitle": "Business Combinations and Consolidated Financial Statements",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_8_business_combinations_consolidation.json",
+      "path": "data/fr/topic_8_business_combinations_consolidation.json"
+    },
+    {
+      "topicId": 9,
+      "topicTitle": "Associates and Joint Arrangements (Ind AS 28, 111)",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_9_associates_joint_arrangements.json",
+      "path": "data/fr/topic_9_associates_joint_arrangements.json"
+    },
+    {
+      "topicId": 10,
+      "topicTitle": "Foreign Currency Transactions and Hyperinflation (Ind AS 21, 29)",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_10_forex_hyperinflation.json",
+      "path": "data/fr/topic_10_forex_hyperinflation.json"
+    },
+    {
+      "topicId": 11,
+      "topicTitle": "Accounting for Government Grants and Borrowing Costs (Ind AS 20, 23)",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_11_grants_borrowing_costs.json",
+      "path": "data/fr/topic_11_grants_borrowing_costs.json"
+    },
+    {
+      "topicId": 12,
+      "topicTitle": "Interim and Segment Reporting (Ind AS 34, 108)",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_12_interim_segment_reporting.json",
+      "path": "data/fr/topic_12_interim_segment_reporting.json"
+    },
+    {
+      "topicId": 13,
+      "topicTitle": "Accounting for Insurance, Banking, and Non-Banking Financial Company (NBFC) Entities",
+      "questionCount": 20,
+      "timeLimitMinutes": 15,
+      "totalMarks": 40,
+      "difficulty": "Difficult",
+      "pattern": "Case-Based PYQs",
+      "fileName": "topic_13_insurance_banking_nbfc.json",
+      "path": "data/fr/topic_13_insurance_banking_nbfc.json"
+    }
+  ]
+}

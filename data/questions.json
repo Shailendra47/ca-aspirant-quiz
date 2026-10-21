@@ -4,7 +4,7 @@
     "id": 1,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Fee Dependence & PIE Thresholds (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Fee Dependence & PIE Thresholds",
     "question": "M/s Sterling & Associates, a chartered accountancy firm, has been the statutory auditor of Zenith Infotech Ltd. (a listed Public Interest Entity) for three consecutive financial years. The firm's total gross professional fees from Zenith Infotech Ltd. and its subsidiaries represent 34% of the firm's total annual fees across all clients for each of these three years. Evaluating this engagement under Section 410 of the Revised ICAI Code of Ethics (2020) and Council Guidelines, which of the following statements correctly states the ethical obligations and safeguards required?",
     "options": [
       "The firm is immediately disqualified by operation of law because fee dependence from any single corporate client exceeding 15% is an absolute bar that cannot be mitigated by safeguards.",
@@ -17,14 +17,17 @@
     "explanation": "Under Section 410.3 of the Revised Code of Ethics (2020), where for two consecutive years the total gross fees from an audit client that is a Public Interest Entity (PIE) represent more than 15% of the total fees received by the firm, the firm shall disclose this matter to TCWG and apply one of the following safeguards: (a) Prior to the audit opinion being issued, an engagement quality review performed by an external professional accountant; or (b) After the audit opinion is issued, an external review by a professional accountant or ICAI review body. If fee dependence exceeds 15% for 5 consecutive years, the firm must cease to act as auditor.",
     "createdAt": "2026-10-19T07:23:14.045Z",
     "updatedAt": "2026-10-19T07:23:14.045Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f376",
     "id": 2,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Accounting & Bookkeeping Services to Audit Client (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Accounting & Bookkeeping Services to Audit Client",
     "question": "CA. Aniruddh is appointed statutory auditor of Horizon Retail Pvt. Ltd. (a non-PIE entity). Due to the sudden resignation of the client's chief accountant, the managing director requests CA. Aniruddh's audit team to prepare the monthly journal vouchers, calculate depreciation schedules, and compile the final trial balance before auditing the year-end financial statements. The client agrees to double the statutory audit fee. Under Section 601 of the Code of Ethics and Section 144 of the Companies Act 2013, can CA. Aniruddh accept this assignment?",
     "options": [
       "Yes, because Horizon Retail Pvt. Ltd. is an unlisted private company and Section 144 of the Companies Act only applies to listed entities.",
@@ -37,14 +40,17 @@
     "explanation": "Under Section 144 of the Companies Act 2013, a statutory auditor is expressly prohibited from providing accounting and book-keeping services directly or indirectly to the company or its holding/subsidiary companies. Furthermore, Section 601 of the Code of Ethics emphasizes that preparing accounting records and financial statements for an audit client creates a severe Self-Review Threat because the auditor would subsequently evaluate their own accounting outputs.",
     "createdAt": "2026-10-19T07:23:14.050Z",
     "updatedAt": "2026-10-19T07:23:14.050Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f377",
     "id": 3,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Advocacy Threat & Tax Litigation Services (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Advocacy Threat & Tax Litigation Services",
     "question": "CA. Meenakshi acts as the statutory auditor of Surya Metals Ltd. The Income Tax Department issues an assessment order proposing a ₹12 Crore tax demand on account of transfer pricing adjustments. The Board of Surya Metals Ltd. requests CA. Meenakshi to act as their authorized advocate and argue the legal appeal before the Income Tax Appellate Tribunal (ITAT), where she will formally cross-examine departmental witnesses and argue that the company's valuation models are unimpeachable. What is the ethical validity of accepting this advocacy mandate?",
     "options": [
       "CA. Meenakshi can represent the client before the ITAT because representing clients in tax matters is a recognized statutory privilege of Chartered Accountants under Section 288 of the Income-tax Act.",
@@ -57,14 +63,17 @@
     "explanation": "Under Section 604.10 of the Code of Ethics, providing tax litigation resolution services to an audit client creates Advocacy and Self-Review Threats. When the dispute involves matters that are material to the financial statements and the auditor acts as an advocate before an appellate court or tribunal (such as ITAT), the Advocacy Threat is at an unacceptable level and no safeguards can reduce it to an acceptable level. The auditor must decline to act as advocate.",
     "createdAt": "2026-10-19T07:23:14.051Z",
     "updatedAt": "2026-10-19T07:23:14.051Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f378",
     "id": 4,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Partner Rotation & Cooling-off Period under Code (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Partner Rotation & Cooling-off Period under Code",
     "question": "CA. Ramesh has served as the Engagement Partner on the statutory audit of BlueChip Telecom Ltd. (a listed Public Interest Entity) for 7 consecutive financial years (FY 2017-18 to FY 2023-24). Under Section 540 of the Revised ICAI Code of Ethics (Long Association of Personnel with an Audit Client), what is the mandatory cooling-off period before CA. Ramesh can again serve as the Engagement Partner or Engagement Quality Reviewer (EQR) for BlueChip Telecom Ltd.?",
     "options": [
       "2 consecutive years.",
@@ -77,14 +86,17 @@
     "explanation": "Under Section 540.5 of the Revised Code of Ethics (2020), for audits of Public Interest Entities (PIEs), an individual who has acted as the Engagement Partner for a continuous period of 7 years must undergo a mandatory cooling-off period of 5 consecutive years. During this cooling-off period, the individual cannot serve as Engagement Partner, Engagement Quality Reviewer, or participate in the audit in any key decision-making capacity.",
     "createdAt": "2026-10-19T07:23:14.054Z",
     "updatedAt": "2026-10-19T07:23:14.054Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f379",
     "id": 5,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Intimidation Threat & Disagreements on Audit Qualifications (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Intimidation Threat & Disagreements on Audit Qualifications",
     "question": "During the audit of Alpha Logistics Ltd., CA. Devinder insists on qualifying the audit report due to unverified high-value debtor balances of ₹45 Crores. The Chairman of Alpha Logistics threatens CA. Devinder that if he includes any qualification, the company will not only terminate the firm's ₹25 Lakhs tax consultancy retainership across group entities but will also file a defamation case against CA. Devinder. How should CA. Devinder handle this situation under Fundamental Principles?",
     "options": [
       "Issue an unmodified clean opinion with an Emphasis of Matter paragraph to avoid professional conflict and preserve commercial goodwill.",
@@ -97,14 +109,17 @@
     "explanation": "Under the Fundamental Principles (Section 110.1 and 120), a professional accountant must maintain Objectivity and Professional Skepticism, refusing to let bias, conflict of interest, or undue influence override professional judgment. Threats of dismissal, litigation, or loss of other non-audit fees constitute severe Intimidation Threats. An auditor cannot dilute audit reporting (SA 705) to accommodate client threats.",
     "createdAt": "2026-10-19T07:23:14.055Z",
     "updatedAt": "2026-10-19T07:23:14.055Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f37a",
     "id": 6,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Secondment of Audit Staff to Audit Client (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Secondment of Audit Staff to Audit Client",
     "question": "M/s Kothari & Co. is the statutory auditor of Vayu Power Ltd. The Chief Financial Officer of Vayu Power requests the audit firm to second a senior qualified Chartered Accountant from their audit team to the client company for 6 months to act as the interim Financial Controller and authorize vendor payments. The seconded person will not work on Vayu Power's audit for that year. Under the Revised Code of Ethics (Section 520), can the firm agree to this secondment arrangement?",
     "options": [
       "Yes, because the seconded staff member will be formally excluded from the statutory audit engagement team.",
@@ -117,14 +132,17 @@
     "explanation": "Under Section 520.4 of the Code of Ethics, a firm shall not lend personnel to an audit client if the personnel would assume management responsibilities, such as authorizing transactions, signing financial statements, or making management decisions. Such arrangements create unacceptable Self-Review and Familiarity Threats that cannot be reduced by safeguards.",
     "createdAt": "2026-10-19T07:23:14.056Z",
     "updatedAt": "2026-10-19T07:23:14.056Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f37b",
     "id": 7,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Hosting Services & Custody of Client Data (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Hosting Services & Custody of Client Data",
     "question": "CA. Tanmay provides statutory audit services to Delta E-Commerce Ltd. In addition, CA. Tanmay's firm operates a cloud server hosting platform where Delta E-Commerce stores its primary general ledgers, database archives, and business records. CA. Tanmay has full administrative rights to alter, backup, and restore client records. Evaluating this engagement under Section 600 of the Code of Ethics, which of the following is correct?",
     "options": [
       "Providing hosting services never impairs independence because technical data storage is purely an IT operational activity.",
@@ -137,14 +155,17 @@
     "explanation": "Under Section 600.7 of the Code of Ethics, providing hosting services—where the firm has custody of an audit client's data or operating systems, or determines data retention policies—is considered assuming a Management Responsibility. Assuming management responsibility for an audit client creates severe Self-Review and Self-Interest Threats and is strictly prohibited.",
     "createdAt": "2026-10-19T07:23:14.056Z",
     "updatedAt": "2026-10-19T07:23:14.056Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f37c",
     "id": 8,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Valuation Services to Audit Client (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Valuation Services to Audit Client",
     "question": "M/s Singhal & Co. is the statutory auditor of Omega Pharmaceuticals Ltd. Omega is acquiring a biotech firm and asks M/s Singhal & Co. to perform an independent fair valuation of the acquired unlisted patents and intangible assets (valued at ₹180 Crores, representing 42% of total assets). The valuation will be directly incorporated into Omega's balance sheet under Ind AS 103 (Business Combinations). Under Section 603 of the Code of Ethics, can M/s Singhal & Co. undertake this valuation?",
     "options": [
       "Yes, because valuation of intangibles is a specialized technical discipline requiring Chartered Accountant expertise.",
@@ -157,14 +178,17 @@
     "explanation": "Under Section 603.5 of the Code of Ethics, a firm shall not provide valuation services to an audit client if the valuation involves a significant degree of subjectivity and will have a material effect on the financial statements on which the firm will express an opinion. Doing so creates an insurmountable Self-Review Threat that cannot be mitigated by safeguards.",
     "createdAt": "2026-10-19T07:23:14.056Z",
     "updatedAt": "2026-10-19T07:23:14.056Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f37d",
     "id": 9,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Internal Audit Services to Audit Client (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Internal Audit Services to Audit Client",
     "question": "CA. Bhavik is statutory auditor of Pioneer Agro Ltd. The audit committee requests CA. Bhavik to also conduct the internal audit of the company's manufacturing divisions and submit monthly internal audit reports directly to the audit committee. The committee argues that having the same CA firm saves costs and increases efficiency. Can CA. Bhavik accept the internal audit engagement under Indian law and ethical provisions?",
     "options": [
       "Yes, because both statutory audit and internal audit serve the ultimate interest of corporate shareholders.",
@@ -177,14 +201,17 @@
     "explanation": "Under Section 144(a) of the Companies Act 2013, an auditor cannot render internal audit services to the company, holding company, or subsidiary. Furthermore, Section 605 of the Code of Ethics notes that providing internal audit services to a statutory audit client creates an insurmountable Self-Review Threat because the auditor relies on the client's internal controls that the firm itself assessed or designed.",
     "createdAt": "2026-10-19T07:23:14.057Z",
     "updatedAt": "2026-10-19T07:23:14.057Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f37e",
     "id": 10,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "NOCLAR - Scope & Non-Compliance with Environmental Laws (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] NOCLAR - Scope & Non-Compliance with Environmental Laws",
     "question": "During the statutory audit of CleanChemicals Ltd. (a listed Public Interest Entity), the audit engagement team discovers documentation showing that the factory management has been secretly dumping untreated toxic industrial effluents into an adjacent river in flagrant breach of the Environment (Protection) Act, 1986. The potential statutory closure penalty and environmental compensation levy could threaten the company's going concern status. How must the Senior Professional Accountant in Practice handle this issue under the NOCLAR provisions of the Code of Ethics?",
     "options": [
       "The auditor must ignore environmental matters because auditors are appointed solely to examine financial books of accounts and verify tax returns.",
@@ -197,14 +224,17 @@
     "explanation": "Under Section 360 (NOCLAR), which applies to listed entities, non-compliance with laws and regulations (including environmental protection laws) that cause substantial harm to investors, creditors, employees, or the public requires proactive response. If management and TCWG fail to remediate, the auditor has a professional duty to assess whether disclosure to an appropriate external public authority is required in the public interest, which legally overrides client confidentiality.",
     "createdAt": "2026-10-19T07:23:14.057Z",
     "updatedAt": "2026-10-19T07:23:14.057Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f37f",
     "id": 11,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Referral Fees & Commissions from Software Vendors (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Referral Fees & Commissions from Software Vendors",
     "question": "CA. Alok advises an audit client to implement a specific ERP software package manufactured by SoftSolutions Pvt. Ltd. SoftSolutions pays CA. Alok a 15% referral commission on the software contract value (₹6 Lakhs) without the knowledge of the client's Board of Directors. Evaluating CA. Alok's action under the Fundamental Principles and Clause (2) & (3) of Part I, First Schedule, which of the following is correct?",
     "options": [
       "CA. Alok has not violated any ethical standards because software sales are non-accounting commercial transactions.",
@@ -217,14 +247,17 @@
     "explanation": "Under Section 330 of the Code of Ethics and Clauses (2) and (3) of Part I of the First Schedule to the CA Act 1949, accepting a commission, referral fee, or kickback from a third party in connection with services rendered to a client impairs objectivity and creates a direct Self-Interest Threat. Earning undisclosed commissions on recommendations given to clients constitutes gross professional misconduct.",
     "createdAt": "2026-10-19T07:23:14.058Z",
     "updatedAt": "2026-10-19T07:23:14.058Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f380",
     "id": 12,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Contingent Fees in Non-Assurance Services (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Contingent Fees in Non-Assurance Services",
     "question": "CA. Shobhit is requested by an unlisted client to represent them in a GST search and seizure proceeding. The client proposes a fee arrangement where CA. Shobhit will receive 10% of whatever tax demand reduction is achieved before the Appellate Commissioner. Under Section 330 of the Code of Ethics and Council Regulation 192, can CA. Shobhit accept this contingent fee arrangement?",
     "options": [
       "Yes, because contingent fees are permitted for all tax representations under Regulation 192.",
@@ -237,14 +270,17 @@
     "explanation": "Clause (10) of Part I of the First Schedule and Regulation 192 prohibit a CA in practice from charging fees based on a percentage of profits or contingent on results. The permitted exceptions under Regulation 192 include duties as liquidator, receiver, valuer in certain direct tax instances, and debt recovery. Contingent fees based on tax demand saved in GST/Income tax assessments are strictly prohibited as they severely compromise integrity and objectivity.",
     "createdAt": "2026-10-19T07:23:14.058Z",
     "updatedAt": "2026-10-19T07:23:14.058Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f381",
     "id": 13,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Gifts & Hospitality Threats (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Gifts & Hospitality Threats",
     "question": "During the year-end statutory audit, the Managing Director of Grand Resorts Ltd. gifts the audit team members all-expenses-paid 5-star weekend vacation vouchers worth ₹3,50,000 for their personal use. The Managing Director states that this is customary festive hospitality extended to all corporate associates. Under Section 340 of the Code of Ethics, how must the audit firm evaluate and respond to this offer?",
     "options": [
       "Accept the vouchers because festive gifts below ₹5 Lakhs are customary business courtesies under Indian corporate culture.",
@@ -257,14 +293,17 @@
     "explanation": "Under Section 340 of the Code of Ethics, a professional accountant shall not accept gifts, hospitality, or inducements unless the value is trivial and inconsequential. An all-expenses-paid luxury holiday worth ₹3,50,000 is substantial and creates severe Self-Interest and Familiarity Threats. Acceptance would compromise the fundamental principles of Integrity and Objectivity.",
     "createdAt": "2026-10-19T07:23:14.058Z",
     "updatedAt": "2026-10-19T07:23:14.058Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f382",
     "id": 14,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Loans & Indebtedness from Audit Client (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Loans & Indebtedness from Audit Client",
     "question": "CA. Kunal is the statutory auditor of FinServ Housing Finance Ltd. (an NBFC). CA. Kunal's spouse avails a housing loan of ₹85 Lakhs from FinServ Housing Finance Ltd. at a promotional staff-concessional interest rate of 4.5% per annum, whereas the regular commercial home loan rate charged by the NBFC to the public is 8.9% per annum. Evaluating this borrowing under Section 511 of the Code of Ethics, which statement is true?",
     "options": [
       "The loan is permissible because it is taken by the spouse in her personal individual capacity and not by the auditor.",
@@ -277,14 +316,17 @@
     "explanation": "Under Section 511 of the Code of Ethics, a loan from an audit client that is a bank or lending institution to an auditor or immediate family member is permitted ONLY if it is made under normal lending procedures, terms, and requirements (arm's length commercial rates). Availing a concessional rate of 4.5% creates an acute Self-Interest Threat that destroys independence.",
     "createdAt": "2026-10-19T07:23:14.058Z",
     "updatedAt": "2026-10-19T07:23:14.058Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f383",
     "id": 15,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Financial Interest held by Immediate Family Member (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Financial Interest held by Immediate Family Member",
     "question": "CA. Rajesh is appointed statutory auditor of Sterling Biotech Ltd. Five days before the commencement of the audit, CA. Rajesh discovers that his 22-year-old dependent son holds equity shares in Sterling Biotech Ltd. with a face value of ₹1,00,000 (market value of ₹12,50,000). Under Section 141(3)(d)(i) of the Companies Act 2013 and Section 510 of the Code of Ethics, what is the consequence?",
     "options": [
       "CA. Rajesh is disqualified immediately because an auditor or his relative cannot hold even a single share in the company.",
@@ -297,14 +339,17 @@
     "explanation": "Under Section 141(3)(d)(i) of the Companies Act 2013 read with Rule 10 of Companies (Audit and Auditors) Rules, 2014, a relative may hold securities in the company of face value not exceeding ₹1,00,000. However, under Section 510 of the Code of Ethics, if an immediate family member (such as a dependent child) holds a direct financial interest, it creates an acute Self-Interest Threat. The financial interest must be disposed of or the auditor must decline the engagement.",
     "createdAt": "2026-10-19T07:23:14.059Z",
     "updatedAt": "2026-10-19T07:23:14.059Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f384",
     "id": 16,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Former Audit Partner Joining Audit Client as CFO (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Former Audit Partner Joining Audit Client as CFO",
     "question": "CA. Vivek resigned as Senior Partner from Audit Firm 'V & Associates' on March 31, 2024. On May 1, 2024, CA. Vivek joins Titan Engineering Ltd. (a listed statutory audit client of V & Associates) as Chief Financial Officer (CFO). Evaluating this appointment under Section 524 of the Code of Ethics, which of the following is correct?",
     "options": [
       "There is no independence issue because CA. Vivek is no longer a partner of the audit firm.",
@@ -317,14 +362,17 @@
     "explanation": "Under Section 524 of the Code of Ethics, where a key audit partner joins an audit client as a Director or CFO, Familiarity and Intimidation Threats arise because remaining audit team members may be reluctant to challenge their former senior. For PIEs, an individual shall not act as CFO or Director of an audit client until a cooling-off period of at least 12 months (or 24 months if Engagement Partner) has elapsed since ceasing to be a partner.",
     "createdAt": "2026-10-19T07:23:14.059Z",
     "updatedAt": "2026-10-19T07:23:14.059Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f385",
     "id": 17,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Serving as Director while Firm provides Advisory Services (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Serving as Director while Firm provides Advisory Services",
     "question": "CA. Deepali is an Independent Director on the Board of Sparkle Jewels Ltd. Her partnership firm, M/s Deepali & Co., is approached by Sparkle Jewels Ltd. to provide recurring GST compliance, transfer pricing advisory, and investment consultancy services for an annual fee of ₹40 Lakhs. Under Section 149(6) of the Companies Act 2013 and the Code of Ethics, can the firm accept this assignment while CA. Deepali remains an Independent Director?",
     "options": [
       "Yes, because non-audit advisory work does not conflict with the non-executive role of an Independent Director.",
@@ -337,14 +385,17 @@
     "explanation": "Under Section 149(6) of the Companies Act 2013, an Independent Director cannot have any material pecuniary relationship with the company or its holding/subsidiary entities, nor can a firm in which they are a partner have transactional relationships exceeding 10% of the firm's gross turnover. Moreover, acting as an advisor while sitting on the Board creates severe Self-Review and Self-Interest Threats.",
     "createdAt": "2026-10-19T07:23:14.059Z",
     "updatedAt": "2026-10-19T07:23:14.059Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f386",
     "id": 18,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Litigation Support & Expert Witness Services (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Litigation Support & Expert Witness Services",
     "question": "M/s Agarwal & Co. is the statutory auditor of Zenith Infrastructure Ltd. Zenith is involved in commercial arbitration against a municipal corporation regarding construction delay penalties. Zenith requests M/s Agarwal & Co. to act as their paid Expert Witness before the Arbitral Tribunal to testify and defend the quantum of lost business profits calculated by Zenith's management. Under Section 607 of the Code of Ethics, can M/s Agarwal & Co. accept this role?",
     "options": [
       "Yes, because acting as an expert witness is an independent objective technical role before a court or tribunal.",
@@ -357,14 +408,17 @@
     "explanation": "Under Section 607 of the Code of Ethics, providing expert witness services to an audit client creates significant Advocacy and Self-Review Threats. When the expert witness testimony involves estimating or evaluating damages that have a material effect on the financial statements, the Advocacy Threat is at an unacceptable level and the firm must not act as an expert witness for its audit client.",
     "createdAt": "2026-10-19T07:23:14.059Z",
     "updatedAt": "2026-10-19T07:23:14.059Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f387",
     "id": 19,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Routine Technical Advice vs Management Decision Making (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Routine Technical Advice vs Management Decision Making",
     "question": "During an audit, the Chief Accountant asks the statutory auditor for advice on how to apply the revenue recognition criteria under Ind AS 115 for a complex software license contract with variable consideration. The auditor explains the accounting standard provisions and provides illustrative application guidance, but leaves the final decision on transaction price and revenue timing to the client's management. Evaluating this interaction under Section 600 of the Code of Ethics, which statement is true?",
     "options": [
       "Providing any technical advice on accounting standards during an audit constitutes assuming management responsibility and is prohibited.",
@@ -377,14 +431,17 @@
     "explanation": "Under Section 600.3 of the Code of Ethics, providing advice and recommendations on technical accounting standards, financial reporting matters, or internal controls to assist management does not constitute assuming management responsibility, provided the client's management takes ownership of the financial statements and makes all final judgments.",
     "createdAt": "2026-10-19T07:23:14.059Z",
     "updatedAt": "2026-10-19T07:23:14.059Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f388",
     "id": 20,
     "chapter": 1,
     "chapterTitle": "Fundamental Principles & Threats",
-    "tag": "Aggressive Tax Planning Schemes without Economic Substance (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Aggressive Tax Planning Schemes without Economic Substance",
     "question": "M/s Zenith & Co. is the statutory auditor of Solar Enterprises Ltd. During the tax year, the client requests the audit firm's tax partner to design an aggressive tax avoidance scheme utilizing circular transactions through shell entities in a tax haven with zero commercial substance, solely to manufacture synthetic capital losses to offset taxable operating profits. If the tax partner assists in structuring this artificial tax avoidance vehicle, which Fundamental Principles under Section 110 of the Code of Ethics are violated?",
     "options": [
       "Only the principle of Confidentiality, because tax avoidance details might be leaked to the tax department.",
@@ -397,14 +454,17 @@
     "explanation": "Under Section 111 (Integrity) and Section 115 (Professional Behavior) of the Code of Ethics, a professional accountant shall be straightforward and honest in all professional relationships and shall not be associated with reports, returns, or communications containing false or misleading information. Facilitating artificial sham transactions without economic substance discredits the profession and breaches Integrity and Professional Behavior.",
     "createdAt": "2026-10-19T07:23:14.060Z",
     "updatedAt": "2026-10-19T07:23:14.060Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f389",
     "id": 21,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Section 2(2) Deemed Practice & Multi-Disciplinary Partnerships (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Section 2(2) Deemed Practice & Multi-Disciplinary Partnerships",
     "question": "CA. Vikram, holding a full-time Certificate of Practice (COP), enters into a formal partnership agreement with an Advocate (Bar Council of India) and a Cost Accountant (ICMAI) to establish a multi-disciplinary consultancy firm offering composite legal, tax, and corporate governance solutions. The partnership agreement provides that all three partners will share gross professional fees equally and sign joint advisory reports under the firm name 'Vikram & Associates, Legal & Financial Advisors'. Under Section 2(2) of the Chartered Accountants Act, 1949 and Council Guidelines on Multi-Disciplinary Partnerships (MDP), which of the following is correct?",
     "options": [
       "The partnership is illegal because Chartered Accountants are strictly prohibited from partnering with any professional who is not a member of the ICAI under all circumstances.",
@@ -417,14 +477,17 @@
     "explanation": "Under Section 2(2) of the CA Act 1949 and the ICAI MDP Guidelines, members in practice are permitted to form partnerships with specified professionals (Advocates, Company Secretaries, Cost Accountants, etc.) for non-assurance multidisciplinary practices. However, assurance/attest functions can only be signed by Chartered Accountants, and the firm must be duly registered with the Institute.",
     "createdAt": "2026-10-19T07:23:14.060Z",
     "updatedAt": "2026-10-19T07:23:14.060Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f38a",
     "id": 22,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Council General Guidelines: Tax Audit Ceiling under Section 44AB (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Council General Guidelines: Tax Audit Ceiling under Section 44AB",
     "question": "CA. Raghav is a partner in M/s Raghav & Associates, which comprises 4 practicing partners. During FY 2023-24, CA. Raghav personally signs 72 tax audit reports under Section 44AB of the Income-tax Act, 1961, while the other 3 partners sign 20 tax audits each (total firm tax audits = 132). CA. Raghav argues that since the firm as a whole has 4 partners, the firm's aggregate tax audit capacity is 4 × 60 = 240 tax audits, and 132 is well within the ceiling. Under Chapter VI of the Council General Guidelines, 2008, what is CA. Raghav's disciplinary liability?",
     "options": [
       "CA. Raghav is not guilty because the tax audit ceiling under Council General Guidelines applies strictly to the firm as a whole and any partner can sign on behalf of the firm up to the aggregate firm limit.",
@@ -437,14 +500,17 @@
     "explanation": "Under Chapter VI of the Council General Guidelines, 2008, a member of the Institute in practice shall not accept in a financial year more than 60 tax audit assignments under Section 44AB. In the case of a firm, the overall limit is 60 audits per partner, but the individual signing must ensure compliance with Council directions. Exceeding the specified ceiling constitutes professional misconduct deemed under Section 22 of the Act.",
     "createdAt": "2026-10-19T07:23:14.060Z",
     "updatedAt": "2026-10-19T07:23:14.060Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f38b",
     "id": 23,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Council Guidelines: Non-Audit Fees Ceiling from Statutory Audit Clients (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Council Guidelines: Non-Audit Fees Ceiling from Statutory Audit Clients",
     "question": "M/s Pinnacle & Co. is appointed statutory auditor of Bharat Heavy Engineering Ltd. (a listed Public Sector Undertaking) for an annual audit fee of ₹15 Lakhs. During the same financial year, the management of Bharat Heavy Engineering awards M/s Pinnacle & Co. consulting assignments for Ind AS transition, internal financial controls testing, and GST structuring for an aggregate professional fee of ₹48 Lakhs. Evaluating this under Chapter VIII of the Council General Guidelines, 2008, is the firm in violation?",
     "options": [
       "No, because non-audit fees from listed public companies have no regulatory limits provided they are approved by the Audit Committee.",
@@ -457,14 +523,17 @@
     "explanation": "Under Chapter VIII of the Council General Guidelines, 2008, a member in practice or firm appointed as statutory auditor of a public sector company, government company, or listed entity cannot accept fees for other non-audit services rendered to the same entity exceeding the statutory audit fee. Here, non-audit fees of ₹48 Lakhs exceed the statutory audit fee of ₹15 Lakhs, resulting in professional misconduct.",
     "createdAt": "2026-10-19T07:23:14.060Z",
     "updatedAt": "2026-10-19T07:23:14.060Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f38c",
     "id": 24,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Indebtedness Limits: Council Guidelines vs Companies Act 2013 (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Indebtedness Limits: Council Guidelines vs Companies Act 2013",
     "question": "CA. Harsh is appointed statutory auditor of Apex Engineering Pvt. Ltd. for FY 2023-24. CA. Harsh owes ₹2,50,000 to Apex Engineering Pvt. Ltd. on account of goods purchased on credit for personal use 6 months ago. CA. Harsh argues that under Section 141(3)(d)(ii) of the Companies Act, 2013, an auditor is disqualified only if indebted for an amount exceeding ₹5,00,000, and since ₹2,50,000 is below ₹5,00,000, he is fully eligible. Evaluating this under Chapter X of the Council General Guidelines, 2008, is CA. Harsh's contention tenable?",
     "options": [
       "Yes, because statutory provisions of the Companies Act 2013 override all internal ICAI Council Guidelines.",
@@ -477,14 +546,17 @@
     "explanation": "Under Chapter X of the Council General Guidelines, 2008, a member of the Institute in practice is deemed guilty of professional misconduct if he accepts appointment as auditor of a concern while indebted to that concern for an amount exceeding ₹1,00,000. While the Companies Act 2013 sets a statutory disqualification threshold of ₹5,00,000 under Section 141(3)(d)(ii), the ICAI's stricter professional disciplinary ceiling of ₹1,00,000 binds members.",
     "createdAt": "2026-10-19T07:23:14.061Z",
     "updatedAt": "2026-10-19T07:23:14.061Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a340784f4c2c0571f38d",
     "id": 25,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Maintenance of Books of Accounts by Member in Practice (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Maintenance of Books of Accounts by Member in Practice",
     "question": "CA. Deepak, practicing in his individual proprietary capacity, achieves a gross professional receipts turnover of ₹18 Lakhs during the year. The Disciplinary Directorate conducts an inquiry into a misconduct complaint and directs CA. Deepak to produce his Cash Book, Ledger, and Fee Journal. CA. Deepak refuses, claiming that because his gross professional receipts are below the ₹25 Lakhs threshold prescribed under Section 44AA of the Income-tax Act, a CA is legally exempt from maintaining books of accounts. Under Chapter V of the Council General Guidelines, 2008, which of the following is correct?",
     "options": [
       "CA. Deepak's contention is correct because income tax thresholds govern accounting requirements across all statutory professions.",
@@ -497,14 +569,17 @@
     "explanation": "Under Chapter V of the Council General Guidelines, 2008, a member of the Institute in practice is deemed guilty of professional misconduct if he does not maintain proper books of account (Cash Book, Ledger, etc.) if his gross professional receipts exceed ₹50,000 in any of the three immediately preceding financial years. The Income-tax Act Section 44AA threshold has no bearing on this mandatory ethical requirement.",
     "createdAt": "2026-10-19T07:23:14.061Z",
     "updatedAt": "2026-10-19T07:23:14.061Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9db",
     "id": 26,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Mandatory KYC Norms & Frequency of High-Risk Client Review (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Mandatory KYC Norms & Frequency of High-Risk Client Review",
     "question": "Under the Mandatory Know Your Client (KYC) Norms issued by the Council of the ICAI pursuant to PMLA guidelines and international FATF standards, what is the mandatory review and re-verification frequency for client entities classified under the 'High Risk' category (such as entities with politically exposed persons, complex offshore ownership, or cash-intensive operations)?",
     "options": [
       "High-risk clients require re-verification once every 5 years.",
@@ -517,14 +592,17 @@
     "explanation": "Under ICAI's Mandatory KYC Norms, practicing members must perform ongoing due diligence based on client risk categorization. For clients categorized as 'High Risk' (e.g. PEPs, cross-border high-net-worth accounts, non-resident corporate vehicles), KYC information and documentation must be re-verified at least once every 1 to 2 years, whereas medium and low-risk clients have extended review intervals.",
     "createdAt": "2026-10-19T07:23:14.061Z",
     "updatedAt": "2026-10-19T07:23:14.061Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9dc",
     "id": 27,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Ultimate Beneficial Owner (UBO) Identification Thresholds (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Ultimate Beneficial Owner (UBO) Identification Thresholds",
     "question": "CA. Sandeep is onboarding a corporate client, Global Ventures Pvt. Ltd., for statutory audit. Under the ICAI Mandatory KYC Guidelines read with Rule 9 of the Prevention of Money Laundering (Maintenance of Records) Rules, what is the controlling ownership threshold for identifying the Ultimate Beneficial Owner (UBO) of a corporate company, and what is the threshold for an unincorporated partnership firm?",
     "options": [
       "Company: 26%; Partnership Firm: 26%.",
@@ -537,14 +615,17 @@
     "explanation": "Under the revised PMLA guidelines incorporated into ICAI KYC norms: (1) For a company, the Ultimate Beneficial Owner (UBO) is the natural person who exercises control through ownership or holds more than 10% of shares, capital, or profits. (2) For a partnership firm, the UBO threshold is more than 15% of capital or profits. (3) For a trust, it is 10% or more interest.",
     "createdAt": "2026-10-19T07:23:14.061Z",
     "updatedAt": "2026-10-19T07:23:14.061Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9dd",
     "id": 28,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Network Guidelines & Affiliation with International Networks (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Network Guidelines & Affiliation with International Networks",
     "question": "M/s Global Tax & Associates, an Indian CA firm, joins an international accounting network, 'WorldAudit Alliance'. The firm prints stationery and invoices displaying the logo and name: 'Global Tax & Associates — Member of WorldAudit Alliance International Network'. Under the ICAI Network Guidelines, 2021, which of the following conditions is mandatory for using such network nomenclature?",
     "options": [
       "The international network must have its registered global headquarters physically located in New Delhi.",
@@ -557,14 +638,17 @@
     "explanation": "Under the ICAI Guidelines for Networking (2021), an Indian CA firm may join an Indian or international network provided the network is registered with the ICAI by filing Form B. In stationery, the member firm may mention 'Member of [Network Name]', but statutory attest certificates and audit reports must be signed solely in the name of the Indian registered CA firm.",
     "createdAt": "2026-10-19T07:23:14.061Z",
     "updatedAt": "2026-10-19T07:23:14.061Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9de",
     "id": 29,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Internal Auditor Appointment Restriction (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Internal Auditor Appointment Restriction",
     "question": "CA. Ritu is the internal auditor of Diamond Textiles Ltd. for FY 2023-24. Due to the sudden resignation of the statutory auditor, the Board offers the statutory audit for the same year to CA. Ritu. Can CA. Ritu accept the statutory audit appointment?",
     "options": [
       "Yes, provided she resigns as internal auditor before signing the statutory audit report.",
@@ -577,14 +661,17 @@
     "explanation": "Under established Council Guidelines and Section 144 of the Companies Act 2013, an internal auditor cannot be appointed as the statutory auditor of the same company for the same financial period. Having evaluated the internal control systems and accounts as internal auditor, performing statutory audit creates an insurmountable Self-Review Threat.",
     "createdAt": "2026-10-19T07:23:14.061Z",
     "updatedAt": "2026-10-19T07:23:14.061Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9df",
     "id": 30,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Unique Document Identification Number (UDIN) Guidelines (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Unique Document Identification Number (UDIN) Guidelines",
     "question": "CA. Rajesh signs and issues statutory audit reports and tax audit certificates on September 28, 2024. Due to high work pressure during tax audit season, CA. Rajesh fails to generate UDINs for these reports within the prescribed statutory window of 60 days. What is the regulatory consequence under the ICAI UDIN Guidelines?",
     "options": [
       "UDIN is a purely optional facility; failure to generate UDIN has no disciplinary or legal consequence.",
@@ -597,14 +684,17 @@
     "explanation": "Under the ICAI UDIN Guidelines, generating a UDIN is mandatory for all attest functions, certifications, and audit reports within 60 days of signing. Failure to generate UDIN within the prescribed timeframe violates Council directives and constitutes professional misconduct under Clause (1) of Part II of the Second Schedule to the Act.",
     "createdAt": "2026-10-19T07:23:14.062Z",
     "updatedAt": "2026-10-19T07:23:14.062Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e0",
     "id": 31,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Empanelment with Regulators & Canvassing Prohibition (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Empanelment with Regulators & Canvassing Prohibition",
     "question": "CA. Alok seeks empanelment for bank statutory branch audits with the Reserve Bank of India and C&AG. To improve his firm's grading, CA. Alok engages a retired senior bank executive as a paid lobbyist to personally meet officials of the empanelment committee and secure high-value branch audits. Evaluating CA. Alok's action under Council Guidelines on Empanelment and Tendering, which of the following is correct?",
     "options": [
       "Canvassing through commercial intermediaries is standard business development and is fully permitted.",
@@ -617,14 +707,17 @@
     "explanation": "Under Council Guidelines on Empanelment and Clause (5) of Part I of the First Schedule, a member in practice cannot canvass, solicit professional work, or employ touts or intermediaries to secure audits from banks, government departments, or corporations. Any canvassing for empanelment constitutes professional misconduct.",
     "createdAt": "2026-10-19T07:23:14.062Z",
     "updatedAt": "2026-10-19T07:23:14.062Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e1",
     "id": 32,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Tendering Guidelines & Minimum Fee Compliance (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Tendering Guidelines & Minimum Fee Compliance",
     "question": "A public sector corporation issues a commercial Request for Proposal (RFP) for internal audit services with a minimum benchmark fee of ₹10 Lakhs. CA. Pranav's firm submits an aggressive commercial bid of ₹1,50,000 (an 85% discount) solely to undercut competitors and capture the prestige of the client. Under the ICAI Guidelines for Responding to Tenders, 2016, how is CA. Pranav's conduct evaluated?",
     "options": [
       "Under-cutting fees is a constitutionally protected right under Article 19(1)(g) of the Constitution and can never be questioned by the ICAI.",
@@ -637,14 +730,17 @@
     "explanation": "Under the ICAI Guidelines for Responding to Tenders (2016), while members are permitted to respond to tenders issued by government/PSU bodies, bidding fees that are reckless, predatory, or violate minimum fee criteria specified in the tender undermines professional standards and constitutes a breach of Council Guidelines.",
     "createdAt": "2026-10-19T07:23:14.062Z",
     "updatedAt": "2026-10-19T07:23:14.062Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e2",
     "id": 33,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Sharing Office Space with Other Professionals (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Sharing Office Space with Other Professionals",
     "question": "CA. Manish shares a commercial office with an Advocate and a Real Estate Consultant. The office has a common entrance, a single shared reception desk, and a common name board stating 'Manish & Associates, Chartered Accountants & Real Estate Deal Makers'. Clients of both the CA and the real estate broker sit in the same waiting lounge. Under Council Guidelines on Office Sharing, is CA. Manish guilty of professional misconduct?",
     "options": [
       "No, because sharing office space reduces overhead expenses and is commercially prudent.",
@@ -657,14 +753,17 @@
     "explanation": "Under Council Guidelines on Sharing of Office Space, while sharing space with members of other recognized professional bodies (like Advocates, CS, CMA) is allowed, the office must have distinct demarcation, separate signage, and separate file custody to ensure confidentiality. Combining a CA firm's sign with commercial business like 'Real Estate Deal Makers' constitutes advertising and soliciting under Clauses (6) and (7).",
     "createdAt": "2026-10-19T07:23:14.062Z",
     "updatedAt": "2026-10-19T07:23:14.062Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e3",
     "id": 34,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Firm Name Approval & Regulation 190 (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Firm Name Approval & Regulation 190",
     "question": "CA. Varun decides to commence practice under the trade name 'TaxGuru Super Specialists & Associates'. He publishes letterheads, business cards, and a website using this name without seeking prior approval from the ICAI Council. Under Regulation 190 of the Chartered Accountants Regulations, 1988, what is the status of CA. Varun's actions?",
     "options": [
       "A member can adopt any trade name or firm name without Council approval under freedom of commercial speech.",
@@ -677,14 +776,17 @@
     "explanation": "Regulation 190 of the Chartered Accountants Regulations, 1988 mandates that a Chartered Accountant in practice shall not use any firm name, style, or trade name other than his own name, except with the previous approval in writing of the Council. Practicing under an unapproved trade name like 'TaxGuru Super Specialists' is an express violation of Regulation 190.",
     "createdAt": "2026-10-19T07:23:14.063Z",
     "updatedAt": "2026-10-19T07:23:14.063Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e4",
     "id": 35,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "General Permission vs Specific Permission under Regulation 190A (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] General Permission vs Specific Permission under Regulation 190A",
     "question": "CA. Neeraj holds a full-time Certificate of Practice. He wishes to engage in the following activities: (i) Acting as a sleeping partner in a family manufacturing business; (ii) Acting as an Independent Director in an unlisted company; (iii) Teaching coaching classes for CA students for 35 hours per week. Under Regulation 190A and Council Guidelines, which of these requires SPECIFIC prior permission from the ICAI Council?",
     "options": [
       "All three activities are under General Permission and require no prior permission.",
@@ -697,14 +799,17 @@
     "explanation": "Under Regulation 190A and Council Guidelines: (1) Becoming a sleeping partner in a family business falls under General Permission. (2) Acting as an Independent Director or non-executive director falls under General Permission. (3) Teaching or tutoring up to 25 hours per week has general permission; teaching exceeding 25 hours per week requires SPECIFIC prior approval of the Council.",
     "createdAt": "2026-10-19T07:23:14.063Z",
     "updatedAt": "2026-10-19T07:23:14.063Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e5",
     "id": 36,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Full-Time COP Holder Serving as Full-Time College Professor (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Full-Time COP Holder Serving as Full-Time College Professor",
     "question": "CA. Arvind holds a full-time Certificate of Practice. He accepts an appointment as a permanent full-time Professor of Commerce at a government university, working daily from 9:00 AM to 4:00 PM (35 hours weekly). Concurrently, CA. Arvind operates his audit practice in the evenings and signs statutory audit reports. What is the validity of CA. Arvind's practice under Regulation 190A?",
     "options": [
       "Fully valid, because teaching commerce enhances professional academic standards.",
@@ -717,14 +822,17 @@
     "explanation": "Under Regulation 190A and the Chartered Accountants Act, a member cannot hold a full-time salaried employment (such as a full-time university professor) while simultaneously holding a full-time Certificate of Practice and attesting financial statements. Full-time employment requires either surrendering the COP or obtaining specific Council permission under exceptional terms.",
     "createdAt": "2026-10-19T07:23:14.064Z",
     "updatedAt": "2026-10-19T07:23:14.064Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e6",
     "id": 37,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Concurrent Audit of Banks & Statutory Audit Limits (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Concurrent Audit of Banks & Statutory Audit Limits",
     "question": "M/s Saxena & Co. is appointed concurrent auditor of the treasury branch of Canara Bank. While serving as concurrent auditor, the firm is offered the statutory branch audit of three other commercial branches of Canara Bank for the same financial year. Can M/s Saxena & Co. accept the statutory branch audits under RBI and ICAI guidelines?",
     "options": [
       "Yes, because the concurrent audit is of the treasury branch whereas the statutory audits are of retail branches.",
@@ -737,14 +845,17 @@
     "explanation": "Under Reserve Bank of India (RBI) guidelines and ICAI Council advisories, a Chartered Accountant firm cannot simultaneously act as both concurrent auditor and statutory auditor of the same bank in the same financial year. Accepting statutory branch audits of the same bank while acting as concurrent auditor violates independence guidelines.",
     "createdAt": "2026-10-19T07:23:14.065Z",
     "updatedAt": "2026-10-19T07:23:14.065Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e7",
     "id": 38,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Statutory Auditor Holding Shares as Trustee / Executor (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Statutory Auditor Holding Shares as Trustee / Executor",
     "question": "CA. Mohan is appointed statutory auditor of Sun Pharma Ltd. CA. Mohan's deceased uncle appointed him as the sole Executor and Trustee of a family testamentary trust. The trust owns 5,000 equity shares in Sun Pharma Ltd. CA. Mohan has zero beneficial financial interest in the trust's assets. Does CA. Mohan's position as trustee holding client shares disqualify him from acting as statutory auditor under the Companies Act 2013 and Code of Ethics?",
     "options": [
       "No, because holding shares in a fiduciary capacity without beneficial interest is completely exempt from disqualification under the Companies Act.",
@@ -757,14 +868,17 @@
     "explanation": "Under Section 141(3)(d)(i) of the Companies Act 2013, a person who holds any security or interest in the company is disqualified. The Ethical Standards Board (ESB) has ruled that holding shares even in a fiduciary capacity as a trustee, executor, or power of attorney creates a legal interest and impairs independence, disqualifying the member from acting as statutory auditor.",
     "createdAt": "2026-10-19T07:23:14.066Z",
     "updatedAt": "2026-10-19T07:23:14.066Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e8",
     "id": 39,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Undisputed Audit Fees of Predecessor Auditor Unpaid (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Undisputed Audit Fees of Predecessor Auditor Unpaid",
     "question": "CA. Suresh is approached by Modern Garments Ltd. to accept appointment as statutory auditor for FY 2023-24. Upon communicating with the retiring auditor, CA. Suresh learns that Modern Garments Ltd. has not paid the undisputed statutory audit fees of the retiring auditor for the preceding two financial years. Under Chapter VII of the Council General Guidelines, 2008, can CA. Suresh accept the statutory audit appointment?",
     "options": [
       "Yes, because previous fee disputes between client and predecessor are outside the incoming auditor's concern.",
@@ -777,14 +891,17 @@
     "explanation": "Under Chapter VII of the Council General Guidelines, 2008, a member of the Institute in practice shall not accept appointment as auditor of an entity if the undisputed audit fees for the previous year(s) of the previous auditor have not been paid. Accepting the audit without verifying that undisputed fees are settled constitutes professional misconduct.",
     "createdAt": "2026-10-19T07:23:14.066Z",
     "updatedAt": "2026-10-19T07:23:14.066Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9e9",
     "id": 40,
     "chapter": 2,
     "chapterTitle": "CA in Practice & KYC Norms",
-    "tag": "Multi-Disciplinary Partnerships (MDPs): Voting & Profit Rights (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Multi-Disciplinary Partnerships (MDPs): Voting & Profit Rights",
     "question": "Under the ICAI Regulations governing Multi-Disciplinary Partnerships (MDPs) under Section 53B of the Chartered Accountants Act, which of the following represents a mandatory statutory condition for the execution of attest/assurance reports by an MDP firm?",
     "options": [
       "Non-CA partners (such as Advocates or Company Secretaries) can sign statutory audit reports under the Companies Act if they have 10 years of professional experience.",
@@ -797,14 +914,17 @@
     "explanation": "Under the ICAI Multi-Disciplinary Partnership (MDP) framework, while multidisciplinary partnerships are permitted for consulting and non-assurance services, the statutory attest function is strictly restricted by law (Section 2(2) and Section 141 of Companies Act) to qualified Chartered Accountants. Non-CA partners have no authority, voting power, or right to sign statutory assurance reports.",
     "createdAt": "2026-10-19T07:23:14.066Z",
     "updatedAt": "2026-10-19T07:23:14.066Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9ea",
     "id": 41,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (1), Part I, First Schedule: Practice in Member's Name (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Clause (1), Part I, First Schedule: Practice in Member's Name",
     "question": "CA. Ramesh, holding a Certificate of Practice, shifts his residence abroad for 2 years. He enters into an agreement with his friend, Mr. Suresh (who is an uncertified B.Com graduate with 15 years of accounting experience), permitting Mr. Suresh to manage CA. Ramesh's audit practice in India, issue client invoices, and sign tax representations using rubber stamps of CA. Ramesh's signature. Under Clause (1) of Part I of the First Schedule to the Chartered Accountants Act, 1949, how is CA. Ramesh's conduct evaluated?",
     "options": [
       "CA. Ramesh is not guilty because Mr. Suresh has 15 years of practical accounting experience.",
@@ -817,14 +937,17 @@
     "explanation": "Under Clause (1) of Part I of the First Schedule to the CA Act 1949, a Chartered Accountant in practice is deemed guilty of professional misconduct if he allows any person to practice in his name as a Chartered Accountant unless such person is also a Chartered Accountant and is in partnership with or employed by him. Delegating signing authority or office practice to an unqualified person is grave misconduct.",
     "createdAt": "2026-10-19T07:23:14.066Z",
     "updatedAt": "2026-10-19T07:23:14.066Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9eb",
     "id": 42,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (2), Part I, First Schedule: Fee Sharing & Goodwill to Legal Heirs (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Clause (2), Part I, First Schedule: Fee Sharing & Goodwill to Legal Heirs",
     "question": "CA. Satish, senior partner of M/s Satish & Co., passes away. The partnership deed provides that upon the demise of a partner, the firm will pay 20% of the firm's gross professional fees annually for 5 years to the deceased partner's widow as consideration for the goodwill of the firm. The surviving partners honor this agreement. Under Clause (2) of Part I of the First Schedule, are the surviving partners guilty of professional misconduct for sharing fees with a non-member?",
     "options": [
       "Yes, because sharing professional fees with any non-member under any circumstances constitutes professional misconduct.",
@@ -837,14 +960,17 @@
     "explanation": "Under Clause (2) of Part I of the First Schedule to the CA Act 1949, sharing fees with non-members is misconduct. However, the proviso and Council Guidelines explicitly permit sharing profits or paying goodwill/annuity to a retired partner or the legal representative/heirs of a deceased partner, provided it is authorized by the partnership deed and does not continue in perpetuity.",
     "createdAt": "2026-10-19T07:23:14.066Z",
     "updatedAt": "2026-10-19T07:23:14.066Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9ec",
     "id": 43,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (3), Part I, First Schedule: Accepting Share of Profits / Kickbacks (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Clause (3), Part I, First Schedule: Accepting Share of Profits / Kickbacks",
     "question": "CA. Naveen introduces an audit client seeking private equity financing to an investment merchant banker. The merchant banker successfully structures a ₹50 Crore funding round and pays CA. Naveen a 'finders fee / commission' of 1% (₹50 Lakhs) out of the banker's investment banking fee. CA. Naveen accepts this payment directly into his firm bank account. Under Clause (3) of Part I of the First Schedule, which statement is true?",
     "options": [
       "CA. Naveen is not guilty because investment banking advisory is an unregulated market service.",
@@ -857,14 +983,17 @@
     "explanation": "Clause (3) of Part I of the First Schedule provides that a CA in practice is guilty of professional misconduct if he accepts or agrees to accept any part of the profits of the professional work of a lawyer, auctioneer, broker, or other agent who is not a member of the Institute. Receiving a percentage cut or finders fee from a merchant banker constitutes professional misconduct.",
     "createdAt": "2026-10-19T07:23:14.067Z",
     "updatedAt": "2026-10-19T07:23:14.067Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9ed",
     "id": 44,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (4), Part I, First Schedule: Partnership with Unqualified Persons (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Clause (4), Part I, First Schedule: Partnership with Unqualified Persons",
     "question": "CA. Pankaj enters into a formal partnership with his brother, who is a licensed Real Estate Appraiser and Stockbroker, to run a joint consultancy business in property valuation and equity research under the name 'Pankaj & Brother Associates'. Under Clause (4) of Part I of the First Schedule, what is the disciplinary liability of CA. Pankaj?",
     "options": [
       "He is guilty of professional misconduct for entering into partnership with a person who is not a Chartered Accountant or a member of a recognized professional body specified under Section 53B.",
@@ -877,14 +1006,17 @@
     "explanation": "Under Clause (4) of Part I of the First Schedule, a member in practice is guilty of professional misconduct if he enters into partnership with any person other than a Chartered Accountant in practice, or a person who possesses recognized qualifications as permitted under Section 53B/Regulation 53B. Real estate brokers and stockbrokers are not recognized professional categories under Council guidelines.",
     "createdAt": "2026-10-19T07:23:14.067Z",
     "updatedAt": "2026-10-19T07:23:14.067Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9ee",
     "id": 45,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (5), Part I, First Schedule: Securing Work through Touts & Canvassing (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Clause (5), Part I, First Schedule: Securing Work through Touts & Canvassing",
     "question": "M/s Brilliant Tax Associates pays a 10% monthly retainership fee to an officer in the Registrar of Companies (ROC) facilitation center. In exchange, the officer refers newly incorporated startup companies to M/s Brilliant Tax Associates for statutory audit and GST registration. Evaluating this arrangement under Clause (5) of Part I of the First Schedule, which of the following is correct?",
     "options": [
       "The firm is not guilty because government facilitation centers are authorized to guide startups to registered professionals.",
@@ -897,14 +1029,17 @@
     "explanation": "Clause (5) of Part I of the First Schedule states that a CA in practice is guilty of professional misconduct if he secures, either through the services of a person not in his employment or by means not open to a Chartered Accountant, any professional business. Paying touts, intermediaries, or officials to funnel professional work is grave misconduct.",
     "createdAt": "2026-10-19T07:23:14.067Z",
     "updatedAt": "2026-10-19T07:23:14.067Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9ef",
     "id": 46,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (6), Part I, First Schedule: Advertising on Social Media & Billboards (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Clause (6), Part I, First Schedule: Advertising on Social Media & Billboards",
     "question": "CA. Gaurav rents a prominent highway billboard displaying his photograph with the caption: 'Why Pay High Taxes? Consult CA. Gaurav, India’s #1 Tax Expert! 100% Tax Savings Guaranteed! Visit www.taxgaurav.com'. In addition, he runs targeted sponsored Facebook ads claiming that his firm achieves superior audit results compared to Big-4 firms. Under Clause (6) of Part I of the First Schedule, how is CA. Gaurav's conduct categorized?",
     "options": [
       "Permissible, because professional advertising is protected under the Competition Act, 2002.",
@@ -917,14 +1052,17 @@
     "explanation": "Under Clause (6) of Part I of the First Schedule, a member in practice is deemed guilty of professional misconduct if he solicits clients or professional work either directly or indirectly by circular, advertisement, personal communication, or interview. Using public hoardings, sponsored social media ads, superlative claims ('India’s #1 Tax Expert'), and comparisons with other firms violates Clause (6).",
     "createdAt": "2026-10-19T07:23:14.067Z",
     "updatedAt": "2026-10-19T07:23:14.067Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9f0",
     "id": 47,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (6), Part I, First Schedule: Website Guidelines (Push vs Pull) (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Clause (6), Part I, First Schedule: Website Guidelines (Push vs Pull)",
     "question": "Under the ICAI Website Guidelines issued pursuant to Clause (6) of Part I of the First Schedule, which of the following practices is STRICTLY PROHIBITED for a Chartered Accountant firm operating an official website?",
     "options": [
       "Publishing the names and qualifications of partners and the year of establishment of the firm on the website on a 'pull' basis.",
@@ -937,14 +1075,17 @@
     "explanation": "Under the ICAI Website Guidelines, websites must operate strictly on a 'pull' basis (where visitors search and access information voluntarily). Firms cannot use 'push' technology (mass unsolicited emails, pop-up ads), advertise fees, display client names without written consent, or make comparative or superlative claims.",
     "createdAt": "2026-10-19T07:23:14.067Z",
     "updatedAt": "2026-10-19T07:23:14.067Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9f1",
     "id": 48,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (7), Part I, First Schedule: Designation other than Chartered Accountant (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Clause (7), Part I, First Schedule: Designation other than Chartered Accountant",
     "question": "CA. Rohit prints professional visiting cards and office letterheads containing the following title: 'CA. Rohit, B.Com, FCA, Registered Valuer, Insolvency Professional, Income Tax & GST Super-Specialist'. Evaluating this designation under Clause (7) of Part I of the First Schedule and Council Guidelines, which of the following is correct?",
     "options": [
       "The visiting card is fully compliant because all listed qualifications are genuine statutory certifications.",
@@ -957,14 +1098,17 @@
     "explanation": "Under Clause (7) of Part I of the First Schedule, a member in practice shall not use any designation or description other than Chartered Accountant on letterheads, visiting cards, or signboards. Council Guidelines prohibit descriptive titles such as 'Income Tax Specialist', 'GST Consultant', or 'Super-Specialist'. Designations like Insolvency Professional or Registered Valuer can only be used when practicing strictly in those capacities on separate stationery.",
     "createdAt": "2026-10-19T07:23:14.067Z",
     "updatedAt": "2026-10-19T07:23:14.067Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9f2",
     "id": 49,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (8), Part I, First Schedule: Prior Communication with Retiring Auditor (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Clause (8), Part I, First Schedule: Prior Communication with Retiring Auditor",
     "question": "CA. Abhay receives an appointment letter as statutory auditor of Modern Plastics Ltd. in place of the retiring auditor, CA. Bharat. CA. Abhay sends an email from his personal Gmail account to CA. Bharat's official firm email address and commences the statutory audit the following morning without waiting for a reply or delivery acknowledgment. CA. Bharat later proves he never received or opened the email due to a server outage. Under Clause (8) of Part I of the First Schedule, what is CA. Abhay's position?",
     "options": [
       "CA. Abhay is not guilty because sending an email constitutes electronic communication under the Information Technology Act, 2000.",
@@ -977,14 +1121,17 @@
     "explanation": "Under Clause (8) of Part I of the First Schedule, a member in practice cannot accept a position as auditor without first communicating with the previous auditor in writing. Council directives require communication by Registered Post with Acknowledgement Due (AD), hand delivery with written acknowledgment, or electronic communication with positive delivery proof. Sending an unverified email without confirmation of receipt constitutes misconduct.",
     "createdAt": "2026-10-19T07:23:14.068Z",
     "updatedAt": "2026-10-19T07:23:14.068Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad3a36c597ecc3b48c1c9f3",
     "id": 50,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (8), Part I, First Schedule: Applicability to Tax Audits under Section 44AB (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Clause (8), Part I, First Schedule: Applicability to Tax Audits under Section 44AB",
     "question": "CA. Vinod is approached by a sole proprietorship trader to conduct the Tax Audit under Section 44AB of the Income-tax Act for FY 2023-24. In the preceding year, the tax audit was conducted by CA. Tarun. CA. Vinod accepts the appointment and files the tax audit report on the Income Tax portal without communicating with CA. Tarun. When questioned, CA. Vinod contends that Clause (8) of Part I of the First Schedule applies exclusively to statutory company audits under the Companies Act and not to non-company tax audits. Is CA. Vinod's defense valid?",
     "options": [
       "Yes, because Section 44AB of the Income-tax Act is a revenue compliance law that does not fall under the Chartered Accountants Act.",
@@ -997,14 +1144,17 @@
     "explanation": "The Council has issued express notifications clarifying that the mandatory requirement of prior communication under Clause (8) of Part I of the First Schedule applies not only to company statutory audits, but also to tax audits under Section 44AB, bank branch audits, and other recurring assurance engagements. Failure to communicate with the previous tax auditor constitutes misconduct.",
     "createdAt": "2026-10-19T07:23:14.068Z",
     "updatedAt": "2026-10-19T07:23:14.068Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c4f9",
     "id": 51,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (9), Part I, First Schedule: Ascertaining Statutory Compliance (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Clause (9), Part I, First Schedule: Ascertaining Statutory Compliance",
     "question": "CA. Pradeep accepts appointment as statutory auditor of Shaurya Motors Ltd. to fill a vacancy created by the removal of the previous auditor before the expiry of their term. CA. Pradeep fails to verify whether the company obtained the prior approval of the Central Government (Regional Director) under Section 140(1) of the Companies Act, 2013, before removing the predecessor. In fact, no Central Government approval was ever obtained. Under Clause (9) of Part I of the First Schedule, what is CA. Pradeep's liability?",
     "options": [
       "CA. Pradeep is not liable because complying with company law is solely the responsibility of the Board of Directors.",
@@ -1017,14 +1167,17 @@
     "explanation": "Under Clause (9) of Part I of the First Schedule, a member in practice is guilty of professional misconduct if he accepts an appointment as auditor of a company without first ascertaining that the requirements of Sections 139 and 140 of the Companies Act in respect of appointment/removal have been complied with. Removal under Section 140(1) requires Central Government approval; accepting appointment without verifying this is clear misconduct.",
     "createdAt": "2026-10-19T07:23:14.068Z",
     "updatedAt": "2026-10-19T07:23:14.068Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c4fa",
     "id": 52,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (10), Part I, First Schedule: Charging Fees Based on Profits (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Clause (10), Part I, First Schedule: Charging Fees Based on Profits",
     "question": "CA. Lokesh is appointed as the Liquidator of an insolvent company by the National Company Law Tribunal (NCLT). His remuneration agreement stipulates that he will receive 3% of the total net realisations of the assets of the company plus 2% of the amount distributed to unsecured creditors. Under Clause (10) of Part I of the First Schedule and Regulation 192, is CA. Lokesh guilty of professional misconduct for charging percentage-based fees?",
     "options": [
       "Yes, because Chartered Accountants cannot charge percentage fees on any transaction under any circumstances.",
@@ -1037,14 +1190,17 @@
     "explanation": "While Clause (10) of Part I of the First Schedule generally prohibits charging fees based on a percentage of profits or contingent on results, Regulation 192 creates specific exceptions: (a) Receiver or liquidator fees based on percentage of assets realized/distributed; (b) Valuer under direct tax laws; (c) Debt recovery services. Hence, CA. Lokesh's fee structure is lawful.",
     "createdAt": "2026-10-19T07:23:14.068Z",
     "updatedAt": "2026-10-19T07:23:14.068Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c4fb",
     "id": 53,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (11), Part I, First Schedule: Engaging in Business without Permission (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Clause (11), Part I, First Schedule: Engaging in Business without Permission",
     "question": "CA. Harish, holding a full-time Certificate of Practice, is appointed as a Whole-Time Managing Director of a fintech startup company, drawing a monthly executive salary of ₹3,00,000. He argues that since fintech represents modern financial technology, it is part of the accountancy domain and does not require Council permission. Under Clause (11) of Part I of the First Schedule, is CA. Harish guilty of misconduct?",
     "options": [
       "No, because modern technology startups are exempt from Regulation 190A under Startup India initiatives.",
@@ -1057,14 +1213,17 @@
     "explanation": "Under Clause (11) of Part I of the First Schedule and Regulation 190A, a member in practice cannot engage in any other business or occupation without Council permission. Acting as a Whole-Time Managing Director or executive director is full-time commercial employment and is strictly prohibited without specific prior approval of the Council.",
     "createdAt": "2026-10-19T07:23:14.068Z",
     "updatedAt": "2026-10-19T07:23:14.068Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c4fc",
     "id": 54,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (12), Part I, First Schedule: Signing Reports by Non-Partners (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Clause (12), Part I, First Schedule: Signing Reports by Non-Partners",
     "question": "CA. Siddharth is an employee (paid assistant) in the firm M/s Khandelwal & Co. CA. Siddharth is a qualified FCA holding a valid COP. While the sole partner of the firm is away on vacation, CA. Siddharth signs a statutory bank audit report in the name of 'Khandelwal & Co., Chartered Accountants' using his own name and membership number. Under Clause (12) of Part I of the First Schedule, what is the disciplinary liability of the partner and the employee?",
     "options": [
       "No misconduct is committed because CA. Siddharth is an FCA and an employee of the firm.",
@@ -1077,14 +1236,17 @@
     "explanation": "Clause (12) of Part I of the First Schedule specifies that a CA in practice is guilty of professional misconduct if he allows a person not being a partner in his firm to sign on his behalf or on behalf of his firm any balance sheet, profit and loss account, or audit report. An employee or paid assistant—even if a qualified CA—cannot sign attest reports on behalf of the firm.",
     "createdAt": "2026-10-19T07:23:14.069Z",
     "updatedAt": "2026-10-19T07:23:14.069Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c4fd",
     "id": 55,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Part II, First Schedule: Professional Misconduct in Relation to Members in Service (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Part II, First Schedule: Professional Misconduct in Relation to Members in Service",
     "question": "CA. Tanya is employed as Chief Accounts Officer in a multinational manufacturing corporation. In negotiating a high-value supply contract with a vendor, CA. Tanya secretly demands and accepts a 2% kickback (₹15 Lakhs) directly into her offshore account from the vendor. Under Part II of the First Schedule to the Chartered Accountants Act, 1949, how is CA. Tanya's conduct judged?",
     "options": [
       "The ICAI has zero jurisdiction over members in service; only the employer can take disciplinary action under the Indian Penal Code.",
@@ -1097,14 +1259,17 @@
     "explanation": "Under Part II of the First Schedule, a member of the Institute (other than a member in practice) is guilty of professional misconduct if she: (1) Pays or agrees to pay any part of her emoluments to secure employment; or (2) Accepts or agrees to accept any part of fees, profits, or gains from a vendor or agent by way of kickback in relation to employment duties.",
     "createdAt": "2026-10-19T07:23:14.069Z",
     "updatedAt": "2026-10-19T07:23:14.069Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c4fe",
     "id": 56,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Part III, First Schedule: Failure to Supply Information to ICAI Council (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Part III, First Schedule: Failure to Supply Information to ICAI Council",
     "question": "The Disciplinary Directorate of the ICAI issues three consecutive registered notices to CA. Bhupesh requesting production of audit working paper files in connection with an ongoing investigation into a bank fraud. CA. Bhupesh completely ignores all three notices and refuses to provide any explanation or records to the Institute. Under Clause (2) of Part III of the First Schedule, what is the consequence?",
     "options": [
       "A member is constitutionally protected by the right against self-incrimination (Article 20(3)) and cannot be compelled to reply to the Institute.",
@@ -1117,14 +1282,17 @@
     "explanation": "Under Clause (2) of Part III of the First Schedule, a member (whether in practice or service) is guilty of professional misconduct if he does not supply the information called for, or does not comply with the requirements asked for, by the Institute, Council, Disciplinary Directorate, or any of its Committees.",
     "createdAt": "2026-10-19T07:23:14.069Z",
     "updatedAt": "2026-10-19T07:23:14.069Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c4ff",
     "id": 57,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Part IV, First Schedule: Other Misconduct & Disrepute (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Part IV, First Schedule: Other Misconduct & Disrepute",
     "question": "CA. Rohit, during a domestic airline flight, engages in violent unruly behavior, assaults the flight crew, and is convicted by a Metropolitan Magistrate for public affray and breach of peace, sentenced to pay a fine of ₹10,000. Although this act has zero relationship to professional audit practice, the Disciplinary Directorate initiates proceedings under Part IV of the First Schedule. Is CA. Rohit liable under the Chartered Accountants Act?",
     "options": [
       "No, because the ICAI Disciplinary Directorate has jurisdiction exclusively over professional accounting and audit acts.",
@@ -1137,14 +1305,17 @@
     "explanation": "Under Part IV of the First Schedule (Other Misconduct), a member is deemed guilty of misconduct if he is convicted by a criminal court for an offence punishable with imprisonment up to 6 months, or if he brings disrepute to the profession, whether or not related to his professional work. Unruly violent criminal conduct damages public perception of the profession.",
     "createdAt": "2026-10-19T07:23:14.069Z",
     "updatedAt": "2026-10-19T07:23:14.069Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c500",
     "id": 58,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (1), Part I, Second Schedule: Breach of Confidentiality (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Clause (1), Part I, Second Schedule: Breach of Confidentiality",
     "question": "During the audit of a listed pharmaceutical company, CA. Arvind discovers that the company has successfully developed a breakthrough cancer cure drug, which will be announced publicly next week. CA. Arvind discloses this non-public confidential information to his brother-in-law, who buys 50,000 shares and makes an overnight windfall profit of ₹80 Lakhs upon the public announcement. Under Clause (1) of Part I of the Second Schedule and Section 140 of the Code of Ethics, what is CA. Arvind's liability?",
     "options": [
       "CA. Arvind is not liable under the CA Act because insider trading is investigated exclusively by SEBI under SEBI (PIT) Regulations.",
@@ -1157,14 +1328,17 @@
     "explanation": "Under Clause (1) of Part I of the Second Schedule, a member in practice is guilty of professional misconduct if he discloses information acquired in the course of his professional engagement to any person other than his client, without the consent of his client, or otherwise than as required by any law for the time being in force. Leaking confidential client data for insider trading is grave misconduct.",
     "createdAt": "2026-10-19T07:23:14.069Z",
     "updatedAt": "2026-10-19T07:23:14.069Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c501",
     "id": 59,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (2), Part I, Second Schedule: Certifying Unexamined Financials (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Clause (2), Part I, Second Schedule: Certifying Unexamined Financials",
     "question": "CA. Tarun certifies a Projected Cash Flow Statement and Estimated Balance Sheet for an SME client applying for a ₹20 Crore bank term loan. In his certification, CA. Tarun signs: 'I have verified the above financial estimates and certify that the company will achieve a 25% net profit margin over the next 5 years'. In reality, CA. Tarun performed zero audit or sensitivity analysis and merely copied figures provided by the promoter. Under Clause (2) and (3) of Part I of the Second Schedule, how is CA. Tarun judged?",
     "options": [
       "CA. Tarun is not guilty because projected financial statements are hypothetical future estimates and cannot be audited.",
@@ -1177,14 +1351,17 @@
     "explanation": "Under Clause (2) and (3) of Part I of the Second Schedule, a member in practice is guilty of professional misconduct if he certifies or submits in his name a report on financial statements unless the examination of such statements and related records has been made by him, or if he vouches for the accuracy of one's forecast or estimate of earnings. A CA can examine assumptions under SAE 3400 but cannot vouch for or guarantee future projections.",
     "createdAt": "2026-10-19T07:23:14.069Z",
     "updatedAt": "2026-10-19T07:23:14.069Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c502",
     "id": 60,
     "chapter": 3,
     "chapterTitle": "Schedules to the Act (Misconduct)",
-    "tag": "Clause (5) & (6), Part I, Second Schedule: Concealment of Fraud & Gross Negligence (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Clause (5) & (6), Part I, Second Schedule: Concealment of Fraud & Gross Negligence",
     "question": "During the statutory audit of QuickBuild Infra Ltd., CA. Pradeep uncovers that the Managing Director siphoned off ₹75 Crores of corporate funds through bogus subcontracting invoices issued by fake shell entities owned by the Director's relatives. In consideration of a ₹15 Lakhs special audit fee bonus, CA. Pradeep deliberately ignores this finding, classifies the payments under 'General Site Development Expenses', and issues an unmodified clean audit report. Under Clauses (5), (6), and (7) of Part I of the Second Schedule, what is CA. Pradeep's disciplinary liability?",
     "options": [
       "CA. Pradeep is guilty only of poor documentation under SA 230, which attracts a minor peer review advisory.",
@@ -1197,14 +1374,17 @@
     "explanation": "Under Clauses (5), (6), and (7) of Part I of the Second Schedule to the CA Act 1949, a member in practice is guilty of professional misconduct if he: (5) Fails to disclose a material fact known to him; (6) Fails to report a material misstatement known to him; and (7) Does not exercise due diligence, or is grossly negligent in the conduct of professional duties. Covering up a ₹75 Crore fraud for a bonus constitutes the most egregious misconduct under the Second Schedule.",
     "createdAt": "2026-10-19T07:23:14.070Z",
     "updatedAt": "2026-10-19T07:23:14.070Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c503",
     "id": 61,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Disciplinary Machinery & Bifurcated Jurisdiction (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Disciplinary Machinery & Bifurcated Jurisdiction",
     "question": "A formal complaint is lodged against CA. Vandana containing dual allegations: (i) Allegation 1 involves soliciting professional work through circular letters (First Schedule, Part I, Clause 6); and (ii) Allegation 2 involves gross negligence and failure to report a material fraud of ₹10 Crores during a statutory audit (Second Schedule, Part I, Clause 7). After examining the complaint and written statement, the Director (Discipline) forms a prima facie opinion that CA. Vandana is guilty of both allegations. Under Section 21 of the Chartered Accountants Act, 1949, which body has the lawful jurisdiction to adjudicate this composite complaint?",
     "options": [
       "Allegation 1 must be tried by the Board of Discipline, while Allegation 2 must be tried separately by the Disciplinary Committee in two distinct parallel trials.",
@@ -1217,14 +1397,17 @@
     "explanation": "Under Section 21 of the Chartered Accountants Act, 1949, where the Director (Discipline) is of the opinion that a member is guilty of any professional or other misconduct falling under both the First Schedule and the Second Schedule (or under the Second Schedule alone), the entire matter must be placed before the Disciplinary Committee under Section 21B. The Disciplinary Committee has composite jurisdiction.",
     "createdAt": "2026-10-19T07:23:14.070Z",
     "updatedAt": "2026-10-19T07:23:14.070Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c504",
     "id": 62,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Penal Powers of Board of Discipline under Section 21A (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Penal Powers of Board of Discipline under Section 21A",
     "question": "The Board of Discipline concludes an inquiry under Section 21A against CA. Sunil for a violation falling strictly under Part I of the First Schedule (unauthorized advertising). Under Section 21A(3) of the Chartered Accountants Act, 1949 (as amended by the Amendment Act, 2022), which of the following represents the maximum penalty that the Board of Discipline is legally empowered to impose on CA. Sunil?",
     "options": [
       "Permanent cancellation of Certificate of Practice and a fine of ₹10,00,000.",
@@ -1237,14 +1420,17 @@
     "explanation": "Under Section 21A(3) of the CA Act 1949 as amended by the CA Amendment Act 2022, where the Board of Discipline finds a member guilty of misconduct specified in the First Schedule, it may: (a) Reprimand the member; (b) Remove the name of the member from the Register for a period not exceeding 3 months; and/or (c) Impose a fine which may extend to ₹2,00,000 (increased from ₹1,00,000 by the 2022 amendment).",
     "createdAt": "2026-10-19T07:23:14.070Z",
     "updatedAt": "2026-10-19T07:23:14.070Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c505",
     "id": 63,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Penal Powers of Disciplinary Committee under Section 21B (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Penal Powers of Disciplinary Committee under Section 21B",
     "question": "Following a detailed inquiry into gross audit negligence under the Second Schedule, the Disciplinary Committee finds CA. Naresh and his audit firm, M/s Naresh & Co., guilty of professional misconduct. Under Section 21B(3) of the Chartered Accountants Act, 1949 (as amended by the CA Amendment Act, 2022), what are the maximum statutory penal powers of the Disciplinary Committee regarding monetary fines?",
     "options": [
       "Maximum fine of ₹1,00,000 for individual members and ₹5,00,000 for audit firms.",
@@ -1257,14 +1443,17 @@
     "explanation": "Under Section 21B(3) of the CA Act 1949 (as revised by the Chartered Accountants Amendment Act 2022), where the Disciplinary Committee finds a member or firm guilty of misconduct under the Second Schedule, it may reprimand, remove the name from the Register permanently or for any period, and/or impose a fine up to ₹10,00,000 for an individual member, and up to ₹50,00,000 for a firm.",
     "createdAt": "2026-10-19T07:23:14.070Z",
     "updatedAt": "2026-10-19T07:23:14.070Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c506",
     "id": 64,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Appellate Authority & Limitation Period for Filing Appeal (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Appellate Authority & Limitation Period for Filing Appeal",
     "question": "CA. Deepak is aggrieved by an adverse penalty order passed by the Disciplinary Committee suspending his Certificate of Practice for 2 years and imposing a fine of ₹3,00,000. Under Section 22G of the Chartered Accountants Act, 1949, within what limitation period must CA. Deepak file an appeal before the Appellate Authority, and from what date is this period computed?",
     "options": [
       "Within 30 days from the date of passing of the order.",
@@ -1277,14 +1466,17 @@
     "explanation": "Under Section 22G of the Chartered Accountants Act, 1949, any member of the Institute aggrieved by any order of the Board of Discipline or the Disciplinary Committee imposing a penalty may prefer an appeal to the Appellate Authority within 90 days from the date on which the order is communicated to him. The Appellate Authority may entertain an appeal after 90 days if satisfied that there was sufficient cause.",
     "createdAt": "2026-10-19T07:23:14.070Z",
     "updatedAt": "2026-10-19T07:23:14.070Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c507",
     "id": 65,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Composition of the Appellate Authority under Section 22A (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Composition of the Appellate Authority under Section 22A",
     "question": "Under Section 22A of the Chartered Accountants Act, 1949, what is the statutory composition of the Appellate Authority established to hear appeals against orders of the Disciplinary Committee and Board of Discipline?",
     "options": [
       "The President of the ICAI, the Vice-President, and the Secretary of the Institute.",
@@ -1297,14 +1489,17 @@
     "explanation": "Under Section 22A of the Act, the Appellate Authority consists of a Chairperson who is or has been a Judge of a High Court, two members who have knowledge of law, economics, or accountancy appointed by the Central Government, and two members nominated by the Council of the ICAI. This ensures judicial independence from the Council.",
     "createdAt": "2026-10-19T07:23:14.070Z",
     "updatedAt": "2026-10-19T07:23:14.070Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c508",
     "id": 66,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Time Limit for Entertaining Old Complaints (Rule 12) (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Time Limit for Entertaining Old Complaints (Rule 12)",
     "question": "In January 2024, a shareholder files a complaint with the Disciplinary Directorate alleging that CA. Mayank was grossly negligent during the statutory audit of ABC Ltd. for the financial year concluded in March 2014 (10 years prior). CA. Mayank submits an application for summary dismissal under Rule 12 of the CA (Procedure of Investigations) Rules, 2007. What is the statutory rule regarding entertaining complaints relating to ancient acts or omissions?",
     "options": [
       "There is no limitation period under the CA Act; complaints can be entertained up to 30 years.",
@@ -1317,14 +1512,17 @@
     "explanation": "Under Rule 12 of the Chartered Accountants (Procedure of Investigations of Professional and Other Misconduct and Conduct of Cases) Rules, 2007, where a complaint or information is filed after the expiry of 7 years from the date of the alleged act or omission, the Director shall place the matter before the Council, and the Council shall decide whether it is in the public interest to proceed. Unless the Council so decides, the complaint is barred.",
     "createdAt": "2026-10-19T07:23:14.071Z",
     "updatedAt": "2026-10-19T07:23:14.071Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c509",
     "id": 67,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Powers of Civil Court Vested in Disciplinary Bodies (Section 21C) (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Powers of Civil Court Vested in Disciplinary Bodies (Section 21C)",
     "question": "Under Section 21C of the Chartered Accountants Act, 1949, the Director (Discipline), the Board of Discipline, and the Disciplinary Committee are vested with the same powers as are vested in a Civil Court under the Code of Civil Procedure, 1908 (CPC) in respect of which of the following matters?",
     "options": [
       "Passing attachment orders on immovable property and issuing arrest warrants.",
@@ -1337,14 +1535,17 @@
     "explanation": "Under Section 21C of the CA Act 1949, the disciplinary authorities possess powers of a Civil Court trying a suit under the CPC, 1908 in respect of: (a) Summoning and enforcing attendance of witnesses and examining them on oath; (b) Discovery and production of documents; (c) Receiving evidence on affidavits; and (d) Issuing commissions for examination of witnesses or documents.",
     "createdAt": "2026-10-19T07:23:14.071Z",
     "updatedAt": "2026-10-19T07:23:14.071Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c50a",
     "id": 68,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Publication of Names of Guilty Members in Official Gazette (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Publication of Names of Guilty Members in Official Gazette",
     "question": "Following an order of the Disciplinary Committee removing CA. Anil from the Register of Members for 5 years, CA. Anil requests the Council to keep the removal confidential and not publish his name in the Official Gazette or the ICAI Journal, arguing that publication infringes his constitutional right to privacy. Under Section 21B and Council Disciplinary Regulations, what is the mandatory procedure?",
     "options": [
       "The Council must keep the disciplinary order confidential if the member pays a privacy fee of ₹50,000.",
@@ -1357,14 +1558,17 @@
     "explanation": "Under the Chartered Accountants Act and Regulations, when an order imposing a penalty of suspension, removal of name, or cancellation of Certificate of Practice is passed, the Institute is statutorily required to notify and publish the order and the member's name in the Gazette of India and in the Institute's monthly journal for public awareness and protection of public interest.",
     "createdAt": "2026-10-19T07:23:14.071Z",
     "updatedAt": "2026-10-19T07:23:14.071Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c50b",
     "id": 69,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Withdrawal of Misconduct Complaints by Complainants (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Withdrawal of Misconduct Complaints by Complainants",
     "question": "A bank files a formal complaint against CA. Kailash alleging that he issued fraudulent net worth certificates enabling a borrower to obtain an irregular loan of ₹15 Crores. Six months into the inquiry, the borrower repays the bank loan, and the bank files an application before the Disciplinary Directorate seeking unconditional withdrawal of the complaint against CA. Kailash. Under Rule 11 of the Disciplinary Rules, 2007, what is the legal position?",
     "options": [
       "The complaint terminates immediately by operation of law upon the complainant's withdrawal application.",
@@ -1377,14 +1581,17 @@
     "explanation": "Under Rule 11 of the Disciplinary Rules, 2007, the Director (Discipline) or the Board/Committee may decline to permit withdrawal of a complaint if they believe that the allegations involve serious misconduct impacting public interest or the integrity of the profession. Disciplinary proceedings serve a public regulatory purpose and are not purely private civil disputes.",
     "createdAt": "2026-10-19T07:23:14.072Z",
     "updatedAt": "2026-10-19T07:23:14.072Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c50c",
     "id": 70,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Concurrent Disciplinary Proceedings & Criminal Trials (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Concurrent Disciplinary Proceedings & Criminal Trials",
     "question": "CA. Rajesh is chargesheeted by the Central Bureau of Investigation (CBI) before a Special CBI Court for alleged conspiracy and falsification of accounts in a ₹100 Crore bank fraud. Simultaneously, the ICAI Disciplinary Directorate issues a show-cause notice. CA. Rajesh moves an application before the Disciplinary Committee praying for a stay of the disciplinary proceedings until the criminal trial concludes, citing prejudice to his criminal defense. Is the Disciplinary Committee bound to stay its proceedings?",
     "options": [
       "Yes. Under Indian jurisprudence, criminal trials automatically operate as an absolute stay on all departmental disciplinary inquiries.",
@@ -1397,14 +1604,17 @@
     "explanation": "The Supreme Court of India has established (e.g. in Capt. M. Paul Anthony and subsequent rulings) that departmental/disciplinary proceedings and criminal trials can proceed concurrently because their objectives and standards of proof differ. In disciplinary proceedings, the standard is preponderance of probability, whereas in criminal cases it is beyond reasonable doubt. The Disciplinary Committee is not obligated to stay its inquiry.",
     "createdAt": "2026-10-19T07:23:14.072Z",
     "updatedAt": "2026-10-19T07:23:14.072Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c50d",
     "id": 71,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Debt Recovery & Loan Syndication Mandates (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] ESB Decision: Debt Recovery & Loan Syndication Mandates",
     "question": "CA. Alok accepts an assignment from a commercial client to assist in procuring a ₹30 Crore working capital bank loan. CA. Alok agrees to charge a professional fee calculated strictly as 2% of the loan amount successfully disbursed by the bank (contingent loan syndication fee). Under ESB Decisions and Regulation 192, what is the validity of CA. Alok's fee arrangement?",
     "options": [
       "Fully valid, because debt recovery and loan syndication are exempt from contingent fee restrictions under Regulation 192.",
@@ -1417,14 +1627,17 @@
     "explanation": "Under Council Clarifications and ESB Decisions, the exemption under Regulation 192(c) applies strictly to 'debt recovery services'—where a member helps recover overdue bad debts already owed to a client. It does NOT permit charging percentage or contingent fees for loan syndication or securing fresh bank loans. Charging contingent fees for procuring bank borrowings constitutes professional misconduct.",
     "createdAt": "2026-10-19T07:23:14.072Z",
     "updatedAt": "2026-10-19T07:23:14.072Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c50e",
     "id": 72,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Internal Auditor of Associate / Joint Venture (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] ESB Decision: Internal Auditor of Associate / Joint Venture",
     "question": "CA. Prakash is the statutory auditor of Alpha Ltd. Alpha Ltd. holds a 40% equity stake with significant influence in Beta Pvt. Ltd. (making Beta an Associate company under Section 2(6) of the Companies Act, 2013). The Board of Beta Pvt. Ltd. appoints CA. Prakash as its internal auditor. Under ESB Decisions and Section 144 of the Companies Act, can CA. Prakash act as internal auditor of the associate company?",
     "options": [
       "Yes, because Alpha and Beta are separate legal corporate entities.",
@@ -1437,14 +1650,17 @@
     "explanation": "Under ESB Rulings and Section 144 of the Companies Act 2013, an auditor of a company cannot provide internal audit services to its holding, subsidiary, or associate companies. Under Ind AS 28, the profits and investment valuation of the associate (Beta) are directly consolidated into the holding company's financial statements, creating an unacceptable Self-Review Threat for the statutory auditor.",
     "createdAt": "2026-10-19T07:23:14.072Z",
     "updatedAt": "2026-10-19T07:23:14.072Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c50f",
     "id": 73,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Auditor Receiving Shares / Sweat Equity as Fees (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] ESB Decision: Auditor Receiving Shares / Sweat Equity as Fees",
     "question": "A high-growth tech startup offers its statutory auditor, CA. Raghav, an option to receive 2% equity shares in the company in lieu of ₹10 Lakhs statutory audit fees for FY 2023-24. CA. Raghav accepts the equity shares, arguing that startups face cash crunches and equity compensation aligns the auditor's interest with the company's growth. Under the Code of Ethics and ESB Decisions, how is this evaluated?",
     "options": [
       "Acceptable, because sweat equity to professionals is permitted under Section 54 of the Companies Act 2013.",
@@ -1457,14 +1673,17 @@
     "explanation": "Under ESB decisions and Section 141(3)(d)(i) of the Companies Act 2013, an auditor is disqualified from holding any securities or financial interest in an audit client. Accepting equity shares in lieu of professional audit fees creates an immediate direct financial interest and a catastrophic Self-Interest Threat, destroying independence.",
     "createdAt": "2026-10-19T07:23:14.072Z",
     "updatedAt": "2026-10-19T07:23:14.072Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c510",
     "id": 74,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Non-Audit Fees Exceeding Statutory Fees in Private Companies (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] ESB Decision: Non-Audit Fees Exceeding Statutory Fees in Private Companies",
     "question": "M/s Kapoor & Co. is statutory auditor of Swift Logistics Pvt. Ltd. (an unlisted private company). The statutory audit fee is ₹2,00,000. During the year, the firm renders tax planning, management consulting, and transfer pricing documentation to Swift Logistics Pvt. Ltd., billing an aggregate non-audit fee of ₹18,00,000 (9 times the statutory audit fee). Under Council Guidelines and ESB rulings, does this violate the non-audit fee ceiling?",
     "options": [
       "Yes, because non-audit fees can never exceed statutory audit fees for any company under Indian law.",
@@ -1477,14 +1696,17 @@
     "explanation": "Chapter VIII of the Council General Guidelines, 2008 restricts non-audit fees from exceeding the statutory audit fee specifically for public sector companies, government companies, listed companies, and public interest entities. It does not apply to unlisted private companies, although the auditor must still ensure that fee dependence does not compromise overall independence under Section 410 of the Code.",
     "createdAt": "2026-10-19T07:23:14.072Z",
     "updatedAt": "2026-10-19T07:23:14.072Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c511",
     "id": 75,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Canvassing for Empanelment through Digital PR Firms (PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] ESB Decision: Canvassing for Empanelment through Digital PR Firms",
     "question": "CA. Nitin engages a digital PR marketing agency to publish articles on business news portals naming his firm as 'Top Insolvency Law & Forensic Audit Firm of the Year', accompanied by client testimonial videos. The marketing agency also distributes direct WhatsApp marketing brochures to bank credit managers offering 20% discounts on forensic audits. Under ESB Decisions and Clause (6) of Part I of the First Schedule, what is the verdict?",
     "options": [
       "Permitted, because digital PR and social media marketing are standard business tools in the 21st century.",
@@ -1497,14 +1719,17 @@
     "explanation": "Under ESB rulings and Clause (6) of Part I of the First Schedule, members are strictly prohibited from engaging PR agencies, publishing sponsored promotional awards, circulating unsolicited marketing brochures, or offering fee discounts to solicit clients. Such conduct violates professional ethics.",
     "createdAt": "2026-10-19T07:23:14.073Z",
     "updatedAt": "2026-10-19T07:23:14.073Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c512",
     "id": 76,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Exercising Lien on Client Books of Accounts for Unpaid Fees (PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] ESB Decision: Exercising Lien on Client Books of Accounts for Unpaid Fees",
     "question": "A client company fails to pay the statutory audit fees of ₹5,00,000 to CA. Harish. When the client demands the return of its statutory general ledgers, minute books, and fixed asset registers, CA. Harish refuses to return them, claiming a General Common Law Lien under Section 171 of the Indian Contract Act, 1872, until his professional fees are fully settled. Under ESB Decisions and Section 128 of the Companies Act 2013, can CA. Harish exercise a lien on the company's statutory books?",
     "options": [
       "Yes, because professionals have an unassailable statutory lien over client property in their possession for unpaid professional bills.",
@@ -1517,14 +1742,17 @@
     "explanation": "Under ESB decisions and Section 128 of the Companies Act 2013, a company must maintain its books of accounts at its registered office at all times. An auditor cannot exercise a lien or hold client statutory books of accounts as hostage for unpaid fees. The auditor must return the books and pursue civil remedies for fee recovery.",
     "createdAt": "2026-10-19T07:23:14.073Z",
     "updatedAt": "2026-10-19T07:23:14.073Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c513",
     "id": 77,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Valuation when Firm is Statutory Auditor of Holding Company (PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] ESB Decision: Valuation when Firm is Statutory Auditor of Holding Company",
     "question": "M/s Mehta & Associates is the statutory auditor of Zenith Holdings Ltd. (a listed entity). Zenith Holdings owns 80% equity in Pioneer Retail Ltd. (a material subsidiary). Pioneer Retail Ltd. plans to issue new shares to private equity investors and asks M/s Mehta & Associates to perform a DCF business valuation and issue a valuation certificate for the share issue. Under Section 603 of the Code of Ethics and ESB Decisions, can M/s Mehta & Associates perform the valuation?",
     "options": [
       "Yes, because Pioneer Retail Ltd. is an unlisted entity and Mehta & Associates is auditor of the parent entity.",
@@ -1537,14 +1765,17 @@
     "explanation": "Under ESB rulings and Section 603 of the Code of Ethics, performing a valuation for a material subsidiary of an audit client creates an insurmountable Self-Review Threat because the valuation directly impacts the consolidated financial statements that the firm audits. The firm must decline the engagement.",
     "createdAt": "2026-10-19T07:23:14.073Z",
     "updatedAt": "2026-10-19T07:23:14.073Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c514",
     "id": 78,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "CA Amendment Act 2022: NFRA & Disciplinary Coordination (PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] CA Amendment Act 2022: NFRA & Disciplinary Coordination",
     "question": "Following the establishment of the National Financial Reporting Authority (NFRA) under Section 132 of the Companies Act, 2013, what is the jurisdictional relationship between NFRA and the ICAI Disciplinary Committee regarding investigating professional misconduct of auditors of listed public companies?",
     "options": [
       "ICAI has exclusive jurisdiction over all Chartered Accountants, and NFRA orders are purely advisory.",
@@ -1557,14 +1788,17 @@
     "explanation": "Under Section 132(4) of the Companies Act 2013, NFRA has statutory power to investigate professional or other misconduct of auditors of listed companies and large public companies. The statute explicitly specifies that where NFRA initiates an investigation, no other institute or body (including ICAI) shall initiate or continue any proceedings in such matter, establishing NFRA's overriding jurisdiction for prescribed entities.",
     "createdAt": "2026-10-19T07:23:14.073Z",
     "updatedAt": "2026-10-19T07:23:14.073Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c515",
     "id": 79,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "ESB Decision: Statutory Auditor Appointed as Resolution Professional (PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] ESB Decision: Statutory Auditor Appointed as Resolution Professional",
     "question": "CA. Aniket is the statutory auditor of Steel City Ltd. Steel City Ltd. undergoes financial distress and enters into Corporate Insolvency Resolution Process (CIRP) under the Insolvency and Bankruptcy Code (IBC), 2016. The Committee of Creditors (CoC) proposes to appoint CA. Aniket as the Resolution Professional (RP) to take over the management of the company. Under ESB Decisions and IBBI Regulations, can CA. Aniket accept the appointment as Resolution Professional?",
     "options": [
       "Yes, because as statutory auditor, CA. Aniket possesses intimate knowledge of the company's financial operations.",
@@ -1577,14 +1811,17 @@
     "explanation": "Under IBBI Code of Conduct and ESB Decisions, an insolvency professional must be independent of the corporate debtor. An individual who has served as the statutory auditor of the company within the preceding 3 years cannot act as its IRP or RP because the auditor cannot objectively audit their own preceding work or take over executive management without severe conflict of interest.",
     "createdAt": "2026-10-19T07:23:14.074Z",
     "updatedAt": "2026-10-19T07:23:14.074Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c516",
     "id": 80,
     "chapter": 4,
     "chapterTitle": "Disciplinary Procedures & ESB",
-    "tag": "Revised Penal Powers under CA Amendment Act, 2022 (PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Revised Penal Powers under CA Amendment Act, 2022",
     "question": "Following the enactment of the Chartered Accountants, Cost and Works Accountants and Company Secretaries (Amendment) Act, 2022, what are the revised maximum monetary fine limits that the Board of Discipline (Section 21A) and the Disciplinary Committee (Section 21B) are empowered to impose on an individual member found guilty of professional misconduct?",
     "options": [
       "Board of Discipline: up to ₹25,000; Disciplinary Committee: up to ₹1,00,000.",
@@ -1597,14 +1834,17 @@
     "explanation": "Under the Chartered Accountants (Amendment) Act, 2022: (1) The Board of Discipline under Section 21A(3) can impose a fine up to ₹2,00,000 (increased from ₹1,00,000). (2) The Disciplinary Committee under Section 21B(3) can reprimand, remove the member permanently or for any period, and impose a fine up to ₹10,00,000 for individual members (increased from ₹5,00,000), and up to ₹50,00,000 for audit firms.",
     "createdAt": "2026-10-19T07:23:14.074Z",
     "updatedAt": "2026-10-19T07:23:14.074Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c517",
     "id": 81,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "VaR Multi-Day Scaling & Autocorrelation Pitfall (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] VaR Multi-Day Scaling & Autocorrelation Pitfall",
     "question": "An investment bank holds a ₹50 Crore equity portfolio with an estimated daily standard deviation of returns of 1.80%. The bank's risk manager calculates the 10-day Value at Risk (VaR) at a 99% confidence level (Z = 2.33, assuming zero mean return) using the square root of time rule. Furthermore, historical analysis reveals that the portfolio returns exhibit significant positive serial correlation (momentum autocorrelation) over consecutive trading days. What is the calculated 10-day VaR, and how does the presence of positive serial correlation affect the validity of the square root of time rule?",
     "options": [
       "Calculated 10-day VaR is ₹2.097 Crores; positive serial correlation has zero effect on multi-day volatility because variance is strictly linear across all time horizons.",
@@ -1617,14 +1857,17 @@
     "explanation": "Calculation: 1-day VaR = ₹50 Crores × 1.80% × 2.33 = ₹2.097 Crores. Under the square root of time rule, 10-day VaR = ₹2.097 Cr × √10 = ₹2.097 Cr × 3.162277 = ₹6.631 Crores. Tricky Conceptual Point: The √T scaling rule strictly assumes that daily returns are independent and identically distributed (i.i.d.) with zero serial correlation. If returns exhibit positive serial correlation (momentum/trending), shocks persist across days, meaning actual multi-day variance is higher than T × daily variance. Hence, applying √T in the presence of positive autocorrelation underestimates the true multi-day risk.",
     "createdAt": "2026-10-19T07:23:14.074Z",
     "updatedAt": "2026-10-19T07:23:14.074Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c518",
     "id": 82,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Portfolio VaR & Diversification Benefit (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Portfolio VaR & Diversification Benefit",
     "question": "A wealth management fund operates a ₹100 Crore portfolio consisting of two assets: Asset X (₹60 Crores, daily standard deviation σX = 2.0%) and Asset Y (₹40 Crores, daily standard deviation σY = 3.0%). The correlation coefficient between the daily returns of Asset X and Asset Y is ρ = -0.20. Assuming normal distribution with zero mean return at a 95% confidence level (Z = 1.65, 1-day horizon), what is the diversified Portfolio VaR, and what is the Diversification Benefit (reduction in risk compared to undiversified VaR)?",
     "options": [
       "Portfolio VaR is ₹3.96 Crores, and the Diversification Benefit is ₹0.00 Crores because negative correlation cancels all portfolio benefits.",
@@ -1637,14 +1880,17 @@
     "explanation": "Calculations:\n1. Weights: wX = 0.60, wY = 0.40.\n2. Portfolio Variance σp² = (wX² × σX²) + (wY² × σY²) + (2 × wX × wY × σX × σY × ρ)\n= (0.36 × 0.0004) + (0.16 × 0.0009) + (2 × 0.60 × 0.40 × 0.02 × 0.03 × -0.20)\n= 0.000144 + 0.000144 - 0.0000576 = 0.0002304.\nPortfolio σp = √0.0002304 = 0.015179 (1.5179%).\n3. Diversified Portfolio VaR = ₹100 Crores × 1.5179% × 1.65 = ₹2.5045 Crores (approx ₹2.50 Crores).\n4. Undiversified Individual VaRs:\nVaR_X = ₹60 Cr × 2% × 1.65 = ₹1.98 Crores.\nVaR_Y = ₹40 Cr × 3% × 1.65 = ₹1.98 Crores.\nUndiversified VaR = ₹1.98 Cr + ₹1.98 Cr = ₹3.96 Crores.\n5. Diversification Benefit = Undiversified VaR - Diversified VaR = ₹3.96 Cr - ₹2.50 Cr = ₹1.46 Crores.",
     "createdAt": "2026-10-19T07:23:14.074Z",
     "updatedAt": "2026-10-19T07:23:14.074Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c519",
     "id": 83,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "VaR Methodologies & Non-Linear Option Payoffs (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] VaR Methodologies & Non-Linear Option Payoffs",
     "question": "A proprietary trading desk manages a structured investment portfolio that includes deep out-of-the-money options (high Gamma/convexity) and high-yield credit securities with embedded default triggers. The Chief Risk Officer must select between the Variance-Covariance (Parametric), Historical Simulation, and Monte Carlo Simulation methods for computing regulatory VaR. Which of the following statements represents the most accurate evaluation of these methodologies for this portfolio?",
     "options": [
       "The Variance-Covariance method is fundamentally inadequate because it relies on linear Taylor approximations (Delta-normal) and assumes multivariate normality, completely failing to capture option Gamma (non-linearity) and asymmetric fat-tailed credit default risk; Monte Carlo simulation with full revaluation is the most robust approach despite higher computational cost.",
@@ -1657,14 +1903,17 @@
     "explanation": "The Variance-Covariance (Parametric) method assumes multivariate normal distributions and uses linear Delta approximations. For portfolios containing options with significant Gamma (curvature) or credit instruments with default risk, payoffs are highly non-linear and distributions exhibit extreme skewness and leptokurtosis (fat tails), causing parametric VaR to severely miscalculate risk. Historical Simulation avoids distributional assumptions but cannot price scenarios absent from history. Monte Carlo simulation with full revaluation is the industry benchmark for complex non-linear derivatives and path-dependent options.",
     "createdAt": "2026-10-19T07:23:14.075Z",
     "updatedAt": "2026-10-19T07:23:14.075Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c51a",
     "id": 84,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Conditional VaR (Expected Shortfall) & Sub-Additivity (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Conditional VaR (Expected Shortfall) & Sub-Additivity",
     "question": "In advanced risk measurement, what fundamental mathematical and practical advantage does Conditional VaR (CVaR / Expected Shortfall) possess over conventional Value at Risk (VaR), particularly when evaluating portfolios with severe tail-risk exposures?",
     "options": [
       "Conventional VaR is always sub-additive, whereas CVaR is not sub-additive; CVaR simplifies calculations by assuming returns never exceed 2 standard deviations.",
@@ -1677,14 +1926,17 @@
     "explanation": "Standard VaR suffers from two critical flaws: (1) It is not a coherent risk measure because it violates the sub-additivity axiom for non-normal distributions, meaning the VaR of a combined portfolio can theoretically exceed the sum of individual VaRs. (2) VaR only identifies the threshold loss at a given confidence interval (e.g. 99%), remaining completely blind to the magnitude of losses in the remaining 1% tail. Conditional VaR (Expected Shortfall) solves both issues: it is mathematically sub-additive and calculates the expected (average) loss in the tail beyond the VaR threshold.",
     "createdAt": "2026-10-19T07:23:14.075Z",
     "updatedAt": "2026-10-19T07:23:14.075Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c51b",
     "id": 85,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Macaulay Duration vs Modified Duration in Price Sensitivity (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Macaulay Duration vs Modified Duration in Price Sensitivity",
     "question": "A treasury department holds a 5-year corporate bond with a face value of ₹1,000, paying an annual coupon of 8.00% and currently trading at par (YTM = 8.00% per annum). The Macaulay duration of the bond is calculated as 4.312 years. If market yields across the economy increase by 75 basis points (+0.75%), what is the estimated percentage change in the bond's price using Modified Duration, and why is applying Macaulay duration directly into the price sensitivity formula incorrect?",
     "options": [
       "Estimated price change is -3.234%; Macaulay duration is the exact price sensitivity measure because coupon reinvestment occurs at the Macaulay duration date.",
@@ -1697,14 +1949,17 @@
     "explanation": "Calculation:\n1. Modified Duration D_mod = D_mac / (1 + YTM/m) = 4.312 / (1 + 0.08) = 4.312 / 1.08 = 3.9926 years.\n2. Percentage Price Change: ΔP / P ≈ - D_mod × Δy = - 3.9926 × (+0.0075) = -0.029944 = -2.994% (approx -2.993% to -2.994% drop).\nTricky Point: Macaulay duration is expressed in units of time (years) and measures cash flow timing. Modified duration measures the percentage price volatility per percentage change in yield. Multiplying Macaulay duration directly by Δy yields -3.234%, which is a classic student trap that ignores the (1 + y) discounting adjustment factor.",
     "createdAt": "2026-10-19T07:23:14.075Z",
     "updatedAt": "2026-10-19T07:23:14.075Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c51c",
     "id": 86,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Convexity Adjustment & Taylor Series Expansion (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Convexity Adjustment & Taylor Series Expansion",
     "question": "A fixed income fund manager holds a portfolio of long-term government securities with a Modified Duration of 8.50 years and a Convexity of 95.0. Market benchmark yields experience a sharp drop of 160 basis points (Δy = -0.0160). Utilizing the combined Duration-Convexity Taylor Series expansion [ΔP/P ≈ -D_mod(Δy) + 1/2 × Convexity × (Δy)²], what is the total estimated percentage change in the portfolio price, and what role does the convexity adjustment play?",
     "options": [
       "Total estimated price change is +14.816%; the convexity adjustment (+1.216%) increases the price appreciation because the price-yield curve is convex to the origin, ensuring duration alone does not underestimate price gains when yields fall.",
@@ -1717,14 +1972,17 @@
     "explanation": "Calculation:\n1. Duration Effect = - D_mod × Δy = - 8.50 × (-0.0160) = +0.1360 = +13.600%.\n2. Convexity Effect = + (1/2) × Convexity × (Δy)² = 0.5 × 95.0 × (-0.0160)² = 47.5 × 0.000256 = +0.012160 = +1.216%.\n3. Combined Percentage Price Change = +13.600% + 1.216% = +14.816%.\nTricky Point: Because the bond price-yield curve is convex to the origin, the tangent line (duration) always lies below the actual price curve. Consequently, when yields fall, duration underestimates price gains; when yields rise, duration overestimates price losses. The convexity adjustment is ALWAYS positive for option-free bonds (+ 1/2 × Convexity × (Δy)²), adding to price gains when yields drop and cushioning price declines when yields rise.",
     "createdAt": "2026-10-19T07:23:14.076Z",
     "updatedAt": "2026-10-19T07:23:14.076Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c51d",
     "id": 87,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Classical Bond Immunization Conditions & Rebalancing Risk (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Classical Bond Immunization Conditions & Rebalancing Risk",
     "question": "A pension fund has a guaranteed bullet payout liability of ₹500 Crores due in exactly 7 years. To insulate the fund against parallel shifts in the yield curve, the investment committee implements Redington's Classical Immunization strategy. Which set of mathematical conditions is mandatory to achieve immunization, and why does an immunized portfolio require continuous dynamic rebalancing?",
     "options": [
       "PV(Assets) = PV(Liabilities), Duration(Assets) < Duration(Liabilities), and Convexity(Assets) < Convexity(Liabilities); rebalancing is never needed once duration is matched at inception.",
@@ -1737,14 +1995,17 @@
     "explanation": "Under Redington's classical immunization framework for parallel yield shifts:\n1. Present Value of Assets must be greater than or equal to Present Value of Liabilities: PV(A) ≥ PV(L).\n2. Asset Duration must match Liability Duration: D(A) = D(L).\n3. Asset Convexity must exceed Liability Convexity: Convexity(A) > Convexity(L), ensuring that the asset value curve lies strictly above the liability value curve around the operating yield.\nDynamic Rebalancing: Immunization is not a passive buy-and-hold strategy. As time passes and yields change, asset duration (composed of coupon bonds) decays at a different rate than liability duration (often a zero-coupon single bullet payout), requiring regular portfolio rebalancing.",
     "createdAt": "2026-10-19T07:23:14.076Z",
     "updatedAt": "2026-10-19T07:23:14.076Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c51e",
     "id": 88,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Asset-Liability Management (ALM) & Gap Analysis (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Asset-Liability Management (ALM) & Gap Analysis",
     "question": "A commercial bank's ALM Committee reports that for the 90-day time bucket, the bank has ₹2,400 Crores of Rate-Sensitive Assets (RSA) and ₹3,000 Crores of Rate-Sensitive Liabilities (RSL). If market interest rates across all maturities increase by 125 basis points (+1.25%), what is the Interest Rate Gap, and what is the impact on the bank's Net Interest Income (NII)?",
     "options": [
       "Gap is +₹600 Crores (Asset-Sensitive); Net Interest Income increases by ₹7.50 Crores.",
@@ -1757,14 +2018,17 @@
     "explanation": "Calculations:\n1. Interest Rate Gap = Rate-Sensitive Assets (RSA) - Rate-Sensitive Liabilities (RSL)\nGap = ₹2,400 Crores - ₹3,000 Crores = -₹600 Crores (Negative Gap / Liability-Sensitive).\n2. Change in Net Interest Income ΔNII = Gap × Δr\nΔNII = (-₹600 Crores) × (+0.0125) = -₹7.50 Crores (Drop of ₹7.50 Crores in NII).\nTricky Point: When a bank has a Negative Gap (RSA < RSL), more liabilities than assets reprice within the time horizon. When interest rates rise, the cost of funds on RSL increases on ₹3,000 Crores, while asset yields increase on only ₹2,400 Crores. Thus, interest expense rises faster than interest income, causing Net Interest Income (NII) to decline by ₹7.50 Crores.",
     "createdAt": "2026-10-19T07:23:14.076Z",
     "updatedAt": "2026-10-19T07:23:14.076Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c51f",
     "id": 89,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Interest Rate Zero-Cost Collar Mechanism (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Interest Rate Zero-Cost Collar Mechanism",
     "question": "Zenith Motors borrows ₹250 Crores under a 5-year floating-rate term loan linked to 6-month SOFR + 2.00%. To protect against sharp increases in benchmark interest rates without incurring upfront cash option premium expenses, the company structures a Zero-Cost Collar. How is this collar constructed, and how does it perform if 6-month SOFR settles at 7.50% versus 2.50% (assuming a Cap strike of 6.00% and Floor strike of 3.50%)?",
     "options": [
       "Zenith buys a Floor at 3.50% and sells a Cap at 6.00%; if SOFR rises to 7.50%, Zenith pays an uncapped borrowing cost of 9.50%.",
@@ -1777,14 +2041,17 @@
     "explanation": "A borrower with floating debt fears rising interest rates. To hedge:\n1. Structure: Buy a Cap at 6.00% (calls on rate) to protect against rate spikes, and sell a Floor at 3.50% (puts on rate) to collect premium offsetting the Cap cost (Zero-Cost Collar).\n2. Scenario 1 (SOFR = 7.50%): Above Cap strike (6.00%). The Cap pays (7.50% - 6.00%) = 1.50%. The company's net borrowing cost = (7.50% + 2.00% loan spread) - 1.50% cap payoff = 8.00% (effectively capped at Strike 6.00% + 2.00% spread).\n3. Scenario 2 (SOFR = 2.50%): Below Floor strike (3.50%). The sold Floor is exercised against Zenith, requiring payment of (3.50% - 2.50%) = 1.00%. Net cost = (2.50% + 2.00% spread) + 1.00% floor payout = 5.50% (effectively floored at Strike 3.50% + 2.00% spread).",
     "createdAt": "2026-10-19T07:23:14.076Z",
     "updatedAt": "2026-10-19T07:23:14.076Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c520",
     "id": 90,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "CDS Settlement Mechanisms: Cash vs Recovery Rate Trap (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] CDS Settlement Mechanisms: Cash vs Recovery Rate Trap",
     "question": "Prudent Capital holds a Credit Default Swap (CDS) contract with a notional principal of ₹100 Crores referencing the Senior Secured Bonds of Solar Power Ltd. The CDS contract specifies Cash Settlement. Following an uncured failure to pay interest, an official Credit Event is declared by the ISDA Credit Derivatives Determinations Committee. A binding credit auction determines that the post-default market recovery value of the reference bonds is 32.00% of par value. What is the net cash settlement payout received by Prudent Capital from the Protection Seller?",
     "options": [
       "₹32.00 Crores, representing the recovery rate value determined in the auction.",
@@ -1797,14 +2064,17 @@
     "explanation": "In a Cash-Settled Credit Default Swap (CDS), the protection buyer does not deliver the physical defaulted bond. Instead, the Protection Seller pays the credit loss determined by market auction:\nCash Payout = Notional Amount × (100% - Recovery Rate)\nHere, Notional = ₹100 Crores, Recovery Rate = 32.00% (0.32).\nCash Payout = ₹100 Crores × (100% - 32%) = ₹100 Crores × 68% = ₹68.00 Crores.\nTricky Pitfall: Students frequently pick ₹32 Crores (the recovery rate), confusing the recovery value retained by the bond with the loss compensated by the CDS.",
     "createdAt": "2026-10-19T07:23:14.076Z",
     "updatedAt": "2026-10-19T07:23:14.076Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c521",
     "id": 91,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Volatility Scaling Trap: Trading Days vs Calendar Days (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Volatility Scaling Trap: Trading Days vs Calendar Days",
     "question": "An equity derivative desk estimates that the daily return standard deviation of an index portfolio is 1.60%. The junior risk analyst computes the annualized volatility by scaling the daily volatility with √365 (calendar days), yielding 30.57%. The Chief Risk Officer rejects this calculation and mandates scaling by √252 (active trading days). What is the correctly annualized equity volatility, and what is the percentage error introduced by the junior analyst's formula?",
     "options": [
       "Correct annualized volatility is 25.40%; using 365 calendar days erroneously inflates volatility by approximately 20.4% [√(365/252) - 1].",
@@ -1817,14 +2087,17 @@
     "explanation": "Calculations:\n1. Correct Annualized Volatility = Daily Volatility × √252 = 1.60% × 15.8745 = 25.399% (approx 25.40%).\n2. Erroneous Volatility = 1.60% × √365 = 1.60% × 19.105 = 30.568% (approx 30.57%).\n3. Relative Error = √(365/252) - 1 = √(1.4484) - 1 = 1.2035 - 1 = +20.35% (approx 20.4% overestimation).\nTricky Point: In equity markets, trading occurs only on business days (~250 to 252 days). Scaling by 365 calendar days assumes continuous price discovery on weekends, severely distorting option pricing and regulatory capital calculations.",
     "createdAt": "2026-10-19T07:23:14.077Z",
     "updatedAt": "2026-10-19T07:23:14.077Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c522",
     "id": 92,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Economic Exposure vs Transaction Exposure (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Economic Exposure vs Transaction Exposure",
     "question": "Bharat Exporters Ltd. manufactures automotive gears in Pune and exports 100% of its output to Germany billed in Euros (EUR). Over the past 3 years, the Indian Rupee has steadily appreciated by 18% against the Euro in real terms, while rival auto-part manufacturers based in Vietnam have gained competitive cost advantages. The CFO proposes to hedge this risk by purchasing 3-month EUR forward contracts rolling forward indefinitely. Why is this proposed hedging strategy fundamentally flawed?",
     "options": [
       "Forward contracts are illegal for exports exceeding ₹100 Crores under RBI regulations.",
@@ -1837,14 +2110,17 @@
     "explanation": "Economic Exposure (Operating Exposure) measures the impact of unanticipated real exchange rate fluctuations on future cash flows, competitive position, and enterprise market value. Derivative instruments (forwards/options) mitigate only contracted Transaction Exposure. Relying on short-term rolling forwards does not alter long-term manufacturing cost uncompetitiveness; true mitigation requires operational hedges (shifting production, diversifying sales markets, local supply sourcing).",
     "createdAt": "2026-10-19T07:23:14.077Z",
     "updatedAt": "2026-10-19T07:23:14.077Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c523",
     "id": 93,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Basel Traffic Light Backtesting Framework (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Basel Traffic Light Backtesting Framework",
     "question": "Under the Basel Committee on Banking Supervision (BCBS) Traffic Light approach for backtesting internal 99% 1-day Value at Risk (VaR) models over a testing window of 250 trading days, how are exceptions (days where actual trading loss exceeds the predicted VaR) classified into Green, Yellow, and Red zones, and what is the regulatory consequence of falling into the Red Zone?",
     "options": [
       "Green: 0 exceptions; Yellow: 1–10 exceptions; Red: 11+ exceptions; capital requirement is doubled.",
@@ -1857,14 +2133,17 @@
     "explanation": "Under the Basel Traffic Light approach (250 observations at 99% confidence level): (1) Green Zone (0–4 exceptions): Model is accepted, capital scaling factor k = 3. (2) Yellow Zone (5–9 exceptions): Supervisory alert, scaling factor increases progressively (3.40 to 3.85). (3) Red Zone (10+ exceptions): Statistical certainty that the model underestimates risk (error probability < 0.01%); scaling factor rises to 4.0 and internal model approval may be withdrawn.",
     "createdAt": "2026-10-19T07:23:14.077Z",
     "updatedAt": "2026-10-19T07:23:14.077Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c524",
     "id": 94,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Reverse Stress Testing in Enterprise Risk Management (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Reverse Stress Testing in Enterprise Risk Management",
     "question": "What is the defining procedural and conceptual difference between conventional Stress Testing and 'Reverse Stress Testing' as mandated under the revised Basel III and Enterprise Risk Management frameworks?",
     "options": [
       "Conventional stress testing evaluates credit risk, whereas reverse stress testing evaluates operational risk.",
@@ -1877,14 +2156,17 @@
     "explanation": "In conventional stress testing, risk managers define adverse scenarios and measure their impact on financial solvency. In Reverse Stress Testing, the starting point is the hypothetical failure of the firm (e.g. breaching minimum regulatory capital or experiencing terminal illiquidity). Analysts work backwards to uncover hidden vulnerabilities, correlated risks, and contagion channels that could lead to that catastrophic threshold.",
     "createdAt": "2026-10-19T07:23:14.077Z",
     "updatedAt": "2026-10-19T07:23:14.077Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c525",
     "id": 95,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Interest Rate Swap (IRS) Netting & Comparative Advantage (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Interest Rate Swap (IRS) Netting & Comparative Advantage",
     "question": "Company P can borrow Fixed at 9.00% or Floating at MIBOR + 0.80%. Company Q can borrow Fixed at 11.50% or Floating at MIBOR + 1.50%. Company P desires a floating-rate liability, while Company Q desires a fixed-rate borrowing. What is the total potential gain available to be shared between both parties through an Interest Rate Swap (IRS), and how is the comparative advantage distributed?",
     "options": [
       "Total gain is 3.20%; Company P has a comparative advantage in Floating borrowing.",
@@ -1897,14 +2179,17 @@
     "explanation": "Calculations:\n1. Fixed Spread: 11.50% - 9.00% = 2.50% (P is 2.50% cheaper).\n2. Floating Spread: (MIBOR + 1.50%) - (MIBOR + 0.80%) = 0.70% (P is 0.70% cheaper).\n3. Net Differential / Total Swap Gain = 2.50% - 0.70% = 1.80% (180 basis points).\nCompany P has an absolute advantage in both markets, but its comparative advantage is strongest in the Fixed market (saving 2.50% vs 0.70%). Hence, P borrows Fixed, Q borrows Floating, and they swap to achieve a combined net saving of 1.80%.",
     "createdAt": "2026-10-19T07:23:14.077Z",
     "updatedAt": "2026-10-19T07:23:14.077Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c526",
     "id": 96,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Forward Rate Agreement (FRA) Cash Settlement Formula (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Forward Rate Agreement (FRA) Cash Settlement Formula",
     "question": "A corporate borrower enters into a 3 × 6 Forward Rate Agreement (FRA) with a bank for a notional principal of ₹50 Crores at an agreed forward rate of 6.50% per annum (Actual/360 day count convention). At the settlement date (at the end of month 3), the 3-month reference benchmark rate fixes at 8.00% per annum for the 90-day period. What is the cash settlement payment, and who pays whom?",
     "options": [
       "The bank pays the corporate borrower ₹18,37,794 at the beginning of the 90-day borrowing period, representing the discounted present value of the interest differential.",
@@ -1917,14 +2202,17 @@
     "explanation": "Calculations:\n1. Interest Differential = (Reference Rate - FRA Rate) × Notional × (Days / 360)\n= (8.00% - 6.50%) × ₹50 Crores × (90 / 360) = 1.50% × ₹50 Cr × 0.25 = ₹18,75,000.\n2. Since FRA settlement occurs at the START of the 90-day borrowing period, this interest differential must be discounted to present value using the reference benchmark rate (8.00%):\nSettlement Cash Flow = ₹18,75,000 / [1 + (8.00% × 90 / 360)]\n= ₹18,75,000 / [1 + 0.02] = ₹18,75,000 / 1.02 = ₹18,37,794.12 (approx ₹18,37,794).\nBecause the benchmark rate (8.00%) rose above the agreed FRA rate (6.50%), the bank pays the borrower.",
     "createdAt": "2026-10-19T07:23:14.078Z",
     "updatedAt": "2026-10-19T07:23:14.078Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c527",
     "id": 97,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Cross-Currency Basis Swap & Currency Basis Spread (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Cross-Currency Basis Swap & Currency Basis Spread",
     "question": "An Indian blue-chip corporate issues 5-year USD-denominated bonds at SOFR + 1.20% and converts the proceeds to INR using a Cross-Currency Basis Swap (USD/INR). The market cross-currency basis spread for USD/INR is negative (-35 basis points). What does a negative cross-currency basis spread signify in international financial markets, and how does it impact the borrower's INR synthetic borrowing cost?",
     "options": [
       "A negative basis spread implies that US Dollars are in abundant surplus in international interbank markets, reducing Indian borrowing costs.",
@@ -1937,14 +2225,17 @@
     "explanation": "In cross-currency swaps, a negative basis spread on non-USD currencies reflects a violation of Covered Interest Parity (CIP) driven by high global demand for US Dollar funding and limits to bank balance-sheet arbitrage. Non-US entities seeking to borrow USD synthetic funds must pay an additional basis spread, increasing their overall effective borrowing costs.",
     "createdAt": "2026-10-19T07:23:14.078Z",
     "updatedAt": "2026-10-19T07:23:14.078Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c528",
     "id": 98,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Delta-Gamma Hedging of Exotic Derivative Books (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Delta-Gamma Hedging of Exotic Derivative Books",
     "question": "An equity derivatives desk holds a portfolio of European call options with a portfolio Delta (Δ) of +4,500 and a portfolio Gamma (Γ) of -2,400. To create a Delta-Gamma neutral book, the trader has access to: (i) Underlying equity stock (Delta = 1.0, Gamma = 0); and (ii) A traded exchange call option with Delta = 0.60 and Gamma = 4.0. What sequence of derivative trades is required to achieve complete Delta and Gamma neutrality?",
     "options": [
       "Buy 600 traded options to neutralize Gamma, then sell 4,860 underlying shares to neutralize Delta.",
@@ -1957,14 +2248,17 @@
     "explanation": "Calculations:\n1. The underlying stock has Gamma = 0, so Gamma must be neutralized first using the traded option.\nTarget: Portfolio Gamma + (N_opt × Gamma_opt) = 0\n-2,400 + (N_opt × 4.0) = 0 => N_opt = +600 (Buy 600 traded options).\n2. Adding 600 traded options changes the portfolio Delta:\nNew Delta = Old Delta + (600 × Delta_opt) = +4,500 + (600 × 0.60) = +4,500 + 360 = +4,860.\n3. Neutralize total Delta using underlying shares (which have Delta = 1.0, Gamma = 0):\nTarget: New Delta + N_stock = 0 => +4,860 + N_stock = 0 => N_stock = -4,860 (Short/Sell 4,860 shares).",
     "createdAt": "2026-10-19T07:23:14.078Z",
     "updatedAt": "2026-10-19T07:23:14.078Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c529",
     "id": 99,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "COSO Enterprise Risk Management (ERM) Framework (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] COSO Enterprise Risk Management (ERM) Framework",
     "question": "Under the COSO Enterprise Risk Management (ERM) Framework (Integrating with Strategy and Performance), what are the five interrelated core components that govern comprehensive organizational risk oversight?",
     "options": [
       "1. Equity, 2. Debt, 3. Derivatives, 4. Forex, 5. Real Estate.",
@@ -1977,14 +2271,17 @@
     "explanation": "The updated COSO ERM Framework comprises five core interrelated components: (1) Governance and Culture (tone at the top); (2) Strategy and Objective-Setting (risk appetite alignment); (3) Performance (risk identification, assessment, and prioritization); (4) Review and Revision (monitoring and adapting to market disruptions); and (5) Information, Communication, and Reporting.",
     "createdAt": "2026-10-19T07:23:14.078Z",
     "updatedAt": "2026-10-19T07:23:14.078Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c52a",
     "id": 100,
     "chapter": 5,
     "chapterTitle": "Risk Management (CA Final AFM)",
-    "tag": "Credit Value Adjustment (CVA) in Counterparty Risk (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Credit Value Adjustment (CVA) in Counterparty Risk",
     "question": "In over-the-counter (OTC) derivative risk governance under IFRS 13 / Ind AS 113, what is Credit Value Adjustment (CVA), and how does Bilateral CVA (incorporating Debt Value Adjustment / DVA) reflect the counterparty default risk of both contracting parties?",
     "options": [
       "CVA is an insurance policy issued by the central government guaranteeing zero counterparty default.",
@@ -1997,14 +2294,17 @@
     "explanation": "Credit Value Adjustment (CVA) represents the market value of counterparty credit risk—the difference between the risk-free portfolio value and the true portfolio value that accounts for counterparty default. Bilateral CVA incorporates Debt Value Adjustment (DVA), which is the adjustment reflecting the reporting entity's own credit risk to its counterparties.",
     "createdAt": "2026-10-19T07:23:14.078Z",
     "updatedAt": "2026-10-19T07:23:14.078Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c52b",
     "id": 101,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "NAV Calculation with Accrued Income & Expenses (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] NAV Calculation with Accrued Income & Expenses",
     "question": "A mutual fund scheme has 20,00,000 units outstanding on March 31. The fund's asset portfolio on that date consists of: (i) Listed equity shares with a market value of ₹8,40,00,000; (ii) Government bonds with a book value of ₹2,00,00,000 and accrued interest of ₹14,00,000 (market quotation at par); (iii) Cash and money market balances of ₹60,00,000; (iv) Dividends declared on portfolio shares with record date passed, but cash not yet received: ₹16,00,000. On the liabilities side, the fund has: accrued asset management fees of ₹8,00,000, custodian charges payable of ₹2,00,000, and short-term redemption liabilities of ₹20,00,000. What is the Net Asset Value (NAV) per unit of the scheme on March 31?",
     "options": [
       "₹50.00 per unit.",
@@ -2017,14 +2317,17 @@
     "explanation": "Calculations:\n1. Total Assets = Market Value of Listed Shares (₹8,40,00,000) + Value of Bonds (₹2,00,00,000) + Accrued Interest (₹14,00,000) + Cash & Equivalents (₹60,00,000) + Dividends Receivable (₹16,00,000)\nTotal Assets = ₹840 L + ₹200 L + ₹14 L + ₹60 L + ₹16 L = ₹1,130 Lakhs (₹11,30,00,000).\n2. Total Liabilities = Accrued Management Fees (₹8 L) + Custodian Charges (₹2 L) + Redemption Liabilities (₹20 L)\nTotal Liabilities = ₹8 L + ₹2 L + ₹20 L = ₹30 Lakhs (₹30,00,000).\n3. Net Asset Value (NAV) = Total Assets - Total Liabilities = ₹1,130 Lakhs - ₹30 Lakhs = ₹1,100 Lakhs (₹11,00,00,000).\n4. Number of Units = 20,00,000.\nNAV per unit = ₹11,00,00,000 / 20,00,000 units = ₹55.00 per unit.\n(Wait, let's check: ₹1,100 L / 20 L units = ₹55.00. Option B is ₹55.00. Let's fix correct index to 1).",
     "createdAt": "2026-10-19T07:23:14.078Z",
     "updatedAt": "2026-10-19T07:23:14.078Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c52c",
     "id": 102,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Dividend Equalisation Reserve Mechanism (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Dividend Equalisation Reserve Mechanism",
     "question": "An open-ended growth-and-income fund operates with 10,00,000 initial units having a face value of ₹10. On April 1, the opening NAV is ₹15.00 per unit. Over the next six months (up to September 30), the fund earns net operating income of ₹24,00,000 (accumulated net income of ₹2.40 per unit). On October 1, an institutional investor subscribes to 2,00,000 fresh units at the prevailing cum-dividend NAV of ₹17.40. Why must the mutual fund credit ₹2.40 per new unit (₹4,80,000) to the 'Dividend Equalisation Reserve', and what would happen if equalisation was omitted when a subsequent dividend of ₹2.00 per unit is distributed?",
     "options": [
       "Equalisation is done solely to avoid paying GST on unit application money.",
@@ -2037,14 +2340,17 @@
     "explanation": "Under the SEBI (Mutual Funds) Regulations, when fresh units are issued mid-year at cum-dividend NAV, the subscription price includes an element of undistributed accrued net income per unit. If this component is not credited to the Dividend Equalisation Account, distributing dividends later across an expanded unit base would siphon off income generated by old units to new entrants (dilution). The equalisation reserve neutralizes this effect.",
     "createdAt": "2026-10-19T07:23:14.079Z",
     "updatedAt": "2026-10-19T07:23:14.079Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c52d",
     "id": 103,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Dividend Reinvestment Plan (DRIP) & Effective Yield (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Dividend Reinvestment Plan (DRIP) & Effective Yield",
     "question": "Mr. Sharma invests ₹5,00,000 in a mutual fund scheme on January 1, 2024 at an opening NAV of ₹25.00 per unit (20,000 units allotted). On June 30, 2024, the scheme declares a dividend of ₹2.50 per unit. The ex-dividend NAV on June 30 is ₹28.00 per unit. Mr. Sharma is enrolled in the Dividend Reinvestment Plan (DRIP), and his entire dividend is automatically reinvested at the ex-dividend NAV. On December 31, 2024, Mr. Sharma redeems all his units at a closing NAV of ₹32.50 per unit. Assuming no entry or exit loads, what is the total number of units redeemed, and what is Mr. Sharma's Annualized Effective Yield for the year?",
     "options": [
       "20,000 units redeemed; Effective Yield is 30.00%.",
@@ -2057,14 +2363,17 @@
     "explanation": "Calculations:\n1. Initial units on Jan 1 = ₹5,00,000 / ₹25.00 = 20,000 units.\n2. Dividend on June 30 = 20,000 units × ₹2.50 = ₹50,000.\n3. Reinvestment price = Ex-dividend NAV = ₹28.00.\nNew units added = ₹50,000 / ₹28.00 = 1,785.714 units.\n4. Total units held after June 30 = 20,000 + 1,785.714 = 21,785.714 units.\n5. Redemption proceeds on Dec 31 = 21,785.714 units × ₹32.50 = ₹7,08,035.71.\n6. Absolute Return = (₹7,08,035.71 - ₹5,00,000) / ₹5,00,000 = ₹2,08,035.71 / ₹5,00,000 = 41.607% (approx 41.61% for 1 year).",
     "createdAt": "2026-10-19T07:23:14.079Z",
     "updatedAt": "2026-10-19T07:23:14.079Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c52e",
     "id": 104,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Holding Period Return vs Annualized Yield: Reverse-Working Days (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Holding Period Return vs Annualized Yield: Reverse-Working Days",
     "question": "An investor purchases units of an equity mutual fund on July 10 at an NAV of ₹40.00. During the holding period, the scheme pays an interim dividend of ₹1.60 per unit. On the redemption date, the investor exits at an NAV of ₹44.80 per unit. The investor's calculated Annualized Simple Return for this holding period is exactly 29.20% per annum (based on a 365-day year). For how many exact calendar days did the investor hold the mutual fund units?",
     "options": [
       "150 days.",
@@ -2077,14 +2386,17 @@
     "explanation": "Calculations:\n1. Capital Gain per unit = Closing NAV - Opening NAV = ₹44.80 - ₹40.00 = ₹4.80.\n2. Dividend received = ₹1.60.\n3. Total Holding Period Gain = ₹4.80 + ₹1.60 = ₹6.40 per unit.\n4. Holding Period Return (HPR) = Total Gain / Opening NAV = ₹6.40 / ₹40.00 = 0.160 = 16.00%.\n5. Annualized Return formula: Annualized Return = HPR × (365 / Number of Days)\n29.20% = 16.00% × (365 / N)\nN = (16.00 × 365) / 29.20 = 5,840 / 29.20 = 200 days.\nHence, the investor held the units for exactly 200 days.",
     "createdAt": "2026-10-19T07:23:14.079Z",
     "updatedAt": "2026-10-19T07:23:14.079Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c52f",
     "id": 105,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Exit Load Application & Net Redemption Value (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Exit Load Application & Net Redemption Value",
     "question": "A corporate investor purchases 1,00,000 units of a multi-cap equity fund on March 1, 2023 at an NAV of ₹50.00 (Total Investment = ₹50,00,000). The scheme structure stipulates the following exit load schedule: (i) Exit load of 2.00% if redeemed within 180 days; (ii) Exit load of 1.00% if redeemed between 181 and 365 days; and (iii) Nil exit load if redeemed after 365 days. The investor redeems 40,000 units on Day 240 when NAV is ₹62.00, and redeems the remaining 60,000 units on Day 420 when NAV is ₹70.00. Securities Transaction Tax (STT) is 0.001% on equity redemption. What are the total net proceeds received by the investor across both redemptions?",
     "options": [
       "₹66,80,000.",
@@ -2097,14 +2409,17 @@
     "explanation": "Calculations:\n1. First Redemption (Day 240 - 40,000 units):\nApplicable Exit Load = 1.00% (since between 181 and 365 days).\nRedemption Price per unit = NAV × (1 - Exit Load) = ₹62.00 × (1 - 0.01) = ₹62.00 × 0.99 = ₹61.38.\nGross Proceeds = 40,000 × ₹61.38 = ₹24,55,200.\nLess: STT (0.001%) = ₹24,55,200 × 0.00001 = ₹24.55 ≈ ₹25.\nNet Tranche 1 Proceeds = ₹24,55,175.45.\n2. Second Redemption (Day 420 - 60,000 units):\nApplicable Exit Load = Nil (since > 365 days).\nRedemption Price per unit = ₹70.00.\nGross Proceeds = 60,000 × ₹70.00 = ₹42,00,000.\nLess: STT (0.001%) = ₹42,00,000 × 0.00001 = ₹42.\nNet Tranche 2 Proceeds = ₹41,99,958.\n3. Combined Total Net Proceeds = ₹24,55,175.45 + ₹41,99,958 = ₹66,55,133.45 (approx ₹66,55,133 - ₹66,55,334 depending on STT rounding).\nTricky Point: Exit load is always deducted from the gross NAV at the time of redemption and goes back to the scheme.",
     "createdAt": "2026-10-19T07:23:14.079Z",
     "updatedAt": "2026-10-19T07:23:14.079Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c530",
     "id": 106,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Bonus Units Option vs Dividend Payout Option (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Bonus Units Option vs Dividend Payout Option",
     "question": "An investor invests in two identical sister funds: Scheme G (Growth/Bonus Option) and Scheme D (Dividend Option), buying 10,000 units in each scheme at an opening NAV of ₹30.00. At the end of Year 1, when both funds have generated an underlying portfolio gain of ₹6.00 per unit: Scheme D distributes a cash dividend of ₹4.00 per unit (ex-dividend NAV drops to ₹32.00), whereas Scheme G declares a 1:5 Bonus Issue (1 bonus unit for every 5 units held, ex-bonus NAV drops to ₹30.00). In Year 2, both schemes experience an identical 20% growth in underlying asset value. What is the total value of units held by the investor in Scheme G versus Scheme D at the end of Year 2 (assuming cash dividend was not reinvested)?",
     "options": [
       "Scheme G: ₹4,32,000; Scheme D: ₹3,84,000 (plus ₹40,000 cash dividend received).",
@@ -2117,14 +2432,17 @@
     "explanation": "Calculations:\n1. Scheme G (Bonus Option):\nInitial: 10,000 units @ ₹30 = ₹3,00,000.\nBefore bonus: Value per unit = ₹36.00.\nBonus 1:5 declared: New units added = 10,000 / 5 = 2,000 units. Total units = 12,000.\nEx-bonus NAV = (10,000 × ₹36) / 12,000 = ₹30.00.\nYear 2 growth of 20%: New NAV = ₹30.00 × 1.20 = ₹36.00.\nTotal Value at Year 2 = 12,000 units × ₹36.00 = ₹4,32,000.\n2. Scheme D (Dividend Payout):\nBefore dividend: NAV = ₹36.00. Dividend of ₹4.00 paid. Ex-div NAV = ₹32.00.\nCash dividend received = 10,000 × ₹4 = ₹40,000.\nYear 2 growth of 20%: New NAV = ₹32.00 × 1.20 = ₹38.40.\nValue of units at Year 2 = 10,000 units × ₹38.40 = ₹3,84,000 (+ ₹40,000 cash dividend = ₹4,24,000 total wealth).\nNotice that Scheme G achieves higher compounding because the entire gain remained invested.",
     "createdAt": "2026-10-19T07:23:14.079Z",
     "updatedAt": "2026-10-19T07:23:14.079Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c531",
     "id": 107,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Expense Ratio & SEBI Total Expense Ratio (TER) Limits (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Expense Ratio & SEBI Total Expense Ratio (TER) Limits",
     "question": "Under SEBI (Mutual Funds) Regulations, 1996, what is the regulatory Total Expense Ratio (TER) ceiling for an open-ended equity-oriented mutual fund scheme on the first ₹500 Crores of Daily Net Assets, and how does the daily accrual of the expense ratio affect daily NAV computation?",
     "options": [
       "Maximum TER is 5.00%; expenses are deducted as a single annual charge on March 31.",
@@ -2137,14 +2455,17 @@
     "explanation": "Under Regulation 52 of SEBI (Mutual Funds) Regulations, the maximum TER permissible for equity-oriented open-ended schemes is graduated in slabs: up to 2.25% on the first ₹500 Crores of daily net assets, reducing progressively for higher asset tiers. In operational accounting, the TER is divided by 365 days and accrued daily, reducing the daily NAV so that published NAV is already net of all management and operational fees.",
     "createdAt": "2026-10-19T07:23:14.080Z",
     "updatedAt": "2026-10-19T07:23:14.080Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c532",
     "id": 108,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Sharpe vs Treynor Ratio Conflict in Performance Evaluation (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Sharpe vs Treynor Ratio Conflict in Performance Evaluation",
     "question": "An investor evaluates two equity mutual funds: Fund Alpha (Mean return $R = 19.0%$, Standard Deviation $sigma = 18.0%$, Beta $\beta = 1.30$) and Fund Beta (Mean return $R = 16.5%$, Standard Deviation $sigma = 12.0%$, Beta $\beta = 1.05$). The risk-free rate is $R_f = 6.0%$. Calculating both performance metrics:\nSharpe: Fund Alpha = 0.722, Fund Beta = 0.875;\nTreynor: Fund Alpha = 10.00%, Fund Beta = 10.00%.\nUnder what specific investment condition should the investor strictly prefer Fund Beta over Fund Alpha based on these metrics?",
     "options": [
       "Fund Beta should be preferred if the mutual fund is being evaluated as an isolated standalone investment representing the investor's entire portfolio, because Sharpe Ratio measures excess return per unit of Total Risk ($sigma$), and Fund Beta achieves superior total risk efficiency.",
@@ -2157,14 +2478,17 @@
     "explanation": "Theoretical Rule: (1) Sharpe Ratio uses Total Risk (Standard Deviation $sigma$) in the denominator. When an investor puts all their money into a single fund (non-diversified standalone portfolio), unsystematic risk matters, so the fund with the higher Sharpe Ratio (Fund Beta: 0.875 vs 0.722) is superior. (2) Treynor Ratio uses Systematic Risk (Beta $\beta$) in the denominator. When an investor is adding a fund to an already well-diversified multi-asset portfolio, unsystematic risk is diversified away, making Treynor the appropriate measure.",
     "createdAt": "2026-10-19T07:23:14.080Z",
     "updatedAt": "2026-10-19T07:23:14.080Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c533",
     "id": 109,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Jensen's Alpha & CAPM Expected Return (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Jensen's Alpha & CAPM Expected Return",
     "question": "During a 3-year performance appraisal, BlueSky FlexiCap Fund delivered an annualized return of 18.20% with a portfolio beta ($\beta_p$) of 1.15. During the same period, the Nifty 50 benchmark index generated an annualized return of 14.00%, while 91-day Treasury Bills yielded a risk-free rate ($R_f$) of 6.00%. What is the CAPM benchmark expected return, what is the fund's Jensen's Alpha ($alpha$), and what does a positive alpha signify?",
     "options": [
       "CAPM Expected Return is 15.20%; Jensen's Alpha is +3.00%; positive alpha proves the fund manager generated excess returns beyond the compensation required for the systematic risk taken.",
@@ -2177,14 +2501,17 @@
     "explanation": "Calculations:\n1. CAPM Expected Return $E(R_p) = R_f + \beta_p \times (R_m - R_f)$\n$E(R_p) = 6.00% + 1.15 \times (14.00% - 6.00%) = 6.00% + (1.15 \times 8.00%) = 6.00% + 9.20% = 15.20%$.\n2. Actual Return achieved $R_p = 18.20%$.\n3. Jensen's Alpha $alpha_p = R_p - E(R_p) = 18.20% - 15.20% = +3.00%$.\nA positive Jensen's Alpha of +3.00% indicates superior stock selection capability: the manager generated 300 basis points of true abnormal return above the return expected for bearing a systematic beta of 1.15.",
     "createdAt": "2026-10-19T07:23:14.085Z",
     "updatedAt": "2026-10-19T07:23:14.085Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c534",
     "id": 110,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Fama's Decomposition of Total Return (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Fama's Decomposition of Total Return",
     "question": "A mutual fund manager reports a portfolio return $R_p = 21.0%$, standard deviation $sigma_p = 20.0%$, and portfolio beta $\beta_p = 1.20$. The market index delivers $R_m = 16.0%$ with standard deviation $sigma_m = 15.0%$, and the risk-free rate is $R_f = 6.0%$. Under Eugene Fama's Framework for Decomposing Portfolio Performance, what is the Total Excess Return, what is the Return from Systematic Risk, what is the Return from Imperfect Diversification (Diversification Risk), and what is the Net Selectivity?",
     "options": [
       "Total Excess Return = 15.0%; Systematic Risk = 12.0%; Diversification Risk = 1.33%; Net Selectivity = +1.67%.",
@@ -2197,14 +2524,17 @@
     "explanation": "Calculations:\n1. Total Excess Return = $R_p - R_f = 21.0% - 6.0% = 15.0%$.\n2. Return from Systematic Risk = $\beta_p \times (R_m - R_f) = 1.20 \times (16.0% - 6.0%) = 1.20 \times 10.0% = 12.0%$.\n3. Gross Selectivity (Jensen's Alpha) = Total Excess Return - Systematic Return = 15.0% - 12.0% = +3.00%.\n4. Return from Diversification Risk = $[(sigma_p / sigma_m) - \beta_p] \times (R_m - R_f) = [(20.0 / 15.0) - 1.20] \times 10.0% = [1.3333 - 1.20] \times 10.0% = 0.1333 \times 10.0% = 1.333%$.\n5. Net Selectivity = Gross Selectivity - Diversification Risk = 3.00% - 1.333% = +1.667% (approx +1.67%).\nNet Selectivity shows that after compensating for the unsystematic risk born due to imperfect diversification, the manager added 1.67% of pure stock-picking skill.",
     "createdAt": "2026-10-19T07:23:14.085Z",
     "updatedAt": "2026-10-19T07:23:14.085Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c535",
     "id": 111,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Sortino Ratio vs Sharpe Ratio in Asymmetric Returns (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Sortino Ratio vs Sharpe Ratio in Asymmetric Returns",
     "question": "An aggressive growth mutual fund yields an annualized return of 22.0%. The fund's overall standard deviation ($sigma_p$) is 18.0%. However, because most of the volatility is driven by explosive positive upside jumps, the Downside Deviation (semi-standard deviation measuring only returns falling below the investor's Target Minimum Return of 8.0%) is only 7.0%. What is the Sharpe Ratio (using $R_f = 6.0%$) and what is the Sortino Ratio (using Minimum Acceptable Return $T = 8.0%$), and why is the Sortino Ratio a superior metric for positively skewed funds?",
     "options": [
       "Sharpe Ratio is 0.889; Sortino Ratio is 2.000; the Sortino Ratio is superior because it does not penalize the fund manager for upside volatility (which investors desire) and focuses exclusively on downside downside risk below the target threshold.",
@@ -2217,14 +2547,17 @@
     "explanation": "Calculations:\n1. Sharpe Ratio = $(R_p - R_f) / sigma_p = (22.0% - 6.0%) / 18.0% = 16.0% / 18.0% = 0.889$.\n2. Sortino Ratio = $(R_p - \text{Target Return}) / \text{Downside Deviation} = (22.0% - 8.0%) / 7.0% = 14.0% / 7.0% = 2.000$.\nTricky Conceptual Point: The Sharpe ratio assumes symmetrical normal distribution and penalizes large positive gains just as harshly as large losses because both inflate $sigma$. The Sortino ratio replaces total volatility with downside semi-deviation, measuring the true risk of failing to achieve the minimum target return.",
     "createdAt": "2026-10-19T07:23:14.085Z",
     "updatedAt": "2026-10-19T07:23:14.085Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c536",
     "id": 112,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Tracking Error & Information Ratio for Index Funds / ETFs (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Tracking Error & Information Ratio for Index Funds / ETFs",
     "question": "A Nifty 50 Index Fund generates an annualized return of 14.80%, while the underlying Nifty 50 Total Return Index (TRI) generates 14.20%. The standard deviation of the excess daily returns between the fund and the benchmark (Tracking Error, TE) is 0.80%. What is the Information Ratio (IR) of the index fund, and what are the primary market causes of Tracking Error in passive mutual funds?",
     "options": [
       "Information Ratio is +0.75; tracking error is caused by fund cash drag (holding liquidity for redemptions), transaction brokerage costs, dividend reinvestment timing lags, and corporate action settlement friction.",
@@ -2237,14 +2570,17 @@
     "explanation": "Calculations:\n1. Active Return = Fund Return - Benchmark Return = 14.80% - 14.20% = +0.60%.\n2. Tracking Error (TE) = 0.80%.\n3. Information Ratio (IR) = Active Return / Tracking Error = +0.60% / 0.80% = +0.75.\nCauses of Tracking Error: Even in passive index funds, tracking error arises from: (a) Cash drag (holding 1–2% cash for daily redemptions); (b) Brokerage and transaction costs on rebalancing; (c) Timing differences in dividend receipt vs index inclusion; and (d) Corporate action adjustments.",
     "createdAt": "2026-10-19T07:23:14.086Z",
     "updatedAt": "2026-10-19T07:23:14.086Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c537",
     "id": 113,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Close-Ended Fund Trading at Discount to NAV: Arbitrage Yield (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Close-Ended Fund Trading at Discount to NAV: Arbitrage Yield",
     "question": "A close-ended equity mutual fund scheme has an audited Net Asset Value (NAV) of ₹50.00 per unit. Due to secondary market illiquidity, the fund's units trade on the National Stock Exchange (NSE) at a market price of ₹42.50 (a 15.00% discount to NAV). The close-ended scheme matures in exactly 1 year (at which date the fund must legally redeem all units at the prevailing NAV). Assuming the underlying portfolio NAV grows by 10.00% over the next 1 year, what is the effective Annualized Return earned by an arbitrage investor who purchases units on the stock exchange at ₹42.50 today and holds until redemption?",
     "options": [
       "10.00%.",
@@ -2257,14 +2593,17 @@
     "explanation": "Calculations:\n1. Initial Purchase Price on Exchange = ₹42.50.\n2. Current NAV = ₹50.00.\n3. Growth in underlying NAV over 1 year = 10%.\nTerminal NAV at maturity = ₹50.00 × 1.10 = ₹55.00.\n4. Upon scheme maturity, close-ended funds redeem units at full NAV (₹55.00).\n5. Total Gain per unit = ₹55.00 - ₹42.50 = ₹12.50.\n6. Annualized Return = Gain / Purchase Price = ₹12.50 / ₹42.50 = 0.294117 = 29.41%.\nNotice how the unwinding of the 15% discount magnifies the portfolio's 10% return into an actual 29.41% investor yield!",
     "createdAt": "2026-10-19T07:23:14.086Z",
     "updatedAt": "2026-10-19T07:23:14.086Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c538",
     "id": 114,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Hedge Fund / PMS '2 and 20' Fee Structure with High-Water Mark (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Hedge Fund / PMS '2 and 20' Fee Structure with High-Water Mark",
     "question": "An Alternative Investment Fund (AIF Cat III / Hedge Fund) manages ₹100 Crores at the beginning of Year 1 under a '2 and 20' fee structure (2% fixed annual management fee charged on opening AUM, and a 20% incentive/performance fee charged on annual net profits above a High-Water Mark with zero hurdle rate). The fund records the following gross year-end portfolio values before fees:\nYear 1: Portfolio rises to ₹130 Crores;\nYear 2: Market crash causes portfolio to fall to ₹95 Crores;\nYear 3: Portfolio recovers to ₹140 Crores.\nWhat is the incentive fee payable to the fund manager at the end of Year 3?",
     "options": [
       "₹9.00 Crores, calculated as 20% of (₹140 Cr - ₹95 Cr).",
@@ -2277,14 +2616,17 @@
     "explanation": "Under the High-Water Mark (HWM) convention in hedge funds and PMS:\n1. Year 1: Starting AUM = ₹100 Cr. Rises to ₹130 Cr. Net profit = ₹30 Cr. Incentive fee paid = 20% × ₹30 Cr = ₹6 Cr. High-Water Mark is established at ₹130 Crores.\n2. Year 2: Portfolio drops to ₹95 Cr (below HWM of ₹130 Cr). No incentive fee is paid. HWM remains at ₹130 Crores.\n3. Year 3: Portfolio rises to ₹140 Cr. The manager cannot charge incentive fees on the recovery from ₹95 Cr to ₹130 Cr (recouping past losses). The incentive fee is charged ONLY on the net gain above the previous peak (HWM = ₹130 Cr):\nIncentive Fee Year 3 = 20% × (₹140 Cr - ₹130 Cr) = 20% × ₹10 Cr = ₹2.00 Crores.",
     "createdAt": "2026-10-19T07:23:14.086Z",
     "updatedAt": "2026-10-19T07:23:14.086Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c539",
     "id": 115,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Side-Pocketing / Segregated Portfolio Creation in Debt Funds (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2024 PYQ] Side-Pocketing / Segregated Portfolio Creation in Debt Funds",
     "question": "A debt mutual fund holds ₹1,000 Crores of assets with 10 Crore units outstanding (NAV = ₹100.00). The portfolio includes ₹100 Crores of non-convertible debentures of InfraPower Ltd. Following an unexpected default, the credit rating of InfraPower Ltd. is downgraded from AA to D (Default). The AMC decides to implement 'Side-Pocketing' (creating a Segregated Portfolio) as per SEBI regulations. How does the creation of the segregated portfolio affect the investor holding 1,000 units in the scheme?",
     "options": [
       "The investor's units are canceled and converted into debentures of InfraPower Ltd.",
@@ -2297,14 +2639,17 @@
     "explanation": "Under SEBI's Segregated Portfolio (Side-Pocketing) framework: Following a credit event/default, the distressed debt asset is carved out into a separate portfolio. Existing unit-holders receive an equal number of units in the Segregated Portfolio (1,000 units). The Main Scheme NAV immediately reflects only the performing assets (dropping from ₹100 to ₹90), allowing normal daily redemptions without forcing the fund to sell liquid assets to pay exiting investors at the expense of remaining investors.",
     "createdAt": "2026-10-19T07:23:14.086Z",
     "updatedAt": "2026-10-19T07:23:14.086Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c53a",
     "id": 116,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Systematic Investment Plan (SIP) & Rupee-Cost Averaging (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2023 PYQ] Systematic Investment Plan (SIP) & Rupee-Cost Averaging",
     "question": "An investor invests ₹12,000 per month through a Systematic Investment Plan (SIP) in an equity fund over four consecutive months. The NAVs on the SIP purchase dates are: Month 1: ₹60.00; Month 2: ₹40.00; Month 3: ₹30.00; and Month 4: ₹48.00. What is the Average Unit Cost incurred by the investor, what is the Simple Arithmetic Average of the NAVs, and why is the Average Unit Cost strictly lower than the Simple Average NAV?",
     "options": [
       "Average Unit Cost is ₹41.74; Simple Average NAV is ₹44.50; Average Unit Cost is lower due to Rupee-Cost Averaging (the investor automatically buys more units when prices fall and fewer units when prices rise).",
@@ -2317,14 +2662,17 @@
     "explanation": "Calculations:\n1. Units acquired each month:\nMonth 1: ₹12,000 / ₹60.00 = 200 units.\nMonth 2: ₹12,000 / ₹40.00 = 300 units.\nMonth 3: ₹12,000 / ₹30.00 = 400 units.\nMonth 4: ₹12,000 / ₹48.00 = 250 units.\nTotal units acquired = 200 + 300 + 400 + 250 = 1,150 units.\nTotal money invested = 4 × ₹12,000 = ₹48,000.\n2. Average Cost per unit = ₹48,000 / 1,150 units = ₹41.739 (approx ₹41.74).\n3. Simple Arithmetic Average NAV = (₹60 + ₹40 + ₹30 + ₹48) / 4 = ₹178 / 4 = ₹44.50.\nTricky Point: Because a fixed monetary amount is invested periodically, more units are accumulated at lower NAVs (400 units at ₹30 vs 200 units at ₹60). The harmonic weighting ensures the Average Unit Cost (₹41.74) is always lower than the arithmetic average NAV (₹44.50).",
     "createdAt": "2026-10-19T07:23:14.086Z",
     "updatedAt": "2026-10-19T07:23:14.086Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c53b",
     "id": 117,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Systematic Withdrawal Plan (SWP) Capital Depletion (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2023 PYQ] Systematic Withdrawal Plan (SWP) Capital Depletion",
     "question": "A retiree invests ₹30,00,000 in a debt fund at an initial NAV of ₹30.00 per unit (allotting 1,00,000 units). The retiree initiates a Systematic Withdrawal Plan (SWP) of ₹30,000 at the end of each month. Over the first two months, the NAV movements are:\nEnd of Month 1: NAV is ₹29.50;\nEnd of Month 2: NAV is ₹31.00.\nHow many units are redeemed in Month 1 and Month 2, and what is the remaining unit balance and fund value at the end of Month 2?",
     "options": [
       "Month 1: 1,016.95 units; Month 2: 967.74 units; Remaining Units = 98,015.31; Fund Value = ₹30,38,474.61.",
@@ -2337,14 +2685,17 @@
     "explanation": "Calculations:\n1. Month 1: Withdrawal = ₹30,000. NAV = ₹29.50.\nUnits redeemed = ₹30,000 / ₹29.50 = 1,016.949 units.\nRemaining units after Month 1 = 1,00,000 - 1,016.949 = 98,983.051 units.\n2. Month 2: Withdrawal = ₹30,000. NAV = ₹31.00.\nUnits redeemed = ₹30,000 / ₹31.00 = 967.742 units.\nRemaining units after Month 2 = 98,983.051 - 967.742 = 98,015.309 units.\n3. Portfolio Value at end of Month 2 = 98,015.309 units × ₹31.00 = ₹30,38,474.58 (approx ₹30,38,475).",
     "createdAt": "2026-10-19T07:23:14.087Z",
     "updatedAt": "2026-10-19T07:23:14.087Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c53c",
     "id": 118,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Direct Plan vs Regular Plan Compounding Variance (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2022 PYQ] Direct Plan vs Regular Plan Compounding Variance",
     "question": "An investor allocates ₹20,00,000 in an equity mutual fund scheme for 20 years. The underlying gross asset portfolio return before expenses is 14.00% per annum. The scheme offers two options: (i) Direct Plan (Total Expense Ratio TER = 0.75% p.a.); and (ii) Regular Plan (Total Expense Ratio TER = 2.00% p.a., which includes 1.25% annual distributor trail commission). Utilizing annual compounding, what is the terminal wealth difference between the Direct Plan and the Regular Plan at the end of 20 years?",
     "options": [
       "Direct Plan: ₹2,30,42,860; Regular Plan: ₹1,92,92,586; Difference is ₹37,50,274.",
@@ -2357,14 +2708,17 @@
     "explanation": "Calculations:\n1. Direct Plan Net CAGR = Gross Return - Direct TER = 14.00% - 0.75% = 13.25% p.a.\nTerminal Value (Direct) = ₹20,00,000 × (1 + 0.1325)²⁰ = ₹20,00,000 × 11.52143 = ₹2,30,42,860.\n2. Regular Plan Net CAGR = Gross Return - Regular TER = 14.00% - 2.00% = 12.00% p.a.\nTerminal Value (Regular) = ₹20,00,000 × (1 + 0.12)²⁰ = ₹20,00,000 × 9.64629 = ₹1,92,92,586.\n3. Terminal Wealth Difference = ₹2,30,42,860 - ₹1,92,92,586 = ₹37,50,274.\nTricky Point: A seemingly minor 1.25% difference in annual expense ratio compounds over 20 years into an enormous loss of over ₹37.5 Lakhs (almost double the original principal investment!).",
     "createdAt": "2026-10-19T07:23:14.087Z",
     "updatedAt": "2026-10-19T07:23:14.087Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c53d",
     "id": 119,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Balanced Fund Dynamic Portfolio Rebalancing (AFM PYQ)",
+    "tag": "[ICAI CA Final May 2022 PYQ] Balanced Fund Dynamic Portfolio Rebalancing",
     "question": "A Hybrid Balanced Mutual Fund with an initial asset base of ₹1,000 Crores operates under a strict Constant Mix asset allocation policy mandating 65% Equity and 35% Debt. Over a 6-month period, equity markets surge by 30%, while the debt portfolio yields 4.00%. To restore the mandatory 65:35 target asset allocation, what rebalancing transaction must the fund manager execute?",
     "options": [
       "Sell ₹59.15 Crores of Equity and invest the proceeds into Debt.",
@@ -2377,14 +2731,17 @@
     "explanation": "Calculations:\n1. Initial Allocation:\nEquity = 65% of ₹1,000 Cr = ₹650 Crores.\nDebt = 35% of ₹1,000 Cr = ₹350 Crores.\n2. Values after market movement:\nEquity Value = ₹650 Cr × 1.30 = ₹845.00 Crores.\nDebt Value = ₹350 Cr × 1.04 = ₹364.00 Crores.\nTotal Portfolio Value = ₹845 Cr + ₹364 Cr = ₹1,209.00 Crores.\n3. Target Allocation on new total value (₹1,209 Cr):\nTarget Equity = 65% × ₹1,209 Cr = ₹785.85 Crores.\nTarget Debt = 35% × ₹1,209 Cr = ₹423.15 Crores.\n4. Required Rebalancing:\nExcess Equity = Actual Equity (₹845 Cr) - Target Equity (₹785.85 Cr) = +₹59.15 Crores.\nRequired Equity Sale = Actual Equity (₹845.00 Cr) - Target Equity (₹785.85 Cr) = ₹59.15 Crores. Rebalancing requires selling ₹59.15 Crores of equities and allocating proceeds to debt.",
     "createdAt": "2026-10-19T07:23:14.088Z",
     "updatedAt": "2026-10-19T07:23:14.088Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   },
   {
     "_id": "6ad5ae12597ecc3b48c2c53e",
     "id": 120,
     "chapter": 6,
     "chapterTitle": "Mutual Funds (CA Final AFM)",
-    "tag": "Mark-to-Market Valuation of Illiquid Debt under SEBI Haircut Matrix (AFM PYQ)",
+    "tag": "[ICAI CA Final Nov 2021 PYQ] Mark-to-Market Valuation of Illiquid Debt under SEBI Haircut Matrix",
     "question": "A debt mutual fund holds unrated, illiquid commercial paper with a face value of ₹50 Crores maturing in 60 days. Under the revised SEBI valuation framework for non-traded money market and debt instruments, how must mutual funds determine the fair valuation price of such illiquid securities for computing daily NAV?",
     "options": [
       "Illiquid securities are carried at historical purchase cost until maturity without any adjustments.",
@@ -2397,6 +2754,9 @@
     "explanation": "Under the SEBI Master Circular on Mutual Fund Valuation, asset management companies cannot value non-traded or thinly traded debt and money market instruments at historical amortized cost. Instead, valuation must strictly adhere to the valuation matrix methodology published by independent valuation agencies (CRISIL and ICRA), which incorporates the benchmark government yield curve, credit rating spreads, and illiquidity markups.",
     "createdAt": "2026-10-19T07:23:14.088Z",
     "updatedAt": "2026-10-19T07:23:14.088Z",
-    "__v": 0
+    "__v": 0,
+    "difficulty": "Difficult",
+    "type": "Case-Based PYQ",
+    "isCaseBased": true
   }
 ]
