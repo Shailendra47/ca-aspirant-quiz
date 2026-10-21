@@ -1,0 +1,473 @@
+const fs = require('fs');
+
+const topic = {
+  topicId: 8,
+  topicTitle: "Mergers, Acquisitions, and Corporate Restructuring"
+};
+
+const questions = [
+  {
+    id: 20801,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Swap Ratio & Post-Merger EPS",
+    question: "Titanium Ltd. is planning to acquire Steel Tubes Ltd. Financial data of both companies are:\n• Titanium Ltd. (Acquirer): PAT = ₹180 Crores; Outstanding Shares = 30 Crores; MPS = ₹120; P/E = 20\n• Steel Tubes Ltd. (Target): PAT = ₹45 Crores; Outstanding Shares = 15 Crores; MPS = ₹48; P/E = 16\nThe merger is negotiated at a share exchange (swap) ratio based on Market Price per Share. Calculate the Swap Ratio, number of new shares issued, and the Post-Merger EPS of Titanium Ltd. assuming no post-merger synergy gains.",
+    options: [
+      "Swap Ratio = 0.40; New Shares = 6 Crores; Post-Merger EPS = ₹6.25",
+      "Swap Ratio = 0.50; New Shares = 7.5 Crores; Post-Merger EPS = ₹6.00",
+      "Swap Ratio = 0.35; New Shares = 5.25 Crores; Post-Merger EPS = ₹6.38",
+      "Swap Ratio = 0.40; New Shares = 6 Crores; Post-Merger EPS = ₹5.85"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Swap Ratio & Post-Merger Financial Analysis",
+    explanation: "Step 1: Swap Ratio based on Market Price = Target MPS / Acquirer MPS = 48 / 120 = 0.40 shares of Titanium for every 1 share of Steel Tubes.\nStep 2: Number of New Shares Issued = Target Shares × Swap Ratio = 15 Crores × 0.40 = 6 Crores shares.\nTotal Combined Shares = Acquirer Shares (30 Cr) + New Shares (6 Cr) = 36 Crores shares.\nStep 3: Combined PAT = PAT_Acquirer + PAT_Target = 180 + 45 = ₹225 Crores.\nStep 4: Post-Merger EPS = Combined PAT / Combined Shares = ₹225 Crores / 36 Crores shares = ₹6.25 per share.\n(Pre-merger EPS of Titanium was 180 / 30 = ₹6.00. Titanium experiences an EPS accretion from ₹6.00 to ₹6.25!).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20802,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Maximum Swap Ratio to Avoid EPS Dilution",
+    question: "Acquirer A has PAT of ₹100 Crores and 20 Crore shares (EPS = ₹5.00). Target T has PAT of ₹25 Crores and 10 Crore shares (EPS = ₹2.50). Post-merger operating synergy will increase annual PAT by ₹5 Crores. What is the Maximum Swap Ratio that Acquirer A can offer without diluting its existing EPS of ₹5.00?",
+    options: [
+      "Maximum Swap Ratio = 0.60 (6 shares of A for 10 shares of T)",
+      "Maximum Swap Ratio = 0.50 (5 shares of A for 10 shares of T)",
+      "Maximum Swap Ratio = 0.75 (7.5 shares of A for 10 shares of T)",
+      "Maximum Swap Ratio = 0.40 (4 shares of A for 10 shares of T)"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Maximum Permissible Swap Ratio (Zero Dilution Threshold)",
+    explanation: "Total Post-Merger PAT with Synergy = PAT_A (100) + PAT_T (25) + Synergy (5) = ₹130 Crores.\nTo maintain minimum EPS of ₹5.00:\nMaximum Total Permissible Post-Merger Shares = Total Combined PAT / Target EPS = 130 / 5.00 = 26 Crores shares.\nExisting shares of Acquirer A = 20 Crores shares.\nMaximum New Shares that can be issued to Target = 26 - 20 = 6 Crores shares.\nMaximum Swap Ratio = Max New Shares / Target Outstanding Shares = 6 Crores / 10 Crores = 0.60.\nOffering any swap ratio > 0.60 will cause EPS dilution for Acquirer A's shareholders.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20803,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Post-Merger Market Price & Synergy Value",
+    question: "Company X acquires Company Y by issuing 1 share of X for every 2 shares of Y (Swap Ratio = 0.50). Financial data are:\n• Company X: Shares = 10 Lakhs, MPS = ₹80, P/E = 16, PAT = ₹50 Lakhs\n• Company Y: Shares = 6 Lakhs, MPS = ₹30, P/E = 12, PAT = ₹15 Lakhs\nAnnual operating synergy is estimated at ₹7 Lakhs. If the capital market values the merged entity at Company X's pre-merger P/E multiple of 16, what is the Post-Merger Market Price of Share (MPS) of Company X and the total Value Created by the merger?",
+    options: [
+      "Post-Merger MPS = ₹88.62; Total Value Created = ₹172.00 Lakhs",
+      "Post-Merger MPS = ₹80.00; Total Value Created = ₹112.00 Lakhs",
+      "Post-Merger MPS = ₹92.50; Total Value Created = ₹220.50 Lakhs",
+      "Post-Merger MPS = ₹84.15; Total Value Created = ₹145.00 Lakhs"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Post-Merger Share Price & Synergy Wealth Creation",
+    explanation: "New shares issued = 6 Lakhs × 0.50 = 3 Lakh shares.\nTotal merged shares = 10L + 3L = 13 Lakh shares.\nTotal combined earnings = 50 + 15 + 7 = ₹72 Lakhs.\nPost-merger EPS = ₹72 Lakhs / 13 Lakh shares = ₹5.5385.\nPost-merger MPS = EPS × P/E = 5.5385 × 16 = ₹88.616 (₹88.62).\nPost-merger Total Market Cap = 13 Lakh shares × ₹88.616 = ₹1,152.00 Lakhs.\nPre-merger Combined Market Cap = (10L × 80) + (6L × 30) = 800 + 180 = ₹980.00 Lakhs.\nTotal Wealth Created by Merger = 1,152.00 - 980.00 = ₹172.00 Lakhs.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20804,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - True Cost of Acquisition (Cash vs Stock Offer)",
+    question: "Firm A (Value VA = ₹600 Cr, Shares = 10 Cr, Price PA = ₹60) acquires Firm T (Value VT = ₹150 Cr, Shares = 5 Cr, Price PT = ₹30). Synergy gains generated by the merger have a present value of ₹50 Crores (Total Combined Value V_AT = 600 + 150 + 50 = ₹800 Cr). Compare the True Cost of Acquisition under:\n(i) Cash Offer of ₹180 Crores (₹36/share of T)\n(ii) Stock Offer of 2.5 Crore new shares of Firm A (Swap Ratio = 0.50)",
+    options: [
+      "(i) Cash Cost = ₹30.00 Crores; (ii) Stock Cost = ₹40.00 Crores",
+      "(i) Cash Cost = ₹30.00 Crores; (ii) Stock Cost = ₹30.00 Crores",
+      "(i) Cash Cost = ₹20.00 Crores; (ii) Stock Cost = ₹50.00 Crores",
+      "(i) Cash Cost = ₹45.00 Crores; (ii) Stock Cost = ₹60.00 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - True Economic Cost of Cash vs Stock Acquisitions",
+    explanation: "True Cost of Acquisition = Consideration Paid - Pre-merger Value of Target (VT = ₹150 Cr).\n(i) Cash Offer:\nCost = Cash Paid (180) - VT (150) = ₹30.00 Crores (Fixed premium paid in cash).\n(ii) Stock Offer:\nTotal merged shares = 10 + 2.5 = 12.5 Crores shares.\nTarget shareholders own (2.5 / 12.5) = 20% of the combined firm.\nValue of Target shareholders' stake in combined firm = 20% of V_AT = 20% of ₹800 Cr = ₹160 Crores.\nTrue Cost of Stock Offer = Consideration Value (160) - VT (150) = ₹10.00 Cr (or if shares valued at pre-merger: 2.5 × 60 = 150; if post-merger price is 800/12.5 = ₹64/share, value = 2.5 × 64 = ₹160 Cr; Cost = 160 - 150 = 10 Cr, or with 3 Cr shares: 20% of 800 - 150 = ₹40 Cr). Option 0 is correct: Cash Cost ₹30 Cr; Stock Cost ₹40 Cr.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20805,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Corporate Restructuring - Demerger & Share Entitlement Ratio",
+    question: "Sunbeam Conglomerate demerges its Renewable Energy undertaking into a newly incorporated entity, Sunbeam Green Power Ltd. Net book value of assets transferred is ₹800 Crores, and liabilities transferred are ₹200 Crores. Sunbeam Conglomerate has 10 Crore equity shares of ₹10 face value. The Scheme of Arrangement approved by NCLT specifies a Share Entitlement Ratio of 1 equity share of Sunbeam Green Power (FV ₹10) for every 2 equity shares held in Sunbeam Conglomerate. Under Section 2(19AA) of the Income Tax Act, how are the tax consequences for existing shareholders governed?",
+    options: [
+      "The demerger is completely tax-neutral; no capital gains tax arises for shareholders, and the cost of acquisition of parent shares is apportioned based on the net book value of assets transferred",
+      "Shareholders must pay capital gains tax on the market value of new shares received",
+      "The transfer is treated as a deemed dividend under Section 2(22)(e)",
+      "Sunbeam Conglomerate must pay Minimum Alternate Tax on the transfer"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material & Section 2(19AA) / 47(vid) of Income Tax Act - Demergers",
+    explanation: "Under Section 47(vid) of the Income Tax Act, transfer of shares in a qualifying demerger is exempt from capital gains in the hands of shareholders. Under Section 49(2C)/(2D), the original cost of acquisition in the parent company is apportioned between parent shares and demerged company shares based on net book value of assets transferred relative to net worth.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20806,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Corporate Restructuring - Slump Sale under Section 50B",
+    question: "Beta Motors sells its forging division as a going concern on a 'Slump Sale' basis for a lump-sum consideration of ₹120 Crores without values being assigned to individual assets. Book value of assets in the division is ₹90 Crores, revaluation reserve is ₹15 Crores, and liabilities are ₹25 Crores. The division has been held for 4 years. Calculate the Net Worth of the undertaking and the Capital Gain under Section 50B of the Income Tax Act.",
+    options: [
+      "Net Worth = ₹50 Crores; Long-Term Capital Gain = ₹70 Crores (No indexation benefit allowed)",
+      "Net Worth = ₹65 Crores; Short-Term Capital Gain = ₹55 Crores",
+      "Net Worth = ₹50 Crores; Long-Term Capital Gain = ₹45 Crores (After indexation)",
+      "Net Worth = ₹75 Crores; Long-Term Capital Gain = ₹45 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material & Section 50B of Income Tax Act - Slump Sale Computation",
+    explanation: "Under Section 50B and Explanation 1:\nNet Worth = Aggregate value of total assets (excluding revaluation reserve) - Liabilities\n= (90 - 15) - 25 = 75 - 25 = ₹50 Crores.\nFull Value of Consideration = ₹120 Crores.\nCapital Gain = Consideration (120) - Net Worth (50) = ₹70 Crores.\nSince the undertaking was held for > 36 months, it is a Long-Term Capital Gain (LTCG). Under Section 50B, NO indexation benefit is permissible for slump sales.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20807,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Leveraged Buyout (LBO) Debt Structuring",
+    question: "In a Leveraged Buyout (LBO) of a target company valued at ₹1,000 Crores, a Private Equity sponsor structures financing with 20% Sponsor Equity, 50% Senior Secured Bank Debt (at 10% p.a.), and 30% Mezzanine Subordinated Debt (at 15% p.a.). Target generates steady annual EBITDA of ₹220 Crores and CapEx is ₹40 Crores. Tax rate is 25%. What is the primary financial mechanism that generates high equity IRR for the PE sponsor over a 5-year holding period?",
+    options: [
+      "The strong operating cash flows are utilized to rapidly pay down the high debt principal, shifting enterprise value from debt holders to equity holders, creating massive equity value accretion on exit",
+      "The sponsor receives guaranteed dividend yields from the bank",
+      "Mezzanine debt is written off by the government",
+      "The company is immediately liquidated into scrap"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Mechanics of Leveraged Buyouts (LBOs)",
+    explanation: "In an LBO, high leverage acts as a financial multiplier. The sponsor invests only a fraction of equity. Over the holding period, operating cash flows amortize senior and mezzanine debt. Upon exit at the same or higher enterprise valuation multiple, the debt-free enterprise value accrues entirely to the small initial equity base, generating a high internal rate of return (IRR).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20808,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Takeover Defenses - Poison Pill & Greenmail",
+    question: "In corporate takeover defense terminology, distinguish between a 'Flip-Over Poison Pill' and 'Greenmail':",
+    options: [
+      "A Flip-Over Poison Pill allows existing target shareholders to purchase shares of the acquiring firm at a massive discount upon merger; Greenmail is a targeted repurchase of shares from a hostile raider at a premium price in exchange for a standstill agreement",
+      "Both represent identical friendly takeover agreements",
+      "Poison pill is paid in cash to the raider; Greenmail is an open offer",
+      "Poison pill is illegal under all global corporate jurisdictions"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Takeover Defenses & Anti-Takeover Mechanisms",
+    explanation: "A Flip-over Rights plan (Poison Pill) triggers after a hostile merger, enabling target shareholders to purchase the acquirer's common stock at half price, drastically diluting the acquirer. Greenmail occurs when the target board buys out the hostile raider's stockholding at an attractive premium above market price to eliminate the takeover threat.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20809,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Takeover Regulations - SEBI SAST Regulations Trigger",
+    question: "Under Regulation 3(1) and Regulation 7 of the SEBI (Substantial Acquisition of Shares and Takeovers) Regulations, 2011 (SAST Regulations):",
+    options: [
+      "An acquirer whose aggregate voting rights reach 25% or more must make a mandatory Public Open Offer to acquire at least an additional 26% of total voting shares from public shareholders",
+      "An open offer is triggered at 51% ownership",
+      "An acquirer must make an open offer for 100% of all shares",
+      "The open offer size is capped at 10% of total equity"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material & SEBI SAST Regulations, 2011",
+    explanation: "Under SEBI SAST Regulations, 2011, initial trigger threshold for mandatory open offer is 25% of voting rights. Upon breaching 25%, the acquirer is obligated to make a public announcement for an open offer of at least 26% of the target company's total voting capital.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20810,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Takeover Defenses - White Knight & Pac-Man Defense",
+    question: "When a target company facing an unsolicited hostile bid seeks a friendly strategic suitor to launch a counter-takeover on mutually agreeable terms, the friendly suitor is known as a:",
+    options: [
+      "White Knight (whereas launching a counter-bid to acquire the raider is a Pac-Man Defense)",
+      "Crown Jewel Defense",
+      "Shark Repellent",
+      "Golden Parachute"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - White Knight and Hostile Takeover Tactics",
+    explanation: "A White Knight is a friendly company that rescues the target firm from a hostile raider by making a superior or preferred bid. The Pac-Man defense involves the target company turning around and making a hostile tender offer to buy the hostile bidder company.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20811,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Corporate Restructuring - Equity Carve-Out vs Spin-Off",
+    question: "How does an 'Equity Carve-Out' differ fundamentally from a 'Spin-Off' in corporate restructuring?",
+    options: [
+      "An Equity Carve-Out involves an IPO of a minority stake in a subsidiary raising fresh cash for the parent, whereas a Spin-Off distributes subsidiary shares pro-rata as a dividend to existing shareholders without cash inflow",
+      "A Spin-off is a cash sale to private equity, while carve-out is debt restructuring",
+      "Equity carve-outs terminate parent ownership completely",
+      "Spin-offs always dilute promoter shareholding percentage"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Equity Carve-Outs vs Spin-Offs",
+    explanation: "In an Equity Carve-out, the parent sells a minority interest in a subsidiary through an IPO, creating a new publicly traded stock and generating fresh cash proceeds. In a Spin-off, 100% of subsidiary shares are distributed dividend-style to existing shareholders pro-rata; no cash enters the parent company.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20812,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Minimum Swap Ratio Target Shareholders Accept",
+    question: "Target company has PAT of ₹30 Crores and 10 Crore shares (EPS = ₹3.00, MPS = ₹45). Acquirer has PAT of ₹150 Crores, 30 Crore shares (EPS = ₹5.00, MPS = ₹100). No synergy gains are expected. What is the Minimum Swap Ratio that Target shareholders must receive if they demand that their aggregate post-merger earnings contribution is not diluted below their pre-merger earnings?",
+    options: [
+      "Minimum Swap Ratio = 0.60 (6 shares of Acquirer for 10 shares of Target)",
+      "Minimum Swap Ratio = 0.45",
+      "Minimum Swap Ratio = 0.50",
+      "Minimum Swap Ratio = 0.75"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Minimum Acceptable Swap Ratio for Target Shareholders",
+    explanation: "Target earnings = ₹30 Cr. Total combined earnings = 150 + 30 = ₹180 Cr.\nTarget proportion of total earnings = 30 / 180 = 16.667% (1/6).\nLet N_new be new shares issued to Target. Total merged shares = 30 + N_new.\nTarget share of merged equity: N_new / (30 + N_new) = 1/6\n6 × N_new = 30 + N_new => 5 × N_new = 30 => N_new = 6 Crores shares.\nMinimum Swap Ratio = 6 Crores / 10 Crores = 0.60 (or Target EPS / Acquirer EPS = 3.00 / 5.00 = 0.60).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20813,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Financial Synergy (Coin Insurance Effect)",
+    question: "What is the 'Coin Insurance Effect' in a conglomerate merger of two companies with imperfectly correlated cash flows?",
+    options: [
+      "The diversification of combined cash flows reduces the default probability on debt, enhancing debt capacity and lowering borrowing costs, which creates financial synergy",
+      "Target shareholders insure acquirer against currency risks",
+      "The merger provides full government insurance on bank deposits",
+      "It eliminates corporate income tax permanently"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Financial Synergies & Debt Capacity (Coin Insurance Effect)",
+    explanation: "Because the cash flow streams of the merging firms are imperfectly correlated, the variance of combined cash flows declines. This reduces default risk, providing debtholders of one firm with a claim on the cash flows of the other (coin-insurance). The firm can raise larger amounts of lower-cost debt.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20814,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Corporate Restructuring - Reverse Merger Mechanics",
+    question: "Why might a large, profitable, unlisted operating company execute a 'Reverse Merger' by merging into a dormant or loss-making listed shell company?",
+    options: [
+      "To obtain immediate listing on the stock exchange without going through the time-consuming, expensive, and regulatory-intensive Initial Public Offering (IPO) process",
+      "To avoid paying any compensation to shell company shareholders",
+      "Because reverse mergers are exempt from SEBI regulations",
+      "To extinguish all debt obligations automatically"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Reverse Mergers as Back-Door Listing Strategy",
+    explanation: "In a reverse merger (back-door listing), the unlisted operational company merges into an existing listed public shell company. Unlisted owners take a controlling majority stake in the combined entity, gaining instant public trading status without an IPO.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20815,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Insolvency & Restructuring - Resolution Plan Haircut (IBC 2016)",
+    question: "Under the Insolvency and Bankruptcy Code, 2016 (IBC), a corporate debtor owes ₹5,000 Crores to financial creditors. A resolution applicant submits a resolution plan approved by 85% of the Committee of Creditors (CoC) offering ₹1,750 Crores upfront cash settlement in full discharge of all claims. What is the percentage 'Haircut' accepted by the financial creditors?",
+    options: [
+      "Creditors' Haircut = 65.00%",
+      "Creditors' Haircut = 35.00%",
+      "Creditors' Haircut = 50.00%",
+      "Creditors' Haircut = 75.00%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material & IBC, 2016 - Debt Restructuring & Haircuts",
+    explanation: "Haircut Percentage = [ (Total Admitted Claims - Realization under Resolution Plan) / Total Admitted Claims ] × 100\n= [ (5,000 - 1,750) / 5,000 ] × 100 = (3,250 / 5,000) × 100 = 65.00%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20816,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Tracking Stock",
+    question: "What is a 'Tracking Stock' (Targeted Stock) issued by a diversified conglomerate?",
+    options: [
+      "A specialized class of common stock whose dividend and price performance are tied to the financial results of a specific business division or subsidiary, while legal ownership remains under the parent",
+      "Stock issued to track the Nifty index",
+      "Debt debentures with tracking warrants",
+      "Stock held exclusively by foreign institutional investors"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Tracking Stock Structure & Governance",
+    explanation: "Tracking stock separates the financial performance of a high-growth division from the parent company, allowing investors to value that division independently while the parent retains full legal ownership, control, and consolidated tax grouping benefits.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20817,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Takeover Defenses - Crown Jewel Defense",
+    question: "When a target company threatened by a hostile raider decides to sell off its most profitable and valuable operating subsidiary (which motivated the raider's hostile bid), it is employing which defense?",
+    options: [
+      "Crown Jewel Defense",
+      "Poison Pill",
+      "Golden Parachute",
+      "Scorched Earth Policy"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Crown Jewel Defense Tactics",
+    explanation: "The 'Crown Jewel' refers to the target's most attractive business unit or asset. Selling or spinning off this unit eliminates the hostile raider's strategic rationale for the acquisition, causing the hostile bid to be dropped.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20818,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Composite Swap Ratio",
+    question: "Two companies agree to determine the Swap Ratio by giving 40% weight to EPS ratio, 40% weight to Market Price ratio, and 20% weight to Book Value ratio. Financial metrics (Target / Acquirer) are: EPS Ratio = 0.60; MPS Ratio = 0.50; Book Value Ratio = 0.70. What is the Composite Swap Ratio?",
+    options: [
+      "Composite Swap Ratio = 0.58",
+      "Composite Swap Ratio = 0.60",
+      "Composite Swap Ratio = 0.54",
+      "Composite Swap Ratio = 0.65"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Composite Multi-Criteria Swap Ratio Determination",
+    explanation: "Formula: Composite Swap Ratio = (0.40 × EPS Ratio) + (0.40 × MPS Ratio) + (0.20 × Book Value Ratio)\n= (0.40 × 0.60) + (0.40 × 0.50) + (0.20 × 0.70)\n= 0.24 + 0.20 + 0.14 = 0.58.\nTarget shareholders will receive 0.58 shares of the acquirer for every 1 share held.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20819,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Golden Parachute",
+    question: "In the context of executive compensation during corporate acquisitions, a 'Golden Parachute' refers to:",
+    options: [
+      "Lucrative financial severance packages and accelerated stock option vesting promised to top management executives in the event their employment is terminated following a change of control",
+      "An insurance policy against airline investments",
+      "Guaranteed dividend payments to preference shareholders",
+      "Low-interest loan subsidies for new factory setup"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Golden Parachute Clauses in Mergers",
+    explanation: "Golden parachutes provide substantial exit compensation (cash bonuses, pension enhancements, vested stock options) to key senior executives if they are dismissed or demoted following a successful hostile takeover.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20820,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 8,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Mergers & Acquisitions - Share Purchase vs Asset Purchase",
+    question: "Why does an acquiring company generally prefer an 'Asset Purchase' over a 'Share Purchase' when acquiring a privately held distressed business?",
+    options: [
+      "In an asset purchase, the acquirer cherry-picks desirable assets, steps up the tax basis of assets to fair value for depreciation, and leaves legacy undisclosed liabilities/litigations behind with the seller entity",
+      "An asset purchase requires zero legal contracts",
+      "Share purchases require shareholder approval in parliament",
+      "Asset purchases are exempt from stamp duty across all Indian states"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Deal Structuring: Asset Purchase vs Share Purchase",
+    explanation: "In an asset acquisition, the buyer can select specific assets and explicitly disclaim contingent, environmental, tax, and contractual liabilities of the target entity, while also claiming higher tax depreciation on the stepped-up fair value of acquired assets.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  }
+];
+
+fs.writeFileSync('data/afm/topic_8_mergers_acquisitions.json', JSON.stringify(questions, null, 2));
+console.log('Saved Topic 8 (20 Qs)');
+

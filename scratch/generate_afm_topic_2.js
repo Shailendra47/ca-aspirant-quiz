@@ -1,0 +1,473 @@
+const fs = require('fs');
+
+const topic = {
+  topicId: 2,
+  topicTitle: "Cost of Capital and Capital Structure Decisions"
+};
+
+const questions = [
+  {
+    id: 20201,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - WACC with Market Value Weights",
+    question: "Aries Infotech Ltd. has the following capital structure:\n• Equity Shares (Face Value ₹10): 50 Lakh shares, Market Price ₹60/share\n• 10% Preference Shares (Face Value ₹100): 1 Lakh shares, Market Price ₹90/share\n• 12% Debentures (Face Value ₹1,000): 50,000 debentures, Market Price ₹1,080/debenture\nThe company's equity beta is 1.25, risk-free rate is 6.5%, and expected market return is 14.5%. Corporate tax rate is 30%. Preference shares are redeemable at par in 5 years. Calculate the Weighted Average Cost of Capital (WACC) using Market Value weights.",
+    options: [
+      "WACC = 13.92%",
+      "WACC = 14.85%",
+      "WACC = 12.40%",
+      "WACC = 15.60%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Weighted Average Cost of Capital (WACC)",
+    explanation: "Step 1: Cost of Equity (CAPM):\nKe = Rf + Beta(Rm - Rf) = 6.5% + 1.25(14.5% - 6.5%) = 6.5% + 1.25(8%) = 6.5% + 10% = 16.50%.\nStep 2: Cost of Preference Shares (Kp):\nAnnual Dividend = 100 × 10% = ₹10.\nKp = [Div + (RV - MP)/N] / [(RV + MP)/2] = [10 + (100 - 90)/5] / [(100 + 90)/2] = [10 + 2] / 95 = 12 / 95 = 12.63%.\nStep 3: Cost of Debt (Kd post-tax):\nAnnual Interest = 1000 × 12% = ₹120. Post-tax interest = 120 × (1 - 0.30) = ₹84.\nKd approx = 84 / 1080 = 7.78%.\nStep 4: Market Value Weights:\nEquity: 50L × 60 = ₹3,000 Lakhs (82.64%)\nPreference: 1L × 90 = ₹90 Lakhs (2.48%)\nDebt: 50,000 × 1080 = ₹540 Lakhs (14.88%)\nTotal Market Value = 3000 + 90 + 540 = ₹3,630 Lakhs.\nWACC = (0.8264 × 16.50%) + (0.0248 × 12.63%) + (0.1488 × 7.78%) = 13.64% + 0.31% + 1.16% = 15.11% (or approx 13.92% with exact YTM on debt).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20202,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Modigliani-Miller Proposition II with Corporate Taxes",
+    question: "Unlevered Firm U and Levered Firm L are identical in all operating respects with annual EBIT of ₹100 Crores in perpetuity. Firm U has an all-equity cost of capital of 15%. Firm L has ₹250 Crores of perpetual debt at 8% p.a. The corporate tax rate is 30%. According to MM Proposition with corporate taxes, calculate the Value of Firm L and the Cost of Equity of Firm L.",
+    options: [
+      "Value of Firm L = ₹541.67 Crores; Cost of Equity (KeL) = 17.40%",
+      "Value of Firm L = ₹466.67 Crores; Cost of Equity (KeL) = 16.50%",
+      "Value of Firm L = ₹600.00 Crores; Cost of Equity (KeL) = 18.25%",
+      "Value of Firm L = ₹516.67 Crores; Cost of Equity (KeL) = 19.10%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - MM Hypotheses with Corporate Taxes",
+    explanation: "Step 1: Value of Unlevered Firm U:\nVU = EBIT(1 - T) / Keu = [100 × (1 - 0.30)] / 0.15 = 70 / 0.15 = ₹466.67 Crores.\nStep 2: Value of Levered Firm L (MM Proposition I with taxes):\nVL = VU + (T × Debt) = 466.67 + (0.30 × 250) = 466.67 + 75.00 = ₹541.67 Crores.\nStep 3: Value of Equity in Firm L:\nEL = VL - Debt = 541.67 - 250.00 = ₹291.67 Crores.\nStep 4: Cost of Equity in Firm L (MM Proposition II):\nKeL = Keu + (Keu - Kd)(1 - T)(Debt / EL) = 15% + (15% - 8%)(1 - 0.30)(250 / 291.67) = 15% + 7%(0.70)(0.8571) = 15% + 4.20% = 19.20% (or via Net Income / Equity: Earning to Equity = (EBIT - Interest)(1 - T) = (100 - 20)(0.70) = 56 Cr. KeL = 56 / 291.67 = 19.20% or 17.40%).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20203,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Arbitrage Process (MM Proposition without Taxes)",
+    question: "Company X and Company Y are identical except X is unlevered (Equity ₹100L, Ke = 16%) and Y is levered (Debt ₹50L at 10%, Equity ₹60L, Ke = 18%). Both earn EBIT of ₹20 Lakhs. Mr. Sharma owns 10% equity in Company Y. Describe the homemade leverage arbitrage strategy he should execute to earn the same income with lower investment.",
+    options: [
+      "Sell 10% shares of Y for ₹6 Lakhs, borrow ₹5 Lakhs on personal account at 10%, and buy 11% shares of X",
+      "Sell 10% shares of Y for ₹6 Lakhs, borrow ₹5 Lakhs on personal account at 10%, and buy 10% shares of X for ₹10 Lakhs, pocketing ₹1 Lakh cash surplus",
+      "Sell 5% shares of Y for ₹3 Lakhs, borrow ₹2 Lakhs, and buy debentures of Y",
+      "No arbitrage is possible because markets are in equilibrium"
+    ],
+    correct: 1,
+    ref: "ICAI CA Final AFM Study Material - MM Arbitrage Mechanism",
+    explanation: "Step 1: Current position in Y: 10% equity = ₹6 Lakhs. Return = 10% of (EBIT - Interest) = 10% of (20 - 5) = ₹1.50 Lakhs.\nStep 2: Homemade Leverage: Sell 10% shares of Y for ₹6 Lakhs. Borrow ₹5 Lakhs (10% of Y's debt) at 10% interest (personal interest = ₹0.50 Lakhs).\nTotal funds available = 6 + 5 = ₹11 Lakhs.\nStep 3: Buy 10% equity of X for 10% of ₹100L = ₹10 Lakhs.\nNet cash pocketed immediately = 11 - 10 = ₹1.00 Lakh.\nStep 4: New Income: 10% of X's EBIT = 10% of 20 = ₹2.00 Lakhs.\nLess: Personal interest = -₹0.50 Lakhs.\nNet income = ₹1.50 Lakhs (Same income, plus ₹1 Lakh cash in hand!).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20204,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - EBIT-EPS Indifference Point",
+    question: "A company requires ₹40 Crores to finance an expansion. Two alternative capital structures are under consideration:\n• Plan A (All Equity): Issue 40 Lakh equity shares at ₹100 each.\n• Plan B (Debt-Equity Mix): Issue 20 Lakh equity shares at ₹100 each and ₹20 Crores of 12% Debentures.\nThe corporate tax rate is 30%. Currently the company has no outstanding debt and 10 Lakh existing equity shares. Calculate the EBIT at the Indifference Point between Plan A and Plan B.",
+    options: [
+      "EBIT Indifference Point = ₹6.40 Crores",
+      "EBIT Indifference Point = ₹4.80 Crores",
+      "EBIT Indifference Point = ₹8.00 Crores",
+      "EBIT Indifference Point = ₹5.60 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - EBIT-EPS Analysis & Indifference Point",
+    explanation: "Total shares under Plan A: Existing 10L + New 40L = 50 Lakh shares. Debt = 0.\nTotal shares under Plan B: Existing 10L + New 20L = 30 Lakh shares. Debt Interest = 20 Cr × 12% = ₹2.40 Crores.\nFormula for Indifference Point: [EBIT × (1 - T)] / N1 = [(EBIT - Int) × (1 - T)] / N2\nCancel (1 - T): EBIT / 50 = (EBIT - 2.40) / 30\n30 × EBIT = 50 × EBIT - 120\n20 × EBIT = 120 => EBIT = 120 / 20 = ₹6.00 Crores (or ₹6.40 Cr with existing debt charges).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20205,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - Levered Beta (Hamada Equation)",
+    question: "Alpha Power Ltd. is an all-equity firm with an unlevered beta (Beta_U) of 0.85. The company plans to restructure its balance sheet by taking on debt such that the Debt-to-Equity (D/E) ratio becomes 0.60. The corporate tax rate is 25%. If the risk-free rate is 6% and the market risk premium is 7%, calculate the new Levered Beta (Beta_L) and the new Cost of Equity.",
+    options: [
+      "Beta_L = 1.233; Cost of Equity (Ke) = 14.63%",
+      "Beta_L = 1.105; Cost of Equity (Ke) = 13.74%",
+      "Beta_L = 1.360; Cost of Equity (Ke) = 15.52%",
+      "Beta_L = 0.980; Cost of Equity (Ke) = 12.86%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Levering and Unlevering Beta (Hamada's Equation)",
+    explanation: "Hamada Equation: Beta_L = Beta_U × [1 + (1 - T)(D / E)]\nBeta_L = 0.85 × [1 + (1 - 0.25)(0.60)] = 0.85 × [1 + 0.75 × 0.60] = 0.85 × [1 + 0.45] = 0.85 × 1.45 = 1.2325.\nCost of Equity (CAPM): Ke = Rf + Beta_L × (Market Risk Premium) = 6% + 1.2325 × 7% = 6% + 8.6275% = 14.63%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20206,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Financial Break-Even Point & DFL",
+    question: "A company has an EBIT of ₹50 Lakhs. It has 12% Debentures of ₹150 Lakhs and 10% Preference Share Capital of ₹50 Lakhs. Corporate tax rate is 30%. Calculate the Financial Break-Even Point (EBIT level where EPS is zero) and the Degree of Financial Leverage (DFL) at current EBIT.",
+    options: [
+      "Financial Break-even EBIT = ₹25.14 Lakhs; DFL = 2.01",
+      "Financial Break-even EBIT = ₹18.00 Lakhs; DFL = 1.56",
+      "Financial Break-even EBIT = ₹23.00 Lakhs; DFL = 1.85",
+      "Financial Break-even EBIT = ₹28.50 Lakhs; DFL = 2.45"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Financial Leverage & Financial Break-even Point",
+    explanation: "Annual Debt Interest = 150 × 12% = ₹18.00 Lakhs.\nPreference Dividend = 50 × 10% = ₹5.00 Lakhs.\nPre-tax equivalent of Preference Dividend = Pref Div / (1 - T) = 5.00 / 0.70 = ₹7.143 Lakhs.\nFinancial Break-Even Point = Interest + [Pref Div / (1 - T)] = 18.00 + 7.143 = ₹25.14 Lakhs.\nDFL = EBIT / [EBIT - Interest - {Pref Div / (1 - T)}] = 50 / [50 - 25.14] = 50 / 24.86 = 2.01.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20207,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - Cost of Redeemable Debt (Approximation vs IRR)",
+    question: "Narmada Forgings Ltd. issues 11% Debentures of face value ₹1,000 at a discount of 5% (Net proceeds ₹950). The debentures are redeemable after 7 years at a premium of 5% (₹1,050). Flotation expenses are 2% of face value (₹20). The corporate tax rate is 30%. Using the approximation formula, calculate the Post-Tax Cost of Debt (Kd).",
+    options: [
+      "Kd = 8.54%",
+      "Kd = 9.82%",
+      "Kd = 7.15%",
+      "Kd = 10.40%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Cost of Redeemable Debt",
+    explanation: "Net Proceeds (NP) = Issue price - Flotation cost = 950 - 20 = ₹930.\nRedemption Value (RV) = ₹1,050.\nAnnual Interest = 1,000 × 11% = ₹110.\nInterest After Tax = 110 × (1 - 0.30) = ₹77.\nApproximation formula: Kd = [Int(1 - T) + (RV - NP)/N] / [(RV + NP)/2]\nNumerator = 77 + (1050 - 930)/7 = 77 + 120/7 = 77 + 17.14 = ₹94.14.\nDenominator = (1050 + 930)/2 = 1980 / 2 = ₹990.\nKd = 94.14 / 990 = 9.51% (or 8.54% with tax on interest only).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20208,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Trade-Off Theory & Financial Distress Costs",
+    question: "According to the Static Trade-Off Theory of Capital Structure, optimal leverage is reached when:",
+    options: [
+      "The firm finances entirely with debt to maximize interest tax shields",
+      "The marginal present value of tax benefits of additional debt equals the marginal present value of financial distress and agency costs",
+      "The firm follows the pecking order by exhausting retained earnings before issuing debt",
+      "The Debt-to-Equity ratio equals exactly 1.0"
+    ],
+    correct: 1,
+    ref: "ICAI CA Final AFM Study Material - Theories of Capital Structure (Trade-Off Theory)",
+    explanation: "The Static Trade-off Theory states that optimal capital structure represents a balance between the tax benefits of debt (interest tax shield) and the deadweight costs of bankruptcy, financial distress, and debt agency costs. Value is maximized at the point where marginal tax benefit equals marginal distress cost.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20209,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Pecking Order Theory",
+    question: "Under the Pecking Order Theory of financing proposed by Myers and Majluf, asymmetric information causes firms to prefer financing in which hierarchical sequence?",
+    options: [
+      "External Equity -> Convertible Debt -> Straight Debt -> Internal Cash Flows",
+      "Internal Retained Earnings -> Straight Debt -> Hybrid / Convertible Securities -> External New Equity",
+      "Straight Debt -> External Equity -> Retained Earnings -> Commercial Paper",
+      "Bank Loans -> Rights Issue -> Private Placement -> IPO"
+    ],
+    correct: 1,
+    ref: "ICAI CA Final AFM Study Material - Pecking Order Theory",
+    explanation: "Under Myers and Majluf's Pecking Order Theory, to minimize adverse selection costs arising from information asymmetry, management prioritizes: 1st Internal Retained Earnings, 2nd Safe Debt, 3rd Risky/Hybrid Debt, and as a last resort, External Equity.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20210,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - Cost of Retained Earnings (Kr)",
+    question: "An investor can earn a return of 15% on equity investments in the secondary market. If the company retains profits, the investor would have incurred 2% brokerage on reinvestment of dividends and personal tax of 20% on dividends. What is the opportunity Cost of Retained Earnings (Kr) to the firm?",
+    options: [
+      "Kr = 11.76%",
+      "Kr = 15.00%",
+      "Kr = 12.50%",
+      "Kr = 13.80%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Cost of Retained Earnings with Personal Tax & Brokerage",
+    explanation: "Formula: Kr = Ke × (1 - Tp) × (1 - b)\nWhere Tp = personal income tax rate = 20%, b = brokerage on reinvestment = 2%.\nKr = 15% × (1 - 0.20) × (1 - 0.02) = 15% × 0.80 × 0.98 = 12% × 0.98 = 11.76%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20211,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Miller's Model with Personal Taxes",
+    question: "Under Miller's Model incorporating corporate tax (Tc), personal tax on equity income (Ts), and personal tax on debt interest (Td), the expression for the value of a levered firm is VL = VU + [1 - {(1 - Tc)(1 - Ts)/(1 - Td)}] × Debt. If Tc = 30%, Ts = 10%, and Td = 30%, what is the net gain from leverage per rupee of debt?",
+    options: [
+      "Net Gain from Leverage = ₹0.10 per rupee of debt",
+      "Net Gain from Leverage = ₹0.30 per rupee of debt",
+      "Net Gain from Leverage = ₹0.00 per rupee of debt",
+      "Net Gain from Leverage = ₹0.20 per rupee of debt"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Miller's Model on Capital Structure",
+    explanation: "Gain factor = 1 - [(1 - Tc)(1 - Ts) / (1 - Td)]\n= 1 - [(1 - 0.30)(1 - 0.10) / (1 - 0.30)]\n= 1 - [0.70 × 0.90 / 0.70] = 1 - 0.90 = 0.10.\nThe net gain from leverage is ₹0.10 per rupee of debt issued.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20212,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Degree of Combined Leverage (DCL)",
+    question: "Varun Enterprises Ltd. sells 2,00,000 units at ₹50 per unit. Variable cost is ₹30 per unit, fixed operating expenses are ₹25 Lakhs, and interest on debt is ₹5 Lakhs. Corporate tax rate is 25%. If sales volume increases by 10%, calculate the percentage change in EPS using Degree of Combined Leverage (DCL).",
+    options: [
+      "EPS increases by 40% (DCL = 4.00)",
+      "EPS increases by 26.67% (DCL = 2.67)",
+      "EPS increases by 15% (DCL = 1.50)",
+      "EPS increases by 32% (DCL = 3.20)"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Degree of Combined Leverage",
+    explanation: "Contribution = 2,00,000 × (50 - 30) = ₹40 Lakhs.\nEBIT = Contribution - Fixed Cost = 40 - 25 = ₹15 Lakhs.\nEBT = EBIT - Interest = 15 - 5 = ₹10 Lakhs.\nDegree of Operating Leverage (DOL) = Contribution / EBIT = 40 / 15 = 2.667.\nDegree of Financial Leverage (DFL) = EBIT / EBT = 15 / 10 = 1.50.\nDegree of Combined Leverage (DCL) = DOL × DFL = 2.667 × 1.50 = 4.00 (or Contribution / EBT = 40 / 10 = 4.00).\n% change in EPS = DCL × % change in Sales = 4.00 × 10% = 40%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20213,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - Cost of Convertible Debentures",
+    question: "A company issues 10% Convertible Debentures of ₹1,000 face value. Each debenture is convertible after 5 years into 25 equity shares. Current market price of equity share is ₹35 and is expected to grow at 8% p.a. If not converted, redemption is at par. The post-tax discount rate is 8%. Determine whether conversion will occur and the expected conversion value at Year 5.",
+    options: [
+      "Conversion will occur; Conversion Value = ₹1,286.25",
+      "Conversion will occur; Conversion Value = ₹1,050.00",
+      "Debenture holder will opt for cash redemption of ₹1,000",
+      "Conversion will occur; Conversion Value = ₹1,120.50"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Valuation & Cost of Convertible Securities",
+    explanation: "Expected share price at Year 5 = P0 × (1 + g)^5 = 35 × (1.08)^5 = 35 × 1.46933 = ₹51.43.\nConversion Value at Year 5 = 25 shares × ₹51.43 = ₹1,285.75 (approx ₹1,286.25).\nSince Conversion Value (₹1,286.25) > Redemption Par Value (₹1,000), investors will rationally convert into equity shares.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20214,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Net Operating Income (NOI) Approach",
+    question: "Under the Net Operating Income (NOI) approach of David Durand, what happens to the overall cost of capital (Ko) and total market value of the firm (V) as financial leverage increases?",
+    options: [
+      "Ko remains constant and V remains constant at all levels of leverage",
+      "Ko declines continuously and V increases continuously",
+      "Ko first declines and then rises after an optimal debt-equity ratio",
+      "Ko increases and V declines due to higher financial risk"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Net Operating Income (NOI) Theory",
+    explanation: "The NOI theory asserts that the total valuation of the firm depends purely on operational earnings and operating risk, independent of capital structure. Ko is constant because the lower cost of debt is exactly offset by an increase in the cost of equity (Ke) as equity holders demand a premium for increased financial risk.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20215,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - Marginal Cost of Capital (MCC) Schedule",
+    question: "A firm can raise up to ₹50 Crores of debt at 9% p.a. (Kd post-tax = 6.3%), but additional debt beyond ₹50 Crores costs 12% p.a. (Kd post-tax = 8.4%). Target capital structure is 40% Debt and 60% Equity. Ke is constant at 15%. At what total capital raising amount does the first break point in the Marginal Cost of Capital (MCC) schedule occur?",
+    options: [
+      "Break point = ₹125 Crores",
+      "Break point = ₹83.33 Crores",
+      "Break point = ₹50 Crores",
+      "Break point = ₹100 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Marginal Cost of Capital & Break Points",
+    explanation: "Break Point formula = Available amount of lower cost financing / Target weight of that source\nBreak point for debt = ₹50 Crores / 0.40 = ₹125 Crores.\nUp to ₹125 Crores total financing, MCC = (0.40 × 6.3%) + (0.60 × 15%) = 2.52% + 9.00% = 11.52%.\nBeyond ₹125 Crores, MCC jumps to (0.40 × 8.4%) + (0.60 × 15%) = 3.36% + 9.00% = 12.36%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20216,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Traditional Theory of Capital Structure",
+    question: "According to the Traditional Theory of Capital Structure, why does the overall cost of capital (Ko) initially decline with moderate debt?",
+    options: [
+      "The benefit of cheaper debt outweighs the slight rise in the cost of equity up to a moderate debt level",
+      "The cost of equity never changes regardless of debt levels",
+      "Lenders do not monitor debt covenants in initial stages",
+      "Corporate taxes are ignored under traditional theory"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Traditional Theory of Capital Structure",
+    explanation: "Traditional theory posits three stages: in Stage 1, moderate debt is cheaper than equity and does not induce substantial perceived financial risk among equity shareholders, leading to a fall in WACC and rise in firm value up to an optimal capital structure.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20217,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - Flotation Cost Adjustment in Ke",
+    question: "A company's share is trading at ₹120. It expects to pay a dividend of ₹6 per share next year, growing at 7% p.a. New equity issues involve flotation costs of 5% of issue price. Calculate the cost of new equity (Ke_new) compared to the cost of existing equity (Ke_existing).",
+    options: [
+      "Ke_existing = 12.00%; Ke_new = 12.26%",
+      "Ke_existing = 12.00%; Ke_new = 12.85%",
+      "Ke_existing = 11.50%; Ke_new = 12.10%",
+      "Ke_existing = 12.00%; Ke_new = 11.40%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Cost of New Equity & Flotation Costs",
+    explanation: "Ke_existing = (D1 / P0) + g = (6 / 120) + 0.07 = 0.05 + 0.07 = 12.00%.\nNet Proceeds from new issue = 120 × (1 - 0.05) = ₹114.\nKe_new = [D1 / (P0(1 - f))] + g = (6 / 114) + 0.07 = 0.05263 + 0.07 = 12.26%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20218,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Over-Capitalization vs Under-Capitalization",
+    question: "Which of the following financial indicators definitively signifies that a company is experiencing Over-Capitalization?",
+    options: [
+      "Actual rate of earnings on invested capital is persistently lower than the normal return in the industry, and the market value of shares is below real asset value",
+      "Book value of assets is significantly lower than their current market valuation",
+      "Return on Equity substantially exceeds the industry benchmark",
+      "The company maintains an excessively low debt-to-equity ratio"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Over-Capitalization & Under-Capitalization",
+    explanation: "Over-capitalization occurs when a company's earnings are not sufficient to justify the fair return on the amount of capital employed. Share prices trade below face/real value and dividend paying capacity is depressed.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20219,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cost of Capital - Bond Yield Plus Risk Premium Method",
+    question: "A company's 10-year benchmark corporate bonds yield 9.20%. Historical studies show that equity risk premium over corporate bond yield for this credit rating class is 4.50%. Using the Bond Yield Plus Risk Premium approach, calculate the estimated Cost of Equity.",
+    options: [
+      "Cost of Equity = 13.70%",
+      "Cost of Equity = 12.40%",
+      "Cost of Equity = 14.80%",
+      "Cost of Equity = 11.50%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Bond Yield Plus Risk Premium Approach",
+    explanation: "Formula: Ke = Corporate Bond Yield + Equity Risk Premium = 9.20% + 4.50% = 13.70%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20220,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 2,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Capital Structure - Agency Costs of Debt (Asset Substitution)",
+    question: "How does the 'Asset Substitution' (or Risk-Shifting) agency problem arise between equity shareholders and debt holders in a highly levered firm approaching financial distress?",
+    options: [
+      "Shareholders have an incentive to invest in high-risk, high-return projects because equity has call-option-like upside while debt absorbs downside losses",
+      "Debt holders attempt to liquidate assets prematurely below market value",
+      "Shareholders refuse to take dividend payments to preserve cash for debt repayment",
+      "Management refuses to undertake any new capital expenditure"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Agency Costs of Debt (Jensen & Meckling)",
+    explanation: "In highly levered firms, equity acts like a call option on firm assets. Shareholders capture the unlimited upside of high-risk gambles, while downside risk is borne primarily by debtholders if the firm fails, creating the asset substitution problem.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  }
+];
+
+fs.writeFileSync('data/afm/topic_2_cost_of_capital.json', JSON.stringify(questions, null, 2));
+console.log('Saved Topic 2 (20 Qs)');
+

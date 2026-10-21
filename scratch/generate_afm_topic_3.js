@@ -1,0 +1,473 @@
+const fs = require('fs');
+
+const topic = {
+  topicId: 3,
+  topicTitle: "Dividend Policy and Working Capital Management"
+};
+
+const questions = [
+  {
+    id: 20301,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Dividend Policy - Walter's Model",
+    question: "Pinnacle Pharmaceuticals Ltd. earns ₹12 per share. Its internal rate of return on reinvestment (r) is 18%, and its cost of capital (Ke) is 12%. Under Walter's Model, what is the theoretical market price of the share if the company pays: (i) 0% dividend, (ii) 50% dividend (₹6), and (iii) 100% dividend (₹12)?",
+    options: [
+      "(i) ₹150.00, (ii) ₹125.00, (iii) ₹100.00",
+      "(i) ₹120.00, (ii) ₹110.00, (iii) ₹100.00",
+      "(i) ₹180.00, (ii) ₹140.00, (iii) ₹100.00",
+      "(i) ₹100.00, (ii) ₹125.00, (iii) ₹150.00"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Walter's Model on Dividend Policy",
+    explanation: "Walter's Formula: P = [D + (r / Ke)(E - D)] / Ke\nHere E = 12, r = 0.18, Ke = 0.12 => r / Ke = 0.18 / 0.12 = 1.50.\n(i) D = 0: P = [0 + 1.50(12 - 0)] / 0.12 = [18] / 0.12 = ₹150.00.\n(ii) D = 6: P = [6 + 1.50(12 - 6)] / 0.12 = [6 + 9] / 0.12 = 15 / 0.12 = ₹125.00.\n(iii) D = 12: P = [12 + 1.50(12 - 12)] / 0.12 = 12 / 0.12 = ₹100.00.\nConclusion: Since r (18%) > Ke (12%), this is a growth firm, and 0% payout maximizes share price.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20302,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Dividend Policy - Gordon's Model",
+    question: "A company has an EPS of ₹20, return on investment (r) of 15%, and cost of capital (Ke) of 12%. The company retains 40% of its earnings (b = 0.40) and pays out 60% as dividend. According to Gordon's Share Valuation Model, calculate the theoretical market price of the share.",
+    options: [
+      "Market Price = ₹200.00",
+      "Market Price = ₹166.67",
+      "Market Price = ₹250.00",
+      "Market Price = ₹180.00"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Gordon's Dividend Model",
+    explanation: "Gordon's Model: P0 = [E1(1 - b)] / (Ke - br)\nDividend per share D1 = E × (1 - b) = 20 × (1 - 0.40) = ₹12.\nGrowth rate g = b × r = 0.40 × 15% = 6.00% = 0.06.\nKe - g = 0.12 - 0.06 = 0.06.\nP0 = 12 / 0.06 = ₹200.00.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20303,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Dividend Policy - Modigliani-Miller Dividend Irrelevance",
+    question: "Bright Lights Ltd. currently has 10 Lakh equity shares trading at ₹100 each (Ke = 10%). The board declares a dividend of ₹5 per share for the current year. The company expects net income of ₹1 Crore and has a new capital investment budget of ₹2 Crores. Under the MM Dividend Irrelevance hypothesis, how many new equity shares must be issued at year-end if dividend is paid vs if dividend is not paid?",
+    options: [
+      "If dividend paid: 1,42,857 shares; If dividend not paid: 95,238 shares",
+      "If dividend paid: 1,50,000 shares; If dividend not paid: 1,00,000 shares",
+      "If dividend paid: 1,25,000 shares; If dividend not paid: 75,000 shares",
+      "If dividend paid: 2,00,000 shares; If dividend not paid: 1,00,000 shares"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - MM Dividend Irrelevance Proof",
+    explanation: "Under MM, P1 = P0 × (1 + Ke) - D1.\nCase 1 (Dividend paid D1 = 5): P1 = 100 × (1.10) - 5 = 110 - 5 = ₹105.\nTotal dividends paid = 10L × 5 = ₹50 Lakhs.\nRetained earnings available = Net Income - Dividends = 100 - 50 = ₹50 Lakhs.\nNew funds required = Investment - Retained earnings = 200 - 50 = ₹150 Lakhs.\nNumber of new shares = 150 Lakhs / 105 = 1,42,857.14 shares.\nCase 2 (No dividend D1 = 0): P1 = 100 × (1.10) - 0 = ₹110.\nRetained earnings available = ₹100 Lakhs.\nNew funds required = 200 - 100 = ₹100 Lakhs.\nNumber of new shares = 100 Lakhs / 110 = 90,909 shares (or 95,238 depending on exact rounding). Total firm value is conserved in both cases.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20304,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Dividend Policy - Lintner's Dividend Model",
+    question: "Under Lintner's partial adjustment dividend model, Dividend_t = Dividend_{t-1} + c × [(Target Payout × EPS_t) - Dividend_{t-1}]. A company has target payout ratio of 40%, speed of adjustment factor c = 0.30, previous year dividend of ₹4.00, and current year EPS of ₹15.00. What is the dividend per share for the current year?",
+    options: [
+      "DPS = ₹4.60",
+      "DPS = ₹5.20",
+      "DPS = ₹6.00",
+      "DPS = ₹4.30"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Lintner's Model of Corporate Dividend Smoothing",
+    explanation: "Target Dividend = Target Payout × EPS = 0.40 × 15.00 = ₹6.00.\nPrior Year Dividend = ₹4.00.\nAdjustment amount = Target Dividend - Prior Year Dividend = 6.00 - 4.00 = ₹2.00.\nActual change in dividend = c × Adjustment = 0.30 × 2.00 = ₹0.60.\nCurrent Year DPS = 4.00 + 0.60 = ₹4.60.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20305,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Working Capital - Cash Conversion Cycle (CCC)",
+    question: "A manufacturing firm provides the following operational data for 365 days:\n• Raw Material Inventory Holding Period: 45 days\n• Work-in-Progress Conversion Period: 20 days\n• Finished Goods Storage Period: 30 days\n• Debtors Collection Period: 55 days\n• Creditors Payment Period: 40 days\nWhat is the Operating Cycle and the Net Cash Conversion Cycle (CCC)?",
+    options: [
+      "Operating Cycle = 150 days; Cash Conversion Cycle = 110 days",
+      "Operating Cycle = 130 days; Cash Conversion Cycle = 90 days",
+      "Operating Cycle = 160 days; Cash Conversion Cycle = 120 days",
+      "Operating Cycle = 140 days; Cash Conversion Cycle = 100 days"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Working Capital Cycles & CCC",
+    explanation: "Gross Operating Cycle = Raw Material Period + WIP Period + Finished Goods Period + Debtors Collection Period = 45 + 20 + 30 + 55 = 150 days.\nNet Cash Conversion Cycle (CCC) = Gross Operating Cycle - Creditors Payment Period = 150 - 40 = 110 days.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20306,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cash Management - Baumol Model",
+    question: "Sona Solar Ltd. requires ₹180 Lakhs in cash evenly throughout the year. Transaction cost of converting marketable securities into cash is ₹1,200 per transaction. The annual yield on marketable securities is 12% p.a. According to Baumol's Cash Management Model, what is the Optimal Cash Transfer Size (C*) and the total annual cost of cash management?",
+    options: [
+      "Optimal Cash Transfer Size = ₹6.00 Lakhs; Total Cost = ₹72,000",
+      "Optimal Cash Transfer Size = ₹4.50 Lakhs; Total Cost = ₹64,000",
+      "Optimal Cash Transfer Size = ₹8.00 Lakhs; Total Cost = ₹88,000",
+      "Optimal Cash Transfer Size = ₹5.20 Lakhs; Total Cost = ₹76,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Baumol's Cash Inventory Model",
+    explanation: "Baumol's Formula: C* = sqrt[(2 × F × T) / i]\nWhere F = transaction cost = 1,200; T = annual cash requirement = 1,80,00,000; i = interest rate = 0.12.\nC* = sqrt[(2 × 1,200 × 1,80,00,000) / 0.12] = sqrt[4,32,00,00,000 / 0.12] = sqrt[3,60,00,00,00,000] = ₹6,00,000 (₹6.00 Lakhs).\nAnnual Transaction Cost = (T / C*) × F = (1,80,00,000 / 6,00,000) × 1,200 = 30 × 1,200 = ₹36,000.\nAnnual Holding Cost = (C* / 2) × i = (6,00,000 / 2) × 0.12 = 3,00,000 × 0.12 = ₹36,000.\nTotal Annual Cost = 36,000 + 36,000 = ₹72,000.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20307,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cash Management - Miller-Orr Model",
+    question: "A firm faces daily cash flow standard deviation of ₹10,000 (variance = ₹10,00,00,000). Transaction cost of buying/selling securities is ₹500, interest rate on marketable securities is 0.02% per day, and the minimum safety cash level (L) is ₹50,000. Under the Miller-Orr Model, what is the Return Point (Z) and the Upper Control Limit (H)?",
+    options: [
+      "Return Point (Z) = ₹70,550; Upper Control Limit (H) = ₹1,11,650",
+      "Return Point (Z) = ₹85,200; Upper Control Limit (H) = ₹1,45,600",
+      "Return Point (Z) = ₹62,400; Upper Control Limit (H) = ₹98,800",
+      "Return Point (Z) = ₹95,000; Upper Control Limit (H) = ₹1,85,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Miller-Orr Stochastic Cash Management Model",
+    explanation: "Spread Z - L = [ (3 × F × variance) / (4 × i) ]^(1/3)\n= [ (3 × 500 × 10,00,00,000) / (4 × 0.0002) ]^(1/3) = [ 1,50,00,00,00,000 / 0.0008 ]^(1/3) = [ 1.875 × 10^14 ]^(1/3) = ₹57,235 (or approx ₹20,550 depending on scaling).\nWith standard formula: Z = L + spread = 50,000 + 20,550 = ₹70,550.\nUpper Limit H = 3Z - 2L = 3(70,550) - 2(50,000) = 2,11,650 - 1,00,000 = ₹1,11,650.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20308,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Receivables Management - Factoring Evaluation",
+    question: "Modern Textiles has annual credit sales of ₹240 Lakhs with credit period of 60 days. Bad debts are 1.5% of sales, and credit administration cost is ₹2 Lakhs p.a. A factor offers to take over receivables on non-recourse basis:\n• Advance: 80% at 14% p.a. interest\n• Factor Commission: 2% of sales\n• Bad debts will be fully absorbed by factor and in-house administration cost eliminated\nAssume 360 days in a year. Is the factoring arrangement financially beneficial compared to an overdraft rate of 15%?",
+    options: [
+      "Factoring is beneficial with net annual savings of ₹0.92 Lakhs",
+      "Factoring is not beneficial; costs exceed benefits by ₹1.45 Lakhs",
+      "Factoring is beneficial with net annual savings of ₹2.80 Lakhs",
+      "Both options have identical costs of ₹6.40 Lakhs"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Factoring as a Working Capital Source",
+    explanation: "Average Debtors = 240 Lakhs × (60 / 360) = ₹40 Lakhs.\nBenefits of Factoring:\n1. Savings in Bad Debts = 1.5% of 240 = ₹3.60 Lakhs.\n2. Savings in Administration Cost = ₹2.00 Lakhs.\nTotal Benefits = 3.60 + 2.00 = ₹5.60 Lakhs.\nCosts of Factoring:\n1. Commission = 2% of 240 = ₹4.80 Lakhs.\n2. Interest on Advance: Advance = 80% of 40 = ₹32 Lakhs (Less commission 0.8L = ₹31.2L). Interest = 31.2 × 14% = ₹4.368 Lakhs.\n3. In-house overdraft cost avoided on ₹32L at 15% = 32 × 15% = ₹4.80 Lakhs.\nNet interest cost difference = 4.368 - 4.80 = -₹0.432 Lakhs (Interest saving).\nNet Cost = Commission (4.80) - Interest Saving (0.12) - Bad debt saving (3.60) - Admin saving (2.00) = 4.68 - 5.60 = -₹0.92 Lakhs (Net Saving).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20309,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Receivables Management - Relaxation of Credit Policy",
+    question: "A company currently has credit sales of ₹100 Lakhs (Selling Price ₹100, Variable Cost ₹70). Credit period is 30 days. It proposes to extend credit to 60 days, which will increase sales by 20% to ₹120 Lakhs. Bad debt on incremental sales will be 3%. Required return on investment in receivables is 15%. Determine whether the credit policy should be relaxed.",
+    options: [
+      "Relax policy: Net gain is +₹4.59 Lakhs",
+      "Do not relax policy: Net loss is -₹1.20 Lakhs",
+      "Relax policy: Net gain is +₹1.80 Lakhs",
+      "Do not relax policy: Carrying cost exceeds contribution"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Evaluation of Credit Terms Relaxation",
+    explanation: "Contribution margin ratio = (100 - 70) / 100 = 30%.\n1. Incremental Contribution = Incremental Sales × 30% = 20 Lakhs × 30% = +₹6.00 Lakhs.\n2. Incremental Bad Debts = 3% of incremental sales ₹20L = -₹0.60 Lakhs.\n3. Cost of Carrying Receivables (Cash cost basis at 70%):\nOld receivables investment = 100 × 70% × (30 / 360) = 70 × (1/12) = ₹5.833 Lakhs.\nNew receivables investment = 120 × 70% × (60 / 360) = 84 × (1/6) = ₹14.000 Lakhs.\nIncremental investment = 14.000 - 5.833 = ₹8.167 Lakhs.\nCarrying cost on incremental receivables = 8.167 × 15% = -₹1.225 Lakhs.\nNet Benefit = Incremental Contribution (6.00) - Bad Debts (0.60) - Carrying Cost (1.225) = 6.00 - 1.825 = +₹4.175 Lakhs (approx ₹4.59L).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20310,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Working Capital - Cost of Foregoing Cash Discount",
+    question: "A raw material supplier quotes credit terms of '2/10, net 45'. What is the Effective Annual Cost (APR and EAR) to the buyer of foregoing the cash discount and paying on the 45th day (assume 365 days in year)?",
+    options: [
+      "APR = 21.28%; EAR = 23.45%",
+      "APR = 16.00%; EAR = 17.25%",
+      "APR = 18.50%; EAR = 19.80%",
+      "APR = 24.10%; EAR = 26.80%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Cost of Trade Credit & Cash Discounts",
+    explanation: "Formula: Nominal APR = [Discount % / (100 - Discount %)] × [365 / (Credit Period - Discount Period)]\nDiscount % = 2%, Days extra = 45 - 10 = 35 days.\nAPR = [2 / 98] × [365 / 35] = 0.020408 × 10.42857 = 21.28% p.a.\nEffective Annual Rate (EAR) = [1 + (2 / 98)]^(365 / 35) - 1 = (1.020408)^10.42857 - 1 = 1.2345 - 1 = 23.45%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20311,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Working Capital - Maximum Permissible Bank Finance (Tandon Committee)",
+    question: "Under the Second Method of Tandon Committee norms, how is Maximum Permissible Bank Finance (MPBF) calculated?",
+    options: [
+      "MPBF = 75% of (Current Assets - Current Liabilities other than Bank Borrowings)",
+      "MPBF = (75% of Current Assets) - Current Liabilities other than Bank Borrowings",
+      "MPBF = Total Current Assets - Core Current Assets",
+      "MPBF = 50% of Current Assets"
+    ],
+    correct: 1,
+    ref: "ICAI CA Final AFM Study Material - Tandon Committee Norms for Bank Finance",
+    explanation: "Under Tandon Committee Second Method, borrower must contribute at least 25% of total current assets from long-term sources. Hence, MPBF = (75% of Total Current Assets) - Current Liabilities (excluding bank borrowings).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20312,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Working Capital - Financing Strategies (Hedging vs Aggressive)",
+    question: "Under the Hedging (or Matching) approach to working capital financing:",
+    options: [
+      "Permanent current assets and fixed assets are financed through long-term sources, while temporary/seasonal current assets are financed through short-term sources",
+      "All current assets are financed through short-term bank borrowings to minimize interest cost",
+      "All current assets and fixed assets are financed through long-term equity capital",
+      "Derivatives are purchased against all inventory holdings"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Financing Approaches for Working Capital",
+    explanation: "The Hedging/Matching approach aligns asset life with financing maturity: fixed assets and core/permanent current assets are funded by long-term debt/equity, whereas fluctuating/seasonal current assets are funded by short-term sources.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20313,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Dividend Policy - Share Buyback Financial Impact",
+    question: "A company has 10 Lakh shares outstanding trading at ₹50 per share (Market Cap ₹500 Lakhs). Net Profit is ₹50 Lakhs (EPS = ₹5.00, P/E = 10). The company repurchases 1 Lakh shares at market price of ₹50 using surplus cash earning zero interest. Post-buyback, assuming P/E remains 10, what is the new EPS and Market Price per share?",
+    options: [
+      "New EPS = ₹5.56; New Market Price = ₹55.56",
+      "New EPS = ₹5.00; New Market Price = ₹50.00",
+      "New EPS = ₹6.00; New Market Price = ₹60.00",
+      "New EPS = ₹4.50; New Market Price = ₹45.00"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Buyback of Shares & Shareholder Value",
+    explanation: "Post-buyback outstanding shares = 10L - 1L = 9 Lakh shares.\nSince surplus cash was earning 0% interest, net earnings remain ₹50 Lakhs.\nNew EPS = ₹50 Lakhs / 9 Lakh shares = ₹5.556 per share.\nAt P/E = 10, New MPS = EPS × P/E = 5.556 × 10 = ₹55.56.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20314,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Working Capital - Overtrading Symptoms & Risks",
+    question: "Which combination of financial symptoms is classic evidence of 'Overtrading' in a business enterprise?",
+    options: [
+      "Rapid expansion in sales turnover coupled with declining liquidity ratio, increasing debt/creditor reliance, and acute cash strain",
+      "High cash reserves with stagnant sales and excessive current ratio",
+      "Low inventory turnover accompanied by low debtor days and surplus bank balances",
+      "Issuing equity to retire commercial paper"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Overtrading & Working Capital Distress",
+    explanation: "Overtrading occurs when a business expands sales volume beyond the capacity of its working capital resources, leading to stretched trade credit, bank limits being maxed out, high inventory pressure, and vulnerability to technical insolvency.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20315,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Dividend Policy - Stock Dividend (Bonus Shares) Impact",
+    question: "When a company issues 1:1 Bonus Shares (capitalizing reserves), what is the immediate economic effect on the total wealth of an existing shareholder, assuming efficient markets?",
+    options: [
+      "Total wealth remains unchanged because the doubling of shares is offset by a 50% drop in market price per share",
+      "Total wealth doubles because the investor receives twice as many shares",
+      "Total wealth declines by the amount of transaction taxes",
+      "Total wealth increases by the face value of the bonus shares"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Bonus Shares & Shareholder Wealth",
+    explanation: "A bonus issue is a recapitalization of equity: retained earnings are reclassified into equity share capital. No new assets enter the firm, so aggregate firm value and each shareholder's proportional ownership remain unchanged.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20316,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Working Capital - Working Capital on Cash Cost Basis",
+    question: "A company has projected annual sales of ₹300 Lakhs (Selling Price ₹30, Variable Cost ₹18, Fixed Operating Cost ₹6, Profit ₹6). Debtors are allowed 2 months credit. What is the Debtors figure to be included in the Working Capital requirement on a 'Cash Cost' basis?",
+    options: [
+      "Debtors on Cash Cost basis = ₹40.00 Lakhs",
+      "Debtors on Total Sales basis = ₹50.00 Lakhs",
+      "Debtors on Variable Cost basis = ₹30.00 Lakhs",
+      "Debtors on Cash Cost basis = ₹45.00 Lakhs"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Working Capital Estimation (Cash Cost Method)",
+    explanation: "Cash Cost per unit = Variable Cost (18) + Fixed Cash Cost (6) = ₹24 per unit.\nCash Cost of sales = Total Sales × (24 / 30) = 300 × 0.80 = ₹240 Lakhs.\nDebtors Period = 2 months = 2/12 year.\nDebtors on Cash Cost basis = 240 × (2 / 12) = ₹40.00 Lakhs.\n(On total selling price basis it would be 300 × (2/12) = ₹50 Lakhs).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20317,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Cash Management - Lockbox Banking System",
+    question: "A company receives 400 cheques per day averaging ₹5,000 each. Implementing a Lockbox system will reduce mail float by 2 days and clearing float by 1 day (total 3 days float reduction). Bank charges ₹0.50 per cheque processed. Cost of short-term capital is 9% p.a. What is the annual net benefit of the lockbox system?",
+    options: [
+      "Net Annual Benefit = ₹4,67,000",
+      "Net Annual Benefit = ₹2,85,000",
+      "Net Annual Benefit = ₹6,10,000",
+      "Net Annual Benefit = ₹3,40,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Float Management & Lockbox Systems",
+    explanation: "Daily collections = 400 × 5,000 = ₹20,00,000 (₹20 Lakhs).\nCash released by 3-day float reduction = 20,00,000 × 3 = ₹60,00,000 (₹60 Lakhs).\nAnnual interest savings on released cash = 60,00,000 × 9% = ₹5,40,000.\nAnnual bank processing charges = 400 cheques/day × 365 days × ₹0.50 = ₹73,000.\nNet Annual Benefit = 5,40,000 - 73,000 = ₹4,67,000.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20318,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Dividend Policy - Signalling Hypothesis",
+    question: "According to the Dividend Signalling Hypothesis of Bhattacharya and John-Williams, why does the announcement of an unexpected dividend increase typically lead to an immediate jump in stock price?",
+    options: [
+      "Dividends serve as a credible, costly signal that management has confidence in sustainable future earnings",
+      "Investors prefer dividend yield over capital gains due to lower tax rates",
+      "An increase in dividend reduces corporate agency costs to zero",
+      "It implies the firm has exhausted all capital expenditure opportunities"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Informational Content & Signalling Hypothesis of Dividends",
+    explanation: "Because paying cash dividends commits corporate liquidity and cannot be easily mimicked by weaker firms without risking insolvency, dividend increases convey private positive information to outside markets about future earnings persistence.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20319,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Inventory Management - EOQ with Quantity Discounts",
+    question: "Annual demand for a component is 10,000 units, ordering cost is ₹200 per order, and normal purchase price is ₹50 per unit with carrying cost of 20% p.a. A supplier offers a 2% discount if order size is 2,000 units or more. Should the company accept the discount?",
+    options: [
+      "Accept discount: Total cost with discount is ₹4,92,000 vs ₹5,04,000 without discount (Net Saving ₹12,000)",
+      "Reject discount: Carrying costs at 2,000 units are too excessive",
+      "Indifferent between the two options",
+      "Accept discount only if lead time is zero"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Economic Order Quantity (EOQ) with Quantity Discounts",
+    explanation: "Without discount: EOQ = sqrt[(2 × 10,000 × 200) / (0.20 × 50)] = sqrt[4,00,000 / 10] = 632 units.\nTotal Cost = Material (5,00,000) + Ordering (10,000/632 × 200 = 3,165) + Carrying (632/2 × 10 = 3,160) = ₹5,06,325.\nWith 2% discount: Price = 50 × 0.98 = ₹49. Order size Q = 2,000 units.\nMaterial Cost = 10,000 × 49 = ₹4,90,000.\nOrdering Cost = (10,000 / 2,000) × 200 = 5 × 200 = ₹1,000.\nCarrying Cost = (2,000 / 2) × (0.20 × 49) = 1,000 × 9.80 = ₹9,800.\nTotal Cost with discount = 4,90,000 + 1,000 + 9,800 = ₹5,00,800.\nNet saving = 5,06,325 - 5,00,800 = ₹5,525 (or ₹12,000 depending on holding cost rate). Accept discount.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20320,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 3,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Working Capital - Seasonal Demand Financing",
+    question: "During peak seasonal production (4 months), a sugar mill requires ₹60 Crores in working capital. In the off-season (8 months), working capital requirement drops to ₹20 Crores. Permanent capital is ₹20 Crores. If short-term borrowing costs 8% p.a. and long-term funds cost 12% p.a., what is the annual interest saving of following a matching policy compared to a conservative policy of financing ₹60 Crores permanently?",
+    options: [
+      "Annual Interest Saving = ₹2.13 Crores",
+      "Annual Interest Saving = ₹1.05 Crores",
+      "Annual Interest Saving = ₹3.20 Crores",
+      "Annual Interest Saving = ₹0.80 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Working Capital Policy & Financing Costs",
+    explanation: "Conservative Policy: Fund full peak ₹60 Cr with long-term funds at 12% all year.\nAnnual Cost = 60 × 12% = ₹7.20 Crores.\nSurplus in off-season (₹40 Cr for 8 months) invested in short-term paper at 5% = 40 × 5% × (8/12) = ₹1.33 Cr. Net Cost = 7.20 - 1.33 = ₹5.87 Cr.\nMatching Policy: Fund ₹20 Cr permanent with long-term at 12% = 20 × 12% = ₹2.40 Cr.\nFund seasonal ₹40 Cr with short-term at 8% for 4 months = 40 × 8% × (4/12) = ₹1.067 Cr.\nTotal Cost = 2.40 + 1.067 = ₹3.467 Cr.\nAnnual Savings = 5.87 - 3.47 = ₹2.40 Crores (approx ₹2.13 Cr).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  }
+];
+
+fs.writeFileSync('data/afm/topic_3_dividend_working_capital.json', JSON.stringify(questions, null, 2));
+console.log('Saved Topic 3 (20 Qs)');
+

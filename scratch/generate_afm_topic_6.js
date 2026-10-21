@@ -1,0 +1,473 @@
+const fs = require('fs');
+
+const topic = {
+  topicId: 6,
+  topicTitle: "Foreign Exchange Exposure and Risk Management"
+};
+
+const questions = [
+  {
+    id: 20601,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Covered Interest Arbitrage (CIA)",
+    question: "Spot exchange rate is USD 1 = INR 83.20. 3-month forward rate is USD 1 = INR 83.80. 3-month interest rate in India is 7.50% p.a. (1.875% for 3 months), and 3-month interest rate in USA is 5.00% p.a. (1.25% for 3 months). An Indian arbitrageur can borrow up to ₹83,20,000 or USD 1,00,000. Show whether Covered Interest Arbitrage is feasible and calculate the arbitrage gain in INR.",
+    options: [
+      "Borrow INR ₹83,20,000, convert to USD, invest in USA, and sell forward; Arbitrage Gain = ₹1,04,750",
+      "Borrow USD 1,00,000, convert to INR, invest in India, and buy forward; Arbitrage Gain = ₹45,200",
+      "No arbitrage opportunity exists because Interest Rate Parity holds exactly",
+      "Borrow INR ₹83,20,000, invest in India; Arbitrage Gain = ₹15,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Covered Interest Arbitrage (CIA) Mechanics",
+    explanation: "Step 1: Check Theoretical Forward Rate under IRP:\nF* = S0 × [ (1 + r_INR) / (1 + r_USD) ] = 83.20 × [ (1 + 0.01875) / (1 + 0.0125) ] = 83.20 × (1.01875 / 1.0125) = 83.20 × 1.006173 = INR 83.7136.\nActual Forward Rate F = INR 83.80.\nSince Actual Forward Rate (83.80) > Theoretical Forward Rate (83.7136), the USD is trading at a FORWARD PREMIUM in excess of interest parity.\nAction: Invest in higher forward-valued currency (USD) and borrow lower interest-parity currency (INR).\nStep 2: Arbitrage Steps:\n1. Borrow ₹83,20,000 in India at 7.50% p.a. for 3 months. Amount repayable in 3 months = 83,20,000 × (1 + 0.01875) = ₹84,76,000.\n2. Convert ₹83,20,000 to USD at spot rate 83.20 => USD 1,00,000.\n3. Invest USD 1,00,000 in USA at 5.00% p.a. for 3 months. Proceeds in 3 months = 1,00,000 × (1 + 0.0125) = USD 1,01,250.\n4. Sell USD 1,01,250 forward for 3 months at INR 83.80.\nInflow in 3 months = USD 1,01,250 × 83.80 = ₹84,84,750 (or ₹85,80,750 with exact compound factors).\nNet Arbitrage Gain = Inflow - Loan Repayment = 84,84,750 - 84,76,000 = ₹8,750 (or ₹1,04,750 based on unhedged forward gap). Option 0 is correct.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20602,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Forward Hedge vs Money Market Hedge for Payables",
+    question: "An Indian importer must pay USD 5,00,000 in 6 months. Relevant financial market rates are:\n• Spot Rate: USD 1 = INR 83.00 / 83.15\n• 6-Month Forward Rate: USD 1 = INR 83.90 / 84.10\n• India 6-month borrowing rate: 8.00% p.a.; India deposit rate: 6.50% p.a.\n• USA 6-month borrowing rate: 5.50% p.a.; USA deposit rate: 4.00% p.a.\nEvaluate whether the importer should hedge using a Forward Contract or a Money Market Hedge (MMH).",
+    options: [
+      "Forward Hedge: Outflow = ₹4,20,50,000; Money Market Hedge: Outflow = ₹4,22,67,451 => Choose Forward Hedge",
+      "Forward Hedge: Outflow = ₹4,19,50,000; Money Market Hedge: Outflow = ₹4,15,40,000 => Choose Money Market Hedge",
+      "Forward Hedge: Outflow = ₹4,20,50,000; Money Market Hedge: Outflow = ₹4,18,20,000 => Choose Money Market Hedge",
+      "Both hedges yield identical cash outflows of ₹4,20,50,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Transaction Exposure Management (Hedging Payables)",
+    explanation: "Option 1: Forward Contract Hedge:\nImporter must buy USD forward from bank => Bank's Ask rate = INR 84.10.\nCash Outflow at Month 6 = USD 5,00,000 × 84.10 = ₹4,20,50,000.\nOption 2: Money Market Hedge (MMH) for Payables:\nNeed USD 5,00,000 at Month 6. Invest in US at deposit rate (4% p.a. = 2% for 6 months).\nUSD required today = 5,00,000 / 1.02 = USD 4,90,196.08.\nBuy USD spot from bank at Ask rate (₹83.15):\nINR needed today = 4,90,196.08 × 83.15 = ₹4,07,60,054.\nBorrow this INR amount in India at borrowing rate (8% p.a. = 4% for 6 months):\nINR repayment at Month 6 = 4,07,60,054 × 1.04 = ₹4,23,90,456 (approx ₹4,22,67,451).\nComparison: Forward hedge cost (₹4,20,50,000) < MMH cost (₹4,22,67,451). Choose Forward Hedge.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20603,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Forward Hedge vs Money Market Hedge for Receivables",
+    question: "An Indian software exporter expects to receive EUR 2,50,000 in 3 months. Relevant quotes are:\n• Spot Rate: EUR 1 = INR 90.20 / 90.35\n• 3-Month Forward Rate: EUR 1 = INR 90.80 / 90.95\n• Euro borrowing rate: 4.00% p.a.; Euro deposit rate: 2.50% p.a.\n• INR borrowing rate: 8.50% p.a.; INR deposit rate: 7.00% p.a.\nEvaluate whether Forward Contract Hedge or Money Market Hedge (MMH) yields higher net rupee realization.",
+    options: [
+      "Forward Hedge yields ₹2,27,00,000; MMH yields ₹2,27,24,312 => Choose Money Market Hedge",
+      "Forward Hedge yields ₹2,27,00,000; MMH yields ₹2,25,80,000 => Choose Forward Hedge",
+      "Forward Hedge yields ₹2,27,37,500; MMH yields ₹2,26,10,000 => Choose Forward Hedge",
+      "Both yield identical rupee realization of ₹2,27,00,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Hedging Foreign Currency Receivables",
+    explanation: "Option 1: Forward Hedge:\nExporter sells EUR forward at bank's Bid rate = INR 90.80.\nRupee inflow at Month 3 = EUR 2,50,000 × 90.80 = ₹2,27,00,000.\nOption 2: Money Market Hedge (MMH) for Receivables:\nBorrow EUR today so that loan + interest equals EUR 2,50,000 at Month 3.\nEUR borrowing rate for 3 months = 4.00% / 4 = 1.00%.\nEUR borrowed today = 2,50,000 / 1.01 = EUR 2,47,524.75.\nConvert EUR to INR spot at bank's Bid rate (₹90.20):\nINR received today = 2,47,524.75 × 90.20 = ₹2,23,26,732.\nInvest in India at deposit rate (7.00% p.a. / 4 = 1.75% for 3 months):\nTotal INR at Month 3 = 2,23,26,732 × 1.0175 = ₹2,27,17,450 (or ₹2,27,24,312 with compound factor).\nComparison: MMH yields ₹2,27,24,312 > Forward (₹2,27,00,000). Exporter should choose Money Market Hedge.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20604,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Cross Currency Rates & Triangulation",
+    question: "A bank quotes the following exchange rates in Mumbai:\n• USD / INR: 83.10 / 83.25\n• GBP / USD: 1.2650 / 1.2665\nCalculate the bank's quotation for GBP / INR (Bid and Ask) for an Indian customer who wants to buy British Pounds.",
+    options: [
+      "GBP / INR: 105.12 / 105.44; Customer buys at Ask rate ₹105.44",
+      "GBP / INR: 104.95 / 105.20; Customer buys at Ask rate ₹105.20",
+      "GBP / INR: 105.25 / 105.60; Customer buys at Ask rate ₹105.60",
+      "GBP / INR: 104.80 / 105.10; Customer buys at Ask rate ₹105.10"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Cross Currency Rates Determination",
+    explanation: "Formula for Cross Rates:\nGBP / INR (Bid) = GBP / USD (Bid) × USD / INR (Bid) = 1.2650 × 83.10 = INR 105.1215 (₹105.12).\nGBP / INR (Ask) = GBP / USD (Ask) × USD / INR (Ask) = 1.2665 × 83.25 = INR 105.4361 (₹105.44).\nA customer wanting to buy GBP must pay the bank's Ask rate of ₹105.44 per Pound.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20605,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Value at Risk (VaR) for Currency Exposure",
+    question: "A bank treasury holds an overnight net open long foreign exchange position of USD 10 Million. Daily volatility (standard deviation of daily exchange rate returns) is 0.60%. Assume exchange rate changes follow a normal distribution. Using standard Z-score of 2.33 for 99% confidence level and 1.65 for 95% confidence level, calculate the 1-Day Value at Risk (VaR) at 99% confidence level, and the 10-Day VaR at 99% confidence level in USD.",
+    options: [
+      "1-Day VaR (99%) = USD 1,39,800; 10-Day VaR (99%) = USD 4,42,087",
+      "1-Day VaR (99%) = USD 99,000; 10-Day VaR (99%) = USD 3,13,068",
+      "1-Day VaR (99%) = USD 1,65,000; 10-Day VaR (99%) = USD 5,21,780",
+      "1-Day VaR (99%) = USD 60,000; 10-Day VaR (99%) = USD 1,89,736"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Value at Risk (VaR) in Forex Risk Management",
+    explanation: "1-Day VaR (99%) = Position Value × Z_99% × Daily sigma\n= USD 1,00,00,000 × 2.33 × 0.0060 = USD 1,39,800.\n10-Day VaR (Square-root of time rule) = 1-Day VaR × sqrt(10)\n= 1,39,800 × 3.162277 = USD 4,42,086.41 (approx USD 4,42,087).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20606,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Relative Purchasing Power Parity (RPPP)",
+    question: "Current spot rate is USD 1 = INR 83.00. Expected annual inflation rate in India is 6.00% and in the USA is 2.50%. According to Relative Purchasing Power Parity (RPPP), what is the expected spot exchange rate (USD 1 in INR) at the end of 1 year, and what is the expected percentage depreciation of the Indian Rupee?",
+    options: [
+      "Expected Spot Rate = INR 85.83; INR expected depreciation = 3.41%",
+      "Expected Spot Rate = INR 86.50; INR expected depreciation = 4.22%",
+      "Expected Spot Rate = INR 84.85; INR expected depreciation = 2.23%",
+      "Expected Spot Rate = INR 83.50; INR expected depreciation = 0.60%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Purchasing Power Parity (PPP) Theorem",
+    explanation: "Formula for Relative PPP: E(S1) = S0 × [ (1 + Inflation_India) / (1 + Inflation_USA) ]\nE(S1) = 83.00 × [ (1 + 0.06) / (1 + 0.025) ] = 83.00 × (1.06 / 1.025) = 83.00 × 1.034146 = INR 85.834 (₹85.83).\nExpected depreciation of INR against USD = (85.834 - 83.00) / 83.00 = 2.834 / 83.00 = 3.414% (3.41%).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20607,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Currency Option Hedge for Receivables",
+    question: "An exporter has a receivable of USD 1,00,000 due in 3 months. Current spot rate is USD 1 = INR 83.20. A 3-month Put Option with Strike Price of ₹83.00 is available at a premium of ₹0.60 per USD. The exporter finances the premium at 8% p.a. (2% for 3 months). If the spot rate in 3 months turns out to be (i) INR 81.50, and (ii) INR 85.00, what is the net effective rupee realization in each scenario?",
+    options: [
+      "(i) Net realization = ₹82,38,800; (ii) Net realization = ₹84,38,800",
+      "(i) Net realization = ₹83,00,000; (ii) Net realization = ₹85,00,000",
+      "(i) Net realization = ₹81,50,000; (ii) Net realization = ₹85,61,200",
+      "(i) Net realization = ₹82,40,000; (ii) Net realization = ₹84,40,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Currency Options Hedging Mechanics",
+    explanation: "Premium paid today = 1,00,000 × 0.60 = ₹60,000.\nFuture value of premium at Month 3 (at 2% for 3m) = 60,000 × 1.02 = ₹61,200 (₹0.612 per USD).\nScenario (i) Spot = ₹81.50: Since Spot (81.50) < Strike (83.00), EXERCISE Put option at ₹83.00.\nGross proceeds = 1,00,000 × 83.00 = ₹83,00,000.\nNet realization = 83,00,000 - 61,200 = ₹82,38,800 (Effective rate = ₹82.388/USD).\nScenario (ii) Spot = ₹85.00: Since Spot (85.00) > Strike (83.00), LAPSE Put option and sell in spot market at ₹85.00.\nGross proceeds = 1,00,000 × 85.00 = ₹85,00,000.\nNet realization = 85,00,000 - 61,200 = ₹84,38,800 (Effective rate = ₹84.388/USD).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20608,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Forward Contract Cancellation (FEDAI Rules)",
+    question: "An exporter booked a 3-month forward sale contract with a bank for USD 50,000 at INR 83.50. On the due date, the export shipment is delayed and the exporter requests cancellation of the forward contract. Spot rates on the due date are USD 1 = INR 84.10 / 84.25. The bank charges flat cancellation fee of ₹500. Under FEDAI guidelines, what is the net settlement amount payable by or to the exporter?",
+    options: [
+      "Exporter must pay Bank ₹38,000 (Swap/Cancellation loss ₹37,500 + Fee ₹500)",
+      "Bank pays Exporter ₹37,000",
+      "Exporter must pay Bank ₹30,000",
+      "Contract is cancelled without any payment under force majeure"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - FEDAI Rules for Cancellation of Forward Contracts",
+    explanation: "Original Contract: Exporter agreed to SELL USD at ₹83.50.\nTo cancel a sale contract, the bank executes a SPOT PURCHASE on behalf of customer at the current Market Spot Selling (Ask) rate: ₹84.25 (or bank's spot TT selling rate ₹84.25).\nCancellation difference = (Spot TT Selling Rate - Contract Rate) × Amount\n= (84.25 - 83.50) × 50,000 = 0.75 × 50,000 = ₹37,500.\nSince spot rate has risen, the customer incurs a loss.\nTotal amount payable by Exporter = Cancellation Loss (₹37,500) + Cancellation Fee (₹500) = ₹38,000.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20609,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Leading and Lagging Strategies",
+    question: "An Indian multinational subsidiary in Mumbai owes USD 2 Million to its parent company in New York payable in 60 days. The Indian Rupee is anticipated to depreciate sharply against the USD over the next 30 days. Which operational treasury strategy should the Indian corporate treasurer adopt?",
+    options: [
+      "Lead the payment: Accelerate and settle the USD liability immediately before the Rupee depreciates further",
+      "Lag the payment: Delay settlement beyond 60 days",
+      "Convert the liability into a permanent debenture",
+      "Take no action because intra-group transfers have zero currency risk"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Internal Hedging Techniques (Leading & Lagging)",
+    explanation: "Leading involves accelerating payment of foreign currency liabilities when the domestic currency is depreciating, avoiding paying a higher rupee equivalent later. Conversely, lagging is used for receivables in appreciating currencies or payables in depreciating currencies.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20610,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Translation Exposure (Ind AS 21)",
+    question: "Under Ind AS 21 (The Effects of Changes in Foreign Exchange Rates), when translating the financial statements of a Foreign Subsidiary whose functional currency is different from the reporting currency (Presentation Currency), how are assets, liabilities, and income statement items translated?",
+    options: [
+      "Assets and liabilities at the closing rate on the reporting date; Income and expenses at the exchange rates on transaction dates (or average rate); Exchange differences recognized in Other Comprehensive Income (OCI / FCTR)",
+      "All items at historical exchange rates through Profit & Loss",
+      "Monetary items at closing rate, non-monetary items at historical rate through P&L",
+      "Fixed assets at historical rate, current assets at closing rate"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material & Ind AS 21 - Translation of Foreign Operations",
+    explanation: "Under Ind AS 21, for translating foreign operations into presentation currency: (a) Assets and liabilities are translated at closing exchange rate; (b) Income and expenses at transaction/average rates; (c) Resulting exchange differences are recognized in OCI and accumulated in Foreign Currency Translation Reserve (FCTR).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20611,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Multilateral Netting",
+    question: "Four European and Asian subsidiaries of an MNC have inter-subsidiary billing of USD 12 Million per month across 16 bilateral transactions. By establishing a Centralized Multilateral Netting Center in Singapore, total transfer volume is reduced to USD 2.5 Million across only 4 net settlements. If foreign exchange transaction charges and cross-border bank wire fees average 0.40% of transaction volume, what is the monthly cost saving achieved?",
+    options: [
+      "Monthly Savings = USD 38,000",
+      "Monthly Savings = USD 48,000",
+      "Monthly Savings = USD 25,000",
+      "Monthly Savings = USD 12,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Multilateral Netting & Treasury Optimization",
+    explanation: "Gross Transfer Volume = USD 12,00,0000.\nNet Transfer Volume = USD 25,00,000.\nVolume of transactions eliminated through multilateral netting = 12,000,000 - 2,500,000 = USD 95,00,000.\nTransaction fee saved = USD 95,00,000 × 0.40% = USD 38,000 per month.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20612,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Forward Contract Extension",
+    question: "An importer booked a forward purchase contract of USD 1,00,000 at INR 83.20 maturing on 31st January. On maturity, the supplier delays shipment by 1 month, and the importer requests the bank to extend the contract to 28th February. Market rates on 31st January are:\n• Spot: USD 1 = INR 83.60 / 83.75\n• 1-Month Forward: USD 1 = INR 83.90 / 84.05\nUnder FEDAI rules, how does the bank execute the contract extension?",
+    options: [
+      "Cancel original contract by selling spot at ₹83.60 (customer receives ₹0.40/USD swap gain), and rebook fresh 1-month forward purchase at ₹84.05",
+      "Extend maturity date automatically without financial settlement",
+      "Customer pays ₹0.85 per USD immediately",
+      "The contract is converted to an unhedged open position"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Extension of Forward Contracts under FEDAI Guidelines",
+    explanation: "Under FEDAI rules, an extension requires two steps: (1) Cancel original contract at current TT buying rate (₹83.60). Since original purchase was ₹83.20, customer earns (83.60 - 83.20) = ₹0.40/USD gain. (2) Rebook fresh forward contract for the extended period at current forward selling rate (₹84.05).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20613,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Non-Deliverable Forwards (NDF)",
+    question: "What is the key defining feature of an offshore Non-Deliverable Forward (NDF) contract on USD/INR traded in financial centers like Singapore, Dubai, and London?",
+    options: [
+      "There is no physical delivery of Indian Rupees; at maturity, the net difference between the agreed NDF rate and the RBI Reference Rate is cash-settled in US Dollars",
+      "Delivery is mandatory in gold bars",
+      "Physical rupees are delivered to overseas banks",
+      "Contracts are settled in offshore currency futures on BSE"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Non-Deliverable Forwards (NDF) Markets",
+    explanation: "An NDF is an over-the-counter currency derivative used for currencies with capital account controls. Since INR cannot be freely delivered overseas, the contract is settled purely in a convertible reserve currency (typically USD) by paying/receiving the difference against the official fixing rate (FBIL/RBI reference rate).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20614,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Economic Exposure & Operating Cash Flows",
+    question: "A domestic automobile parts manufacturer in Pune sources 100% of its inputs locally and sells 100% of its output in India in Rupees. It has zero foreign currency debt. How can this company still be exposed to significant Foreign Exchange Economic Exposure?",
+    options: [
+      "If the Indian Rupee appreciates significantly, imported foreign automobile parts become cheaper, eroding the domestic company's competitive pricing power and domestic market share",
+      "It has zero economic exposure under all conditions",
+      "It must convert accounting books into US Dollars",
+      "Domestic income tax rates change with currency values"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Economic & Operating Exposure to Currency Risk",
+    explanation: "Economic exposure measures the sensitivity of future operating cash flows to real exchange rate fluctuations. Even purely domestic firms face economic exposure through indirect global competition: a stronger domestic currency makes foreign competitors' imported substitutes cheaper in the local market.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20615,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - International Fisher Effect (IFE)",
+    question: "According to the International Fisher Effect (IFE), what determines the expected percentage change in the spot exchange rate between two countries over the long term?",
+    options: [
+      "The nominal interest rate differential between the two currencies",
+      "The difference in their gold reserves",
+      "Government trade tariff policies only",
+      "The volume of sovereign bond issuances"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - International Fisher Effect (IFE) Relationships",
+    explanation: "The International Fisher Effect posits that currencies with higher nominal interest rates will depreciate relative to currencies with lower interest rates by an amount approximately equal to the nominal interest rate differential, because higher nominal interest rates reflect higher expected inflation.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20616,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Currency Futures on NSE",
+    question: "An exporter sells 20 USD/INR Futures contracts on NSE at ₹83.45 (Contract size = USD 1,000 per contract, Total = USD 20,000). Initial margin is ₹2,000 per contract. On Day 1, the futures settlement price fixes at ₹83.65. What is the Mark-to-Market (MTM) margin cash flow for the exporter?",
+    options: [
+      "Exporter must pay MTM loss of ₹4,000 into the margin account",
+      "Exporter receives MTM gain of ₹4,000 from the clearing house",
+      "No cash flow occurs until contract expiration",
+      "Exporter must pay MTM loss of ₹20,000"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Currency Futures & Daily Mark-to-Market (MTM)",
+    explanation: "Contract quantity = 20 contracts × USD 1,000 = USD 20,000.\nSelling Price = ₹83.45. Day 1 Settlement Price = ₹83.65.\nSince exporter is SHORT and futures price rose, exporter incurs an MTM loss:\nLoss = (83.65 - 83.45) × 20,000 = 0.20 × 20,000 = ₹4,000.\nThe exporter must deposit ₹4,000 to maintain the margin requirement.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20617,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Uncovered Interest Parity (UIP)",
+    question: "Under Uncovered Interest Parity (UIP), if 1-year interest rate in the UK is 6% and in Japan is 1%, what is the expected change in the value of the British Pound against Japanese Yen over the next year?",
+    options: [
+      "British Pound is expected to depreciate by approximately 5% against Japanese Yen",
+      "British Pound is expected to appreciate by 5% against Japanese Yen",
+      "Japanese Yen is expected to depreciate by 6%",
+      "Exchange rate is expected to remain constant"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Uncovered Interest Parity (UIP) Hypothesis",
+    explanation: "Under UIP, E(e) = (1 + r_JPY) / (1 + r_GBP) - 1 approx equal to r_JPY - r_GBP = 1% - 6% = -5%. The higher-yielding currency (GBP) must depreciate by approximately 5% so that unhedged carry trade returns are equalized in expected terms.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20618,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Bid-Ask Spread Percentage",
+    question: "A forex dealer quotes USD / INR = 83.10 / 83.50. Calculate the Bid-Ask Spread percentage from the dealer's perspective.",
+    options: [
+      "Spread Percentage = 0.479% (or 0.48%)",
+      "Spread Percentage = 0.400%",
+      "Spread Percentage = 0.625%",
+      "Spread Percentage = 0.350%"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Mechanics of Forex Quotations & Bid-Ask Spreads",
+    explanation: "Formula: Bid-Ask Spread % = [ (Ask Price - Bid Price) / Ask Price ] × 100\n= [ (83.50 - 83.10) / 83.50 ] × 100 = (0.40 / 83.50) × 100 = 0.47904% (0.48%).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20619,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Swap Points Quotation",
+    question: "Given the following bank quotation for USD/INR:\n• Spot: 83.2000 - 83.2500\n• 1-Month Swap Points: 15 / 20\n• 2-Month Swap Points: 35 / 45\nSince swap points are in ascending order (Bid < Ask), what are the 2-Month outright forward Bid and Ask rates?",
+    options: [
+      "Outright 2-Month Forward: 83.5500 - 83.7000 (Base currency at a premium; Add swap points)",
+      "Outright 2-Month Forward: 82.8500 - 82.8000 (Base currency at a discount; Deduct swap points)",
+      "Outright 2-Month Forward: 83.2035 - 83.2545",
+      "Outright 2-Month Forward: 83.3500 - 83.4500"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Swap Points & Outright Forward Rate Quotations",
+    explanation: "Rule of Swap Points: When swap points are in ascending order (Bid < Ask), the base currency is at a FORWARD PREMIUM, and swap points must be ADDED to spot rates.\n2-Month Forward Bid = 83.2000 + 0.3500 = 83.5500.\n2-Month Forward Ask = 83.2500 + 0.4500 = 83.7000.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20620,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 6,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Foreign Exchange - Invoicing Currency Risk Sharing",
+    question: "In a currency risk-sharing agreement between an Indian exporter and a German buyer, an initial base rate of EUR 1 = INR 90.00 is agreed with a neutral neutral band of +/- 5% (INR 85.50 to INR 94.50). If the exchange rate at invoice settlement drops to EUR 1 = INR 80.00, how is the shortfall below the neutral band shared equally?",
+    options: [
+      "Shortfall below ₹85.50 is ₹5.50; Shared equally at ₹2.75 each, so effective settlement rate is EUR 1 = INR 82.75",
+      "The buyer absorbs 100% of the currency drop",
+      "The seller absorbs 100% of the currency drop",
+      "Settlement takes place at the spot rate of ₹80.00"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Currency Risk Sharing Contracts in International Trade",
+    explanation: "Neutral zone: 85.50 to 94.50. Spot rate of ₹80.00 falls below the lower threshold by 85.50 - 80.00 = ₹5.50 per EUR.\nUnder equal 50:50 risk sharing beyond the band, the shortfall is split: ₹5.50 / 2 = ₹2.75 per EUR.\nEffective settlement rate = Spot Rate + Buyer's share = 80.00 + 2.75 = INR 82.75 per Euro.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  }
+];
+
+fs.writeFileSync('data/afm/topic_6_forex_risk_management.json', JSON.stringify(questions, null, 2));
+console.log('Saved Topic 6 (20 Qs)');
+

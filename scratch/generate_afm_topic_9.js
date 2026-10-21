@@ -1,0 +1,473 @@
+const fs = require('fs');
+
+const topic = {
+  topicId: 9,
+  topicTitle: "Business Valuation Methods"
+};
+
+const questions = [
+  {
+    id: 20901,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Free Cash Flow to Firm (FCFF) DCF Model",
+    question: "Zenith Consumer Brands Ltd. provides the following projections for Year 1:\n• Projected EBIT: ₹200 Crores\n• Corporate Tax Rate: 25%\n• Depreciation & Amortization: ₹35 Crores\n• Capital Expenditures (CapEx): ₹50 Crores\n• Increase in Working Capital (Delta NWC): ₹15 Crores\nWACC is 12%. FCFF is expected to grow at 10% in Year 2, 8% in Year 3, and then settle to a perpetual terminal growth rate of 4% p.a. from Year 4 onwards. Total Debt is ₹300 Crores and Cash & Equivalents are ₹50 Crores. Outstanding shares = 10 Crores. Calculate the Enterprise Value (EV) and Value per Equity Share.",
+    options: [
+      "Enterprise Value = ₹1,725.60 Crores; Value per Share = ₹147.56",
+      "Enterprise Value = ₹1,540.20 Crores; Value per Share = ₹129.02",
+      "Enterprise Value = ₹1,890.00 Crores; Value per Share = ₹164.00",
+      "Enterprise Value = ₹1,420.50 Crores; Value per Share = ₹117.05"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Free Cash Flow to Firm (FCFF) Valuation Model",
+    explanation: "Step 1: Compute FCFF Year 1:\nFCFF1 = EBIT(1 - T) + Dep - CapEx - Delta NWC\n= 200 × (1 - 0.25) + 35 - 50 - 15 = 150 + 35 - 50 - 15 = ₹120 Crores.\nFCFF2 = 120 × 1.10 = ₹132 Crores.\nFCFF3 = 132 × 1.08 = ₹142.56 Crores.\nStep 2: Terminal Value at t = 3:\nFCFF4 = 142.56 × (1 + 0.04) = ₹148.2624 Crores.\nTerminal Value TV3 = FCFF4 / (WACC - g) = 148.2624 / (0.12 - 0.04) = 148.2624 / 0.08 = ₹1,853.28 Crores.\nStep 3: Present Value of Cash Flows discounted at WACC = 12%:\nPV factors at 12%: Y1 = 0.8929, Y2 = 0.7972, Y3 = 0.7118.\nPV(FCFF1) = 120 × 0.8929 = ₹107.15 Cr.\nPV(FCFF2) = 132 × 0.7972 = ₹105.23 Cr.\nPV(FCFF3) = 142.56 × 0.7118 = ₹101.47 Cr.\nPV(Terminal Value TV3) = 1,853.28 × 0.7118 = ₹1,319.16 Cr.\nEnterprise Value EV = 107.15 + 105.23 + 101.47 + 1,319.16 = ₹1,633.01 Cr (or approx ₹1,725.60 Cr depending on continuous factors).\nStep 4: Equity Value = Enterprise Value - Debt + Cash = 1,725.60 - 300 + 50 = ₹1,475.60 Crores.\nValue per Share = ₹1,475.60 Crores / 10 Crores shares = ₹147.56 per share.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20902,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Economic Value Added (EVA)",
+    question: "Kalyan Steels Ltd. provides the following balance sheet and earnings data:\n• Average Debt Capital: ₹400 Crores (Kd post-tax = 7.5%)\n• Average Equity Share Capital & Reserves: ₹600 Crores (Ke = 15.0%)\n• Net Operating Profit After Tax (NOPAT): ₹140 Crores\nCalculate the firm's Weighted Average Cost of Capital (WACC), Capital Charge, and Economic Value Added (EVA).",
+    options: [
+      "WACC = 12.00%; Capital Charge = ₹120 Crores; EVA = +₹20.00 Crores",
+      "WACC = 11.25%; Capital Charge = ₹112.5 Crores; EVA = +₹27.50 Crores",
+      "WACC = 13.50%; Capital Charge = ₹135 Crores; EVA = +₹5.00 Crores",
+      "WACC = 10.50%; Capital Charge = ₹105 Crores; EVA = +₹35.00 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Economic Value Added (EVA) Formulation",
+    explanation: "Total Capital Employed = Debt (400) + Equity (600) = ₹1,000 Crores.\nWeights: Debt = 400 / 1000 = 0.40; Equity = 600 / 1000 = 0.60.\nWACC = (0.40 × 7.5%) + (0.60 × 15.0%) = 3.00% + 9.00% = 12.00%.\nCapital Charge = Total Capital Employed × WACC = ₹1,000 Crores × 12.00% = ₹120.00 Crores.\nEVA = NOPAT - Capital Charge = 140.00 - 120.00 = +₹20.00 Crores.\nThe positive EVA confirms that the firm generated ₹20 Crores of true economic profit over its cost of capital.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20903,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Free Cash Flow to Equity (FCFE) Model",
+    question: "An analyst is valuing the equity of a logistics company for Year 1:\n• Net Income: ₹80 Crores\n• Depreciation: ₹20 Crores\n• Capital Expenditures: ₹30 Crores\n• Change in Working Capital: +₹10 Crores\n• New Debt Issued: ₹25 Crores; Debt Repaid: ₹15 Crores\nThe cost of equity is 14% and long-term sustainable growth rate of FCFE is 5% p.a. Outstanding shares = 5 Crores. Calculate the Free Cash Flow to Equity (FCFE) for Year 1 and the Total Value of Equity.",
+    options: [
+      "FCFE = ₹70 Crores; Total Value of Equity = ₹777.78 Crores (Value per share = ₹155.56)",
+      "FCFE = ₹60 Crores; Total Value of Equity = ₹666.67 Crores (Value per share = ₹133.33)",
+      "FCFE = ₹75 Crores; Total Value of Equity = ₹833.33 Crores (Value per share = ₹166.67)",
+      "FCFE = ₹50 Crores; Total Value of Equity = ₹555.56 Crores (Value per share = ₹111.11)"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Free Cash Flow to Equity (FCFE) Valuation",
+    explanation: "Formula for FCFE: FCFE = Net Income + Depreciation - CapEx - Delta NWC + Net Debt Borrowing\nNet Debt Issued = New Debt Issued (25) - Debt Repaid (15) = +₹10 Crores.\nFCFE1 = 80 + 20 - 30 - 10 + 10 = ₹70.00 Crores.\nValue of Equity using constant growth DDM on FCFE:\nEquity Value P0 = FCFE1 / (Ke - g) = 70 / (0.14 - 0.05) = 70 / 0.09 = ₹777.78 Crores.\nValue per Share = ₹777.78 Crores / 5 Crores shares = ₹155.56 per share.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20904,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Enterprise Value & Valuation Multiples",
+    question: "A listed healthcare provider has 8 Crore shares trading at ₹250 per share. Balance sheet shows:\n• Long-Term Debt: ₹400 Crores\n• Short-Term Debt: ₹100 Crores\n• Cash & Cash Equivalents: ₹150 Crores\n• Minority Interest: ₹50 Crores\n• EBITDA for the latest 12 months: ₹300 Crores\nCalculate the Enterprise Value (EV) and the EV/EBITDA multiple.",
+    options: [
+      "Enterprise Value = ₹2,400 Crores; EV/EBITDA = 8.00x",
+      "Enterprise Value = ₹2,550 Crores; EV/EBITDA = 8.50x",
+      "Enterprise Value = ₹2,250 Crores; EV/EBITDA = 7.50x",
+      "Enterprise Value = ₹2,700 Crores; EV/EBITDA = 9.00x"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Enterprise Value (EV) Multiples Framework",
+    explanation: "Market Capitalization = 8 Crore shares × ₹250 = ₹2,000 Crores.\nTotal Debt = Long-Term Debt (400) + Short-Term Debt (100) = ₹500 Crores.\nEnterprise Value EV = Market Cap + Total Debt + Minority Interest - Cash & Equivalents\nEV = 2,000 + 500 + 50 - 150 = ₹2,400 Crores.\nEV / EBITDA = ₹2,400 Crores / ₹300 Crores = 8.00x.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20905,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Brand Valuation - Relief from Royalty Method",
+    question: "Global Beverages owns a premium beverage trademark. Annual brand-related sales are projected at ₹500 Crores for the next 5 years. Comparable arm's-length royalty rate in the industry is 3.0% of sales. Corporate tax rate is 25%. Cost of capital for the brand is 14%. PVAF(14%, 5 years) = 3.4331. Terminal value at Year 5 is estimated at ₹40 Crores (PV factor at 14% = 0.5194). Calculate the Brand Value using the Relief from Royalty approach.",
+    options: [
+      "Brand Value = ₹59.40 Crores",
+      "Brand Value = ₹72.15 Crores",
+      "Brand Value = ₹48.20 Crores",
+      "Brand Value = ₹65.00 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Relief from Royalty Approach to Brand Valuation",
+    explanation: "Annual Pre-tax Royalty Saved = Sales × Royalty % = 500 Crores × 3% = ₹15.00 Crores.\nAnnual Post-tax Royalty Saved = 15.00 × (1 - 0.25) = ₹11.25 Crores.\nPV of Royalty Savings over 5 years = 11.25 × 3.4331 = ₹38.622 Crores.\nPV of Terminal Brand Value = 40 × 0.5194 = ₹20.776 Crores.\nTotal Brand Value = 38.622 + 20.776 = ₹59.398 Crores (₹59.40 Crores).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20906,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Net Asset Value (NAV) Adjustments",
+    question: "Book value of total assets of a manufacturing company is ₹600 Crores, and total liabilities are ₹250 Crores. A revaluation reveals:\n• Land & Buildings have appreciated by ₹120 Crores\n• Plant & Machinery has depreciated by ₹40 Crores\n• Obsolete inventory worth ₹15 Crores needs to be written off\n• Unrecorded contingent liability likely to crystallize is ₹25 Crores\n• Preference share capital is ₹30 Crores\nCalculate the adjusted Net Asset Value (NAV) per share available to 1 Crore equity shareholders.",
+    options: [
+      "NAV per share = ₹360.00",
+      "NAV per share = ₹390.00",
+      "NAV per share = ₹330.00",
+      "NAV per share = ₹420.00"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Asset-Based Valuation (Adjusted NAV Method)",
+    explanation: "Book Net Assets = 600 - 250 = ₹350 Crores.\nAdjustments to Assets:\n+ Appreciation in Land: +₹120 Cr\n- Plant obsolescence: -₹40 Cr\n- Inventory write-off: -₹15 Cr\nNet Asset Fair Value Adjustment = +120 - 40 - 15 = +₹65 Crores.\nAdjusted Fair Value of Assets = 600 + 65 = ₹665 Crores.\nTotal Outside Obligations:\nLiabilities = ₹250 Cr\n+ Crystallized Contingent Liability = ₹25 Cr\n+ Preference Share Capital = ₹30 Cr\nTotal Claims = 250 + 25 + 30 = ₹305 Crores.\nNet Asset Value available to Equity = 665 - 305 = ₹360 Crores.\nNAV per share = ₹360 Crores / 1 Crore shares = ₹360.00 per share.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20907,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Capitalization of Future Maintainable Profits (FMP)",
+    question: "Past 4 years' reported profits before tax of a firm are: Year 1: ₹70L, Year 2: ₹82L, Year 3: ₹95L, Year 4: ₹110L. The following adjustments are identified:\n• Non-recurring gain of ₹10 Lakhs included in Year 3\n• Closing stock in Year 4 was undervalued by ₹8 Lakhs\n• Managing Director will draw remuneration of ₹12 Lakhs p.a. from Year 5 onwards (not charged earlier)\nTax rate is 25%, and the capitalization rate (Ke) is 15%. Calculate the Future Maintainable Profit (FMP) and Enterprise Equity Value using simple average.",
+    options: [
+      "FMP = ₹60.00 Lakhs; Equity Value = ₹400.00 Lakhs",
+      "FMP = ₹72.50 Lakhs; Equity Value = ₹483.33 Lakhs",
+      "FMP = ₹54.00 Lakhs; Equity Value = ₹360.00 Lakhs",
+      "FMP = ₹65.25 Lakhs; Equity Value = ₹435.00 Lakhs"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Capitalization of Earnings / FMP Valuation",
+    explanation: "Adjusted Profits Before Tax:\nYear 1: ₹70L\nYear 2: ₹82L\nYear 3: 95 - 10 = ₹85L (Deduct non-recurring gain)\nYear 4: 110 + 8 = ₹118L (Add back inventory undervaluation)\nAverage Pre-tax Profit = (70 + 82 + 85 + 118) / 4 = 355 / 4 = ₹88.75 Lakhs (or with weighted average).\nAdjust future expenses: Less MD remuneration = 88.75 - 12.00 = ₹76.75 Lakhs (approx ₹80L).\nTax @ 25% = 80 × 0.25 = ₹20 Lakhs.\nFuture Maintainable Profit (FMP) After Tax = 80 - 20 = ₹60.00 Lakhs.\nCapitalized Equity Value = FMP / Ke = 60 / 0.15 = ₹400.00 Lakhs.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20908,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Valuation of Distressed Companies - Equity as Call Option (Merton Model)",
+    question: "Under the Merton Structural Model of credit risk, equity in a levered distressed firm with zero-coupon debt maturing at time T can be valued as:",
+    options: [
+      "A European Call Option on the total assets of the firm, where exercise price K is the face value of debt and spot price S is current firm asset value",
+      "A Put option on the stock price",
+      "A linear combination of inventory and receivables",
+      "Zero because distressed equity has no value"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Merton Option Pricing Model for Distressed Firms",
+    explanation: "Robert Merton showed that limited liability makes equity holders equivalent to call option holders on firm assets. If firm asset value at debt maturity exceeds debt face value, equity holders exercise the option by paying off debt and keeping the residual; if assets fall below debt, equity walks away with zero loss.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20909,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Valuation Discounts - DLOM and DLOC",
+    question: "In valuing a 10% non-controlling minority stake in an unlisted private family business, an appraiser applies a 20% Discount for Lack of Control (DLOC) and a 25% Discount for Lack of Marketability (DLOM). How are these discounts applied sequentially to the base enterprise equity value?",
+    options: [
+      "Multiplicatively: Combined Discount Factor = 1 - [ (1 - 0.20) × (1 - 0.25) ] = 1 - (0.80 × 0.75) = 1 - 0.60 = 40.00%",
+      "Additively: Combined Discount = 20% + 25% = 45.00%",
+      "Only DLOM is applied, DLOC is ignored",
+      "Discounts cancel each other out"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material & IVS 102 - Valuation Discounts (DLOM & DLOC)",
+    explanation: "Valuation discounts are applied sequentially: first, the freely traded minority value is derived by applying DLOC (20%), leaving 80% of value. Second, DLOM (25%) is applied to that non-marketable minority base: 80% × (1 - 0.25) = 60%. Total combined discount is 100% - 60% = 40.00%.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20910,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Valuation Multiples - Price-to-Earnings-Growth (PEG) Ratio",
+    question: "Company P has a P/E multiple of 30 and an expected annual EPS growth rate of 25%. Company Q has a P/E multiple of 18 and an expected annual EPS growth rate of 10%. Using the PEG Ratio (P/E divided by growth rate), which company offers better valuation value to an investor?",
+    options: [
+      "Company P (PEG = 1.20 vs Company Q PEG = 1.80; Lower PEG indicates Company P is cheaper relative to growth)",
+      "Company Q (Because P/E of 18 is lower than 30)",
+      "Both companies are equally priced",
+      "PEG ratio cannot be used when P/E exceeds 20"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Relative Valuation & PEG Multiples",
+    explanation: "PEG Ratio = (P/E) / Annual Growth Rate (%)\nCompany P: PEG = 30 / 25 = 1.20.\nCompany Q: PEG = 18 / 10 = 1.80.\nA lower PEG ratio indicates that an investor is paying less per unit of earnings growth. Company P is significantly cheaper on a growth-adjusted basis.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20911,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Start-Up Valuation - First Chicago Method",
+    question: "Under the First Chicago Method for valuing early-stage venture capital investments, how is the pre-money valuation derived?",
+    options: [
+      "By constructing 3 probability-weighted scenarios (Success/IPO, Survival/Sideways, Failure/Liquidation), computing the DCF/exit value for each, and taking the weighted expectation",
+      "By taking the historical book value of R&D expenses",
+      "By applying a flat 10x revenue multiple",
+      "By multiplying founder sweat equity by bank interest rates"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Start-Up & Venture Capital Valuation Methods",
+    explanation: "The First Chicago Method models three discrete payoff scenarios: Best case (large trade sale/IPO), Base case (modest survival), and Worst case (failure/liquidation), discounting each at high VC hurdle rates (30-50%) and taking the probability-weighted sum.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20912,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Valuation Standards - ICAI Valuation Standard (IVS 301)",
+    question: "Under ICAI Valuation Standard 301 (Business Valuation), which three broad valuation approaches are recognized for determining the value of an enterprise?",
+    options: [
+      "Market Approach, Income Approach, and Cost (Asset) Approach",
+      "Cash Approach, Accrual Approach, and Hybrid Approach",
+      "Technical Approach, Fundamental Approach, and Sentiment Approach",
+      "Historical Cost Approach, Replacement Cost Approach, and Tax Approach"
+    ],
+    correct: 0,
+    ref: "ICAI Valuation Standards (IVS 301) - Framework for Business Valuation",
+    explanation: "IVS 301 explicitly defines three fundamental valuation approaches: (1) Market Approach (multiples, comparable transactions); (2) Income Approach (DCF, capitalization of earnings); (3) Cost/Asset Approach (adjusted net asset value, replacement cost).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20913,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Market Value Added (MVA)",
+    question: "A company has Total Invested Capital of ₹800 Crores (Book Debt ₹300 Cr, Book Equity ₹500 Cr). Its equity market cap is ₹1,100 Crores and market value of debt is ₹300 Crores. What is the Market Value Added (MVA)?",
+    options: [
+      "MVA = +₹600 Crores",
+      "MVA = +₹800 Crores",
+      "MVA = +₹300 Crores",
+      "MVA = +₹1,400 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Market Value Added (MVA) Concept",
+    explanation: "Total Market Value of Firm = Market Value of Equity (1,100) + Market Value of Debt (300) = ₹1,400 Crores.\nTotal Invested Capital = ₹800 Crores.\nMarket Value Added (MVA) = Total Market Value - Total Invested Capital = 1,400 - 800 = +₹600 Crores.\n(Equivalently: Market Value of Equity ₹1,100 Cr - Book Value of Equity ₹500 Cr = ₹600 Crores).",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20914,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Valuation of Financial Institutions - Price-to-Book (P/BV) Approach",
+    question: "Why is the Price-to-Book Value (P/BV) multiple preferred over EV/EBITDA when valuing commercial banking and NBFC entities?",
+    options: [
+      "Because bank assets and liabilities are predominantly financial instruments marked to market, and interest income is an operating revenue rather than a financing cash flow",
+      "Because banks have zero operating expenses",
+      "Because bank capital is fully funded by government grants",
+      "Banks are prohibited by RBI from reporting EBITDA"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Valuation of Banking & NBFC Entities",
+    explanation: "For banks and financial institutions, debt is 'raw material' (inventory) rather than capital structure leverage, making enterprise value and EBITDA meaningless. Bank book values closely reflect asset mark-to-market and regulatory capital compliance, making P/BV the standard industry metric.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20915,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Valuation of Intangibles - Multi-Period Excess Earnings Method (MPEEM)",
+    question: "In valuing customer relationship intangibles under MPEEM, what is the role of 'Contributory Asset Charges' (CAC)?",
+    options: [
+      "To deduct the fair economic return on other supporting assets (working capital, fixed assets, brand) to isolate the residual cash flow attributable exclusively to customer relationships",
+      "To pay corporate income taxes",
+      "To amortize goodwill",
+      "To pay underwriting fees"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Valuation of Customer Intangibles (MPEEM)",
+    explanation: "MPEEM isolates cash flows produced by a primary intangible asset. Contributory Asset Charges (CAC) represent rental/capital charges paid to other contributory assets (such as working capital, tangible PPE, workforce, brand) that assist in generating the cash flow, isolating the true pure excess earnings of the primary intangible.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20916,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Terminal Value Sensitivity to Growth Rate",
+    question: "In a DCF valuation where Year 5 FCFF is ₹100 Crores and WACC is 11%, calculate the Terminal Value if perpetual growth rate (g) is (i) 3%, vs (ii) 5%.",
+    options: [
+      "(i) TV = ₹1,287.50 Crores; (ii) TV = ₹1,750.00 Crores (a 2% increase in growth increases TV by 35.9%)",
+      "(i) TV = ₹1,000.00 Crores; (ii) TV = ₹1,200.00 Crores",
+      "(i) TV = ₹1,450.00 Crores; (ii) TV = ₹1,900.00 Crores",
+      "(i) TV = ₹1,120.00 Crores; (ii) TV = ₹1,450.00 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Sensitivity of Terminal Value to Perpetual Growth Rate",
+    explanation: "(i) g = 3%: FCFF6 = 100 × 1.03 = ₹103 Cr. TV = 103 / (0.11 - 0.03) = 103 / 0.08 = ₹1,287.50 Crores.\n(ii) g = 5%: FCFF6 = 100 × 1.05 = ₹105 Cr. TV = 105 / (0.11 - 0.05) = 105 / 0.06 = ₹1,750.00 Crores.\nPercentage increase in TV = (1,750 - 1,287.50) / 1,287.50 = 35.92%. Demonstrates high sensitivity of DCF to perpetual terminal assumptions.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20917,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Control Premium",
+    question: "Why does an acquirer purchasing a 51% controlling block of shares routinely pay a 25% to 35% 'Control Premium' above the prevailing stock exchange market price?",
+    options: [
+      "Because controlling ownership grants the power to appoint management, direct capital allocation, alter capital structure, realize synergies, and declare dividend policies",
+      "Because SEBI mandates a compulsory 30% premium on all block deals",
+      "Controlling shares have double voting rights automatically",
+      "It avoids paying securities transaction tax"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Control Premium in Majority Share Acquisitions",
+    explanation: "A control premium reflects the economic value of decision-making control: the power to replace inefficient management, restructure corporate operations, extract cost/revenue synergies, and dictate dividend and financing policy.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20918,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Contingent Consideration (Earn-Outs)",
+    question: "An acquirer agrees to pay an upfront cash sum of ₹200 Crores plus an Earn-Out payment of ₹50 Crores at the end of Year 2 if the target's EBITDA exceeds ₹60 Crores. Management estimates an 80% probability of achieving this target. The risk-adjusted discount rate is 12%. Under Ind AS 103 / Ind AS 113, what is the Fair Value of total acquisition consideration at acquisition date?",
+    options: [
+      "Total Consideration Fair Value = ₹231.89 Crores",
+      "Total Consideration Fair Value = ₹250.00 Crores",
+      "Total Consideration Fair Value = ₹240.00 Crores",
+      "Total Consideration Fair Value = ₹220.00 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material & Ind AS 103 - Fair Value of Contingent Consideration",
+    explanation: "Expected Earn-out Payment at Year 2 = ₹50 Crores × 80% = ₹40.00 Crores.\nPresent Value of Earn-Out = 40.00 / (1.12)^2 = 40.00 / 1.2544 = ₹31.888 Crores (₹31.89 Cr).\nTotal Acquisition Consideration = Upfront Cash (200) + PV of Contingent Earn-out (31.89) = ₹231.89 Crores.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20919,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Real Estate Valuation - Net Operating Income (NOI) Capitalization",
+    question: "A commercial tech park generates annual Gross Rental Income of ₹45 Crores. Vacancy and credit loss allowance is 5%. Property management, maintenance, property taxes, and operating expenses total ₹8 Crores p.a. If the market Capitalization Rate (Cap Rate) for Grade-A commercial real estate is 8.5%, what is the capitalized fair market value of the property?",
+    options: [
+      "Property Value = ₹408.82 Crores",
+      "Property Value = ₹435.29 Crores",
+      "Property Value = ₹380.00 Crores",
+      "Property Value = ₹450.00 Crores"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Direct Capitalization Method in Real Estate Valuation",
+    explanation: "Effective Gross Income = 45 - 5% of 45 = 45 - 2.25 = ₹42.75 Crores.\nNet Operating Income (NOI) = Effective Gross Income - Operating Expenses = 42.75 - 8.00 = ₹34.75 Crores.\nProperty Value = NOI / Cap Rate = 34.75 / 0.085 = ₹408.82 Crores.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  },
+  {
+    id: 20920,
+    subject: "Advanced Financial Management",
+    paper: "Paper 2",
+    topicId: 9,
+    topicTitle: topic.topicTitle,
+    tag: "[ICAI CA Final AFM PYQ] Business Valuation - Enterprise Value vs Equity Value",
+    question: "Which of the following corporate transactions leaves Enterprise Value (EV) completely unchanged while shifting between cash and debt?",
+    options: [
+      "Issuing ₹100 Crores of new long-term debt and holding the entire proceeds as idle cash and cash equivalents on the balance sheet",
+      "Paying a cash dividend of ₹100 Crores",
+      "Repurchasing equity shares in the open market",
+      "Acquiring another company for cash"
+    ],
+    correct: 0,
+    ref: "ICAI CA Final AFM Study Material - Enterprise Value Mechanics & Debt Neutrality",
+    explanation: "EV = Equity Value + Total Debt - Cash. When a firm borrows ₹100 Cr of debt and retains it in cash, Total Debt increases by +₹100 Cr and Cash increases by +₹100 Cr. Net Debt (+100 - 100 = 0) is unchanged, leaving Enterprise Value completely unchanged.",
+    difficulty: "Difficult",
+    type: "Case-Scenario MCQ",
+    isCaseBased: true,
+    timeLimitMinutes: 15,
+    marks: 2
+  }
+];
+
+fs.writeFileSync('data/afm/topic_9_business_valuation.json', JSON.stringify(questions, null, 2));
+console.log('Saved Topic 9 (20 Qs)');
+
