@@ -439,27 +439,37 @@
       <div class="mb-10">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
           <div>
-            <h2 class="text-lg sm:text-xl font-bold font-display text-icai-navy flex items-center gap-2">
+            <h2 id="papersSectionHeading" class="text-lg sm:text-xl font-bold font-display text-icai-navy flex items-center gap-2">
               <span>🏛️</span>
-              <span>Group I Full Papers &amp; Subject Tests</span>
+              <span id="papersSectionTitle">Group I Full Papers &amp; Subject Tests</span>
             </h2>
-            <p class="text-xs text-stone-600 font-serif mt-0.5">
-              All 4 Core Subjects under Group I: Financial Reporting (FR), Advanced Financial Management (AFM), Advanced Auditing (AAAPE) &amp; Corporate and Economic Laws (CEL).
+            <p id="papersSectionSub" class="text-xs text-stone-600 font-serif mt-0.5 min-h-[32px] sm:min-h-[18px] transition-all duration-150">
+              All 4 Core Subjects: Financial Reporting (FR), Advanced Financial Management (AFM), Advanced Auditing (AAAPE) &amp; Corporate and Economic Laws (CEL).
             </p>
           </div>
           
-          <!-- Group I Badge & Standard Indicator -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amber-50/90 border border-amber-300/90 shadow-2xs self-start sm:self-auto">
-            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-            <span class="text-xs font-bold font-sans text-icai-navy">Group I • 4 Core Subjects</span>
-            <span class="text-[11px] font-medium text-stone-600 font-serif border-l border-amber-300 pl-2">100Q / 3-Hr &amp; 20Q / 15-Min</span>
-          </div>
+          <!-- Group Switcher & Standard Indicator (Slim & Seamless) -->
+          <div class="flex items-center gap-2.5 self-start sm:self-auto shrink-0">
+            <!-- Segmented Switcher Controls: Group I & Group II -->
+            <div class="inline-flex items-center p-1 rounded-xl bg-stone-200/90 border border-stone-300 shadow-2xs text-xs font-sans">
+              <button onclick="switchFullPapersGroup('G1')" id="tabGroup1" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-icai-navy text-amber-200 shadow-xs whitespace-nowrap flex items-center gap-1.5">
+                <span id="dotG1" class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Group I (4 Core)</span>
+              </button>
+              <button onclick="switchFullPapersGroup('G2')" id="tabGroup2" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold transition text-stone-700 hover:text-stone-900 hover:bg-stone-300/60 whitespace-nowrap flex items-center gap-1.5">
+                <span id="dotG2" class="w-1.5 h-1.5 rounded-full bg-emerald-400 hidden"></span>
+                <span>Group II (3 Core)</span>
+              </button>
+            </div>
 
-          <!-- Hidden compatibility buttons for legacy tab references -->
-          <div class="hidden" aria-hidden="true">
-            <button id="tabGroupAll"></button>
-            <button id="tabGroup1"></button>
-            <button id="tabGroup2"></button>
+            <!-- Standard Details Badge -->
+            <div id="groupBadgeIndicator" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50/90 border border-amber-300/90 text-xs font-semibold text-stone-800 font-serif shadow-2xs whitespace-nowrap">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span id="groupStandardPill">100Q / 3-Hr &amp; 20Q / 15-Min</span>
+            </div>
+
+            <!-- Hidden compatibility button for tabGroupAll for test suite stability -->
+            <button id="tabGroupAll" onclick="switchFullPapersGroup('ALL')" class="hidden" aria-hidden="true"></button>
           </div>
         </div>
 
@@ -643,6 +653,113 @@
                   <span>📄</span><span>Section B (70M Descriptive)</span>
                 </button>
               </div>
+            </div>
+          </div>
+
+          <!-- ==================== GROUP II FULL PAPERS (PAPERS 4-6) ==================== -->
+          
+          <!-- PAPER 4 (Group II): Direct Tax Laws & International Taxation -->
+          <div class="full-paper-card hidden paper-texture rounded-2xl border-2 border-icai-burgundy p-5 sm:p-6 shadow-book hover:shadow-xl transition flex flex-col justify-between relative overflow-hidden" data-group="G2">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-700 via-icai-burgundy to-rose-600"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-icai-burgundy text-amber-100 text-[10px] font-bold uppercase tracking-wider">Group II • Paper 4</span>
+                <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold">100 Marks (30M MCQ + 70M Desc)</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold font-display text-icai-navy">Direct Tax Laws &amp; International Taxation</h3>
+              <p class="text-xs text-stone-600 mt-2 font-serif leading-relaxed min-h-[48px]">
+                Corporate Assessment (Sec. 115BAA &amp; MAT), Transfer Pricing (Sec. 92C/92CE), DTAA Relief (Sec. 90/91), Permanent Establishment, GAAR &amp; Equalisation Levy.
+              </p>
+              
+              <div class="mt-4 p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 space-y-1.5 text-xs font-serif">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-icai-navy">Section A (30M):</span>
+                  <span class="font-mono text-emerald-800 font-bold">15 Case MCQs • No Negative Marking</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-icai-navy">Section B (70M):</span>
+                  <span class="font-mono text-stone-700 font-semibold">Corporate &amp; Treaty Case Qs (Suggested Answers)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-stone-200 flex flex-col sm:flex-row items-center gap-2">
+              <button onclick="openPreTestInstructions('REAL_PAPER_4')" class="w-full sm:flex-1 py-2 px-2.5 bg-icai-burgundy hover:bg-red-950 text-amber-100 font-bold rounded-lg text-xs shadow-xs border border-rose-300/40 transition flex items-center justify-center gap-1.5">
+                <span>✍️</span><span>Section A (30M Case MCQs)</span>
+              </button>
+              <button onclick="openDescriptivePaperModal('PAPER_4')" class="w-full sm:flex-1 py-2 px-2.5 bg-white hover:bg-stone-100 text-stone-800 font-bold rounded-lg text-xs border border-stone-300 transition flex items-center justify-center gap-1.5 shadow-2xs">
+                <span>📄</span><span>Section B (70M Descriptive)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- PAPER 5 (Group II): Indirect Tax Laws (GST & Customs) -->
+          <div class="full-paper-card hidden paper-texture rounded-2xl border-2 border-icai-burgundy p-5 sm:p-6 shadow-book hover:shadow-xl transition flex flex-col justify-between relative overflow-hidden" data-group="G2">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-purple-700 via-indigo-800 to-icai-navy"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-icai-burgundy text-amber-100 text-[10px] font-bold uppercase tracking-wider">Group II • Paper 5</span>
+                <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold">100 Marks (30M MCQ + 70M Desc)</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold font-display text-icai-navy">Indirect Tax Laws (GST &amp; Customs)</h3>
+              <p class="text-xs text-stone-600 mt-2 font-serif leading-relaxed min-h-[48px]">
+                Input Tax Credit (ITC Sec. 16-17), Place of Supply (Sec. 12-13), Valuation Rules, Demand &amp; Recovery (Sec. 73-74), Customs Valuation &amp; MOOWR Warehousing.
+              </p>
+              
+              <div class="mt-4 p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 space-y-1.5 text-xs font-serif">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-icai-navy">Section A (30M):</span>
+                  <span class="font-mono text-emerald-800 font-bold">15 Case MCQs • No Negative Marking</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-icai-navy">Section B (70M):</span>
+                  <span class="font-mono text-stone-700 font-semibold">GST &amp; Customs Duty Qs (Suggested Answers)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-stone-200 flex flex-col sm:flex-row items-center gap-2">
+              <button onclick="openPreTestInstructions('REAL_PAPER_5')" class="w-full sm:flex-1 py-2 px-2.5 bg-icai-burgundy hover:bg-red-950 text-amber-100 font-bold rounded-lg text-xs shadow-xs border border-rose-300/40 transition flex items-center justify-center gap-1.5">
+                <span>✍️</span><span>Section A (30M Case MCQs)</span>
+              </button>
+              <button onclick="openDescriptivePaperModal('PAPER_5')" class="w-full sm:flex-1 py-2 px-2.5 bg-white hover:bg-stone-100 text-stone-800 font-bold rounded-lg text-xs border border-stone-300 transition flex items-center justify-center gap-1.5 shadow-2xs">
+                <span>📄</span><span>Section B (70M Descriptive)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- PAPER 6 (Group II): Integrated Business Solutions (IBS) -->
+          <div class="full-paper-card hidden paper-texture rounded-2xl border-2 border-icai-burgundy p-5 sm:p-6 shadow-book hover:shadow-xl transition flex flex-col justify-between relative overflow-hidden" data-group="G2">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-600 via-rose-700 to-icai-navy"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-icai-burgundy text-amber-100 text-[10px] font-bold uppercase tracking-wider">Group II • Paper 6</span>
+                <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold">100 Marks (30M MCQ + 70M Desc)</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold font-display text-icai-navy">Integrated Business Solutions (IBS)</h3>
+              <p class="text-xs text-stone-600 mt-2 font-serif leading-relaxed min-h-[48px]">
+                Multi-disciplinary case studies integrating Financial Reporting (Ind AS), AFM, Audit (SA 701), Direct Tax &amp; GST in corporate turnaround &amp; M&amp;A scenarios.
+              </p>
+              
+              <div class="mt-4 p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 space-y-1.5 text-xs font-serif">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-icai-navy">Section A (30M):</span>
+                  <span class="font-mono text-emerald-800 font-bold">15 Multi-Disciplinary Case MCQs</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-icai-navy">Section B (70M):</span>
+                  <span class="font-mono text-stone-700 font-semibold">Integrated Case Solutions &amp; Working Notes</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-stone-200 flex flex-col sm:flex-row items-center gap-2">
+              <button onclick="openPreTestInstructions('REAL_PAPER_6')" class="w-full sm:flex-1 py-2 px-2.5 bg-icai-burgundy hover:bg-red-950 text-amber-100 font-bold rounded-lg text-xs shadow-xs border border-rose-300/40 transition flex items-center justify-center gap-1.5">
+                <span>✍️</span><span>Section A (30M Case MCQs)</span>
+              </button>
+              <button onclick="openDescriptivePaperModal('PAPER_6')" class="w-full sm:flex-1 py-2 px-2.5 bg-white hover:bg-stone-100 text-stone-800 font-bold rounded-lg text-xs border border-stone-300 transition flex items-center justify-center gap-1.5 shadow-2xs">
+                <span>📄</span><span>Section B (70M Descriptive)</span>
+              </button>
             </div>
           </div>
 
@@ -1403,6 +1520,50 @@
           </button>
           <button onclick="confirmSubmitTest()" class="px-6 py-2 bg-icai-navy hover:bg-icai-dark text-amber-200 text-xs font-bold rounded-lg shadow-md border border-icai-gold/40 transition">
             Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== EXAM SESSION LOCK ALERT MODAL ==================== -->
+    <div id="examLockAlertModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="paper-texture rounded-2xl shadow-2xl max-w-lg w-full p-6 sm:p-7 border-2 border-amber-400 font-sans animate-in fade-in zoom-in-95 duration-150 relative overflow-hidden text-center">
+        <!-- Top Ornamental Ribbon -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-icai-navy via-amber-500 to-icai-burgundy"></div>
+
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-amber-100 text-amber-900 border border-amber-300 flex items-center justify-center text-2xl shadow-xs">
+          🔒
+        </div>
+
+        <span class="inline-block px-3 py-0.5 rounded-full bg-icai-navy text-amber-200 text-[10px] font-bold uppercase tracking-wider mb-2">
+          Official ICAI CBT Security Protocol
+        </span>
+
+        <h3 class="text-lg font-bold text-icai-navy font-display mb-2">
+          Examination in Progress
+        </h3>
+
+        <p class="text-xs text-stone-700 font-serif leading-relaxed mb-5 max-w-md mx-auto">
+          Under official examination guidelines, you cannot leave or navigate away from an active paper session without submitting your paper. All navigation is secured to maintain examination integrity.
+        </p>
+
+        <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/90 text-left text-xs font-serif text-stone-800 space-y-1.5 mb-6">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-icai-navy">Active Examination:</span>
+            <span id="lockExamPaperTitle" class="font-semibold text-stone-900 font-sans truncate max-w-[200px]">CA Final Examination</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-icai-navy">Time Remaining:</span>
+            <span id="lockExamTimeRemaining" class="font-mono font-bold text-rose-700">00:00</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button onclick="closeExamLockModal()" class="w-full sm:flex-1 py-2.5 px-4 bg-icai-navy hover:bg-icai-dark text-amber-200 text-xs font-bold rounded-xl shadow-xs border border-icai-gold/40 transition flex items-center justify-center gap-1.5">
+            <span>✍️</span><span>Continue Examination</span>
+          </button>
+          <button onclick="proceedToSubmitFromLock()" class="w-full sm:flex-1 py-2.5 px-4 bg-amber-500 hover:bg-amber-600 text-stone-900 text-xs font-bold rounded-xl shadow-xs transition flex items-center justify-center gap-1.5">
+            <span>📄</span><span>Submit Paper Now</span>
           </button>
         </div>
       </div>
@@ -40253,8 +40414,14 @@
       return { scenario: prevSentences, prompt: lastSentence };
     }
 
-    // View Switching
+    // View Switching with Strict Examination Session Guard
     function switchMainView(viewName) {
+      // STRICT EXAM LOCK: Candidate cannot leave active test session without submitting paper
+      if (currentMainView === 'exam' && viewName !== 'exam' && viewName !== 'results') {
+        openExamLockModal();
+        return;
+      }
+
       currentMainView = viewName;
 
       const views = {
@@ -40377,10 +40544,60 @@
       }, 3000);
     }
 
+    // ==================== EXAM SESSION LOCK CONTROLLER ====================
+    function openExamLockModal() {
+      const modal = document.getElementById('examLockAlertModal');
+      if (!modal) return;
+      const titleEl = document.getElementById('lockExamPaperTitle');
+      const timerEl = document.getElementById('lockExamTimeRemaining');
+      const meta = (typeof CHAPTER_META !== 'undefined' && CHAPTER_META[currentTestKey]) ? CHAPTER_META[currentTestKey] : (typeof CHAPTER_META !== 'undefined' ? CHAPTER_META['ALL'] : {});
+      if (titleEl) {
+        titleEl.textContent = (meta && meta.title) ? meta.title : 'CA Final CBT Examination';
+      }
+      if (timerEl) {
+        const mins = Math.floor(examTimeRemainingSeconds / 60);
+        const secs = examTimeRemainingSeconds % 60;
+        timerEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function closeExamLockModal() {
+      const modal = document.getElementById('examLockAlertModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function proceedToSubmitFromLock() {
+      closeExamLockModal();
+      openSubmitAlertModal();
+    }
+
+    // Browser navigation & unload guard during active exam
+    window.addEventListener('beforeunload', function(e) {
+      if (currentMainView === 'exam') {
+        e.preventDefault();
+        e.returnValue = 'Examination is currently active. You cannot leave the session without submitting your paper.';
+        return e.returnValue;
+      }
+    });
+
+    window.addEventListener('popstate', function(e) {
+      if (currentMainView === 'exam') {
+        try {
+          history.pushState({ inExam: true }, document.title, location.href);
+        } catch (err) {}
+        openExamLockModal();
+      }
+    });
+
     // ==================== IMAGE 1: OTP LOGIN MODAL LOGIC ====================
     let activeGeneratedOtp = '';
 
     function openOtpLoginModal() {
+      if (currentMainView === 'exam') {
+        openExamLockModal();
+        return;
+      }
       const modal = document.getElementById('otpLoginModal');
       if (modal) modal.classList.remove('hidden');
 
@@ -40633,12 +40850,44 @@
       const btnAll = document.getElementById('tabGroupAll');
       const btnG1 = document.getElementById('tabGroup1');
       const btnG2 = document.getElementById('tabGroup2');
-      const activeClass = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-icai-navy text-amber-200 shadow-xs";
-      const inactiveClass = "px-3.5 py-1.5 rounded-lg text-xs font-semibold transition text-stone-700 hover:text-stone-900 hover:bg-stone-300/60";
+      const activeClass = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-icai-navy text-amber-200 shadow-xs whitespace-nowrap flex items-center gap-1.5";
+      const inactiveClass = "px-3.5 py-1.5 rounded-lg text-xs font-semibold transition text-stone-700 hover:text-stone-900 hover:bg-stone-300/60 whitespace-nowrap flex items-center gap-1.5";
 
       if (btnAll) btnAll.className = (groupCode === 'ALL') ? activeClass : inactiveClass;
       if (btnG1) btnG1.className = (groupCode === 'G1') ? activeClass : inactiveClass;
       if (btnG2) btnG2.className = (groupCode === 'G2') ? activeClass : inactiveClass;
+
+      // Update Section Header Title & Subtitle dynamically
+      const titleEl = document.getElementById('papersSectionTitle');
+      const subEl = document.getElementById('papersSectionSub');
+      const pillEl = document.getElementById('groupStandardPill');
+
+      const dotG1 = document.getElementById('dotG1');
+      const dotG2 = document.getElementById('dotG2');
+      if (dotG1) {
+        if (groupCode === 'G1') dotG1.classList.remove('hidden');
+        else dotG1.classList.add('hidden');
+      }
+      if (dotG2) {
+        if (groupCode === 'G2') dotG2.classList.remove('hidden');
+        else dotG2.classList.add('hidden');
+      }
+
+      if (titleEl && subEl && pillEl) {
+        if (groupCode === 'G2') {
+          titleEl.textContent = 'Group II Full Papers & Subject Tests';
+          subEl.textContent = 'All 3 Core Subjects: Direct Tax Laws (DT & IT), Indirect Tax Laws (GST & Customs) & Integrated Business Solutions (IBS).';
+          pillEl.textContent = '100 Marks (30M MCQ + 70M Desc)';
+        } else if (groupCode === 'ALL') {
+          titleEl.textContent = 'All Full Papers & Subject Tests (Group I & Group II)';
+          subEl.textContent = 'Complete 7-Paper Coverage: 4 Group I Core Subjects & 3 Group II Advanced Taxation & IBS Papers.';
+          pillEl.textContent = 'All 7 ICAI Papers';
+        } else {
+          titleEl.textContent = 'Group I Full Papers & Subject Tests';
+          subEl.textContent = 'All 4 Core Subjects: Financial Reporting (FR), Advanced Financial Management (AFM), Advanced Auditing (AAAPE) & Corporate and Economic Laws (CEL).';
+          pillEl.textContent = '100Q / 3-Hr & 20Q / 15-Min';
+        }
+      }
     }
 
     function openPreTestInstructions(testKey) {
@@ -41014,6 +41263,9 @@
       startExamClock();
 
       switchMainView('exam');
+      try {
+        history.pushState({ inExam: true }, document.title, location.href);
+      } catch (err) {}
       renderCbtQuestion(0);
       renderCbtPalette();
       updateLegendCounters();
@@ -44339,6 +44591,5 @@ const DESCRIPTIVE_PAPERS = {
       </div>
     </div>
   </div>
-
 </body>
 </html>
