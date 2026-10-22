@@ -1,4 +1,5 @@
 require('dotenv').config({ path: require('path').join(__dirname, '.env') });
+require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -71,6 +72,12 @@ const LeaderboardEntrySchema = new mongoose.Schema({
   submittedAt: { type: Date, default: Date.now }
 }, { timestamps: true });
 
+// Compound & Field Indexes for maximum query velocity
+QuestionSchema.index({ chapter: 1, id: 1 });
+AttemptSchema.index({ user: 1, createdAt: -1 });
+LeaderboardEntrySchema.index({ chapterCode: 1, submittedAt: -1 });
+LeaderboardEntrySchema.index({ chapterCode: 1, score: -1, timeSpentSeconds: 1 });
+
 const Question = mongoose.model('Question', QuestionSchema);
 const Attempt = mongoose.model('Attempt', AttemptSchema);
 const LeaderboardEntry = mongoose.model('LeaderboardEntry', LeaderboardEntrySchema);
@@ -93,6 +100,35 @@ function requireAuth(req, res, next) {
 }
 
 const INITIAL_QUESTIONS = require(path.join(__dirname, '..', 'data', 'questions.json'));
+
+// High-performance In-Memory JSON Cache with mtime auto-invalidation
+const jsonFileCache = new Map();
+
+function getCachedJson(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) return null;
+    const stat = fs.statSync(filePath);
+    const cached = jsonFileCache.get(filePath);
+    if (cached && cached.mtimeMs === stat.mtimeMs) {
+      return cached.data;
+    }
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const data = JSON.parse(raw);
+    jsonFileCache.set(filePath, { mtimeMs: stat.mtimeMs, data });
+    return data;
+  } catch (err) {
+    return null;
+  }
+}
+
+function invalidateJsonCache(filePath) {
+  if (filePath) {
+    jsonFileCache.delete(filePath);
+  } else {
+    jsonFileCache.clear();
+  }
+}
+
 
 const WEEKLY_ASPIRANT_POOLS = [
   // Pool 0 (Rotates based on ISO week number: week % 4 === 0)
@@ -284,7 +320,8 @@ async function autoSeedDatabase() {
 }
 
 mongoose.connect(MONGO_URI, {
-  dbName: 'quiz_db'
+  dbName: 'quiz_db',
+  serverSelectionTimeoutMS: 8000
 })
 .then(() => {
   console.log('🌿 Connected successfully to MongoDB Atlas database: quiz_db');
@@ -497,10 +534,8 @@ app.get('/api/questions', async (req, res) => {
 app.get('/api/questions/chapters', async (req, res) => {
   try {
     const questionsFile = path.join(__dirname, '..', 'data', 'questions.json');
-    let allQs = [];
-    if (fs.existsSync(questionsFile)) {
-      allQs = JSON.parse(fs.readFileSync(questionsFile, 'utf8'));
-    } else {
+    let allQs = getCachedJson(questionsFile);
+    if (!allQs) {
       allQs = await Question.find().sort({ id: 1 }).lean();
     }
     const grouped = {};
@@ -537,8 +572,8 @@ app.get('/api/questions/chapter/:id', async (req, res) => {
   try {
     const chId = Number(req.params.id);
     const questionsFile = path.join(__dirname, '..', 'data', 'questions.json');
-    if (fs.existsSync(questionsFile)) {
-      const allQs = JSON.parse(fs.readFileSync(questionsFile, 'utf8'));
+    const allQs = getCachedJson(questionsFile);
+    if (allQs) {
       const filtered = allQs.filter(q => q.chapter === chId);
       if (filtered.length > 0) {
         return res.json({
@@ -570,9 +605,9 @@ app.get('/api/questions/chapter/:id', async (req, res) => {
 app.get('/api/questions/group1', (req, res) => {
   try {
     const dataDir = path.join(__dirname, '..', 'data');
-    const p1 = JSON.parse(fs.readFileSync(path.join(dataDir, 'group1_paper1_fr_pyq.json'), 'utf8'));
-    const p2 = JSON.parse(fs.readFileSync(path.join(dataDir, 'group1_paper2_afm_pyq.json'), 'utf8'));
-    const p3 = JSON.parse(fs.readFileSync(path.join(dataDir, 'group1_paper3_audit_pyq.json'), 'utf8'));
+    const p1 = getCachedJson(path.join(dataDir, 'group1_paper1_fr_pyq.json')) || [];
+    const p2 = getCachedJson(path.join(dataDir, 'group1_paper2_afm_pyq.json')) || [];
+    const p3 = getCachedJson(path.join(dataDir, 'group1_paper3_audit_pyq.json')) || [];
 
     res.json({
       group: "Group I",
@@ -618,7 +653,10 @@ app.get('/api/questions/group1/:paper', (req, res) => {
       return res.status(404).json({ error: 'Group 1 Paper not found. Valid: 1 (FR), 2 (AFM), 3 (Audit)' });
     }
 
-    const qs = JSON.parse(fs.readFileSync(path.join(dataDir, file), 'utf8'));
+    const qs = getCachedJson(path.join(dataDir, file));
+    if (!qs) {
+      return res.status(404).json({ error: 'Group 1 Paper questions file not found.' });
+    }
     res.json({
       group: "Group I",
       paper: paperNum,
@@ -642,8 +680,8 @@ app.get('/api/questions/group1/:paper', (req, res) => {
 app.get('/api/fr/topics', (req, res) => {
   try {
     const catalogPath = path.join(__dirname, '..', 'data', 'fr', 'fr_topics_catalog.json');
-    if (fs.existsSync(catalogPath)) {
-      const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+    const catalog = getCachedJson(catalogPath);
+    if (catalog) {
       return res.json(catalog);
     }
     res.status(404).json({ error: 'FR Topics catalog not found' });
@@ -676,8 +714,8 @@ app.get('/api/fr/topic/:id', (req, res) => {
     };
     const fileName = topicFileMap[topicId];
     const filePath = path.join(__dirname, '..', 'data', 'fr', fileName);
-    if (fs.existsSync(filePath)) {
-      const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const questions = getCachedJson(filePath);
+    if (questions) {
       return res.json({
         subject: "Financial Reporting (FR)",
         topicId,
@@ -699,8 +737,8 @@ app.get('/api/fr/topic/:id', (req, res) => {
 app.get('/api/fr/full-test', (req, res) => {
   try {
     const fullTestPath = path.join(__dirname, '..', 'data', 'fr', 'fr_full_paper_100q.json');
-    if (fs.existsSync(fullTestPath)) {
-      const questions = JSON.parse(fs.readFileSync(fullTestPath, 'utf8'));
+    const questions = getCachedJson(fullTestPath);
+    if (questions) {
       return res.json({
         subject: "Financial Reporting (FR)",
         examTitle: "Paper 1: Financial Reporting (FR) Comprehensive Examination",
@@ -724,8 +762,8 @@ app.get('/api/fr/full-test', (req, res) => {
 app.get('/api/fr/questions', (req, res) => {
   try {
     const allQsPath = path.join(__dirname, '..', 'data', 'fr', 'financial_reporting_all_questions.json');
-    if (fs.existsSync(allQsPath)) {
-      const questions = JSON.parse(fs.readFileSync(allQsPath, 'utf8'));
+    const questions = getCachedJson(allQsPath);
+    if (questions) {
       return res.json({
         subject: "Financial Reporting (FR)",
         totalQuestions: questions.length,
@@ -747,8 +785,8 @@ app.get('/api/fr/questions', (req, res) => {
 app.get('/api/afm/topics', (req, res) => {
   try {
     const catalogPath = path.join(__dirname, '..', 'data', 'afm', 'afm_topics_catalog.json');
-    if (fs.existsSync(catalogPath)) {
-      const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+    const catalog = getCachedJson(catalogPath);
+    if (catalog) {
       return res.json(catalog);
     }
     res.status(404).json({ error: 'AFM Topics catalog not found' });
@@ -779,8 +817,8 @@ app.get('/api/afm/topic/:id', (req, res) => {
     };
     const fileName = afmTopicFileMap[topicId];
     const filePath = path.join(__dirname, '..', 'data', 'afm', fileName);
-    if (fs.existsSync(filePath)) {
-      const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const questions = getCachedJson(filePath);
+    if (questions) {
       return res.json({
         subject: "Advanced Financial Management (AFM)",
         topicId,
@@ -802,8 +840,8 @@ app.get('/api/afm/topic/:id', (req, res) => {
 app.get('/api/afm/full-test', (req, res) => {
   try {
     const fullTestPath = path.join(__dirname, '..', 'data', 'afm', 'afm_full_paper_100q.json');
-    if (fs.existsSync(fullTestPath)) {
-      const data = JSON.parse(fs.readFileSync(fullTestPath, 'utf8'));
+    const data = getCachedJson(fullTestPath);
+    if (data) {
       return res.json(data);
     }
     res.status(404).json({ error: 'AFM Full Test file not found' });
@@ -816,8 +854,8 @@ app.get('/api/afm/full-test', (req, res) => {
 app.get('/api/afm/questions', (req, res) => {
   try {
     const allQsPath = path.join(__dirname, '..', 'data', 'afm', 'advanced_financial_management_all_questions.json');
-    if (fs.existsSync(allQsPath)) {
-      const questions = JSON.parse(fs.readFileSync(allQsPath, 'utf8'));
+    const questions = getCachedJson(allQsPath);
+    if (questions) {
       return res.json({
         subject: "Advanced Financial Management (AFM)",
         totalQuestions: questions.length,
@@ -839,8 +877,8 @@ app.get('/api/afm/questions', (req, res) => {
 app.get(['/api/audit/topics', '/api/aaape/topics'], (req, res) => {
   try {
     const catalogPath = path.join(__dirname, '..', 'data', 'audit', 'audit_topics_catalog.json');
-    if (fs.existsSync(catalogPath)) {
-      const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+    const catalog = getCachedJson(catalogPath);
+    if (catalog) {
       return res.json(catalog);
     }
     res.status(404).json({ error: 'Audit Topics catalog not found' });
@@ -871,8 +909,8 @@ app.get(['/api/audit/topic/:id', '/api/aaape/topic/:id'], (req, res) => {
     };
     const fileName = auditTopicFileMap[topicId];
     const filePath = path.join(__dirname, '..', 'data', 'audit', fileName);
-    if (fs.existsSync(filePath)) {
-      const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const questions = getCachedJson(filePath);
+    if (questions) {
       return res.json({
         subject: "Advanced Auditing, Assurance and Professional Ethics (AAAPE)",
         topicId,
@@ -894,8 +932,8 @@ app.get(['/api/audit/topic/:id', '/api/aaape/topic/:id'], (req, res) => {
 app.get(['/api/audit/full-test', '/api/aaape/full-test'], (req, res) => {
   try {
     const fullTestPath = path.join(__dirname, '..', 'data', 'audit', 'audit_full_paper_100q.json');
-    if (fs.existsSync(fullTestPath)) {
-      const data = JSON.parse(fs.readFileSync(fullTestPath, 'utf8'));
+    const data = getCachedJson(fullTestPath);
+    if (data) {
       return res.json(data);
     }
     res.status(404).json({ error: 'Audit Full Test file not found' });
@@ -908,8 +946,8 @@ app.get(['/api/audit/full-test', '/api/aaape/full-test'], (req, res) => {
 app.get(['/api/audit/questions', '/api/aaape/questions'], (req, res) => {
   try {
     const allQsPath = path.join(__dirname, '..', 'data', 'audit', 'advanced_auditing_all_questions.json');
-    if (fs.existsSync(allQsPath)) {
-      const questions = JSON.parse(fs.readFileSync(allQsPath, 'utf8'));
+    const questions = getCachedJson(allQsPath);
+    if (questions) {
       return res.json({
         subject: "Advanced Auditing, Assurance and Professional Ethics (AAAPE)",
         totalQuestions: questions.length,
@@ -928,8 +966,8 @@ app.get(['/api/audit/questions', '/api/aaape/questions'], (req, res) => {
 app.get(['/api/cel/topics', '/api/law/topics'], (req, res) => {
   try {
     const catalogPath = path.join(__dirname, '..', 'data', 'cel', 'cel_topics_catalog.json');
-    if (fs.existsSync(catalogPath)) {
-      const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+    const catalog = getCachedJson(catalogPath);
+    if (catalog) {
       return res.json(catalog);
     }
     res.status(404).json({ error: 'Corporate and Economic Laws (CEL) Topics catalog not found' });
@@ -958,8 +996,8 @@ app.get(['/api/cel/topic/:id', '/api/law/topic/:id'], (req, res) => {
     };
     const fileName = celTopicFileMap[topicId];
     const filePath = path.join(__dirname, '..', 'data', 'cel', fileName);
-    if (fs.existsSync(filePath)) {
-      const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const questions = getCachedJson(filePath);
+    if (questions) {
       return res.json({
         subject: "Corporate and Economic Laws (CEL)",
         topicId,
@@ -981,8 +1019,8 @@ app.get(['/api/cel/topic/:id', '/api/law/topic/:id'], (req, res) => {
 app.get(['/api/cel/full-test', '/api/law/full-test', '/api/cel/full-mock', '/api/law/full-mock'], (req, res) => {
   try {
     const fullTestPath = path.join(__dirname, '..', 'data', 'cel', 'cel_full_paper_100q.json');
-    if (fs.existsSync(fullTestPath)) {
-      const data = JSON.parse(fs.readFileSync(fullTestPath, 'utf8'));
+    const data = getCachedJson(fullTestPath);
+    if (data) {
       return res.json(data);
     }
     res.status(404).json({ error: 'CEL Full Test file not found' });
@@ -995,8 +1033,8 @@ app.get(['/api/cel/full-test', '/api/law/full-test', '/api/cel/full-mock', '/api
 app.get(['/api/cel/questions', '/api/law/questions', '/api/cel/all', '/api/law/all'], (req, res) => {
   try {
     const allQsPath = path.join(__dirname, '..', 'data', 'cel', 'corporate_and_economic_laws_all_questions.json');
-    if (fs.existsSync(allQsPath)) {
-      const questions = JSON.parse(fs.readFileSync(allQsPath, 'utf8'));
+    const questions = getCachedJson(allQsPath);
+    if (questions) {
       return res.json({
         subject: "Corporate and Economic Laws (CEL)",
         totalQuestions: questions.length,
@@ -1011,15 +1049,9 @@ app.get(['/api/cel/questions', '/api/law/questions', '/api/cel/all', '/api/law/a
 });
 
 // ==================== TEXTBOOK NOTES API (GROUP I & GROUP II) ====================
-let cachedNotesCatalog = null;
 function getNotesCatalog() {
-  if (!cachedNotesCatalog) {
-    const catalogPath = path.join(__dirname, '..', 'data', 'notes', 'textbook_notes_catalog.json');
-    if (fs.existsSync(catalogPath)) {
-      cachedNotesCatalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-    }
-  }
-  return cachedNotesCatalog;
+  const catalogPath = path.join(__dirname, '..', 'data', 'notes', 'textbook_notes_catalog.json');
+  return getCachedJson(catalogPath);
 }
 
 // GET All Textbook Notes Catalog (Group I & Group II)
@@ -1241,8 +1273,10 @@ app.get('/api/analytics', requireAuth, async (req, res) => {
 async function syncQuestionJsonFiles() {
   try {
     const dataDir = path.join(__dirname, '..', 'data');
+    const questionsFile = path.join(dataDir, 'questions.json');
     const allQs = await Question.find().sort({ id: 1 }).lean();
-    fs.writeFileSync(path.join(dataDir, 'questions.json'), JSON.stringify(allQs, null, 2), 'utf8');
+    fs.writeFileSync(questionsFile, JSON.stringify(allQs, null, 2), 'utf8');
+    invalidateJsonCache(questionsFile);
   } catch (err) {
     console.warn('Could not sync questions.json:', err.message);
   }
